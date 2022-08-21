@@ -7,7 +7,7 @@ Escreva um ou dois  parágrafo resumindo o objetivo do seu projeto.
 * Bárbara Mattioly Andrade
 * Nome completo do aluno 2
 * Bruno Pontes Duarte
-* Nome completo do aluno 4
+* Camilla Regina da Cruz
 * Laura Enísia Rodrigues Melo
 * Samuel Marques Sousa Leal
 
