@@ -8,7 +8,7 @@ Escreva um ou dois  parágrafo resumindo o objetivo do seu projeto.
 * Nome completo do aluno 2
 * Bruno Pontes Duarte
 * Nome completo do aluno 4
-* Nome completo do aluno 5
+* Laura Enísia Rodrigues Melo
 * Samuel Marques Sousa Leal
 
 ## Professor
