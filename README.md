@@ -5,7 +5,7 @@ Escreva um ou dois  parágrafo resumindo o objetivo do seu projeto.
 ## Integrantes
 
 * Bárbara Mattioly Andrade
-* Nome completo do aluno 2
+* Bruna Barbosa Portilho Bernardes
 * Bruno Pontes Duarte
 * Camilla Regina da Cruz
 * Laura Enísia Rodrigues Melo
