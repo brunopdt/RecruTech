@@ -1,4 +1,4 @@
-# TITULO DO PROJETO
+# RecruTech
 
 
 **Nome completo do Aluno 1, email do aluno 1**
@@ -7,12 +7,19 @@
 
 **Nome completo do Aluno 3, email do aluno 3**
 
+**Nome completo do Aluno 4, email do aluno 3**
+
+**Nome completo do Aluno 5, email do aluno 3**
+
+**Samuel Marques Sousa Leal, samuel.leal.1401791@sga.pucminas.br.**
+
 ---
 
 Professores:
 
-** Prof. NOme do Prof 1 **
-** Prof. NOme do Prof 2 **
+** Prof Cristiano Geraldo Teixeira Silva **
+** Prof. Felipe Augusto Lima Reis**
+** Prof. Hugo Bastos de Paula**
 
 ---
 
@@ -47,12 +54,11 @@ para tal.
 
     1.3 Objetivo geral
 
-O aluno deve escrever um pequeno parágrafo ou frase com o **objetivo geral** do trabalho. 
-O objetivo deve ser bem direto, específico e definido com verbos de ação (elaborar, propor, ava-liar, comparar etc.).
+   <p>      Elaborar um sistema que faça para a empresa o processo seletivo de uma vaga de emprego ou estagio, envolvendo a criação da vaga, divulgação, inscrição, seleção, com todo o processo seletivo( fazer a entrevista, a atividade individual e a atividade em grupo) e por fim realizar a contratação ou não do candidato.</p>
 
         1.3.1 Objetivos específicos
 
-Apresente também alguns (pelo menos 2) **objetivos específicos** dependendo de onde você vai querer 
+   Apresente também alguns (pelo menos 2) **objetivos específicos** dependendo de onde você vai querer 
 concentrar a sua prática investigativa, ou como você vai aprofundar no seu trabalho.
 
     1.4 Justificativas
