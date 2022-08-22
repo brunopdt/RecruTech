@@ -3,13 +3,13 @@
 
 **Barbara Mattioly Andrade, 1403413@sga.pucminas.br**
 
-**Nome completo do Aluno 2, email do aluno 2**
+**Bruna Barbosa Portilho Bernardes, bbernardes@sga.pucminas.br**
 
 **Bruno Pontes Duarte, bruno.duarte@sga.pucminas.br**
 
 **Camilla Regina da Cruz, 1413041@sga.pucminas.br**
 
-**Laura Enísia Rodrigues Melo, laura.enisia@sga.pucminas.br**
+**Nome completo do Aluno 5, email do aluno 3**
 
 **Samuel Marques Sousa Leal, samuel.leal.1401791@sga.pucminas.br.**
 
@@ -17,9 +17,9 @@
 
 Professores:
 
-**Prof Cristiano Geraldo Teixeira Silva**
-**Prof. Felipe Augusto Lima Reis**
-**Prof. Hugo Bastos de Paula**
+** Prof Cristiano Geraldo Teixeira Silva **
+** Prof. Felipe Augusto Lima Reis**
+** Prof. Hugo Bastos de Paula**
 
 ---
 
@@ -63,8 +63,9 @@ Entretanto, somente o maior investimento no âmbito não é o suficiente para co
 
     1.4 Justificativas
 
-Mostre também as **justificativas** para o 
-desenvolvimento do seu trabalho e, caso deseje, desta-que alguma contribuição do trabalho.
+O setor de recursos humanos das empresas hoje executam grande parte de seus processos de forma manual, o que ocasiona em várias dificuldades, como na organização e gestão de documentos, excesso de trabalho e redução da velocidade de execução de processos, que poderia ser muito maior com a automatização e padronização de alguns processos.
+
+Dessa maneira, o projeto foi pensado com o intuito de automatizar os processos burocráticos no âmbito da contratação de funcionários em empresas e prover um ambiente centralizado, padronizado e organizado no setor de recursos humanos, otimizando o tempo de execução de tarefas e facilitando seu meio de trabalho.
 
 
 ## 2. Participantes do processo
