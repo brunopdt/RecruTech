@@ -57,8 +57,9 @@ Entretanto, somente o maior investimento no âmbito não é o suficiente para co
 
         1.3.1 Objetivos específicos
 
-   Apresente também alguns (pelo menos 2) **objetivos específicos** dependendo de onde você vai querer 
-concentrar a sua prática investigativa, ou como você vai aprofundar no seu trabalho.
+   - Criar uma plataforma intuitiva que facilite a empresa interessada a contratar novos fuuncionarios.
+   - Criar a área do cadidato, na qual o mesmo pode demonstrar interesse em participar do processo seletivo.
+   - Armazenar essas informações em um banco de dados.
 
     1.4 Justificativas
 
