@@ -9,7 +9,7 @@
 
 **Camilla Regina da Cruz, 1413041@sga.pucminas.br**
 
-**Nome completo do Aluno 5, email do aluno 3**
+**Laura Enísia Rodrigues Melo, laura.enisia@sga.pucminas.br**
 
 **Samuel Marques Sousa Leal, samuel.leal.1401791@sga.pucminas.br.**
 
@@ -17,9 +17,9 @@
 
 Professores:
 
-** Prof Cristiano Geraldo Teixeira Silva **
-** Prof. Felipe Augusto Lima Reis**
-** Prof. Hugo Bastos de Paula**
+**Prof Cristiano Geraldo Teixeira Silva**
+**Prof. Felipe Augusto Lima Reis**
+**Prof. Hugo Bastos de Paula**
 
 ---
 
