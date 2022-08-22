@@ -1,7 +1,7 @@
 # RecruTech
 
 
-**Nome completo do Aluno 1, email do aluno 1**
+**Barbara Mattioly Andrade, 1403413@sga.pucminas.br**
 
 **Nome completo do Aluno 2, email do aluno 2**
 
