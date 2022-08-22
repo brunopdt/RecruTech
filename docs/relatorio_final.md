@@ -7,7 +7,7 @@
 
 **Bruno Pontes Duarte, bruno.duarte@sga.pucminas.br**
 
-**Nome completo do Aluno 4, email do aluno 3**
+**Camilla Regina da Cruz, 1413041@sga.pucminas.br**
 
 **Nome completo do Aluno 5, email do aluno 3**
 
