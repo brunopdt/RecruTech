@@ -51,12 +51,12 @@ Entretanto, somente o maior investimento no âmbito não é o suficiente para co
 
     1.3 Objetivo geral
 
-   <p>      Elaborar um sistema que faça para a empresa o processo seletivo de uma vaga de emprego ou estagio, envolvendo a criação da vaga, divulgação, inscrição, seleção, com todo o processo seletivo( fazer a entrevista, a atividade individual e a atividade em grupo) e por fim realizar a contratação ou não do candidato.</p>
+   <p>      Elaborar um sistema que faça para a empresa o processo seletivo de uma vaga de emprego ou estagio, envolvendo a criação da vaga, divulgação, inscrição, seleção, com todo o processo seletivo (fazer a entrevista, a atividade individual e a atividade em grupo) e por fim realizar a contratação ou não do candidato.</p>
 
         1.3.1 Objetivos específicos
 
    - Criar uma plataforma intuitiva que facilite a empresa interessada a contratar novos funcionarios.
-   - Criar a área do cadidato, na qual o mesmo pode demonstrar interesse em participar do processo seletivo.
+   - Criar a área do candidato, na qual o mesmo pode demonstrar interesse em participar do processo seletivo.
    - Armazenar essas informações em um banco de dados.
 
     1.4 Justificativas
