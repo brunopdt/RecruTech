@@ -9,17 +9,17 @@
 
 **Camilla Regina da Cruz, 1413041@sga.pucminas.br**
 
-**Nome completo do Aluno 5, email do aluno 3**
+**Laura Enísia Rodrigues Melo, laura.enisia@sga.pucminas.br**
 
-**Samuel Marques Sousa Leal, samuel.leal.1401791@sga.pucminas.br.**
+**Samuel Marques Sousa Leal, samuel.leal.1401791@sga.pucminas.br**
 
 ---
 
 Professores:
 
-** Prof Cristiano Geraldo Teixeira Silva **
-** Prof. Felipe Augusto Lima Reis**
-** Prof. Hugo Bastos de Paula**
+**Prof Cristiano Geraldo Teixeira Silva**
+**Prof. Felipe Augusto Lima Reis**
+**Prof. Hugo Bastos de Paula**
 
 ---
 
@@ -69,8 +69,21 @@ Dessa maneira, o projeto foi pensado com o intuito de automatizar os processos b
 
 
 ## 2. Participantes do processo
+Os Stakeholders do projeto são:
+- Profissionais de RH (psicólogos, administradores, assistentes sociais e recrutadores)
+- Empresas parceiras
+- Diretor e supervisor da empresa
+- Candidatos 
 
-Apresente aqui os diferentes perfis dos Stakeholders (participantes do processo) chave do sistema. Diversas são as informações que podem ser relevantes para a definição dos perfis dos usuários, tais como idade, gênero, aspectos culturais, nível de educação, entre outros. A pesquisa de mercado pode ser uma ferramenta poderosa para se identificar e caracterizar os perfis de usuários.
+Os profissionais do RH, juntamente com os recrutadores, serão os indivíduos que participarão ativamente no Recrutech e em todas as etapas do processo seletivo. (Pessoas de 20-60 anos)
+ 
+Os candidatos são as pessoas interessadas nas vagas estabelecidas no sistema, sendo de estágio, CLT, ou PJ. 
+(Pessoas de 16-70 anos)
+
+O diretor e supervisor da empresa são as pessoas que participarão de algumas etapas do processo seletivo (entrevistas) para analisarem os candidatos durante as etapas.
+(Pessoas de 25-70 anos)
+
+
 
 ## 3. Modelagem do processo de negócio
 
