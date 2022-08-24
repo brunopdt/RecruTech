@@ -11,7 +11,7 @@
 
 **Laura Enísia Rodrigues Melo, laura.enisia@sga.pucminas.br**
 
-**Samuel Marques Sousa Leal, samuel.leal.1401791@sga.pucminas.br**
+**Samuel Marques Sousa Leal, 1401791@sga.pucminas.br**
 
 ---
 
@@ -55,7 +55,7 @@ Entretanto, somente o maior investimento no âmbito não é o suficiente para co
 
         1.3.1 Objetivos específicos
 
-   - Criar uma plataforma intuitiva que facilite a empresa interessada a contratar novos fuuncionarios.
+   - Criar uma plataforma intuitiva que facilite a empresa interessada a contratar novos funcionarios.
    - Criar a área do cadidato, na qual o mesmo pode demonstrar interesse em participar do processo seletivo.
    - Armazenar essas informações em um banco de dados.
 
