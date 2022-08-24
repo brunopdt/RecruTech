@@ -85,7 +85,7 @@ O diretor e supervisor da empresa são as pessoas que participarão de algumas e
 
 ![Persona 1](imagens/Persona1.png)
 ![Persona 2](imagens/Persona2.png)
-![Persona 1](imagens/Stakeholders.png)
+![Mapa de Stakeholders](imagens/Mapa_Stakeholders.jpg)
 
 
 ## 3. Modelagem do processo de negócio
