@@ -61,10 +61,9 @@ Entretanto, somente o maior investimento no âmbito não é o suficiente para co
 
     1.4 Justificativas
 
-O setor de recursos humanos das empresas hoje executam grande parte de seus processos de forma manual, o que ocasiona em várias dificuldades, como na organização e gestão de documentos, excesso de trabalho e redução da velocidade de execução de processos, que poderia ser muito maior com a automatização e padronização de alguns processos.
-
-Dessa maneira, o projeto foi pensado com o intuito de automatizar os processos burocráticos no âmbito da contratação de funcionários em empresas e prover um ambiente centralizado, padronizado e organizado no setor de recursos humanos, otimizando o tempo de execução de tarefas e facilitando seu meio de trabalho.
-
+Com a criação de uma plataforma intuitiva de recrutamento e seleção, o projeto tem a finalidade de automatizar os processos burocráticos no âmbito da contratação de funcionários em empresas, realizando a gerência de documentos. 
+Irá fornecer um ambiente centralizado, padronizado e organizado no setor de recursos humanos.
+Dessa forma, otimizará o tempo de execução de tarefas, facilitando o meio de trabalho dos funcionários.
 
 ## 2. Participantes do processo
 Os Stakeholders do projeto são:
