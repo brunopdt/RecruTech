@@ -115,7 +115,7 @@ Por fim, é importante manter as limitações do sistema em mente. Ainda nesse c
 
 ## 3.3. Modelagem dos Processos
 
-### 3.3.1 Processo 1 – DIVULGAÇÃO DA VAGA
+### 3.3.1 Processo 1 – Divulgação da vaga
 
 Apresente aqui o nome e as oportunidades de melhorias para o processo 1.
 
