@@ -117,11 +117,11 @@ Por fim, é importante manter as limitações do sistema em mente. Ainda nesse c
 
 ### 3.3.1 Processo 1 – Divulgação da vaga e seleção de candidatos
 
-Processo responsável pela criação e divulgação da vaga pela empresa, inscrição dos interessados na vaga e filtragem dos candidatos que atendem aos requisitos mínimos especificados, sendo assim disponibilizados ao profissional de recursos humanos para fazer a seleção e contatar o candidato do resultado da seleçãoo.
+Processo responsável pela criação e divulgação da vaga pela empresa, inscrição dos interessados na vaga e filtragem dos candidatos que atendem aos requisitos mínimos especificados, sendo assim disponibilizados ao profissional de recursos humanos para fazer a seleção e realizar o contato com o resultado da seleção.
 
-Oportunidades de melhoria para o Processo 1:
+**Oportunidades de melhoria para o Processo 1:**
 - Notificação automática dos candidatos que atendem OU não atendem os requisitos básicos da vaga, com o resultado da filtragem (informando se eles foram selecionados para a próxima fase do processo seletivo ou não), sem precisar de ação manual do responsável do R.H;
-- Encerrar o processo caso após a notificação de que passou na primeira fase do processo, o candidato não possua mais disponibilidade.
+- Encerrar o processo caso o candidato selecionado na primeira fase, notifique que não possui mais disponibilidade para a vaga ofertada.
 
 ![Processo 1 - Divulgação da vaga e seleção de candidatos](imagens/processo1.png "Modelo BPMN do Processo 1.")
 
