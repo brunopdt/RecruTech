@@ -122,7 +122,13 @@ Apresente aqui o nome e as oportunidades de melhorias para o processo 1. Em segu
 ![Exemplo de um Modelo BPMN do PROCESSO 1](imagens/diagrama-processo1.png "Modelo BPMN do Processo 1.")
 
 
-### 3.3.2 Processo 2 – NOME DO PROCESSO
+### 3.3.2 Processo 2 – Seleção
+
+No processo de seleção, podemos facilitar a comunicação entre o candidato e a empresa.
+
+![Processo 2](imagens/digrama-processo2.png "Modelo BPMN do Processo 2.")
+
+### 3.3.3 Processo 3 – NOME DO PROCESSO
 
 Apresente aqui o nome e as oportunidades de melhorias para o processo 2. Em seguida, apresente o modelo do processo 2, descrito no padrão BPMN.
 
