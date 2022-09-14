@@ -130,16 +130,16 @@ Processo responsável pela criação e divulgação da vaga pela empresa, inscri
 
 No processo de seleção, podemos facilitar a comunicação entre o candidato e a empresa.
 
-**Oportunidades de melhoria para o Processo 1:**
-- Automatização do processo seletivo no etapa de provas e testes de forma online.
-- No recebimento da documentação, os documentos serão arquivados digitalizados na nuvem da empresa.
-- Agendamento admissional sincronizado com a empresa parceira.
-
 ![Processo 2](imagens/digrama-processo2.png "Modelo BPMN do Processo 2.")
 
 ### 3.3.3 Processo 3 – Contrato
 
-Apresente aqui o nome e as oportunidades de melhorias para o processo 3. Em seguida, apresente o modelo do processo 2, descrito no padrão BPMN.
+**Oportunidades de melhoria para o Processo 1:**
+-Encerramento automático do chamado após o catalogo do cliente 
+ser adicionado no sistema corporativo da empresa
+-Adicionar o envio de um email comunicando ao candidato o resultado do seu projeto seletivo 
+-Arquivar os contratos após serem preenchidos e assinados para futuros acessos caso necessário
+
 
 ![Exemplo de um Modelo BPMN do PROCESSO 2](imagens/diagrama-processo-3.png "Modelo BPMN do Processo 3.")
 
