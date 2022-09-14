@@ -128,11 +128,11 @@ No processo de seleção, podemos facilitar a comunicação entre o candidato e 
 
 ![Processo 2](imagens/digrama-processo2.png "Modelo BPMN do Processo 2.")
 
-### 3.3.3 Processo 3 – NOME DO PROCESSO
+### 3.3.3 Processo 3 – Contrato
 
-Apresente aqui o nome e as oportunidades de melhorias para o processo 2. Em seguida, apresente o modelo do processo 2, descrito no padrão BPMN.
+Apresente aqui o nome e as oportunidades de melhorias para o processo 3. Em seguida, apresente o modelo do processo 2, descrito no padrão BPMN.
 
-![Exemplo de um Modelo BPMN do PROCESSO 2](imagens/call_process.png "Modelo BPMN do Processo 2.")
+![Exemplo de um Modelo BPMN do PROCESSO 2](imagens/diagrama-processo-3.png "Modelo BPMN do Processo 3.")
 
 ## 4. Projeto da Solução
 
