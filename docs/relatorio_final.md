@@ -115,11 +115,11 @@ Por fim, é importante manter as limitações do sistema em mente. Ainda nesse c
 
 ## 3.3. Modelagem dos Processos
 
-### 3.3.1 Processo 1 – NOME DO PROCESSO
+### 3.3.1 Processo 1 – DIVULGAÇÃO DAS VAGAS
 
 Apresente aqui o nome e as oportunidades de melhorias para o processo 1. Em seguida, apresente o modelo do processo 1, descrito no padrão BPMN.
 
-![Exemplo de um Modelo BPMN do PROCESSO 1](imagens/process.png "Modelo BPMN do Processo 1.")
+![Exemplo de um Modelo BPMN do PROCESSO 1](imagens/diagrama-processo1.png "Modelo BPMN do Processo 1.")
 
 
 ### 3.3.2 Processo 2 – NOME DO PROCESSO
