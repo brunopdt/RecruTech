@@ -130,6 +130,12 @@ Processo responsável pela criação e divulgação da vaga pela empresa, inscri
 
 No processo de seleção, podemos facilitar a comunicação entre o candidato e a empresa.
 
+**Oportunidades de melhoria para o Processo 1:**
+- Automatização do processo seletivo no etapa de provas e testes de forma online.
+- No recebimento da documentação, os documentos serão arquivados digitalizados na nuvem da empresa.
+- Agendamento admissional sincronizado com a empresa parceira.
+
+
 ![Processo 2](imagens/digrama-processo2.png "Modelo BPMN do Processo 2.")
 
 ### 3.3.3 Processo 3 – Contrato
