@@ -145,6 +145,20 @@ Caso a indicação seja validada e possua vagas em aberto em que a pessoa se enc
 
 ![Processo 3](imagens/Processo3_IndicacaoCandidato.svg "Indicação de candidatos para a vaga")
 
+### 3.3.4 Processo 4 – Seleção
+
+**Descrição geral do processo:**
+O processo de seleção é o processo responsável pela apuração e triagem dos candidatos. Ele irá filtrar os candidatos de acordo com os currículos selecionados e as fases que terão no sistema como o teste online (caso a empresa exija) e a entrevista com o RH. 
+
+O sistema Recrutech terá o banco de dados com os currículos pré-selecionados para as vagas e irá verificar se a vaga possui ou não um teste online. Caso não possua, o processo seguirá para a reunião entre o candidato e os Recursos Humanos. Caso possua, o sistema irá disponibilizar um teste online para os candidatos e prosseguir com a candidatura. 
+
+De acordo com o resultado de cada fase o sistema envia uma mensagem de retorno notificando o usuário sobre o status do seu processo seletivo (se ele foi aprovado para a próxima etapa ou reprovado). Caso ele tenha sido reprovado em alguma fase o candidato automaticamente é desclassificado para a vaga proposta. E caso tenha sido aprovado em todas as etapas, o candidato é encaminhado para o processo de contratação.
+
+
+![Processo 4](imagens/diagrama_processo3_atualizado.png "Seleção de cadidatos candidatos para a vaga")
+
+
+
 ## 4. Projeto da Solução
 
 ### 4.1. Detalhamento das atividades
