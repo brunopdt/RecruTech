@@ -116,6 +116,7 @@ Por fim, é importante manter as limitações do sistema em mente. Ainda nesse c
 ## 3.3. Modelagem dos Processos
 
 ### 3.3.1 Processo 1 – Divulgação  e criação da vaga
+
 O primeiro processo se trata da divulgação e criação de vagas, que se inicia no setor do recursos humanos da empresa onde é listada a demanda das vagas com os requisitos desejados, e são enviadas ao Recrutech. De acordo com a demanda listada, o Recrutech cadastra as vagas no sistema. Logo em seguida é decidido pelo recursos humanos se haverá teste avaliativo online, e se sim, é enviado os critérios do teste ao Recrutech, sendo realizado o cadastro do mesmo. A partir daí se houver vagas cadastradas similares apenas incrementa o número de vagas, do contrário cria-se uma nova vaga. E finaliza-se com o recursos humanos divulgando a vaga.
 
 ![Processo 1 - Divulgação da vaga e seleção de candidatos](imagens/processo1_diagrama.png "Modelo BPMN do Processo 1.")
@@ -133,15 +134,15 @@ No processo de seleção, podemos facilitar a comunicação entre o candidato e 
 
 ![Processo 2](imagens/digrama-processo2.png "Modelo BPMN do Processo 2.")
 
-### 3.3.3 Processo 3 – Contrato
+### 3.3.3 Processo 3 – Indicação de Candidatos pra uma vaga
 
-**Oportunidades de melhoria para o Processo 2:**
-- Encerramento automático do chamado após o catalogo do cliente ser adicionado no sistema corporativo da empresa
-- Adicionar o envio de um email comunicando ao candidato o resultado do seu projeto seletivo 
-- Arquivar os contratos após serem preenchidos e assinados para futuros acessos caso necessário
+**Descrição geral do processo: **
+Processo responsável pela indicação de candidatos, onde o funcionário de uma empresa ou o usuário do sistema pode indicar um conhecido para alguma vaga, preenchendo alguns dados como o tempo que já trabalhou com essa pessoa, os motivos pelos quais a pessoa se encaixa na vaga em aberto, as competências e entre outros dados.
+
+Caso a indicação seja validada e possua vagas em aberto em que a pessoa se encaixa, o usuário é notificado do resultado de sua indicação e a pessoa indicada é chamada para o processo seletivo, porém, caso não existam vagas abertas no sistema os dados da indicação são inseridos em um funil de indicações, para que, caso abra uma nova vaga em que a pessoa se encaixa, ela seja chamada. Se a indicação for recusada pelo responsável do RH, o processo é finalizado.
 
 
-![Exemplo de um Modelo BPMN do PROCESSO 2](imagens/diagrama-processo-3.png "Modelo BPMN do Processo 3.")
+![Processo 3](imagens/Processo3_IndicacaoCandidato.svg "Indicação de candidatos para a vaga")
 
 ## 4. Projeto da Solução
 
