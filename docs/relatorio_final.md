@@ -158,7 +158,7 @@ De acordo com o resultado de cada fase o sistema envia uma mensagem de retorno n
 
 Processo de contratação, em que o inicio se dá pela comunicação ao candidato quanto ao feedback de seu processo seletivo. Logo em seguida, o sistema da RecruTech abre para o recebimento da devida documentação necessária para a redação do contrato por parte do setor do RH. Este, deve conferir a integridade dos documentos, assim como se estão completos, para que o processo seja levado adiante e finalize com a carteira de trabalho registrada. (caso contrário, o candidato é instruído a reenviar a documentação).
 
-![Processo 5](imagens/processo5)
+![Processo 5](imagens/processo5.png)
 
 
 ## 4. Projeto da Solução
