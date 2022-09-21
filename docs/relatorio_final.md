@@ -136,7 +136,8 @@ No processo de seleção, podemos facilitar a comunicação entre o candidato e 
 
 ### 3.3.3 Processo 3 – Indicação de Candidatos pra uma vaga
 
-**Descrição geral do processo: **
+**Descrição geral do processo:**
+
 Processo responsável pela indicação de candidatos, onde o funcionário de uma empresa ou o usuário do sistema pode indicar um conhecido para alguma vaga, preenchendo alguns dados como o tempo que já trabalhou com essa pessoa, os motivos pelos quais a pessoa se encaixa na vaga em aberto, as competências e entre outros dados.
 
 Caso a indicação seja validada e possua vagas em aberto em que a pessoa se encaixa, o usuário é notificado do resultado de sua indicação e a pessoa indicada é chamada para o processo seletivo, porém, caso não existam vagas abertas no sistema os dados da indicação são inseridos em um funil de indicações, para que, caso abra uma nova vaga em que a pessoa se encaixa, ela seja chamada. Se a indicação for recusada pelo responsável do RH, o processo é finalizado.
