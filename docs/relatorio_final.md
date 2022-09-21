@@ -122,17 +122,12 @@ O primeiro processo se trata da divulgação e criação de vagas, que se inicia
 ![Processo 1 - Divulgação da vaga e seleção de candidatos](imagens/diagrama_processo.png "Modelo BPMN do Processo 1.")
 
 
-### 3.3.2 Processo 2 – Seleção
+### 3.3.2 Processo 2 – Inscrição do candidato na vaga
 
-No processo de seleção, podemos facilitar a comunicação entre o candidato e a empresa.
-
-**Oportunidades de melhoria para o Processo 2:**
-- Automatização do processo seletivo no etapa de provas e testes de forma online.
-- No recebimento da documentação, os documentos serão arquivados digitalizados na nuvem da empresa.
-- Agendamento admissional sincronizado com a empresa parceira.
+O segundo processo, é o processo de inscrição do candidato na vaga, o processo inicia-se com o candidato enviando o seu currículo e o sistema recrutech armazenando-o no banco de dados, após isso o sistema compara o currículo do  candidato com os requisitos da vaga, caso as informações batam o candidato é chamado para a seleção, caso contrario o candidato não é selecionado para a vaga e encerra-se o processo. 
 
 
-![Processo 2](imagens/digrama-processo2.png "Modelo BPMN do Processo 2.")
+![Processo 2](imagens/Processo2.png "Modelo BPMN do Processo 2.")
 
 ### 3.3.3 Processo 3 – Indicação de Candidatos pra uma vaga
 
