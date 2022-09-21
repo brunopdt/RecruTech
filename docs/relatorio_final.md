@@ -115,15 +115,10 @@ Por fim, é importante manter as limitações do sistema em mente. Ainda nesse c
 
 ## 3.3. Modelagem dos Processos
 
-### 3.3.1 Processo 1 – Divulgação da vaga e seleção de candidatos
+### 3.3.1 Processo 1 – Divulgação  e criação da vaga
+O primeiro processo se trata da divulgação e criação de vagas, que se inicia no setor do recursos humanos da empresa onde é listada a demanda das vagas com os requisitos desejados, e são enviadas ao Recrutech. De acordo com a demanda listada, o Recrutech cadastra as vagas no sistema. Logo em seguida é decidido pelo recursos humanos se haverá teste avaliativo online, e se sim, é enviado os critérios do teste ao Recrutech, sendo realizado o cadastro do mesmo. A partir daí se houver vagas cadastradas similares apenas incrementa o número de vagas, do contrário cria-se uma nova vaga. E finaliza-se com o recursos humanos divulgando a vaga.
 
-Processo responsável pela criação e divulgação da vaga pela empresa, inscrição dos interessados na vaga e filtragem dos candidatos que atendem aos requisitos mínimos especificados, sendo assim disponibilizados ao profissional de recursos humanos para fazer a seleção e realizar o contato com o resultado da seleção.
-
-**Oportunidades de melhoria para o Processo 1:**
-- Notificação automática dos candidatos que atendem OU não atendem os requisitos básicos da vaga, com o resultado da filtragem (informando se eles foram selecionados para a próxima fase do processo seletivo ou não), sem precisar de ação manual do responsável do R.H;
-- Encerrar o processo caso o candidato selecionado na primeira fase, notifique que não possui mais disponibilidade para a vaga ofertada.
-
-![Processo 1 - Divulgação da vaga e seleção de candidatos](imagens/processo1.png "Modelo BPMN do Processo 1.")
+![Processo 1 - Divulgação da vaga e seleção de candidatos](imagens/processo1_diagrama.png "Modelo BPMN do Processo 1.")
 
 
 ### 3.3.2 Processo 2 – Seleção
