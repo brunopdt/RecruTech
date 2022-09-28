@@ -138,7 +138,7 @@ Processo responsável pela indicação de candidatos, onde o funcionário de uma
 Caso a indicação seja validada e possua vagas em aberto em que a pessoa se encaixa, o usuário é notificado do resultado de sua indicação e a pessoa indicada é chamada para o processo seletivo, porém, caso não existam vagas abertas no sistema os dados da indicação são inseridos em um funil de indicações, para que, caso abra uma nova vaga em que a pessoa se encaixa, ela seja chamada. Se a indicação for recusada pelo responsável do RH, o processo é finalizado.
 
 
-![Processo 3](imagens/Processo3_IndicacaoCandidato.pdf "Indicação de candidatos para a vaga")
+![Processo 3](imagens/Processo3_IndicacaoCandidato.png "Indicação de candidatos para a vaga")
 
 ### 3.3.4 Processo 4 – Seleção
 
