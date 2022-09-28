@@ -17,7 +17,7 @@
 
 Professores:
 
-**Prof Cristiano Geraldo Teixeira Silva** 
+**Prof Cristiano Neves Rodrigues** 
 **Prof. Felipe Augusto Lima Reis** 
 **Prof. Hugo Bastos de Paula** 
 
