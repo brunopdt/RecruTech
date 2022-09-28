@@ -138,7 +138,7 @@ Processo responsável pela indicação de candidatos, onde o funcionário de uma
 Caso a indicação seja validada e possua vagas em aberto em que a pessoa se encaixa, o usuário é notificado do resultado de sua indicação e a pessoa indicada é chamada para o processo seletivo, porém, caso não existam vagas abertas no sistema os dados da indicação são inseridos em um funil de indicações, para que, caso abra uma nova vaga em que a pessoa se encaixa, ela seja chamada. Se a indicação for recusada pelo responsável do RH, o processo é finalizado.
 
 
-![Processo 3](imagens/Processo3_IndicacaoCandidato.svg "Indicação de candidatos para a vaga")
+![Processo 3](imagens/Processo3_IndicacaoCandidato.pdf "Indicação de candidatos para a vaga")
 
 ### 3.3.4 Processo 4 – Seleção
 
@@ -151,7 +151,7 @@ O sistema Recrutech terá o banco de dados com os currículos pré-selecionados 
 De acordo com o resultado de cada fase o sistema envia uma mensagem de retorno notificando o usuário sobre o status do seu processo seletivo (se ele foi aprovado para a próxima etapa ou reprovado). Caso ele tenha sido reprovado em alguma fase o candidato automaticamente é desclassificado para a vaga proposta. E caso tenha sido aprovado em todas as etapas, o candidato é encaminhado para o processo de contratação.
 
 
-![Processo 4](imagens/diagBPMN_Processo3.svg "Seleção de cadidatos candidatos para a vaga")
+![Processo 4](imagens/diagBPMN_Processo4.svg "Seleção de cadidatos candidatos para a vaga")
 
 ### 3.3.5 Processo 5 – Contratação
 
