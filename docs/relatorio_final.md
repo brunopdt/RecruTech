@@ -183,21 +183,9 @@ Descrever aqui cada uma das propriedades das atividades de cada um dos processos
 | **Campo** | **Tipo** | **Restrições** | **Valor default** |
 | --- | --- | --- | --- |
 | Título da vaga | Área de texto | Máximo 50 caracteres |  |
-
-| **Campo** | **Tipo** | **Restrições** | **Valor default** |
-| --- | --- | --- | --- |
 | Descrição da vaga | Área de texto |  | Sem descrição da vaga |
-
-| **Campo** | **Tipo** | **Restrições** | **Valor default** |
-| --- | --- | --- | --- |
 | Restrições da vaga | Área de texto |  |  |
-
-| **Campo** | **Tipo** | **Restrições** | **Valor default** |
-| --- | --- | --- | --- |
 | Requisitos da vaga | Lista |  |  |
-
-| **Campo** | **Tipo** | **Restrições** | **Valor default** |
-| --- | --- | --- | --- |
 | Quantidade das vagas | Número | Valor maior que zero |  |
 
 **Cadastro de teste online**
@@ -205,9 +193,6 @@ Descrever aqui cada uma das propriedades das atividades de cada um dos processos
 | **Campo** | **Tipo** | **Restrições** | **Valor default** |
 | --- | --- | --- | --- |
 | Envio do teste online | Arquivo | Formato PDF |  |
-
-| **Campo** | **Tipo** | **Restrições** | **Valor default** |
-| --- | --- | --- | --- |
 | Nota mínima exigida no teste | Número |  |  |
 
 #### Processo 2 – INSCRIÇÃO DO CANDIDATO NA VAGA
