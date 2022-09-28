@@ -252,6 +252,15 @@ Descrever aqui cada uma das propriedades das atividades de cada um dos processos
 | Contrato Assinado | Arquivo | Formato PDF |  |
 | Carteira de Trabalho | Arquivo | Formato PDF |  |
 
+#### Processo 6 – CANCELAMENTO DA VAGA PELA EMPRESA
+
+**Teste online**
+
+| **Campo** | **Tipo** | **Restrições** | **Valor default** |
+| --- | --- | --- | --- |
+| Vaga cancelada | Booleano | - | False |
+
+
 
 ### 4.2. Tecnologias
 
