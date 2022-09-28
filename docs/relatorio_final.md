@@ -140,7 +140,7 @@ Caso a indicação seja validada e possua vagas em aberto em que a pessoa se enc
 
 ![Processo 3](imagens/Processo3_IndicacaoCandidato.png "Indicação de candidatos para a vaga")
 
-### 3.3.4 Processo 4 – Seleção
+### 3.3.4 Processo 4 – Seleção do Candidato
 
 **Descrição geral do processo:**
 
@@ -151,7 +151,7 @@ O sistema Recrutech terá o banco de dados com os currículos pré-selecionados 
 De acordo com o resultado de cada fase o sistema envia uma mensagem de retorno notificando o usuário sobre o status do seu processo seletivo (se ele foi aprovado para a próxima etapa ou reprovado). Caso ele tenha sido reprovado em alguma fase o candidato automaticamente é desclassificado para a vaga proposta. E caso tenha sido aprovado em todas as etapas, o candidato é encaminhado para o processo de contratação.
 
 
-![Processo 4](imagens/diagBPMN_Processo4.svg "Seleção de cadidatos candidatos para a vaga")
+![Processo 4](imagens/modproc4.svg "Seleção de cadidatos candidatos para a vaga")
 
 ### 3.3.5 Processo 5 – Contratação
 
@@ -224,6 +224,16 @@ Descrever aqui cada uma das propriedades das atividades de cada um dos processos
 | **Campo** | **Tipo** | **Restrições** | **Valor default** |
 | --- | --- | --- | --- |
 | indicadorInscricaoVálida | Boolean | - | - |
+
+
+#### Processo 4 – SELEÇÃO DO CANDIDATO
+
+**Teste online**
+
+| **Campo** | **Tipo** | **Restrições** | **Valor default** |
+| --- | --- | --- | --- |
+| Teste online | Arquivo | PDF | - |
+| Resultado do teste | float | Máximo 5 caracteres | - |
 
 
 #### Processo 5 – CONTRATAÇÃO
