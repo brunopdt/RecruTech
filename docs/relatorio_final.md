@@ -157,7 +157,7 @@ De acordo com o resultado de cada fase o sistema envia uma mensagem de retorno n
 
 **Descrição geral do processo:**
 
-Processo de contratação, em que o inicio se dá pela comunicação ao candidato quanto ao feedback de seu processo seletivo. Logo em seguida, o sistema da RecruTech abre para o recebimento da devida documentação necessária para a redação do contrato por parte do setor do RH. Este, deve conferir a integridade dos documentos, assim como se estão completos, para que o processo seja levado adiante e finalize com a carteira de trabalho registrada. (caso contrário, o candidato é instruído a reenviar a documentação).
+Processo de contratação, em que o inicio se dá pela comunicação ao candidato quanto ao feedback de seu processo seletivo. Logo em seguida, o sistema da RecruTech abre para o recebimento da devida documentação necessária para a redação do contrato por parte do setor do RH. Este, deve conferir a integridade dos documentos, assim como se estão completos, para que o processo seja levado adiante e o contratado possa revisar e assinar o contrato. Caso haja alguma inconstância nos dados contratuais, o mesmo é levado para a reelaboração. Caso esteja tudo nos conformes, o setor de recursos humanos das empresas recebe novamente o contrato final e solicita a carteira de trabalho ao contratado. Após isso, o processo tem fim com sua carteira de trabalho registrada pela administração do RH. Vale ressaltar que a empresa pode determinar um prazo para o envio das documentações e assinatura do contrato, em que caso o indivíduo não faça os passos necessários para a continuidade do processo ele é desclassificado e o processo termina.
 
 ![Processo 5](imagens/processo5.png)
 
@@ -167,7 +167,7 @@ Processo de contratação, em que o inicio se dá pela comunicação ao candidat
 
 O processo de cancelamento de vagas por parte da empresa é responsável por receber a solicitação de cancelamento de vagas do setor de Recursos Humanos da empresa, é feito uma verificação de candidatos já registrados (contratados) para aquela vaga, casa já tenha sido registrado outra pessoa, o candidato é notificado com o feedback de indisponibilidade da vaga de interesse. O currículo do candidato é salvo no banco de dados da RecruTech e a vaga que antes estava disponível agora é removida do sistema. Caso a vaga não tenha nenhum candidato registrado,a vaga somente é removida a do sistema.
 
-![Processo 5](imagens/diag_Process6.svg)
+![Processo 6](imagens/diag_Process6.svg)
 
 
 ## 4. Projeto da Solução
@@ -201,6 +201,23 @@ Descrever aqui cada uma das propriedades das atividades de cada um dos processos
 | **Campo** | **Tipo** | **Restrições** | **Valor default** |
 | --- | --- | --- | --- |
 | Curriculo | Arquivo | Formato PDF |  |
+
+#### Processo 5 – CONTRATAÇÃO
+
+**Envio da documentação para a redação do contrato**
+
+| **Campo** | **Tipo** | **Restrições** | **Valor default** |
+| --- | --- | --- | --- |
+| Documentos Pessoais | Arquivo | Pasta compactada |  |
+
+
+**Envio do contrato e carteira de trabalho**
+
+| **Campo** | **Tipo** | **Restrições** | **Valor default** |
+| --- | --- | --- | --- |
+| Contrato Assinado | Arquivo | Formato PDF |  |
+| Carteira de Trabalho | Arquivo | Formato PDF |  |
+
 
 ### 4.2. Tecnologias
 
