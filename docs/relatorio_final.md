@@ -203,6 +203,29 @@ Descrever aqui cada uma das propriedades das atividades de cada um dos processos
 | --- | --- | --- | --- |
 | Curriculo | Arquivo | Formato PDF |  |
 
+#### Processo 3 – INDICAÇÃO DE CANDIDATOS PARA UMA VAGA
+
+**Preenchimento do formulário de inscrição**
+
+| **Campo** | **Tipo** | **Restrições** | **Valor default** |
+| --- | --- | --- | --- |
+| Empresa que trabalha | Texto | Máximo 50 caracteres | - |
+| Setor na empresa | Texto | Máximo 50 caracteres | - |
+| Nome do indicado | Texto | Máximo 100 caracteres | - |
+| Idade do indicado | Número | Maior que zero | - |
+| CPF do indicado | Texto | Conter 11 caracteres | - |
+| Tempo Trabalhado com o Indicado | Número | Maior que zero | - |
+| Motivo indicação | Texto | Máximo 200 caracteres |  |
+| Competências do indicado | Lista | - | - |
+| Currículo do indicado | Arquivo | Formato PDF | - |
+
+**Validação inscrição**
+
+| **Campo** | **Tipo** | **Restrições** | **Valor default** |
+| --- | --- | --- | --- |
+| indicadorInscricaoVálida | Boolean | - | - |
+
+
 #### Processo 5 – CONTRATAÇÃO
 
 **Envio da documentação para a redação do contrato**
