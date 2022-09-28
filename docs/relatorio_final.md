@@ -124,10 +124,10 @@ O primeiro processo se trata da divulgação e criação de vagas, que se inicia
 
 ### 3.3.2 Processo 2 – Inscrição do candidato na vaga
 
-O segundo processo, é o processo de inscrição do candidato na vaga, o processo inicia-se com o candidato enviando o seu currículo e o sistema recrutech armazenando-o no banco de dados, após isso o sistema compara o currículo do  candidato com os requisitos da vaga, caso as informações batam o candidato é chamado para a seleção, caso contrario o candidato não é selecionado para a vaga e encerra-se o processo. 
+O segundo processo, é o processo de inscrição do candidato na vaga, o processo inicia-se com o candidato enviando o seu currículo e o sistema recrutech armazenando-o no banco de dados, após isso o sistema compara o currículo do candidato com os requisitos da vaga, caso as informações batam o candidato é chamado para a seleção, caso contrario o candidato não é selecionado para a vaga e é notifacadom, encerrando assim o processo. 
 
 
-![Processo 2](imagens/Processo2.png "Modelo BPMN do Processo 2.")
+![Processo 2](imagens/diagrama-processo2.png "Modelo BPMN do Processo 2.")
 
 ### 3.3.3 Processo 3 – Indicação de Candidatos pra uma vaga
 
@@ -194,20 +194,13 @@ Descrever aqui cada uma das propriedades das atividades de cada um dos processos
 | [Nome do campo] | [Área de texto, Caixa de texto, Número, Data, Imagem, Seleção única, Múltipla escolha, Arquivo, Link, Tabela] |  |  |
 |    |    |     |
 
-#### Processo 2 – NOME DO PROCESSO
+#### Processo 2 – INSCRIÇÃO DO CANDIDATO NA VAGA
 
-**Nome da atividade 1**
-
-| **Campo** | **Tipo** | **Restrições** | **Valor default** |
-| --- | --- | --- | --- |
-| [Nome do campo] | [Área de texto, Caixa de texto, Número, Data, Imagem, Seleção única, Múltipla escolha, Arquivo, Link, Tabela] |  |  |
-|    |    |     |
-
-**Nome da atividade 2**
+**Envio de curriculo**
 
 | **Campo** | **Tipo** | **Restrições** | **Valor default** |
 | --- | --- | --- | --- |
-| [Nome do campo] | [Área de texto, Caixa de texto, Número, Data, Imagem, Seleção única, Múltipla escolha, Arquivo, Link, Tabela] |  |  |
+| curriculo | Arquivo | Formato PDF |  |
 |    |    |     |
 
 ### 4.2. Tecnologias
