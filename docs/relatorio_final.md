@@ -200,8 +200,7 @@ Descrever aqui cada uma das propriedades das atividades de cada um dos processos
 
 | **Campo** | **Tipo** | **Restrições** | **Valor default** |
 | --- | --- | --- | --- |
-| curriculo | Arquivo | Formato PDF |  |
-|    |    |     |
+| Curriculo | Arquivo | Formato PDF |  |
 
 ### 4.2. Tecnologias
 
