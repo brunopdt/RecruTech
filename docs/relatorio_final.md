@@ -176,23 +176,39 @@ O processo de cancelamento de vagas por parte da empresa é responsável por rec
 
 Descrever aqui cada uma das propriedades das atividades de cada um dos processos. Devem estar relacionadas com o modelo de processo apresentado anteriormente.
 
-#### Processo 1 – NOME DO PROCESSO
+#### Processo 1 – CRIAÇÃO E DIVULGAÇÃO DAS VAGAS
 
-**Nome da atividade 1**
-
-| **Campo** | **Tipo** | **Restrições** | **Valor default** |
-| --- | --- | --- | --- |
-| [Nome do campo] | [Área de texto, Caixa de texto, Número, Data, Imagem, Seleção única, Múltipla escolha, Arquivo, Link, Tabela] |  |  |
-| ***Exemplo:***  |    |     |
-| login | Caixa de Texto | formato de e-mail |  |
-| senha | Caixa de Texto | mínimo de 8 caracteres |   |
-
-**Nome da atividade 2**
+**Cadastro das vagas**
 
 | **Campo** | **Tipo** | **Restrições** | **Valor default** |
 | --- | --- | --- | --- |
-| [Nome do campo] | [Área de texto, Caixa de texto, Número, Data, Imagem, Seleção única, Múltipla escolha, Arquivo, Link, Tabela] |  |  |
-|    |    |     |
+| Título da vaga | Área de texto | Máximo 50 caracteres |  |
+
+| **Campo** | **Tipo** | **Restrições** | **Valor default** |
+| --- | --- | --- | --- |
+| Descrição da vaga | Área de texto |  | Sem descrição da vaga |
+
+| **Campo** | **Tipo** | **Restrições** | **Valor default** |
+| --- | --- | --- | --- |
+| Restrições da vaga | Área de texto |  |  |
+
+| **Campo** | **Tipo** | **Restrições** | **Valor default** |
+| --- | --- | --- | --- |
+| Requisitos da vaga | Lista |  |  |
+
+| **Campo** | **Tipo** | **Restrições** | **Valor default** |
+| --- | --- | --- | --- |
+| Quantidade das vagas | Número | Valor maior que zero |  |
+
+**Cadastro de teste online**
+
+| **Campo** | **Tipo** | **Restrições** | **Valor default** |
+| --- | --- | --- | --- |
+| Envio do teste online | Arquivo | Formato PDF |  |
+
+| **Campo** | **Tipo** | **Restrições** | **Valor default** |
+| --- | --- | --- | --- |
+| Nota mínima exigida no teste | Número |  |  |
 
 #### Processo 2 – INSCRIÇÃO DO CANDIDATO NA VAGA
 
