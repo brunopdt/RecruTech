@@ -247,7 +247,7 @@ Descrever aqui cada uma das propriedades das atividades de cada um dos processos
 | Certidão de Nascimento | Arquivo | Formato PDF |  |
 | Foto 3x4 | Arquivo | Formato PDF, JPG ou PNG |  |
 | Comprovante de Endereço | Arquivo | Formato PDF |  |
-| Carteira de Vacina | Arquivo | Formato PDF |  |
+| Cartão de Vacina | Arquivo | Formato PDF | Null |
 | Título de Eleitor| Arquivo | Formato PDF |  |
 | CNH | Arquivo | Formato PDF | Null |
 | Certidão de Casamento | Arquivo | Formato PDF | Null |
