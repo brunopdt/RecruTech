@@ -197,6 +197,12 @@ Descrever aqui cada uma das propriedades das atividades de cada um dos processos
 
 #### Processo 2 – INSCRIÇÃO DO CANDIDATO NA VAGA
 
+**Lista Vagas**
+
+| **Título** | **Subtitulo** | **Descrição** | 
+| --- | --- | --- |
+| Nome da vaga | Nome da empresa | Tempo da vaga disponibilizada e botão para abrir detalhes |
+
 **Envio de curriculo**
 
 | **Campo** | **Tipo** | **Restrições** | **Valor default** |
