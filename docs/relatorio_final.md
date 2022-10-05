@@ -238,19 +238,26 @@ Descrever aqui cada uma das propriedades das atividades de cada um dos processos
 
 #### Processo 5 – CONTRATAÇÃO
 
-**Envio da documentação para a redação do contrato**
+**Envio da documentação pessoal para a redação do contrato**
 
 | **Campo** | **Tipo** | **Restrições** | **Valor default** |
 | --- | --- | --- | --- |
-| Documentos Pessoais | Arquivo | Pasta compactada |  |
+| RG | Arquivo | Formato PDF |  |
+| Carteira de Trabalho | Arquivo | Formato PDF |  |
+| Certidão de Nascimento | Arquivo | Formato PDF |  |
+| Foto 3x4 | Arquivo | Formato PDF, JPG ou PNG |  |
+| Comprovante de Endereço | Arquivo | Formato PDF |  |
+| Carteira de Vacina | Arquivo | Formato PDF |  |
+| Título de Eleitor| Arquivo | Formato PDF |  |
+| CNH | Arquivo | Formato PDF | Null |
+| Certidão de Casamento | Arquivo | Formato PDF | Null |
 
 
-**Envio do contrato e carteira de trabalho**
+**Envio do contrato**
 
 | **Campo** | **Tipo** | **Restrições** | **Valor default** |
 | --- | --- | --- | --- |
 | Contrato Assinado | Arquivo | Formato PDF |  |
-| Carteira de Trabalho | Arquivo | Formato PDF |  |
 
 #### Processo 6 – CANCELAMENTO DA VAGA PELA EMPRESA
 
