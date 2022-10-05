@@ -235,25 +235,33 @@ Descrever aqui cada uma das propriedades das atividades de cada um dos processos
 | Teste online | Arquivo | PDF | - |
 | Resultado do teste | float | Máximo 5 caracteres | - |
 
-
 #### Processo 5 – CONTRATAÇÃO
 
 **Envio da documentação pessoal para a redação do contrato**
 
+| **Campo** | **Tipo** | **Restrições** | **Valor default** | **Obrigatório** | 
+| --- | --- | --- | --- | --- |
+| RG | Arquivo | Formato PDF | | Sim |
+| Carteira de Trabalho | Arquivo | Formato PDF | | Sim |
+| Certidão de Nascimento | Arquivo | Formato PDF | | Sim |
+| Foto 3x4 | Arquivo | Formato PDF, JPG ou PNG | | Sim |
+| Comprovante de Endereço | Arquivo | Formato PDF | | Sim |
+| Cartão de Vacina | Arquivo | Formato PDF | | Não |
+| Título de Eleitor| Arquivo | Formato PDF | | Sim |
+| CNH | Arquivo | Formato PDF | | Não |
+| Certidão de Casamento | Arquivo | Formato PDF | | Não |
+
+
+
+**Envio do contrato para assinatura**
+
 | **Campo** | **Tipo** | **Restrições** | **Valor default** |
 | --- | --- | --- | --- |
-| RG | Arquivo | Formato PDF |  |
-| Carteira de Trabalho | Arquivo | Formato PDF |  |
-| Certidão de Nascimento | Arquivo | Formato PDF |  |
-| Foto 3x4 | Arquivo | Formato PDF, JPG ou PNG |  |
-| Comprovante de Endereço | Arquivo | Formato PDF |  |
-| Cartão de Vacina | Arquivo | Formato PDF | Null |
-| Título de Eleitor| Arquivo | Formato PDF |  |
-| CNH | Arquivo | Formato PDF | Null |
-| Certidão de Casamento | Arquivo | Formato PDF | Null |
+| Contrato | Arquivo | Formato PDF |  |
 
 
-**Envio do contrato**
+
+**Envio do contrato assinado**
 
 | **Campo** | **Tipo** | **Restrições** | **Valor default** |
 | --- | --- | --- | --- |
