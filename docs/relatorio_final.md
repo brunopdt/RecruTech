@@ -138,7 +138,7 @@ Processo responsável pela indicação de candidatos, onde o funcionário de uma
 Caso a indicação seja validada e possua vagas em aberto em que a pessoa se encaixa, o usuário é notificado do resultado de sua indicação e a pessoa indicada é chamada para o processo seletivo, porém, caso não existam vagas abertas no sistema os dados da indicação são inseridos em um funil de indicações, para que, caso abra uma nova vaga em que a pessoa se encaixa, ela seja chamada. Se a indicação for recusada pelo responsável do RH, o processo é finalizado.
 
 
-![Processo 3](imagens/Processo3_IndicacaoCandidato.png "Indicação de candidatos para a vaga")
+![Processo 3](imagens/Processo3_BPMN.png "Indicação de candidatos para a vaga")
 
 ### 3.3.4 Processo 4 – Seleção do Candidato
 
@@ -222,15 +222,16 @@ Descrever aqui cada uma das propriedades das atividades de cada um dos processos
 
 | **Campo** | **Tipo** | **Restrições** | **Valor default** |
 | --- | --- | --- | --- |
-| Empresa que trabalha | Texto | Máximo 50 caracteres | - |
-| Setor na empresa | Texto | Máximo 50 caracteres | - |
-| Nome do indicado | Texto | Máximo 100 caracteres | - |
-| Idade do indicado | Número | Maior que zero | - |
-| CPF do indicado | Texto | Conter 11 caracteres | - |
-| Tempo Trabalhado com o Indicado | Número | Maior que zero | - |
-| Motivo indicação | Texto | Máximo 200 caracteres |  |
+| Nome Funcionário | Caixa de Texto | Mínimo de 3 e máximo de 100 caracteres | - |
+| Nome do indicado | Caixa de Texto | Mínimo de 3 e máximo de máximo 100 caracteres | - |
+| Telefone do indicado | Caixa de Texto | Mínimo de 7 e máximo de 10 caracteres | - |
+| E-mail do indicado | Caixa de Texto | Mínimo de 3 e máximo 100 caracteres | - |
+| LinkedIn do indicado | Caixa de Texto | Máximo 100 caracteres | Nulo |
+| Portfólio do indicado | Caixa de Texto | Máximo 100 caracteres | Nulo |
+| Nível de senioridade | Radio | Não nulo | - |
+| Tempo que conhece o indicado | Número | Maior que 1 ano | - |
 | Competências do indicado | Lista | - | - |
-| Currículo do indicado | Arquivo | Formato PDF | - |
+| Currículo do indicado | Arquivo | Formato PDF | Não nulo |
 
 **Validação inscrição**
 
