@@ -336,7 +336,7 @@ Descreva qual(is) tecnologias você vai usar para resolver o seu problema, ou se
 
 Modelo relacional Recrutech 
 
-![Modelo Relacional](imagens/Modelo_relacionalRecrutech.jpeg "Modelo Relacional")
+![Modelo Relacional](imagens/Diagrama-RecrutechCrop.png "Modelo Relacional")
 
 ## 6. Indicadores de desempenho
 
