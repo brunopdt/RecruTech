@@ -231,6 +231,7 @@ Descrever aqui cada uma das propriedades das atividades de cada um dos processos
 | Nível de senioridade | Radio | Não nulo | - |
 | Tempo que conhece o indicado | Número | Maior que 1 ano | - |
 | Competências do indicado | Lista | - | - |
+| Status indicação | Caixa de texto | - | - |
 | Currículo do indicado | Arquivo | Formato PDF | Não nulo |
 
 **Validação inscrição**
