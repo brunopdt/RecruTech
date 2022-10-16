@@ -243,30 +243,35 @@ Descrever aqui cada uma das propriedades das atividades de cada um dos processos
 #### Processo 4 – SELEÇÃO DO CANDIDATO
 
 **Currículo**
+
 | **Título** | **Subtitulo** | **Restrição** | **Restrição**|
 | --- | --- | --- | --- |
 | Nome da vaga | Nome da empresa | Tempo da vaga disponibilizada | PDF |
 
 
 **Vaga**
+
 | **Título** | **Subtitulo** | **Descrição** | **Contém teste** | **Etapa reunião** |
 | --- | --- | --- | --- |
 | Nome da vaga| Nome da empresa| Detalhes da vaga | Boolean | Boolean |
 
 
 **Teste**
+
 | **Campo** | **Tipo** | **Restrições** | **Inicio**| **Fim**|
 | --- | --- | --- | --- | --- |
 | Teste online | Arquivo | PDF | Timer | Timer | 
 
 
 **Avaliação do teste**
+
 | **Título** | **Subtitulo** | **Teste recebido** | **Avaliação**| **Fim**|
 | --- | --- | --- | --- |
 | Nome da vaga | Nome da empresa | Respostas do teste | Boa, neutra, ruim | Boolean | 
 
 
 **Resultado do teste** 
+
 | **Campo** | **Tipo** | **Restrições** | **Valor default** |
 | --- | --- | --- | --- |
 | Teste online | Arquivo | PDF | - |
@@ -274,6 +279,7 @@ Descrever aqui cada uma das propriedades das atividades de cada um dos processos
 
 
 **Status da seleção**
+
 | **Título** | **Etapa** | 
 | --- | --- |
 | Nome da vaga Etapas bloqueadas e liberadas|
