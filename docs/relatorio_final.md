@@ -245,7 +245,7 @@ Descrever aqui cada uma das propriedades das atividades de cada um dos processos
 **Currículo**
 | **Título** | **Subtitulo** | **Restrição** | **Restrição**
 | --- | --- | --- | --- |
-| Nome da vaga | Nome da empresa | Tempo da vaga disponibilizada | PDF
+| Nome da vaga | Nome da empresa | Tempo da vaga disponibilizada | PDF |
 
 
 **Vaga**
@@ -261,7 +261,7 @@ Descrever aqui cada uma das propriedades das atividades de cada um dos processos
 
 
 **Avaliação do teste**
-| **Título** | **Subtitulo** | **Teste recebido** | **Avaliação**| **Fim**
+| **Título** | **Subtitulo** | **Teste recebido** | **Avaliação**| **Fim**|
 | --- | --- | --- | --- |
 | Nome da vaga | Nome da empresa | Respostas do teste | Boa, neutra, ruim | Boolean | 
 
