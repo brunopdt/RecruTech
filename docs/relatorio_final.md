@@ -234,6 +234,23 @@ Descrever aqui cada uma das propriedades das atividades de cada um dos processos
 | Status indicação | Caixa de texto | - | - |
 | Currículo do indicado | Arquivo | Formato PDF | Não nulo |
 
+**Status Indicação**
+| **Campo** | **Tipo** | **Restrições** | **Valor default** |
+| --- | --- | --- | --- |
+| cod_status_indicacao | Número | Não Nulo | - |
+| dsc_status_indicacao | Caixa de Texto | Não Nulo | - |
+
+**Obs:**
+Status da indicação
+| **cod_status_indicacao** | **dsc_status_indicacao** |
+| --- | --- |
+| 1 | Em validação | 
+| 2 | Validada | 
+| 3 | Candidato Convocado para Seleção |
+| 4 | Inserida no Banco de Indicações | 
+| 5 | Indeferida | 
+| 6 | Concluída | 
+
 **Validação inscrição**
 
 | **Campo** | **Tipo** | **Restrições** | **Valor default** |
