@@ -243,7 +243,7 @@ Descrever aqui cada uma das propriedades das atividades de cada um dos processos
 #### Processo 4 – SELEÇÃO DO CANDIDATO
 
 **Currículo**
-| **Título** | **Subtitulo** | **Restrição** | **Restrição**
+| **Título** | **Subtitulo** | **Restrição** | **Restrição**|
 | --- | --- | --- | --- |
 | Nome da vaga | Nome da empresa | Tempo da vaga disponibilizada | PDF |
 
