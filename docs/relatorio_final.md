@@ -252,21 +252,21 @@ Descrever aqui cada uma das propriedades das atividades de cada um dos processos
 **Vaga**
 
 | **Título** | **Subtitulo** | **Descrição** | **Contém teste** | **Etapa reunião** |
-| --- | --- | --- | --- |
+| --- | --- | --- | --- | --- |
 | Nome da vaga| Nome da empresa| Detalhes da vaga | Boolean | Boolean |
 
 
 **Teste**
 
-| **Campo** | **Tipo** | **Restrições** | **Inicio**| **Fim**|
+| **Campo** | **Tipo** | **Restrições** | **Inicio**| **Fim** |
 | --- | --- | --- | --- | --- |
 | Teste online | Arquivo | PDF | Timer | Timer | 
 
 
 **Avaliação do teste**
 
-| **Título** | **Subtitulo** | **Teste recebido** | **Avaliação**| **Fim**|
-| --- | --- | --- | --- |
+| **Título** | **Subtitulo** | **Teste recebido** | **Avaliação**| **Fim** |
+| --- | --- | --- | --- | --- |
 | Nome da vaga | Nome da empresa | Respostas do teste | Boa, neutra, ruim | Boolean | 
 
 
