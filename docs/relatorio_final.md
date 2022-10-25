@@ -198,9 +198,10 @@ Descrever aqui cada uma das propriedades das atividades de cada um dos processos
 **Status da vaga**
 | **Etapa** | **Cor representada** | **Texto** |
 | --- | --- | --- |
-| 1° | Azul | Vaga postada | 
-| 2° | Amarelo | Vaga em processamento | 
-| 3° | Verde | Vaga divulgada | 
+| 1° | Azul | Vaga cadastrada no sistema | 
+| 2° | Verde | Vaga divulgada no sistema | 
+| 3° | Vermelho | Vaga encerrada | 
+| 4° | Amarelo | Vaga cancelada | 
 
 #### Processo 2 – INSCRIÇÃO DO CANDIDATO NA VAGA
 
