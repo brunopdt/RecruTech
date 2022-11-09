@@ -117,9 +117,9 @@ Por fim, é importante manter as limitações do sistema em mente. Ainda nesse c
 
 ### 3.3.1 Processo 1 – Criação e divulgação das vagas
 
-O primeiro processo se trata da criação e divulgação das vagas, o processo inicia-se com o setor do recursos humanos da empresa cadastrando as vagas com os requisitos desejados no sistema Recrutech. Logo em seguida é decidido pelo recursos humanos se haverá teste avaliativo online, e se sim, é realizado o cadastro do teste online no sistema do Recrutech. A partir daí se houver vagas cadastradas similares apenas incrementa o número de vagas, do contrário cria-se uma nova vaga. E é finalizado com a vaga sendo divulgada no sistema automaticamente.
+O primeiro processo se trata da criação e divulgação das vagas, o processo inicia-se com o setor do recursos humanos da empresa cadastrando as vagas com os requisitos desejados no sistema Recrutech. Logo em seguida o sistema atualiza o status da vaga para vaga cadastrada. E é decidido pelo recursos humanos se haverá teste avaliativo online, se sim, é realizado o cadastro do teste online no sistema do Recrutech. A partir daí se houver vagas cadastradas similares apenas incrementa o número de vagas, do contrário cria-se uma nova vaga. E é finalizado com a vaga sendo divulgada no sistema automaticamente e o status é atualizado novamente para vaga divulgada.
 
-![Processo 1 - Divulgação da vaga e seleção de candidatos](imagens/diagrama_processo.png "Modelo BPMN do Processo 1.")
+![Processo 1](imagens/diagrama_processo1.png "Modelo BPMN do Processo 1.")
 
 
 ### 3.3.2 Processo 2 – Inscrição do candidato na vaga
@@ -198,9 +198,10 @@ Descrever aqui cada uma das propriedades das atividades de cada um dos processos
 **Status da vaga**
 | **Etapa** | **Cor representada** | **Texto** |
 | --- | --- | --- |
-| 1° | Azul | Vaga postada | 
-| 2° | Amarelo | Vaga em processamento | 
-| 3° | Verde | Vaga divulgada | 
+| 1° | Azul | Vaga cadastrada no sistema | 
+| 2° | Verde | Vaga divulgada no sistema | 
+| 3° | Vermelho | Vaga encerrada | 
+| 4° | Amarelo | Vaga cancelada | 
 
 #### Processo 2 – INSCRIÇÃO DO CANDIDATO NA VAGA
 
@@ -231,7 +232,6 @@ Descrever aqui cada uma das propriedades das atividades de cada um dos processos
 | Nível de senioridade | Radio | Não nulo | - |
 | Tempo que conhece o indicado | Número | Maior que 1 ano | - |
 | Competências do indicado | Lista | - | - |
-| Status indicação | Caixa de texto | - | - |
 | Currículo do indicado | Arquivo | Formato PDF | Não nulo |
 
 **Status Indicação**
