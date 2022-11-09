@@ -174,8 +174,6 @@ O processo de cancelamento de vagas por parte da empresa é responsável por rec
 
 ### 4.1. Detalhamento das atividades
 
-Descrever aqui cada uma das propriedades das atividades de cada um dos processos. Devem estar relacionadas com o modelo de processo apresentado anteriormente.
-
 #### Processo 1 – CRIAÇÃO E DIVULGAÇÃO DAS VAGAS
 
 **Cadastro das vagas**
@@ -342,18 +340,78 @@ Status da indicação
 | **Campo** | **Tipo** | **Restrições** | **Valor default** |
 | --- | --- | --- | --- |
 | Vaga cancelada | Booleano | - | False |
-| Status da Vaga | Lista | - | - |
+
 
 
 ### 4.2. Tecnologias
 
 Descreva qual(is) tecnologias você vai usar para resolver o seu problema, ou seja implementar a sua solução. Liste todas as tecnologias envolvidas, linguagens a serem utilizadas, serviços web, frameworks, bibliotecas, IDEs de desenvolvimento, e ferramentas. Apresente também uma figura explicando como as tecnologias estão relacionadas ou como uma interação do usuário com o sistema vai ser conduzida, por onde ela passa até retornar uma resposta ao usuário.
 
+### 4.3.Protótipos de telas - Figma 
+
+![Processo 2](imagens/diagrama-processo2.png "Modelo BPMN do Processo 2.")
+
 ## 5. Modelo de dados
 
-Modelo relacional Recrutech 
+Home, Login e Cadastro
 
-![Modelo Relacional](imagens/Modelo_RelacionalRecrutech.png "Modelo Relacional")
+![Telas](imagens/tela0_Home.png "Tela Home")
+
+![Telas](imagens/tela1_cadastro.png "Cadastro")
+
+![Telas](imagens/tela2_Login.png "Login Usuário")
+
+
+Processo 1 - Criação e divulgação das vagas
+![Telas](imagens/tela12_CadastroVagas.png "Cadastrar vaga")
+
+![Telas](imagens/tela8_DetalheRH.png "Detalhes RH vaga, candidatos e teste")
+
+![Telas](imagens/tela11_AnexoCurriculo.png "Tela anexar curriculo para se candidatar")
+
+
+
+Processo 2 – Inscrição do candidato na vaga
+
+![Telas](imagens/tela7_AcompanhamentoRH.png "Acompanhamento RH")
+
+![Telas](imagens/tela9_ListaVagaCandidato.png "Lista de vagas por empresa, que o candidado visualiza")
+
+![Telas](imagens/tela10_DetalheCandidato.png "Tela detalhes da vaga")
+
+
+Processo 3 - Indicação do candidato na vaga
+
+![Telas](imagens/tela3_Indicacao.png "Indicação Candidato")
+
+![Telas](imagens/tela4_DadosIndicacao.png "Inserindo dados do indicado")
+
+![Telas](imagens/tela5_AcompanharIndicacao.png "Acompanhamento da indicação")
+
+![Telas](imagens/tela6_AcompanharIndicacaoSem.png "Acompanhamento sem indicação")
+
+
+Processo 4 - Seleção
+
+![Telas](imagens/tela13_BancoCurriculo.png "Banco de curriculos da vaga")
+
+![Telas](imagens/tela14_StausRh.png "Status da vaga para o RH")
+
+![Telas](imagens/tela15_StatusCandidato.png "Status da vaga para o candidato")
+
+![Telas](imagens/tela16_EnvioTeste.png "Envio do teste")
+
+![Telas](imagens/tela17_AvaliacaoTeste.png "RH envia teste")
+
+
+Processo 5 - Contratação
+
+![Telas](imagens/tela18_EnvioDocumentacao.png "Envio da documentação para contratação")
+
+![Telas](imagens/tela19_EnvioContrato.png "Enviar contrato")
+
+![Telas](imagens/tela20_ContratoAssinado.png "Enviar contrato assinado")
+
 
 ## 6. Indicadores de desempenho
 
