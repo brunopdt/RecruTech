@@ -349,6 +349,11 @@ As tecnologias utilizadas são, Node.js para o BackEnd, HTML/CSS/JavaScript no F
 
 ### 4.3.Protótipos de telas - Figma 
 
+Style Guide
+
+![Telas](imagens/StyleGuide.png "Style Guide")
+
+
 Home, Login e Cadastro
 
 ![Telas](imagens/tela0_Home.png "Tela Home")
