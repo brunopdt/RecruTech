@@ -345,8 +345,7 @@ Status da indicação
 
 ### 4.2. Tecnologias
 
-Descreva qual(is) tecnologias você vai usar para resolver o seu problema, ou seja implementar a sua solução. Liste todas as tecnologias envolvidas, linguagens a serem utilizadas, serviços web, frameworks, bibliotecas, IDEs de desenvolvimento, e ferramentas. Apresente também uma figura explicando como as tecnologias estão relacionadas ou como uma interação do usuário com o sistema vai ser conduzida, por onde ela passa até retornar uma resposta ao usuário.
-
+As tecnologias utilizadas são, Node.js para o BackEnd, HTML/CSS/JavaScript no FrontEnd, MySQL para o SGBD, Visual Studio Code, Github e Figma.
 
 ### 4.3.Protótipos de telas - Figma 
 
