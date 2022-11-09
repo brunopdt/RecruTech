@@ -347,11 +347,8 @@ Status da indicação
 
 Descreva qual(is) tecnologias você vai usar para resolver o seu problema, ou seja implementar a sua solução. Liste todas as tecnologias envolvidas, linguagens a serem utilizadas, serviços web, frameworks, bibliotecas, IDEs de desenvolvimento, e ferramentas. Apresente também uma figura explicando como as tecnologias estão relacionadas ou como uma interação do usuário com o sistema vai ser conduzida, por onde ela passa até retornar uma resposta ao usuário.
 
+
 ### 4.3.Protótipos de telas - Figma 
-
-![Processo 2](imagens/diagrama-processo2.png "Modelo BPMN do Processo 2.")
-
-## 5. Modelo de dados
 
 Home, Login e Cadastro
 
@@ -411,6 +408,10 @@ Processo 5 - Contratação
 ![Telas](imagens/tela19_EnvioContrato.png "Enviar contrato")
 
 ![Telas](imagens/tela20_ContratoAssinado.png "Enviar contrato assinado")
+
+
+## 5. Modelo de dados
+![Processo 2](imagens/diagrama-processo2.png "Modelo BPMN do Processo 2.")
 
 
 ## 6. Indicadores de desempenho
