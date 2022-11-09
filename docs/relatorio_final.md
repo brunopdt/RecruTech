@@ -411,7 +411,7 @@ Processo 5 - Contratação
 
 
 ## 5. Modelo de dados
-![Processo 2](imagens/diagrama-processo2.png "Modelo BPMN do Processo 2.")
+![Modelo Relacional](imagens/Modelo_RelacionalRecrutech.png "Modelo Relacional.")
 
 
 ## 6. Indicadores de desempenho
