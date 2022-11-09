@@ -342,7 +342,7 @@ Status da indicação
 | **Campo** | **Tipo** | **Restrições** | **Valor default** |
 | --- | --- | --- | --- |
 | Vaga cancelada | Booleano | - | False |
-
+| Status da Vaga | Lista | - | - |
 
 
 ### 4.2. Tecnologias
