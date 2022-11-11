@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/2c9e6838ea.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="styles.css" />
+
+    <title>Login</title>
+  </head>
+  <body>
+    <nav class="sidebar">
+      <img id="logo_sidebar" src="../imgs/logo_icon.jpg" alt="logo_icon" />
+      <a href="#"><i class="fa-solid fa-user fa-xl"></i></a> <br />
+      <a href="#"><i class="fa-solid fa-square-plus fa-xl"></i></a> <br />
+      <a href="#"><i class="fa-solid fa-list fa-xl"></i></a> <br />
+      <a href="#"><i class="fa-solid fa-right-from-bracket fa-xl"></i></a>
+      <br />
+    </nav>
+
+    <div class="main">
+      <div class="title" id="main_title">CADASTRO DA VAGA</div>
+
+      <div class="form">
+        <div class="titulo">
+          <div class="subtitle">1. Título da vaga</div>
+          <input class="typing" type="text" id="titulo" required />
+        </div>
+
+        <div class="descricao">
+          <div class="subtitle margin_sub">2. Descrição da vaga</div>
+          <span class="textarea" role="textbox" contenteditable required></span>
+        </div>
+
+        <div class="restricoes">
+          <div class="subtitle margin_sub">3. Restrições da vaga</div>
+          <span class="textarea" role="textbox" contenteditable required></span>
+        </div>
+
+        <div class="quantidade">
+          <div class="subtitle">4. Quantidade de vagas disponíveis</div>
+          <input class="typing" type="number" id="quantidade" required />
+        </div>
+
+        <div class="experiencia">
+          <div class="subtitle">5. Senioridade desejada</div>
+          <div class="item_check">
+            <input type="checkbox" name="teste" value="sem_teste" required />
+            Estagiário
+          </div>
+          <div class="item_check">
+            <input type="checkbox" name="teste" value="sem_teste" /> Júnior
+          </div>
+          <div class="item_check">
+            <input type="checkbox" name="teste" value="sem_teste" /> Pleno
+          </div>
+          <div class="item_check">
+            <input type="checkbox" name="teste" value="sem_teste" /> Sênior
+          </div>
+        </div>
+
+        <div class="teste">
+          <div class="subtitle">6. Teste da vaga (anexe caso necessário)</div>
+          <div class="file">
+            <input type="file" name="file" /> - formato PDF
+          </div>
+        </div>
+
+        <div class="button_container">
+          <button class="button">CADASTRAR VAGA</button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

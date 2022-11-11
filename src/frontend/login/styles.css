@@ -1,0 +1,127 @@
+body {
+  background: #f7f7f7;
+  font-family: 'Inter', sans-serif;
+  color: #393e46;
+}
+
+.title {
+  font-weight: 800;
+  font-size: 2.5rem;
+  margin-left: 3rem;
+}
+
+a {
+  color: inherit;
+}
+
+/* codigo sidebar padrão para todas as páginas */
+.sidebar {
+  height: 100%;
+  width: 140px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #f8b500;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sidebar a {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1.5rem;
+  text-decoration: none;
+  font-size: 25px;
+  color: #393e46;
+  transition-duration: 0.3s;
+  display: block;
+  text-align: center;
+}
+
+#logo_sidebar {
+  width: 8rem;
+  height: 8rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -1rem;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+/* fim do codigo navbar padrao */
+
+.main {
+  margin-top: 30px;
+  margin-left: 140px;
+  padding: 0px 10px;
+}
+
+.input_area {
+  margin-top: 5rem;
+  margin-left: 5rem;
+}
+
+#login,
+#password {
+  width: 80%;
+  height: 30px;
+  margin-left: 3rem;
+  margin-bottom: 2rem;
+  background-color: transparent;
+  color: #000000;
+  outline: none;
+  outline-style: none;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: solid #000000 1px;
+  padding: 3px 10px;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.alternative_title {
+  color: #f8b500;
+}
+
+#cadastro a {
+  text-decoration: underline;
+  margin-top: 10rem;
+}
+
+#welcome {
+  text-decoration: underline;
+}
+
+.icon {
+  margin-left: 1rem;
+}
+
+::placeholder {
+  color: #393e46;
+}
+
+.button_container {
+  text-align: center;
+}
+
+.button {
+  margin-top: 1em;
+  margin-bottom: 5rem;
+  background-color: #f8b500;
+  font-size: 1.5rem;
+  font-weight: 700;
+  width: 15rem;
+  height: 3rem;
+  border-radius: 15px;
+  outline: none;
+  border: none;
+  transition-duration: 0.4s;
+}
+
+.button:hover {
+  background-color: #ffc938;
+}

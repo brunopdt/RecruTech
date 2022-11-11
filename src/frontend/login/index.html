@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/2c9e6838ea.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="styles.css" />
+
+    <title>Login</title>
+  </head>
+  <body>
+    <nav class="sidebar">
+      <img id="logo_sidebar" src="../imgs/logo_icon.jpg" alt="logo_icon" />
+    </nav>
+
+    <div class="main">
+      <div class="header">
+        <p id="welcome" class="title">Bem-vindo ao Recrutech</p>
+        <p class="title">
+          Acesse sua conta agora ou <br />
+          crie uma nova
+        </p>
+      </div>
+
+      <div class="input_area">
+        <p class="title alternative_title">Login</p>
+        <input type="text" id="login" placeholder="Nome de usuário" />
+        <i class="fa-regular fa-user fa-2xl icon"></i>
+        <br />
+        <input type="password" id="password" placeholder="Senha" />
+        <a href="#"
+          ><i class="fa-solid fa-eye fa-2xl icon" id="togglePassword"></i
+        ></a>
+        <br />
+      </div>
+
+      <div class="button_container">
+        <button type="submit" class="button" id="actionButton" acti>
+          ENTRAR
+        </button>
+        <br />
+      </div>
+
+      <a href="#" class="title alternative_title" id="cadastro">Cadastro</a>
+    </div>
+    <script src="script.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </body>
+</html>
