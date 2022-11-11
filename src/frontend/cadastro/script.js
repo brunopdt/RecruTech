@@ -18,7 +18,7 @@ togglePassword.addEventListener('click', function (e) {
 
 button.addEventListener('click', function (e) {
   const pass = document.getElementById('password').value;
-  const login = document.getElementById('nome').value;
+  const login = document.getElementById('login').value;
   console.log(`Login: ${login} \nPassword: ${pass} `);
   swal.fire({
     "title": "Bem-vindo",
