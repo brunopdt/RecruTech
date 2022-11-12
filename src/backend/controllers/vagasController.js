@@ -1,10 +1,16 @@
-const tasksModel = require('../models/vagasModel');
+const vagasModel = require('../models/vagasModel');
 
-const getAll = async (req, res) => {
-    const tasks = await tasksModel.getAll();
-    return res.status(200).json(tasks);
+const listarVagasController = async (req, res) => {
+    const listaVagas = await vagasModel.listarVagasModel();
+    return res.status(200).json(listaVagas);
+};
+
+const criarVagaController = async (req, res) => {
+    const vagaCriada = await vagasModel.criarVagaModel(req.body);
+    return res.status(201).json(req.body);
 };
 
 module.exports = {
-    getAll
+    listarVagasController,
+    criarVagaController
 };
