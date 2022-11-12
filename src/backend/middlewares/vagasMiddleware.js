@@ -1,4 +1,4 @@
-const { isNullOrUndefined, isStringEmpty, isSeniorityValid, isNumberValid } = require('globalMiddleware');
+const { isNullOrUndefined, isStringEmpty, isSeniorityValid, isNumberValid } = require('./globalMiddleware');
 
 const validateBody = (req, res, next) => {
     const { body } = req;
