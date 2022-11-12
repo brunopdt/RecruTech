@@ -16,7 +16,7 @@
     ></script>
     <link rel="stylesheet" href="styles.css" />
 
-    <title>CadVaga</title>
+    <title>Login</title>
   </head>
   <body>
     <nav class="sidebar">
@@ -53,7 +53,22 @@
         </div>
 
         <div class="experiencia">
-          <div class="subtitle">5. Senioridade desejada</div>
+          <div class="subtitle">5. Experiência mínima desejada (em anos)</div>
+          <input class="typing" type="number" id="experiencia" required />
+        </div>
+
+        <div class="teste">
+          <div class="subtitle">6. A vaga possui teste?</div>
+          <div class="item_radio">
+            <input type="radio" name="teste" value="sim" required /> Sim
+          </div>
+          <div class="item_radio">
+            <input type="radio" name="teste" value="nao" /> Não
+          </div>
+        </div>
+
+        <div class="experiencia">
+          <div class="subtitle">7. Senioridade desejada</div>
           <div class="item_check">
             <input type="checkbox" name="teste" value="sem_teste" required />
             Estagiário
@@ -69,18 +84,30 @@
           </div>
         </div>
 
-        <div class="teste">
-          <div class="subtitle">6. Teste da vaga (anexe caso necessário)</div>
-          <div class="file">
-            <input type="file" name="file" /> - formato PDF
-          </div>
-        </div>
-
         <div class="button_container">
           <button class="button">CADASTRAR VAGA</button>
         </div>
       </div>
     </div>
-    <script src="script.js"></script>
   </body>
+  <script>
+    let el = document.querySelector('.input-wrap .input')
+    let widthMachine = document.querySelector('.input-wrap .width-machine')
+    el.addEventListener('keyup', () => {
+      widthMachine.innerHTML = el.value
+    })
+
+    // Dealing with Textarea Height
+    function calcHeight(value) {
+      let numberOfLineBreaks = (value.match(/\n/g) || []).length
+      // min-height + lines x line-height + padding + border
+      let newHeight = 20 + numberOfLineBreaks * 20 + 12 + 2
+      return newHeight
+    }
+
+    let textarea = document.querySelector('.resize-ta')
+    textarea.addEventListener('keyup', () => {
+      textarea.style.height = calcHeight(textarea.value) + 'px'
+    })
+  </script>
 </html>

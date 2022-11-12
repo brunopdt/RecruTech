@@ -21,6 +21,7 @@ a {
   padding-top: 20px;
 }
 
+
 .sidebar a {
   margin-left: auto;
   margin-right: auto;
@@ -47,7 +48,7 @@ a {
 }
 /* fim do codigo navbar padrao */
 
-.subtitle {
+.subtitle{
   font-weight: 600;
   font-size: 2rem;
   margin-left: 3rem;
@@ -59,7 +60,7 @@ a {
   padding: 0px 10px;
 }
 
-.form {
+.form{
   margin-top: 5em;
 }
 
@@ -73,7 +74,7 @@ a {
   margin-left: 3rem;
 }
 
-#main_title {
+#main_title{
   text-decoration: underline;
 }
 
@@ -81,11 +82,11 @@ a {
   text-align: center;
 }
 
-input {
+input{
   margin-top: 0.5rem;
 }
 
-.typing {
+.typing{
   width: 80%;
   height: 30px;
   margin-left: 3rem;
@@ -149,10 +150,10 @@ input {
 }
 .textarea[placeholder]::before {
   content: attr(placeholder);
-  color: rgba(255, 255, 255, 0);
+  color: rgba(255, 255, 255, 0); 
 }
 
-.margin_sub {
+.margin_sub{
   margin-bottom: 0.5rem;
 }
 
@@ -166,25 +167,23 @@ input {
 }
 
 .textarea[contenteditable]:empty::before {
-  content: '';
+  content: "";
+
 }
 
 .button:hover {
   background-color: #ffc938;
 }
 
-.item_check,
-.file {
+.item_radio, .item_check {
   margin-left: 3rem;
   font-size: 1.5em;
 }
 
-.teste,
-.experiencia {
+.teste, .experiencia{
   margin-bottom: 2rem;
 }
 
-input[type='radio']:checked,
-input[type='checkbox']:checked {
+input[type=radio]:checked, input[type=checkbox]:checked{
   accent-color: #bd8a00;
 }

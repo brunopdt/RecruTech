@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/2c9e6838ea.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="styles.css" />
+
+    <title>Lista de vagas</title>
+  </head>
+  <body>
+    <nav class="sidebar">
+      <img id="logo_sidebar" src="../imgs/logo_icon.jpg" alt="logo_icon" />
+
+      <a href="#"><i class="nav-item fa-solid fa-user fa-xl"></i></a> <br />
+      <a href="#"><i class="nav-item fa-solid fa-square-plus fa-xl"></i></a>
+      <br />
+      <a href="#"><i class="nav-item fa-solid fa-list fa-xl"></i></a> <br />
+
+      <a href="#"
+        ><i class="nav-item fa-solid fa-right-from-bracket fa-xl"></i
+      ></a>
+    </nav>
+
+    <div class="main">
+      <div class="title" id="main_title">Lista de vagas</div>
+
+      <div class="titulos-coluna">
+        <div class="coluna">Vaga</div>
+        <div class="coluna">Local</div>
+        <div class="coluna">Status</div>
+        <div class="coluna" id="botoes" style="visibility: hidden">
+          <div class="button_container">
+            <button class="button" id="button-trash">
+              <i class="fa-solid fa-trash"></i>
+            </button>
+          </div>
+
+          <div class="button_container">
+            <button class="button"><i class="fa-solid fa-plus"></i></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="new-vaga">
+        <div class="vaga">
+          <div class="vaga-info">
+            <div id="nome-vaga">Vaga para dev C# Sênior</div>
+            <div id="local-vaga">BH</div>
+            <div id="status-vaga">Aberta</div>
+
+            <div id="botoes">
+              <div class="button_container">
+                <button class="button" id="button-trash">
+                  <i class="fa-solid fa-trash"></i>
+                </button>
+              </div>
+
+              <div class="button_container">
+                <button class="button"><i class="fa-solid fa-plus"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="line"></div>
+      </div>
+
+      <div class="new-vaga">
+        <div class="vaga">
+          <div class="vaga-info">
+            <div id="nome-vaga">Assitente de TI</div>
+            <div id="local-vaga">Home Office</div>
+            <div id="status-vaga">Aberta</div>
+
+            <div id="botoes">
+              <div class="button_container">
+                <button class="button" id="button-trash">
+                  <i class="fa-solid fa-trash"></i>
+                </button>
+              </div>
+
+              <div class="button_container">
+                <button class="button"><i class="fa-solid fa-plus"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="line"></div>
+      </div>
+
+      <div class="new-vaga">
+        <div class="vaga">
+          <div class="vaga-info">
+            <div id="nome-vaga">Analista de Sistemas</div>
+            <div id="local-vaga">Bocaiúva</div>
+            <div id="status-vaga">Fechada</div>
+
+            <div id="botoes">
+              <div class="button_container">
+                <button class="button" id="button-trash">
+                  <i class="fa-solid fa-trash"></i>
+                </button>
+              </div>
+
+              <div class="button_container">
+                <button class="button"><i class="fa-solid fa-plus"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="line"></div>
+      </div>
+
+      <div class="new-vaga">
+        <div class="vaga">
+          <div class="vaga-info">
+            <div id="nome-vaga">Estágio em desenvolvimento</div>
+            <div id="local-vaga">São João Del Rei</div>
+            <div id="status-vaga">Aberto</div>
+
+            <div id="botoes">
+              <div class="button_container">
+                <button class="button" id="button-trash">
+                  <i class="fa-solid fa-trash"></i>
+                </button>
+              </div>
+
+              <div class="button_container">
+                <button class="button"><i class="fa-solid fa-plus"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="line"></div>
+      </div>
+    </div>
+  </body>
+</html>
