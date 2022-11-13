@@ -2,7 +2,7 @@
 const connection = require('./connection');
 
 const listarVagasModel = async () => {
-  const [vagas] = await connection.execute('SELECT * FROM status_vaga');
+  const [vagas] = await connection.execute('SELECT * FROM vaga');
   return vagas;
 };
 

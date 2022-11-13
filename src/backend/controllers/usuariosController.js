@@ -5,6 +5,12 @@ const cadastrarUsuarioController = async (req, res) => {
     return res.status(201).json(req.body);
 };
 
+const listarLoginController = async (req, res) => {
+    const listaLogin = await usuariosModel.listarLogin();
+    return res.status(200).json(listaLogin);
+};
+
 module.exports = {
-    cadastrarUsuarioController
+    cadastrarUsuarioController,
+    listarLoginController
 };

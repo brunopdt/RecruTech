@@ -12,6 +12,7 @@ const router = express.Router();
 router.get('/vagas', vagasController.listarVagasController);
 router.post('/vagas', vagasMiddleware.validateBody, vagasController.criarVagaController);
 
+router.get('/usuarios', usuariosController.listarLoginController);
 router.post('/usuarios', usuariosMiddleware.validateUser, usuariosController.cadastrarUsuarioController);
 
 module.exports = router;

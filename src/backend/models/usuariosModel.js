@@ -30,6 +30,12 @@ const cadastrarUsuario = async (usuario) => {
   return usuarios;
 };
 
+const listarLogin = async () => {
+  const [usuarioLogin] = await connection.execute('SELECT email,senha FROM usuario');
+  return usuarioLogin;
+};
+
 module.exports = {
-  cadastrarUsuario
+  cadastrarUsuario,
+  listarLogin
 };
