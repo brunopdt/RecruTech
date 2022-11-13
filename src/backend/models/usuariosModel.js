@@ -21,9 +21,11 @@ const cadastrarUsuario = async (usuario) => {
 
   const { nome, senha, email, tipoCadastro } = usuario;
 
+  const senhaEncriptada = encriptador(senha).dadoEncriptado
+
     const query = "INSERT INTO usuario(nome, email, senha, tipoCadastro) VALUES (?, ?, ?, ?)";
 
-  const [usuarios] = await connection.execute(query, [nome, email, senha, tipoCadastro]);
+  const [usuarios] = await connection.execute(query, [nome, email, senhaEncriptada, tipoCadastro]);
 
   return usuarios;
 };
