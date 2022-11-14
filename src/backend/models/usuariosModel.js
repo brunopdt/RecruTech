@@ -1,21 +1,8 @@
 //contém todas as funções que vão interagir diretamente com o banco de dados
 const connection = require('./connection');
 
-const crypto = require("crypto");
+const { encriptador } = require('./cripto')
 
-const algoritmo = 'aes-256-cbc'
-const segredo = crypto.randomBytes(32);
-const iv = crypto.randomBytes(16);
-
-const encriptador = (texto) => {
-  let cipher = crypto.createCipheriv(algoritmo, Buffer.from(segredo), iv);
-
-  let encriptado = cipher.update(texto);
-
-  encriptado = Buffer.concat([encriptado, cipher.final()]);
-
-  return { iv: iv.toString('hex'), dadoEncriptado: encriptado.toString('hex')}
-}
 
 const cadastrarUsuario = async (usuario) => {
 
@@ -31,7 +18,7 @@ const cadastrarUsuario = async (usuario) => {
 };
 
 const listarLogin = async () => {
-  const [usuarioLogin] = await connection.execute('SELECT email,senha FROM usuario');
+  const [usuarioLogin] = await connection.execute('SELECT email,senha, nome FROM usuario');
   return usuarioLogin;
 };
 

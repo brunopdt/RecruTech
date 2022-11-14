@@ -33,7 +33,6 @@ button.addEventListener('click', function (e) {
   const actbutton = document.getElementById('actionButton');
 
   actbutton.disabled = true;
-
-  
-
 })
+
+

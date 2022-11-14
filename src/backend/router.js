@@ -36,6 +36,4 @@ router.post('/vagas', vagasMiddleware.validateBody, vagasController.criarVagaCon
 router.get('/usuarios', usuariosController.listarLoginController);
 router.post('/usuarios', usuariosMiddleware.validateUser, usuariosController.cadastrarUsuarioController);
 
-router.get('/')
-
 module.exports = router;
