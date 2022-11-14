@@ -4,12 +4,14 @@ const validateBody = (req, res, next) => {
     const { body } = req;
 
     if (isNullOrUndefined(body.descricao) || isNullOrUndefined(body.qtdVagas) || isNullOrUndefined(body.requisitos) ||
-        isNullOrUndefined(body.senioridade) || isNullOrUndefined(body.codigoStatus) || isNullOrUndefined(body.tempoExperienciaVaga)) {
+        isNullOrUndefined(body.senioridade) || isNullOrUndefined(body.codigoStatus) || isNullOrUndefined(body.tempoExperienciaVaga) ||
+        isStringEmpty(body.tituloVaga) || !isNumberValid(body.localModalidade)) {
         return res.status(400).json({ message: 'Erro ao cadastrar vaga, todos os dados devem estar preenchidos' });
     }
 
     if (isStringEmpty(body.descricao) || !isNumberValid(body.qtdVagas) || isStringEmpty(body.requisitos) ||
-        isStringEmpty(body.senioridade) || !isNumberValid(body.codigoStatus) || !isNumberValid(body.tempoExperienciaVaga)) {
+        isStringEmpty(body.senioridade) || !isNumberValid(body.codigoStatus) || !isNumberValid(body.tempoExperienciaVaga) ||
+        isStringEmpty(body.tituloVaga) || !isNumberValid(body.localModalidade)) {
         return res.status(400).json({ message: 'Erro ao cadastrar vaga, os campos devem estar preenchidos corretamente' });
     }
 

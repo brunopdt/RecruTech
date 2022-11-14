@@ -8,10 +8,10 @@ const listarVagasModel = async () => {
 };
 
 const criarVagaModel = async (vaga) => {
-  const { descricao, qtdVagas, requisitos, senioridade, codigoStatus, tempoExperienciaVaga } = vaga;
+  const { descricao, qtdVagas, requisitos, senioridade, codigoStatus, tempoExperienciaVaga, tituloVaga, localModalidade } = vaga;
 
-  const query = 'INSERT INTO vaga(descricao, qtdVagas, requisitos, senioridade, codigoStatus, tempoExperienciaVaga) VALUES (?, ?, ?, ?, ?, ?)';
-  const [vagaCriada] = await connection.execute(query, [descricao, qtdVagas, requisitos, senioridade, codigoStatus, tempoExperienciaVaga]);
+  const query = 'INSERT INTO vaga(descricao, qtdVagas, requisitos, senioridade, codigoStatus, tempoExperienciaVaga, tituloVaga, localModalidade) VALUES (?, ?, ?, ?, ?, ?, ?, ?)';
+  const [vagaCriada] = await connection.execute(query, [descricao, qtdVagas, requisitos, senioridade, codigoStatus, tempoExperienciaVaga, tituloVaga, localModalidade]);
 
   return vagaCriada;
 };

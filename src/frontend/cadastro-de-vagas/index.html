@@ -31,7 +31,7 @@
     <div class="main">
       <div class="title" id="main_title">CADASTRO DA VAGA</div>
 
-      <form>
+      <form method="post" enctype="multipart/form-data" class = "form">
         <div class="titulo">
           <div class="subtitle">1. Título da vaga</div>
           <input class="typing" type="text" id="titulo" required />
@@ -42,23 +42,28 @@
           <span class="textarea" role="textbox" contenteditable required></span>
         </div>
 
+        <div class="localModalidade">
+          <div class="subtitle margin_sub">3. Local/Modalidade de trabalho</div>
+          <span class="textarea" role="textbox" contenteditable required></span>
+        </div>
+
         <div class="restricoes">
-          <div class="subtitle margin_sub">3. Restrições da vaga</div>
+          <div class="subtitle margin_sub">4. Restrições da vaga</div>
           <span class="textarea" role="textbox" contenteditable required></span>
         </div>
 
         <div class="quantidade">
-          <div class="subtitle">4. Quantidade de vagas disponíveis</div>
+          <div class="subtitle">5. Quantidade de vagas disponíveis</div>
           <input class="typing" type="number" id="quantidade" required />
         </div>
 
         <div class="experiencia">
-          <div class="subtitle">5. Experiência mínima desejada (em anos)</div>
+          <div class="subtitle">6. Experiência mínima desejada (em anos)</div>
           <input class="typing" type="number" id="experiencia" required />
         </div>
 
         <div class="senioridade">
-          <div class="subtitle">6. Senioridade desejada</div>
+          <div class="subtitle">7. Senioridade desejada</div>
           <div class="item_check">
             <input type="checkbox" name="teste" value="sem_teste" required />
             Estagiário
@@ -75,7 +80,7 @@
         </div>
 
         <div class="teste">
-          <div class="subtitle">7. Teste da vaga (anexe caso necessário)</div>
+          <div class="subtitle">8. Teste da vaga (anexe caso necessário)</div>
           <div class="file">
             <input type="file" name="file" /> - formato PDF
           </div>
