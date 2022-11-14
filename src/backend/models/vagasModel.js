@@ -2,7 +2,8 @@
 const connection = require('./connection');
 
 const listarVagasModel = async () => {
-  const [vagas] = await connection.execute('SELECT * FROM vaga');
+  const [vagas] = await connection.execute('SELECT * FROM status_vaga as statusVaga CROSS JOIN vaga as vaga ON statusVaga.codigoStatus = vaga.codigoStatus;');
+  console.log (JSON.parse(JSON.stringify(vagas)))
   return vagas;
 };
 
@@ -19,3 +20,12 @@ module.exports = {
   listarVagasModel,
   criarVagaModel
 };
+
+
+
+
+
+
+
+
+
