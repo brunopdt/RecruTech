@@ -5,7 +5,6 @@ const connection = require('./connection');
 /*Funçao que lista todas as vagas*/
 const listarVagasModel = async () => {
   const [vagas] = await connection.execute('SELECT * FROM status_vaga as statusVaga CROSS JOIN vaga as vaga ON statusVaga.codigoStatus = vaga.codigoStatus;');
-  console.log (JSON.parse(JSON.stringify(vagas)))
   return vagas;
 };
 
@@ -19,6 +18,17 @@ const criarVagaModel = async (vaga) => {
   return vagaCriada;
 };
 
+const uploadTesteModel = async (codVaga, url) => {
+
+  const { codigoVaga } = codVaga;
+  const { location: urlTeste = "" } = url;
+  
+  const query = 'INSERT INTO teste_vaga(codigoVaga, urlTeste) VALUES (?, ?)';
+  const [testeCriado] =  await connection.execute(query, [codigoVaga, urlTeste]);
+
+  return testeCriado;
+};
+
 
 /*Funçao de uma vaga específica*/
 const vagaEspecifica = async (idVaga)=>{
@@ -30,5 +40,6 @@ const vagaEspecifica = async (idVaga)=>{
 module.exports = {
   listarVagasModel,
   criarVagaModel,
+  uploadTesteModel,
   vagaEspecifica
 };

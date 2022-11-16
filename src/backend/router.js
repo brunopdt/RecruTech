@@ -1,5 +1,7 @@
 /*Rotas API */
 const express = require('express');
+const multer = require('multer');
+const multerConfig = require('./config/multer');
 
 const usuariosController = require('./controllers/usuariosController');
 const usuariosMiddleware = require('./middlewares/usuariosMiddleware');
@@ -10,7 +12,6 @@ const vagasMiddleware = require('./middlewares/vagasMiddleware');
 const router = express.Router();
 
 router.all("*", function (req, res, next) {
-    console.log(req.header("Authorization"));
     res.setHeader(
       "Access-Control-Allow-Headers",
       "X-Requested-With,content-type,Authorization ,Accept"
@@ -26,13 +27,13 @@ router.all("*", function (req, res, next) {
       "Access-Control-Allow-Headers",
       "X-Requested-With,content-type, Authorization"
     );
-  
-    console.log(req.header("Authorization"));
+
     next();
   });
 
 router.get('/vagas', vagasController.listarVagasController);
 router.post('/vagas', vagasMiddleware.validateBody, vagasController.criarVagaController);
+router.post('/vagas-teste', multer(multerConfig).single("file"), vagasController.uploadTesteController);
 
 router.get('/usuarios', usuariosController.listarLoginController);
 router.post('/usuarios', usuariosMiddleware.validateUser, usuariosController.cadastrarUsuarioController);

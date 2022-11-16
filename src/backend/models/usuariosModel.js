@@ -10,7 +10,7 @@ const cadastrarUsuario = async (usuario) => {
 
   const senhaEncriptada = encriptador(senha).dadoEncriptado
 
-    const query = "INSERT INTO usuario(nome, email, senha, tipoCadastro) VALUES (?, ?, ?, ?)";
+  const query = "INSERT INTO usuario(nome, email, senha, tipoCadastro) VALUES (?, ?, ?, ?)";
 
   const [usuarios] = await connection.execute(query, [nome, email, senhaEncriptada, tipoCadastro]);
 
