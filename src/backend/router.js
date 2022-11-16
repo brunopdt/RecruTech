@@ -1,3 +1,4 @@
+/*Rotas API */
 const express = require('express');
 
 const usuariosController = require('./controllers/usuariosController');
@@ -35,5 +36,9 @@ router.post('/vagas', vagasMiddleware.validateBody, vagasController.criarVagaCon
 
 router.get('/usuarios', usuariosController.listarLoginController);
 router.post('/usuarios', usuariosMiddleware.validateUser, usuariosController.cadastrarUsuarioController);
+
+/*Rota pra linkar os detalhes */
+router.get('/detalheVagas', vagasController.detalheVagaEspecifica);
+
 
 module.exports = router;

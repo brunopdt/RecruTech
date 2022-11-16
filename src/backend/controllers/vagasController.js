@@ -10,7 +10,15 @@ const criarVagaController = async (req, res) => {
     return res.status(201).json(req.body);
 };
 
+const detalheVagaEspecifica = async (req, res) => {
+    const {idVaga}= req.query;
+    console.log(req.query);
+    const [especificacaoVaga] = await vagasModel.vagaEspecifica(idVaga); //recebe o retorno da funcao vagaEspecifica
+    return res.status(200).json(especificacaoVaga);
+};
+
 module.exports = {
     listarVagasController,
-    criarVagaController
+    criarVagaController,
+    detalheVagaEspecifica
 };
