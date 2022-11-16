@@ -117,7 +117,7 @@ Por fim, é importante manter as limitações do sistema em mente. Ainda nesse c
 
 ### 3.3.1 Processo 1 – Criação e divulgação das vagas
 
-O primeiro processo se trata da criação e divulgação das vagas, o processo inicia-se com o setor do recursos humanos da empresa cadastrando as vagas com os requisitos desejados no sistema Recrutech. Logo em seguida o sistema atualiza o status da vaga para vaga cadastrada. E é decidido pelo recursos humanos se haverá teste avaliativo online, se sim, é realizado o cadastro do teste online no sistema do Recrutech. A partir daí se houver vagas cadastradas similares apenas incrementa o número de vagas, do contrário cria-se uma nova vaga. E é finalizado com a vaga sendo divulgada no sistema automaticamente e o status é atualizado novamente para vaga divulgada.
+O primeiro processo se trata da criação e divulgação das vagas, o processo inicia-se com o setor do recursos humanos da empresa cadastrando as vagas com os requisitos desejados no sistema Recrutech, elas ficam armazenadas no banco de dados do sistema. Logo em seguida o sistema atualiza o status da vaga para vaga aberta. E é decidido pelo recursos humanos se haverá teste avaliativo online, se sim, é redirecionado para o cadastro do teste online no sistema do Recrutech, e da mesma forma ele é armazenado no banco de dados do sistema. Em seguida a vaga é divulgada no sistema, e caso não tenha teste avaliativo online finaliza-se com a vaga sem teste sendo divulgada no sistema.
 
 ![Processo 1](imagens/diagrama_processo1.png "Modelo BPMN do Processo 1.")
 
@@ -181,33 +181,39 @@ O processo de cancelamento de vagas por parte da empresa é responsável por rec
 | **Campo** | **Tipo** | **Restrições** | **Valor default** |
 | --- | --- | --- | --- |
 | Título da vaga | Caixa de texto | Máximo 50 caracteres |  |
-| Descrição da vaga | Caixa de texto |  | Sem descrição da vaga |
-| Restrições da vaga | Área de texto |  |  |
-| Requisitos da vaga | Lista |  |  |
+| Descrição da vaga | Área de texto |  | Sem descrição da vaga |
+| Local/Modalidade | Caixa de texto |  |  |
+| Requisitos da vaga | Área de texto |  |  |
 | Quantidade das vagas | Número | Valor maior que zero |  |
+| Experiência mínima desejada | Número |  | Zero |
+| Senioridade desejada | Radio |  |  |
+| Possui teste | Radio |  | Null |
 
 **Cadastro de teste online**
 
 | **Campo** | **Tipo** | **Restrições** | **Valor default** |
 | --- | --- | --- | --- |
 | Envio do teste online | Arquivo | Formato PDF |  |
-| Nota mínima exigida no teste | Percentual |  | 60% |
 
 **Status da vaga**
 | **Etapa** | **Cor representada** | **Texto** |
 | --- | --- | --- |
-| 1° | Azul | Vaga cadastrada no sistema | 
-| 2° | Verde | Vaga divulgada no sistema | 
-| 3° | Vermelho | Vaga encerrada | 
-| 4° | Amarelo | Vaga cancelada | 
+| 1° | Vermelho | Vaga fechada | 
+| 2° |  Verde | Vaga aberta |  
 
 #### Processo 2 – INSCRIÇÃO DO CANDIDATO NA VAGA
 
 **Lista Vagas**
 
-| **Título** | **Subtitulo** | **Descrição** | 
-| --- | --- | --- |
-| Nome da vaga | Nome da empresa | Tempo da vaga disponibilizada e botão para abrir detalhes |
+| **Vaga** | **Local** | **Status** | **Detalhamento**
+| --- | --- | --- | --- |
+| Nome da vaga | Local/Modalidade | Aberta/Fechada | Botão para redirecionamento para a tela de detalhes |
+
+**Detalhes**
+
+| **Título** | **Subtítulo** | **Descrição** | **Inscrição** |
+| --- | --- | --- | --- |
+| Título da vaga e local | Empresa e presença de teste na vaga | Descrição da vaga|  Botão de inscrição (redirecionamento para o envio de currículo) |
 
 **Envio de curriculo**
 
