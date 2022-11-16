@@ -124,7 +124,7 @@ O primeiro processo se trata da criação e divulgação das vagas, o processo i
 
 ### 3.3.2 Processo 2 – Inscrição do candidato na vaga
 
-O segundo processo, é o processo de inscrição do candidato na vaga, o processo inicia-se com o candidato enviando o seu currículo e o sistema recrutech armazenando-o no banco de dados, após isso o sistema compara o currículo do candidato com os requisitos da vaga, caso as informações batam o candidato é chamado para a seleção, caso contrario o candidato não é selecionado para a vaga e é notifacadom, encerrando assim o processo. 
+O segundo processo, é o processo de inscrição do candidato na vaga, o processo inicia-se com o candidato visualizando as vagas disponíveis no sistema que estão armazenadas no banco de dados. A partir daí ele escolhe uma vaga que lhe agrada, abre a tela de detalhes que consta os critérios da vaga escolhida. Dessa forma ele aplica-se na vaga e finaliza fazendo o upload de seu currículo.
 
 
 ![Processo 2](imagens/diagrama-processo2.png "Modelo BPMN do Processo 2.")
