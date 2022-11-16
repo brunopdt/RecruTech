@@ -173,8 +173,8 @@ input {
   background-color: #ffc938;
 }
 
-.file,
-.item_check {
+.item_check,
+.item_radio {
   margin-left: 3rem;
   font-size: 1.5em;
 }

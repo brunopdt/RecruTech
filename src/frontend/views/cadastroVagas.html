@@ -22,8 +22,8 @@
     <nav class="sidebar">
       <img id="logo_sidebar" src="../imgs/logo_icon.jpg" alt="logo_icon" />
       <a href="#"><i class="fa-solid fa-user fa-xl"></i></a> <br />
-      <a href="#"><i class="fa-solid fa-square-plus fa-xl"></i></a> <br />
-      <a href="#"><i class="fa-solid fa-list fa-xl"></i></a> <br />
+      <a href="./cadastroVagas.html"><i class="fa-solid fa-square-plus fa-xl"></i></a> <br />
+      <a href="./listaDeVagasRH.html"><i class="fa-solid fa-list fa-xl"></i></a> <br />
       <a href="#"><i class="fa-solid fa-right-from-bracket fa-xl"></i></a>
       <br />
     </nav>
@@ -31,7 +31,7 @@
     <div class="main">
       <div class="title" id="main_title">CADASTRO DA VAGA</div>
 
-      <form method="post" enctype="multipart/form-data" class = "form">
+      <form class = "form">
         <div class="titulo">
           <div class="subtitle">1. Título da vaga</div>
           <input class="typing" type="text" id="titulo" required />
@@ -39,17 +39,17 @@
 
         <div class="descricao">
           <div class="subtitle margin_sub">2. Descrição da vaga</div>
-          <span class="textarea" role="textbox" contenteditable required></span>
+          <textarea class="textarea" id="descricaoVaga" role="textbox" rows="3" cols="50"></textarea>
         </div>
 
         <div class="localModalidade">
           <div class="subtitle margin_sub">3. Local/Modalidade de trabalho</div>
-          <span class="textarea" role="textbox" contenteditable required></span>
+          <input class="textarea" id="localModalidade" role="textbox" contenteditable required></input>
         </div>
 
-        <div class="restricoes">
-          <div class="subtitle margin_sub">4. Restrições da vaga</div>
-          <span class="textarea" role="textbox" contenteditable required></span>
+        <div class="requisitos">
+          <div class="subtitle margin_sub">4. Requisitos da vaga</div>
+          <textarea class="textarea" id="requisitos" role="textbox" rows="3" cols="50" contenteditable required></textarea>
         </div>
 
         <div class="quantidade">
@@ -65,32 +65,32 @@
         <div class="senioridade">
           <div class="subtitle">7. Senioridade desejada</div>
           <div class="item_check">
-            <input type="checkbox" name="teste" value="sem_teste" required />
+            <input type="checkbox" id="estagiario" name="teste" value="estagiario" required />
             Estagiário
           </div>
           <div class="item_check">
-            <input type="checkbox" name="teste" value="sem_teste" /> Júnior
+            <input type="checkbox" id="junior" name="teste" value="junior" /> Júnior
           </div>
           <div class="item_check">
-            <input type="checkbox" name="teste" value="sem_teste" /> Pleno
+            <input type="checkbox" id="pleno" name="teste" value="pleno" /> Pleno
           </div>
           <div class="item_check">
-            <input type="checkbox" name="teste" value="sem_teste" /> Sênior
+            <input type="checkbox" id="senior" name="teste" value="senior" /> Sênior
           </div>
         </div>
 
         <div class="teste">
-          <div class="subtitle">8. Teste da vaga (anexe caso necessário)</div>
-          <div class="file">
-            <input type="file" name="file" /> - formato PDF
-          </div>
+          <div class="subtitle">8. Essa vaga possui teste?</div>
+          <div class="item_radio"> <input type="radio" id="possuiTeste" name="possuiTeste" value="sim"> Sim </div>
+          <div class="item_radio"> <input type="radio" id="naoPossuiTeste" name="possuiTeste" value="nao"> Não </div>
         </div>
 
         <div class="button_container">
-          <button class="button">CADASTRAR VAGA</button>
+          <button id="botao-cadastrar" class="button">CADASTRAR VAGA</button>
         </div>
       </form>
     </div>
+
     <script src="../scripts/cadastroVagas.js"></script>
   </body>
 </html>
