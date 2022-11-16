@@ -17,8 +17,14 @@ const detalheVagaEspecifica = async (req, res) => {
     return res.status(200).json(especificacaoVaga);
 };
 
+const uploadTesteController = async (req, res) => {
+    const uploadTeste = await vagasModel.uploadTesteModel(req.body, req.file);
+    return res.status(201).json(req.body);
+}
+
 module.exports = {
     listarVagasController,
     criarVagaController,
+    uploadTesteController,
     detalheVagaEspecifica
 };

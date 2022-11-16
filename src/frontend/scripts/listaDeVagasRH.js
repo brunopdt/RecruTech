@@ -1,67 +1,64 @@
 const uri = "http://localhost:8081/vagas"
+let textoHTML = '';
 
 async function getItems() {
   const headers = new Headers();
   headers.append('Content-Type', 'application/json');
   headers.append('Accept', 'application/json');
 
- const data = await fetch(uri, {
+  const data = await fetch(uri, {
     method: "GET",
     headers: headers,
-  }).then((response) => {return response.json()});
+  }).then((response) => { return response.json() });
 
   console.log(data);
-}
 
-//--------------------------Laura-----------------------
+  Array.prototype.forEach.call(data, function (x, y) {
+    console.log("nomeDoCampo: " + y + " valor: " + x.descricao);
+    const divVaga = document.getElementById("container_vagas");
+    // if para evitar repetição de linha undefined (RTA)
+    if (x != undefined) {
+      divVaga.innerHTML = contruirCorpoModal(x);
+    }
+  });
 
-function criarElementos(element, id, classe, content, value) {
-  // Criar o elemento
-  const elemento = document.createElement(element);
+  function contruirCorpoModal(data) {
+    let codigoStatus = data.codigoStatus;
+    let dscStatus = data.dscStatus;
+    let codigoVaga = data.codigoVaga;
+    let descricao = data.descricao;
+    let qtdVagas = data.qtdVagas;
+    let requisitos = data.requisitos;
+    let senioridade = data.senioridade;
+    let tempoExperienciaVaga = data.tempoExperienciaVaga;
+    let tituloVaga = data.tituloVaga;
+    let localModalidade = data.localModalidade;
 
-  // Atribuir um id 
-  if (id)
-      elemento.id = id;
+    textoHTML += `
+      <div class="new-vaga">
+        <div class="vaga">
+          <div class="vaga-info">
+            <div id="nome-vaga">${tituloVaga}</div>
+            <div id="local-vaga">${localModalidade}</div>
+            <div id="status-vaga">${dscStatus}</div>
 
-  // Atribuir um tipo para ele
-  if (classe)
-      elemento.className = classe;
+            <div id="botoes">
+              <div class="button_container">
+                <button class="button" id="button-trash">
+                  <i class="fa-solid fa-trash"></i>
+                </button>
+              </div>
 
-  // Atribuir um placeholder para ele
-  if (content)
-      elemento.innerHTML = content;
+              <div class="button_container">
+                <button class="button"><i class="fa-solid fa-plus"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="line">
+      </div>`
+      ;
 
-  // Atribuir um value para ele
-  if (value)
-      elemento.value = value;
-
-  // Retornar o input criado
-  return elemento;
-}
-
-\
-//função linkando 
-function listagemVaga() {
-
-  // Limpa o corpo do modal para criar um novo
-  $(".new-vaga").html("");
-
-  // Referencia a class da nova vaga
-  const classNewVaga = criarElementos(".new-vaga");
-
-  // Criar e colocar a vaga
-  const vagaInfo = criarElementos('div', null, 'vaga-info');
-
-  // Criar e colocar nome da vaga
-   const nomeVaga = criarElementos('div', 'nome-vaga');
-
-  // Criar e colocar local da vaga
-  const localVaga = criarElementos('div', 'local-vaga');
-
-  // Criar e colocar status da vaga
-  const statusVaga = criarElementos('div', 'status-vaga');
-
-  // Criar e colocar status da vaga
-  const botoes = criarElementos('div', 'botoes');
-
+    return textoHTML
+  }
 }
