@@ -1,18 +1,20 @@
 //contém todas as funções que vão interagir diretamente com o banco de dados
 const connection = require('./connection');
 
-const { encriptador } = require('./cripto')
+const { encriptador } = require('./cripto');
 
 
 const cadastrarUsuario = async (usuario) => {
 
   const { nome, senha, email, tipoCadastro } = usuario;
 
-  const senhaEncriptada = encriptador(senha).dadoEncriptado
+  const date = new Date(Date.now()).toLocaleDateString();
 
-  const query = "INSERT INTO usuario(nome, email, senha, tipoCadastro) VALUES (?, ?, ?, ?)";
+  const senhaEncriptada = encriptador(senha).dadoEncriptado;
 
-  const [usuarios] = await connection.execute(query, [nome, email, senhaEncriptada, tipoCadastro]);
+  const query = "INSERT INTO usuario(nome, email, senha, tipoCadastro, dataCriacaoUsuario) VALUES (?, ?, ?, ?, ?)";
+
+  const [usuarios] = await connection.execute(query, [nome, email, senhaEncriptada, tipoCadastro, date]);
 
   return usuarios;
 };

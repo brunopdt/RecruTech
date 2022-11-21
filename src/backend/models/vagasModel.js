@@ -12,8 +12,10 @@ const listarVagasModel = async () => {
 const criarVagaModel = async (vaga) => {
   const { descricao, qtdVagas, requisitos, senioridade, codigoStatus, tempoExperienciaVaga, tituloVaga, localModalidade } = vaga;
 
-  const query = 'INSERT INTO vaga(descricao, qtdVagas, requisitos, senioridade, codigoStatus, tempoExperienciaVaga, tituloVaga, localModalidade) VALUES (?, ?, ?, ?, ?, ?, ?, ?)';
-  const [vagaCriada] = await connection.execute(query, [descricao, qtdVagas, requisitos, senioridade, codigoStatus, tempoExperienciaVaga, tituloVaga, localModalidade]);
+  const date = new Date(Date.now()).toLocaleDateString();
+
+  const query = 'INSERT INTO vaga(descricao, qtdVagas, requisitos, senioridade, codigoStatus, tempoExperienciaVaga, tituloVaga, localModalidade, dataCriacaoVaga) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)';
+  const [vagaCriada] = await connection.execute(query, [descricao, qtdVagas, requisitos, senioridade, codigoStatus, tempoExperienciaVaga, tituloVaga, localModalidade, date]);
 
   return vagaCriada;
 };
@@ -22,17 +24,19 @@ const uploadTesteModel = async (codVaga, url) => {
 
   const { codigoVaga } = codVaga;
   const { location: urlTeste = "" } = url;
-  
-  const query = 'INSERT INTO teste_vaga(codigoVaga, urlTeste) VALUES (?, ?)';
-  const [testeCriado] =  await connection.execute(query, [codigoVaga, urlTeste]);
+
+  const date = new Date(Date.now()).toLocaleDateString();
+
+  const query = 'INSERT INTO teste_vaga(codigoVaga, urlTeste, dataCriacaoTeste) VALUES (?, ?, ?)';
+  const [testeCriado] = await connection.execute(query, [codigoVaga, urlTeste, date]);
 
   return testeCriado;
 };
 
 
 /*Funçao de uma vaga específica*/
-const vagaEspecifica = async (idVaga)=>{
-  const especificacaoVaga = await connection.execute(`SELECT * FROM vaga WHERE codigoVaga = ${idVaga}`) ;
+const vagaEspecifica = async (idVaga) => {
+  const especificacaoVaga = await connection.execute(`SELECT * FROM vaga WHERE codigoVaga = ${idVaga}`);
   return especificacaoVaga;
 }
 
