@@ -1,5 +1,11 @@
 const uri = "http://localhost:8081/vagas"
 let textoHTML = '';
+let btn = document.querySelector('#detalhe');
+
+btn.addEventListener('click', () => {
+  alert("testee");
+  window.location.href = '/src/frontend/views/DetalhesVag.html'
+})
 
 async function getItems() {
   const headers = new Headers();

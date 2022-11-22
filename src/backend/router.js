@@ -35,11 +35,12 @@ router.get('/vagas', vagasController.listarVagasController);
 router.post('/vagas', vagasMiddleware.validateBody, vagasController.criarVagaController);
 router.post('/vagas-teste', multer(multerConfig).single("file"), vagasController.uploadTesteController);
 
+router.get('/detalheVagas', vagasController.detalheVagaEspecificaController); /*Rota pra linkar os detalhes */
+
 router.get('/usuarios', usuariosController.listarLoginController);
 router.post('/usuarios', usuariosMiddleware.validateUser, usuariosController.cadastrarUsuarioController);
 
-/*Rota pra linkar os detalhes */
-router.get('/detalheVagas', vagasController.detalheVagaEspecifica);
+
 
 
 module.exports = router;

@@ -35,7 +35,7 @@ const uploadTesteModel = async (codVaga, url) => {
 
 
 /*Funçao de uma vaga específica*/
-const vagaEspecifica = async (idVaga) => {
+const vagaEspecificaModel = async (idVaga) => {
   const especificacaoVaga = await connection.execute(`SELECT * FROM vaga WHERE codigoVaga = ${idVaga}`);
   return especificacaoVaga;
 }
@@ -45,5 +45,5 @@ module.exports = {
   listarVagasModel,
   criarVagaModel,
   uploadTesteModel,
-  vagaEspecifica
+  vagaEspecificaModel
 };

@@ -14,7 +14,7 @@ router.use(express.json());
 router.get('/detalhes', (req, res ) =>{res.sendFile (__dirname.replace('backend', 'frontend/views/detalhesVaga.html'))});
 
 //tela lista de vagas
-router.get('/listaVagas', (req, res ) =>{res.sendFile (__dirname.replace('backend', 'frontend/views/listaDeVagasOFC.html'))});
+router.get('/listaVagas', (req, res ) =>{res.sendFile (__dirname.replace('backend', 'frontend/views/listaDeVagasRH.html'))});
 
 
 module.exports = router;

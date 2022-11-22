@@ -10,10 +10,10 @@ const criarVagaController = async (req, res) => {
     return res.status(201).json(req.body);
 };
 
-const detalheVagaEspecifica = async (req, res) => {
-    const {idVaga}= req.query;
-    console.log(req.query);
-    const [especificacaoVaga] = await vagasModel.vagaEspecifica(idVaga); //recebe o retorno da funcao vagaEspecifica
+const detalheVagaEspecificaController = async (req, res) => {
+    const codVaga= req.query;
+    console.log(codVaga);
+    const [especificacaoVaga] = await vagasModel.vagaEspecificaModel(codVaga); //recebe o retorno da funcao vagaEspecifica
     return res.status(200).json(especificacaoVaga);
 };
 
@@ -26,5 +26,5 @@ module.exports = {
     listarVagasController,
     criarVagaController,
     uploadTesteController,
-    detalheVagaEspecifica
+    detalheVagaEspecificaController
 };
