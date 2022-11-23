@@ -129,16 +129,13 @@ O segundo processo, é o processo de inscrição do candidato na vaga, o process
 
 ![Processo 2](imagens/diagrama-processo2.png "Modelo BPMN do Processo 2.")
 
-### 3.3.3 Processo 3 – Indicação de Candidatos pra uma vaga
+### 3.3.3 Processo 3 – Filtragem e Validação de Currículos
 
 **Descrição geral do processo:**
 
-Processo responsável pela indicação de candidatos, onde o funcionário de uma empresa ou o usuário do sistema pode indicar um conhecido para alguma vaga, preenchendo alguns dados como o tempo que já trabalhou com essa pessoa, os motivos pelos quais a pessoa se encaixa na vaga em aberto, as competências e entre outros dados.
+Processo responsável pela filtragem automática de currículos por meio do tempo de experiência requisitado pela vaga e o informado pelo candidato, e pela validação manual dos currículos filtrados pelo profissional de recursos humanos.
 
-Caso a indicação seja validada e possua vagas em aberto em que a pessoa se encaixa, o usuário é notificado do resultado de sua indicação e a pessoa indicada é chamada para o processo seletivo, porém, caso não existam vagas abertas no sistema os dados da indicação são inseridos em um funil de indicações, para que, caso abra uma nova vaga em que a pessoa se encaixa, ela seja chamada. Se a indicação for recusada pelo responsável do RH, o processo é finalizado.
-
-
-![Processo 3](imagens/Processo3_BPMN.png "Indicação de candidatos para a vaga")
+![Processo 3](imagens/bpmn_curriculo.png "Filtragem e Validação de Currículos")
 
 ### 3.3.4 Processo 4 – Seleção do Candidato
 
