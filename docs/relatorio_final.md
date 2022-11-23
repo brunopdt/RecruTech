@@ -433,7 +433,7 @@ Usar o seguinte modelo:
 | Taxa de vagas criadas (mensais) | Avaliar quantitativamente a taxa de vagas cadastradas na plataforma pela empresa mensalmente| Quantitativo de vagas cadastradas por mês |  (Somatório de vagas cadastrados no mês / Somatório total de vagas)*100 | Tabela vagas | Análise do Crescimento da plataforma |
 | Taxa de vagas canceladas (mensais) | Avaliar quantitativamente a taxa de vagas canceladas na plataforma pela empresa mensalmente | Quantitativo de vagas canceladas por mês |  (Somatório de vagas canceladas no mês / Somatório total de vagas)*100 | Tabela vagas | Análise do Crescimento da plataforma |
 | Índice de Contratação | Avaliar quantitativamente a taxa de usuários contratados na plataforma em relação a taxa de usuários inscritos na vaga | Taxa de usuários contratados por mês | (Somatório de pessoas inscritas na vaga / somatório de pessoas contratadas)*100 | Tabela vagas | Análise do Crescimento da plataforma |
-
+| Quantidade de Inscrições por vaga (mensais) | Avaliar quantitativamente a quantidade de usuários ativamente se inscrevendo em vagas | Número médio de inscrições por vagas | (somatório de vagas disponíveis / somatório de inscritos nas vagas)*100 | Tabela de vagas | Análise de atividade dos usuários e dos setores de RH |
 
 OBS APAGAR LINHAS DE EXEMPLO ABAIXO
 | Percentual reclamações | Avaliar quantitativamente as reclamações | Percentual de reclamações em relação ao total atendimento |   | Tabela reclamações | Aprendizado e Crescimento |
