@@ -41,6 +41,4 @@ router.get('/usuarios', usuariosController.listarLoginController);
 router.post('/usuarios', usuariosMiddleware.validateUser, usuariosController.cadastrarUsuarioController);
 
 
-
-
 module.exports = router;
