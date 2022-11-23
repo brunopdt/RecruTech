@@ -1,14 +1,13 @@
 let btn = document.querySelector('#botao-cadastrar');
 
-function calcHeight(value) {
-  let numberOfLineBreaks = (value.match(/\n/g) || []).length
-  let newHeight = 20 + numberOfLineBreaks * 20 + 12 + 2
-  return newHeight
-}
-
 btn.addEventListener('click', () => {
+  alert("oie");
   const vaga = getDadosVagaForm();
-  enviarDadosVagaParaApi(vaga)
+  console.log(vaga);
+  if (vaga == null || vaga == undefined)
+    alert("Erro ao cadastrar a vaga!");
+  /*else
+    enviarDadosVagaParaApi(vaga)*/
 })
 
 
@@ -28,49 +27,20 @@ function getDadosVagaForm() {
   const inputRequisitosVaga = document.querySelector('#requisitos');
   const inputQuantidadeVagas = document.querySelector('#quantidade');
   const inputExperienciaMinima = document.querySelector('#experiencia');
-  const inputSenioridadeEstagiario = document.querySelector('#estagiario');
-  const inputSenioridadeJunior = document.querySelector('#junior');
-  const inputSenioridadePleno = document.querySelector('#pleno');
-  const inputSenioridadeSenior = document.querySelector('#senior');
+  const inputSenioridade = document.querySelector("input[name='senioridadeDesejada']:checked");
 
-  if (inputTitulo.value === null || inputDescricao.value === null || inputLocalModalidade.value === null ||
-    inputRequisitosVaga.value === null || inputQuantidadeVagas.value === null || inputExperienciaMinima.value === null ||
-    !(inputSenioridadeEstagiario.checked || inputSenioridadeJunior.checked ||
-      inputSenioridadePleno.checked || inputSenioridadeSenior.checked)) {
+  if (inputTitulo.value === "" || inputDescricao.value === "" || inputLocalModalidade.value === "" ||
+    inputRequisitosVaga.value === "" || inputQuantidadeVagas.value <= 0 || inputExperienciaMinima.value < 0 ||
+    inputSenioridade === null) {
     console.log("Erro, todos os campos devem estar preenchidos");
     return;
-  }
-
-  let senioridadeDesejada = '';
-  if (inputSenioridadeEstagiario.checked) {
-    senioridadeDesejada += inputSenioridadeEstagiario.value
-    senioridadeDesejada += ','
-  }
-
-  if (inputSenioridadeJunior.checked) {
-    senioridadeDesejada += inputSenioridadeJunior.value
-    senioridadeDesejada += ','
-  }
-
-  if (inputSenioridadePleno.checked) {
-    senioridadeDesejada += inputSenioridadePleno.value
-    senioridadeDesejada += ','
-  }
-
-  if (inputSenioridadeSenior.checked) {
-    senioridadeDesejada += inputSenioridadeSenior.value
-    senioridadeDesejada += ','
-  }
-
-  if (senioridadeDesejada.endsWith(',')) {
-    senioridadeDesejada = senioridadeDesejada.slice(0, senioridadeDesejada.length - 1)
   }
 
   const vaga = {
     descricao: inputDescricao.value,
     qtdVagas: +inputQuantidadeVagas.value,
     requisitos: inputRequisitosVaga.value,
-    senioridade: senioridadeDesejada,
+    senioridade: inputSenioridade.value,
     codigoStatus: 1,
     tempoExperienciaVaga: +inputExperienciaMinima.value,
     tituloVaga: inputTitulo.value,
@@ -92,7 +62,7 @@ async function enviarDadosVagaParaApi(vaga) {
     })
     if (res.status === 201) {
       alert('Vaga cadastrada com sucesso')
-      window.location.href = '../views/listaDeVagasRH.html'
+      window.location.href = '/src/frontend/views/listaDeVagasRH.html'
     } else {
       console.log('Erro ao adicionar vaga');
     }
