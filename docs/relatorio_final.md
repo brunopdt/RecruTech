@@ -436,13 +436,6 @@ Usar o seguinte modelo:
 | Quantidade de Inscrições por vaga (mensais) | Avaliar quantitativamente a quantidade de usuários ativamente se inscrevendo em vagas | Número médio de inscrições por vagas | (somatório de vagas disponíveis / somatório de inscritos nas vagas)*100 | Tabela de vagas | Análise de atividade dos usuários e dos setores de RH |
 | Percentual de aprovação em testes | Avaliar a porcentagem de usuarios que é aprovado no teste | Porcentagem de aprovacao em testes | (somatorio dos candidatos aprovados no teste) / (somatório de candidatos que fizeram o teste)*100 | Tabela de teste_candidato | Quantitativa |
 
-OBS APAGAR LINHAS DE EXEMPLO ABAIXO
-| Percentual reclamações | Avaliar quantitativamente as reclamações | Percentual de reclamações em relação ao total atendimento |   | Tabela reclamações | Aprendizado e Crescimento |
-| Taxa de Requisições abertas | Melhorar a prestação de serviços medindo a porcentagem de requisições | Mede % de requisições atendidas na semana | ![\frac{\sum{atendidas}}{\sum{requisicoes}}100](https://latex.codecogs.com/svg.latex?\frac{\sum{atendidas}}{\sum{requisicoes}}100) | Tabela solicitações | Processos internos |
-| Taxa de entrega de material | Manter controle sobre os materiais que estão sendo entregues | Mede % de material entregue dentro do mês |   | Tabela Pedidos | Clientes |
-
-Obs.: todas as informações para gerar os indicadores devem estar no diagrama de classe **a ser proposto**
-
 ## 7.Sistema desenvolvido
 
 Faça aqui uma breve descrição do software e coloque as principais telas com uma explicação de como usar cada uma.
