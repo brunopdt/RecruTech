@@ -430,6 +430,9 @@ Usar o seguinte modelo:
 | **Indicador** | **Objetivos** | **Descrição** | **Cálculo** | **Fonte dados** | **Perspectiva** |
 | --- | --- | --- | --- | --- | --- |
 | Taxa de usuários (mensais) | Avaliar quantitativamente a taxa de novos usuários cadastrados na plataforma por mês | Taxa de usuários cadastrados por mês |  (Somatório de usuários cadastrados no mês / Somatório total de usuários)*100 | Tabela usuários | Análise do Crescimento da plataforma |
+| Taxa de vagas criadas (mensais) | Avaliar quantitativamente a taxa de vagas cadastradas na plataforma pela empresa mensalmente| Quantitativo de vagas cadastradas por mês |  (Somatório de vagas cadastrados no mês / Somatório total de vagas)*100 | Tabela vagas | Análise do Crescimento da plataforma |
+| Taxa de vagas canceladas (mensais) | Avaliar quantitativamente a taxa de vagas canceladas na plataforma pela empresa mensalmente | Quantitativo de vagas canceladas por mês |  (Somatório de vagas canceladas no mês / Somatório total de vagas)*100 | Tabela vagas | Análise do Crescimento da plataforma |
+
 
 OBS APAGAR LINHAS DE EXEMPLO ABAIXO
 | Percentual reclamações | Avaliar quantitativamente as reclamações | Percentual de reclamações em relação ao total atendimento |   | Tabela reclamações | Aprendizado e Crescimento |
