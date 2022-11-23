@@ -435,6 +435,7 @@ Usar o seguinte modelo:
 | Índice de Contratação | Avaliar quantitativamente a taxa de usuários contratados na plataforma em relação a taxa de usuários inscritos na vaga | Taxa de usuários contratados por mês | (Somatório de pessoas inscritas na vaga / somatório de pessoas contratadas)*100 | Tabela vagas | Análise do Crescimento da plataforma |
 | Quantidade de Inscrições por vaga (mensais) | Avaliar quantitativamente a quantidade de usuários ativamente se inscrevendo em vagas | Número médio de inscrições por vagas | (somatório de vagas disponíveis / somatório de inscritos nas vagas)*100 | Tabela de vagas | Análise de atividade dos usuários e dos setores de RH |
 | Percentual de aprovação em testes | Avaliar a porcentagem de usuarios que é aprovado no teste | Porcentagem de aprovacao em testes | (somatorio dos candidatos aprovados no teste) / (somatório de candidatos que fizeram o teste)*100 | Tabela de teste_candidato | Quantitativa |
+| Tempo médio para realizar contratações | Avaliar quantitativamente a média de tempo para finalização do processo de contratação de um candidato | Tempo levado para contratação | (somatorio dos candidatos aprovados no teste) / (somatório da quantidade de dias levados para cada contratação)*100 | Tabela de teste_candidato | Quantitativa |
 
 ## 7.Sistema desenvolvido
 
