@@ -52,7 +52,7 @@ async function getItems() {
 
 }
 
-const data = getItems;
+const data = getItems();
 
 const LOGIN_URL = "/src/frontend/views/login.html";
 
@@ -96,7 +96,7 @@ function processaFormLogin (event) {
   // Valida login e se estiver ok, redireciona para tela inicial da aplicação
   resultadoLogin = loginUser (username, password);
   if (resultadoLogin) {
-      window.location.href = 'home.html';
+      window.location.href = '';
   }
   else { // Se login falhou, avisa ao usuário
       alert ('Usuário ou senha incorretos');
