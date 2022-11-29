@@ -129,16 +129,13 @@ O segundo processo, é o processo de inscrição do candidato na vaga, o process
 
 ![Processo 2](imagens/diagrama-processo2.png "Modelo BPMN do Processo 2.")
 
-### 3.3.3 Processo 3 – Indicação de Candidatos pra uma vaga
+### 3.3.3 Processo 3 – Filtragem e Validação de Currículos
 
 **Descrição geral do processo:**
 
-Processo responsável pela indicação de candidatos, onde o funcionário de uma empresa ou o usuário do sistema pode indicar um conhecido para alguma vaga, preenchendo alguns dados como o tempo que já trabalhou com essa pessoa, os motivos pelos quais a pessoa se encaixa na vaga em aberto, as competências e entre outros dados.
+Processo responsável pela filtragem automática de currículos por meio do tempo de experiência requisitado pela vaga e o informado pelo candidato, e pela validação manual dos currículos filtrados pelo profissional de recursos humanos.
 
-Caso a indicação seja validada e possua vagas em aberto em que a pessoa se encaixa, o usuário é notificado do resultado de sua indicação e a pessoa indicada é chamada para o processo seletivo, porém, caso não existam vagas abertas no sistema os dados da indicação são inseridos em um funil de indicações, para que, caso abra uma nova vaga em que a pessoa se encaixa, ela seja chamada. Se a indicação for recusada pelo responsável do RH, o processo é finalizado.
-
-
-![Processo 3](imagens/Processo3_BPMN.png "Indicação de candidatos para a vaga")
+![Processo 3](imagens/bpmn_curriculo.png "Filtragem e Validação de Currículos")
 
 ### 3.3.4 Processo 4 – Seleção do Candidato
 
@@ -432,11 +429,12 @@ Usar o seguinte modelo:
 
 | **Indicador** | **Objetivos** | **Descrição** | **Cálculo** | **Fonte dados** | **Perspectiva** |
 | --- | --- | --- | --- | --- | --- |
-| Percentual reclamações | Avaliar quantitativamente as reclamações | Percentual de reclamações em relação ao total atendimento |   | Tabela reclamações | Aprendizado e Crescimento |
-| Taxa de Requisições abertas | Melhorar a prestação de serviços medindo a porcentagem de requisições | Mede % de requisições atendidas na semana | ![\frac{\sum{atendidas}}{\sum{requisicoes}}100](https://latex.codecogs.com/svg.latex?\frac{\sum{atendidas}}{\sum{requisicoes}}100) | Tabela solicitações | Processos internos |
-| Taxa de entrega de material | Manter controle sobre os materiais que estão sendo entregues | Mede % de material entregue dentro do mês |   | Tabela Pedidos | Clientes |
+| Taxa de usuários (mensais) | Avaliar quantitativamente a taxa de novos usuários cadastrados na plataforma por mês | Taxa de usuários cadastrados por mês |  (Somatório de usuários cadastrados no mês / Somatório total de usuários) | Tabela usuários | Análise do Crescimento da plataforma |
+| Taxa de vagas criadas (mensais) | Avaliar quantitativamente a taxa de vagas cadastradas na plataforma pela empresa mensalmente| Quantitativo de vagas cadastradas por mês |  (Somatório de vagas cadastrados no mês / Somatório total de vagas) | Tabela vagas | Análise do Crescimento da plataforma |
+| Taxa de vagas canceladas (mensais) | Avaliar quantitativamente a taxa de vagas canceladas na plataforma pela empresa mensalmente | Quantitativo de vagas canceladas por mês |  (Somatório de vagas canceladas no mês / Somatório total de vagas)*100 | Tabela vagas | Análise do Crescimento da plataforma |
+| Índice de Contratação | Avaliar quantitativamente a taxa de usuários contratados na plataforma em relação a taxa de usuários inscritos na vaga | Taxa de usuários contratados por mês | (Somatório de pessoas inscritas na vaga / somatório de pessoas contratadas)*100 | Tabela vagas | Análise do Crescimento da plataforma |
+| Quantidade de usuários ativos | Avaliar quantitativamente a quantidade de usuários que fazem uso da plataforma | Número de usuários cadastrados no sistema | (somatório de usuários logados) | Log da tabela de usuários | Análise da quantidade de usuários mensais do Recrutech |
 
-Obs.: todas as informações para gerar os indicadores devem estar no diagrama de classe **a ser proposto**
 
 ## 7.Sistema desenvolvido
 

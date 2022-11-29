@@ -9,6 +9,8 @@ const usuariosMiddleware = require('./middlewares/usuariosMiddleware');
 const vagasController = require('./controllers/vagasController');
 const vagasMiddleware = require('./middlewares/vagasMiddleware');
 
+const candVagaController = require('./controllers/candidatoVagaController');
+
 const router = express.Router();
 
 router.all("*", function (req, res, next) {
@@ -35,12 +37,12 @@ router.get('/vagas', vagasController.listarVagasController);
 router.post('/vagas', vagasMiddleware.validateBody, vagasController.criarVagaController);
 router.post('/vagas-teste', multer(multerConfig).single("file"), vagasController.uploadTesteController);
 
+router.post('/curriculo', multer(multerConfig).single("file"), candVagaController.uploadCurriculoController);
+
 router.get('/detalheVagas', vagasController.detalheVagaEspecificaController); /*Rota pra linkar os detalhes */
 
 router.get('/usuarios', usuariosController.listarLoginController);
 router.post('/usuarios', usuariosMiddleware.validateUser, usuariosController.cadastrarUsuarioController);
-
-
 
 
 module.exports = router;

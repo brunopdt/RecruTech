@@ -39,7 +39,7 @@
 
         <div class="descricao">
           <div class="subtitle margin_sub">2. Descrição da vaga</div>
-          <textarea class="textarea" id="descricaoVaga" role="textbox" rows="3" cols="50"></textarea>
+          <textarea class="textarea" id="descricaoVaga" role="textbox" rows="3" cols="50" required></textarea>
         </div>
 
         <div class="localModalidade">
@@ -64,19 +64,10 @@
 
         <div class="senioridade">
           <div class="subtitle">7. Senioridade desejada</div>
-          <div class="item_check">
-            <input type="checkbox" id="estagiario" name="teste" value="estagiario" required />
-            Estagiário
-          </div>
-          <div class="item_check">
-            <input type="checkbox" id="junior" name="teste" value="junior" /> Júnior
-          </div>
-          <div class="item_check">
-            <input type="checkbox" id="pleno" name="teste" value="pleno" /> Pleno
-          </div>
-          <div class="item_check">
-            <input type="checkbox" id="senior" name="teste" value="senior" /> Sênior
-          </div>
+          <div class="item_radio"> <input type="radio" id="estagiario" name="senioridadeDesejada" value="estagiario"> Estagiário </div>
+          <div class="item_radio"> <input type="radio" id="junior" name="senioridadeDesejada" value="junior"> Júnior </div>
+          <div class="item_radio"> <input type="radio" id="pleno" name="senioridadeDesejada" value="pleno"> Pleno </div>
+          <div class="item_radio"> <input type="radio" id="senior" name="senioridadeDesejada" value="senior"> Sênior </div>
         </div>
 
         <div class="teste">
@@ -86,7 +77,7 @@
         </div>
 
         <div class="button_container">
-          <button id="botao-cadastrar" class="button">CADASTRAR VAGA</button>
+          <button id="botao-cadastrar" type="button" class="button">CADASTRAR VAGA</button>
         </div>
       </form>
     </div>
