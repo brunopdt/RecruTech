@@ -18,26 +18,25 @@
 
     <title>Lista de vagas User</title>
   </head>
+
   <body>
     <nav class="sidebar">
       <img id="logo_sidebar" src="../imgs/logo_icon.jpg" alt="logo_icon" />
-
+  
       <a href="#"><i class="nav-item fa-solid fa-user fa-xl"></i></a> <br />
-      <a href="#"><i class="nav-item fa-solid fa-square-plus fa-xl"></i></a>
+      <a href="./cadastroVagas.html"><i class="nav-item fa-solid fa-square-plus fa-xl"></i></a>
       <br />
-      <a href="#"><i class="nav-item fa-solid fa-list fa-xl"></i></a> <br />
-
-      <a href="#"
-        ><i class="nav-item fa-solid fa-right-from-bracket fa-xl"></i
-      ></a>
+      <a href="./listaDeVagasRH.html"><i class="nav-item fa-solid fa-list fa-xl"></i></a> <br />
+  
+      <a href="#"><i class="nav-item fa-solid fa-right-from-bracket fa-xl"></i></a>
     </nav>
-
+  
     <div class="main">
       <div class="title" id="main_title">Lista de vagas</div>
-
+  
       <div class="titulos-coluna">
         <div class="coluna">Vaga</div>
-        <div class="coluna">Local</div>
+        <div class="coluna">Modalidade/Local</div>
         <div class="coluna">Status</div>
         <div class="coluna" id="botoes" style="visibility: hidden">
           <div id="botoes">
@@ -70,7 +69,6 @@
             </div>
           </div>
         </div>
-        <div id="line"></div>
       </div>
 
       <div class="new-vaga">
@@ -136,5 +134,9 @@
         <div id="line"></div>
       </div>
     </div>
+  
+    <script src="../scripts/listaDeVagasUser.js"></script>
+    <script type="text/javascript">
+      getItems();
+    </script>
   </body>
-</html>
