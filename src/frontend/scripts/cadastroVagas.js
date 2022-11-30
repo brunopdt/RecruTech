@@ -1,20 +1,18 @@
 let btn = document.querySelector('#botao-cadastrar');
 
 btn.addEventListener('click', () => {
-  alert("oie");
   const vaga = getDadosVagaForm();
-  console.log(vaga);
   if (vaga == null || vaga == undefined)
-    alert("Erro ao cadastrar a vaga!");
-  /*else
-    enviarDadosVagaParaApi(vaga)*/
+    alert("Erro ao cadastrar a vaga! Todos os campos devem estar preenchidos.");
+  else
+    enviarDadosVagaParaApi(vaga)
 })
 
 
 function validarSeVagaPossuiTeste() {
-  const vagaPossuiTeste = document.querySelector('#possuiTeste');
+  const vagaPossuiTeste = document.querySelector("input[name='possuiTeste']:checked");
 
-  if (vagaPossuiTeste) {
+  if (vagaPossuiTeste.value == "sim") {    
     return true;
   }
   return false;
@@ -50,6 +48,27 @@ function getDadosVagaForm() {
   return vaga;
 }
 
+async function getCodigoVaga(){
+  const inputQuantidadeVagas = document.querySelector('#quantidade');
+  const inputTitulo = document.querySelector('#titulo');
+  
+  const headers = new Headers();
+  headers.append('Content-Type', 'application/json');
+  headers.append('Accept', 'application/json');
+
+  try {
+    const data = await fetch(`http://localhost:8081/vagas-codigo?nomeVaga=${inputTitulo.value}&qtdVagas=${inputQuantidadeVagas.value}`, {
+      method: "GET",
+      headers: headers,
+    }).then((response) => { return response.json() });
+
+    return data;
+  } catch(e){
+    console.error(e);
+  }
+
+}
+
 async function enviarDadosVagaParaApi(vaga) {
   try {
     const res = await fetch('http://localhost:8081/vagas', {
@@ -60,11 +79,16 @@ async function enviarDadosVagaParaApi(vaga) {
       },
       body: JSON.stringify(vaga)
     })
-    if (res.status === 201) {
+
+    if (res.status === 201 && !!validarSeVagaPossuiTeste()) {
+      const codigoDaVaga = getCodigoVaga();
+      console.log(codigoDaVaga);
       alert('Vaga cadastrada com sucesso')
-      window.location.href = '/src/frontend/views/listaDeVagasRH.html'
-    } else {
-      console.log('Erro ao adicionar vaga');
+      window.location.href = `/src/frontend/views/cadastrarTesteVaga.html?codigoVaga=${codigoDaVaga}`
+    } 
+    else if(res.status === 201 && validarSeVagaPossuiTeste() == false ) { 
+      alert('Vaga cadastrada com sucesso')
+      window.location.href = '/src/frontend/views/listaDeVagasRH.html'      
     }
   } catch (e) {
     console.error(e);

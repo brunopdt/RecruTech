@@ -1,87 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <script
-      src="https://kit.fontawesome.com/2c9e6838ea.js"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="stylesheet" href="../styles/cadastroVagas.css" />
 
-    <title>Cadastro de vagas</title>
-  </head>
-  <body>
-    <nav class="sidebar">
-      <img id="logo_sidebar" src="../imgs/logo_icon.jpg" alt="logo_icon" />
-      <a href="#"><i class="fa-solid fa-user fa-xl"></i></a> <br />
-      <a href="./cadastroVagas.html"><i class="fa-solid fa-square-plus fa-xl"></i></a> <br />
-      <a href="./listaDeVagasRH.html"><i class="fa-solid fa-list fa-xl"></i></a> <br />
-      <a href="#"><i class="fa-solid fa-right-from-bracket fa-xl"></i></a>
-      <br />
-    </nav>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700;800&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/2c9e6838ea.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../styles/cadastroVagas.css" />
 
-    <div class="main">
-      <div class="title" id="main_title">CADASTRO DA VAGA</div>
+  <title>Cadastro de vagas</title>
+</head>
 
-      <form class = "form">
-        <div class="titulo">
-          <div class="subtitle">1. Título da vaga</div>
-          <input class="typing" type="text" id="titulo" required />
+<body>
+  <nav class="sidebar">
+    <img id="logo_sidebar" src="../imgs/logo_icon.jpg" alt="logo_icon" />
+    <a href="#"><i class="fa-solid fa-user fa-xl"></i></a> <br />
+    <a href="./cadastroVagas.html"><i class="fa-solid fa-square-plus fa-xl"></i></a> <br />
+    <a href="./listaDeVagasRH.html"><i class="fa-solid fa-list fa-xl"></i></a> <br />
+    <a href="#"><i class="fa-solid fa-right-from-bracket fa-xl"></i></a>
+    <br />
+  </nav>
+
+  <div class="main">
+    <div class="title" id="main_title">CADASTRO DA VAGA</div>
+
+    <form class="form">
+      <div class="titulo">
+        <div class="subtitle">1. Título da vaga</div>
+        <input class="typing" type="text" id="titulo" required />
+      </div>
+
+      <div class="descricao">
+        <div class="subtitle margin_sub">2. Descrição da vaga</div>
+        <textarea class="textarea" id="descricaoVaga" role="textbox" rows="3" cols="50" required></textarea>
+      </div>
+
+      <div class="localModalidade">
+        <div class="subtitle margin_sub">3. Local/Modalidade de trabalho</div>
+        <input class="textarea" id="localModalidade" role="textbox" contenteditable required></input>
+      </div>
+
+      <div class="requisitos">
+        <div class="subtitle margin_sub">4. Requisitos da vaga</div>
+        <textarea class="textarea" id="requisitos" role="textbox" rows="3" cols="50" contenteditable
+          required></textarea>
+      </div>
+
+      <div class="quantidade">
+        <div class="subtitle">5. Quantidade de vagas disponíveis</div>
+        <input class="typing" type="number" id="quantidade" required />
+      </div>
+
+      <div class="experiencia">
+        <div class="subtitle">6. Experiência mínima desejada (em anos)</div>
+        <input class="typing" type="number" id="experiencia" required />
+      </div>
+
+      <div class="senioridade">
+        <div class="subtitle">7. Senioridade desejada</div>
+        <div class="item_radio"> <input type="radio" id="estagiario" name="senioridadeDesejada" value="estagiario">
+          Estagiário </div>
+        <div class="item_radio"> <input type="radio" id="junior" name="senioridadeDesejada" value="junior"> Júnior
         </div>
-
-        <div class="descricao">
-          <div class="subtitle margin_sub">2. Descrição da vaga</div>
-          <textarea class="textarea" id="descricaoVaga" role="textbox" rows="3" cols="50" required></textarea>
+        <div class="item_radio"> <input type="radio" id="pleno" name="senioridadeDesejada" value="pleno"> Pleno </div>
+        <div class="item_radio"> <input type="radio" id="senior" name="senioridadeDesejada" value="senior"> Sênior
         </div>
+      </div>
 
-        <div class="localModalidade">
-          <div class="subtitle margin_sub">3. Local/Modalidade de trabalho</div>
-          <input class="textarea" id="localModalidade" role="textbox" contenteditable required></input>
-        </div>
+      <div class="teste">
+        <div class="subtitle">8. Essa vaga possui teste?</div>
+        <div class="item_radio"> <input type="radio" id="possuiTeste" name="possuiTeste" value="sim"> Sim </div>
+        <div class="item_radio"> <input type="radio" id="naoPossuiTeste" name="possuiTeste" value="nao"> Não </div>
+      </div>
 
-        <div class="requisitos">
-          <div class="subtitle margin_sub">4. Requisitos da vaga</div>
-          <textarea class="textarea" id="requisitos" role="textbox" rows="3" cols="50" contenteditable required></textarea>
-        </div>
+      <div class="button_container">
+        <button id="botao-cadastrar" type="button" class="button">CADASTRAR VAGA</button>
+      </div>
+    </form>
+  </div>
 
-        <div class="quantidade">
-          <div class="subtitle">5. Quantidade de vagas disponíveis</div>
-          <input class="typing" type="number" id="quantidade" required />
-        </div>
+  <script src="../scripts/cadastroVagas.js"></script>
+</body>
 
-        <div class="experiencia">
-          <div class="subtitle">6. Experiência mínima desejada (em anos)</div>
-          <input class="typing" type="number" id="experiencia" required />
-        </div>
-
-        <div class="senioridade">
-          <div class="subtitle">7. Senioridade desejada</div>
-          <div class="item_radio"> <input type="radio" id="estagiario" name="senioridadeDesejada" value="estagiario"> Estagiário </div>
-          <div class="item_radio"> <input type="radio" id="junior" name="senioridadeDesejada" value="junior"> Júnior </div>
-          <div class="item_radio"> <input type="radio" id="pleno" name="senioridadeDesejada" value="pleno"> Pleno </div>
-          <div class="item_radio"> <input type="radio" id="senior" name="senioridadeDesejada" value="senior"> Sênior </div>
-        </div>
-
-        <div class="teste">
-          <div class="subtitle">8. Essa vaga possui teste?</div>
-          <div class="item_radio"> <input type="radio" id="possuiTeste" name="possuiTeste" value="sim"> Sim </div>
-          <div class="item_radio"> <input type="radio" id="naoPossuiTeste" name="possuiTeste" value="nao"> Não </div>
-        </div>
-
-        <div class="button_container">
-          <button id="botao-cadastrar" type="button" class="button">CADASTRAR VAGA</button>
-        </div>
-      </form>
-    </div>
-
-    <script src="../scripts/cadastroVagas.js"></script>
-  </body>
 </html>

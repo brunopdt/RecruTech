@@ -14,27 +14,28 @@ const candVagaController = require('./controllers/candidatoVagaController');
 const router = express.Router();
 
 router.all("*", function (req, res, next) {
-    res.setHeader(
-      "Access-Control-Allow-Headers",
-      "X-Requested-With,content-type,Authorization ,Accept"
-    );
-    res.setHeader("Access-Control-Allow-Origin", "*");
-    res.setHeader("Access-Control-Allow-Credentials", true);
-    res.setHeader("Access-Control-Expose-Headers", "Authorization");
-    res.setHeader(
-      "Access-Control-Allow-Methods",
-      "GET, POST, OPTIONS, PUT, PATCH, DELETE"
-    );
-    res.setHeader(
-      "Access-Control-Allow-Headers",
-      "X-Requested-With,content-type, Authorization"
-    );
+  res.setHeader(
+    "Access-Control-Allow-Headers",
+    "X-Requested-With,content-type,Authorization ,Accept"
+  );
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Allow-Credentials", true);
+  res.setHeader("Access-Control-Expose-Headers", "Authorization");
+  res.setHeader(
+    "Access-Control-Allow-Methods",
+    "GET, POST, OPTIONS, PUT, PATCH, DELETE"
+  );
+  res.setHeader(
+    "Access-Control-Allow-Headers",
+    "X-Requested-With,content-type, Authorization"
+  );
 
-    next();
-  });
+  next();
+});
 
 router.get('/vagas', vagasController.listarVagasController);
 router.post('/vagas', vagasMiddleware.validateBody, vagasController.criarVagaController);
+router.get('/vagas-codigo', vagasController.obterCodigoVagaController);
 router.post('/vagas-teste', multer(multerConfig).single("file"), vagasController.uploadTesteController);
 
 router.post('/curriculo', multer(multerConfig).single("file"), candVagaController.uploadCurriculoController);
@@ -44,5 +45,9 @@ router.get('/detalheVagas', vagasController.detalheVagaEspecificaController); /*
 router.get('/usuarios', usuariosController.listarLoginController);
 router.post('/usuarios', usuariosMiddleware.validateUser, usuariosController.cadastrarUsuarioController);
 
+router.get('/', (req, res) => res.sendFile(__dirname.replace('backend', 'frontend/views/login.html')))
+router.get('/cadastro-vagas', usuariosMiddleware.usuarioLogado, (req, res) => res.sendFile("cadastroVagas.html", { root: 'frontend/views/' }))
+router.post('/usuarios-logar', usuariosController.logarController);
+router.get('/usuarios-deslogar', usuariosController.deslogarController);
 
 module.exports = router;

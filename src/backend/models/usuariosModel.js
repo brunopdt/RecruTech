@@ -24,7 +24,13 @@ const listarLogin = async () => {
   return usuarioLogin;
 };
 
+const logarModel = async (email, senha) => {
+  const usuario = await connection.execute(`SELECT * FROM usuario WHERE email = "${email}" and senha = "${senha}"`);
+  return usuario;
+};
+
 module.exports = {
   cadastrarUsuario,
-  listarLogin
+  listarLogin,
+  logarModel
 };

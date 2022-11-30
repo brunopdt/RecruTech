@@ -1,4 +1,5 @@
 const mysql = require('mysql2');
+
 const connection = mysql.createConnection({
   host: 'mysql-recrutech.cjtiqjvbcci9.us-east-1.rds.amazonaws.com',
   port: 3306,
