@@ -47,6 +47,11 @@ router.post('/usuarios', usuariosMiddleware.validateUser, usuariosController.cad
 
 router.get('/', (req, res) => res.sendFile(__dirname.replace('backend', 'frontend/views/login.html')))
 router.get('/cadastro-vagas', usuariosMiddleware.usuarioLogado, (req, res) => res.sendFile("cadastroVagas.html", { root: 'frontend/views/' }))
+
+router.get('/cadastro-teste', usuariosMiddleware.usuarioLogado, (req, res) => res.sendFile("cadastrarTesteVaga.html", { root: 'frontend/views/' }));
+router.get('/lista-vagas-empresa', usuariosMiddleware.usuarioLogado, (req, res) => res.sendFile("listaDeVagasRH.html", { root: 'frontend/views/' }));
+
+
 router.post('/usuarios-logar', usuariosController.logarController);
 router.get('/usuarios-deslogar', usuariosController.deslogarController);
 

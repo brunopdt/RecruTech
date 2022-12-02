@@ -84,11 +84,11 @@ async function enviarDadosVagaParaApi(vaga) {
       const codigoDaVaga = getCodigoVaga();
       console.log(codigoDaVaga);
       alert('Vaga cadastrada com sucesso')
-      window.location.href = `/src/frontend/views/cadastrarTesteVaga.html?codigoVaga=${codigoDaVaga}`
+      window.location.href = `/cadastro-teste`
     } 
     else if(res.status === 201 && validarSeVagaPossuiTeste() == false ) { 
       alert('Vaga cadastrada com sucesso')
-      window.location.href = '/src/frontend/views/listaDeVagasRH.html'      
+      window.location.href = '/lista-vagas-empresa'      
     }
   } catch (e) {
     console.error(e);
