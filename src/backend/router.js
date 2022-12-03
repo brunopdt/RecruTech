@@ -50,6 +50,7 @@ router.get('/cadastro-vagas', usuariosMiddleware.usuarioLogado, (req, res) => re
 
 router.get('/cadastro-teste', usuariosMiddleware.usuarioLogado, (req, res) => res.sendFile("cadastrarTesteVaga.html", { root: 'frontend/views/' }));
 router.get('/lista-vagas-empresa', usuariosMiddleware.usuarioLogado, (req, res) => res.sendFile("listaDeVagasRH.html", { root: 'frontend/views/' }));
+router.get('/lista-vagas', usuariosMiddleware.usuarioLogado, (req, res) => res.sendFile("listaDeVagasUsuario.html", { root: 'frontend/views/' }));
 
 router.get('/remove-vaga/(:id)', usuariosMiddleware.usuarioLogado, vagasController.deletarVagaController,);
 

@@ -19,16 +19,7 @@ async function getItems() {
 
   console.log(data);
 
-  Array.prototype.forEach.call(data, function (x, y) {
-    console.log("nomeDoCampo: " + y + " valor: " + x.descricao);
-    const divVaga = document.getElementById("container_vagas");
-    // if para evitar repetição de linha undefined (RTA)
-    if (x != undefined) {
-      divVaga.innerHTML = contruirCorpoModal(x);
-    }
-  });
-
-  function contruirCorpoModal(data) {
+  function construirCorpoModal(data) {
     let codigoStatus = data.codigoStatus;
     let dscStatus = data.dscStatus;
     let codigoVaga = data.codigoVaga;
@@ -49,14 +40,9 @@ async function getItems() {
             <div id="status-vaga">${dscStatus}</div>
 
             <div id="botoes">
-              <div class="button_container">
-                <button class="button" id="button-trash">
-                  <i class="fa-solid fa-trash"></i>
-                </button>
-              </div>
 
               <div class="button_container">
-                <button class="button"><i class="fa-solid fa-plus"></i></button>
+                <button class="button"><i class="fa-solid fa-plus"></i> VER DETALHES</button>
               </div>
             </div>
           </div>
@@ -67,4 +53,14 @@ async function getItems() {
 
     return textoHTML
   }
+
+  data.forEach((vaga) => {
+    if(vaga.codigoStatus == 3){
+      
+    } else {
+      const divVaga = document.getElementById("container_vagas");
+      divVaga.innerHTML = construirCorpoModal(vaga);
+    }
+    
+  })
 }
