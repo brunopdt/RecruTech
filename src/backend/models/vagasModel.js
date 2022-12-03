@@ -45,11 +45,16 @@ const obterCodigoVagaModel = async(nomeVaga, qtdVagas) => {
   return codigoVaga;
 }
 
+const deletarVagaModel = async (codVaga) => {
+  const vagaModificada = await connection.execute(`UPDATE vaga SET codigoStatus = 3 WHERE codigoVaga = ${codVaga}`);
+  return vagaModificada;
+}
 
 module.exports = {
   listarVagasModel,
   criarVagaModel,
   uploadTesteModel,
   obterCodigoVagaModel,
-  vagaEspecificaModel
+  vagaEspecificaModel,
+  deletarVagaModel
 };

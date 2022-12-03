@@ -17,6 +17,13 @@ const detalheVagaEspecificaController = async (req, res) => {
     return res.status(200).json(res.body(especificacaoVaga.insertId));
 };
 
+const deletarVagaController = async (req, res) => {
+    const codVaga= req.params.id;
+    console.log(codVaga);
+    const especificacaoVaga = await vagasModel.deletarVagaModel(codVaga);
+    return res.status(200).json(especificacaoVaga);
+};
+
 const obterCodigoVagaController = async (req, res) => {
     const nomeVaga = req.query.nomeVaga;
     const qtdVagas = req.query.qtdVagas;
@@ -38,5 +45,6 @@ module.exports = {
     criarVagaController,
     uploadTesteController,
     obterCodigoVagaController,
-    detalheVagaEspecificaController
+    detalheVagaEspecificaController,
+    deletarVagaController
 };

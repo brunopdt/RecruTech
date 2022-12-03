@@ -2,6 +2,27 @@ const uri = "http://localhost:8081/vagas"
 let textoHTML = '';
 let btn = document.querySelector('#detalhe');
 
+const redirecionar = async (codigo) => {
+
+  try {
+    const res = await fetch(`http://localhost:8081/remove-vaga/${codigo}`, {
+      method: 'GET',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json'
+      },
+    })
+
+    if (res.status === 200) {
+      alert('Vaga fechada com sucesso')
+    } 
+
+  } catch (e) {
+    console.error(e);
+  }
+    
+}
+
 btn.addEventListener('click', () => {
   alert("testee");
   window.location.href = '/src/frontend/views/DetalhesVag.html'
@@ -19,16 +40,9 @@ async function getItems() {
 
   console.log(data);
 
-  Array.prototype.forEach.call(data, function (x, y) {
-    console.log("nomeDoCampo: " + y + " valor: " + x.descricao);
-    const divVaga = document.getElementById("container_vagas");
-    // if para evitar repetição de linha undefined (RTA)
-    if (x != undefined) {
-      divVaga.innerHTML = contruirCorpoModal(x);
-    }
-  });
 
-  function contruirCorpoModal(data) {
+
+const construirCorpoModal = (data) => {
     let codigoStatus = data.codigoStatus;
     let dscStatus = data.dscStatus;
     let codigoVaga = data.codigoVaga;
@@ -50,7 +64,7 @@ async function getItems() {
 
             <div id="botoes">
               <div class="button_container">
-                <button class="button" id="button-trash">
+                <button class="button" id="button-trash" onClick="redirecionar(${codigoVaga})">
                   <i class="fa-solid fa-trash"></i>
                 </button>
               </div>
@@ -67,4 +81,10 @@ async function getItems() {
 
     return textoHTML
   }
+
+  data.forEach((vaga) => {
+    const divVaga = document.getElementById("container_vagas");
+    divVaga.innerHTML = construirCorpoModal(vaga);
+  })
 }
+
