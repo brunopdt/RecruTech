@@ -14,7 +14,6 @@ const validateUser = (req, res, next) => {
     return res.status(400).json({ message: 'Erro ao cadastrar vaga, os campos devem estar preenchidos corretamente' });
   }
 
-
   next();
 };
 

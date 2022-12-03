@@ -48,49 +48,31 @@ function getDadosVagaForm() {
   return vaga;
 }
 
-async function getCodigoVaga(){
-  const inputQuantidadeVagas = document.querySelector('#quantidade');
-  const inputTitulo = document.querySelector('#titulo');
-  
-  const headers = new Headers();
-  headers.append('Content-Type', 'application/json');
-  headers.append('Accept', 'application/json');
-
-  try {
-    const data = await fetch(`http://localhost:8081/vagas-codigo?nomeVaga=${inputTitulo.value}&qtdVagas=${inputQuantidadeVagas.value}`, {
-      method: "GET",
-      headers: headers,
-    }).then((response) => { return response.json() });
-
-    return data;
-  } catch(e){
-    console.error(e);
-  }
-
-}
-
 async function enviarDadosVagaParaApi(vaga) {
-  try {
-    const res = await fetch('http://localhost:8081/vagas', {
-      method: 'POST',
-      headers: {
-        Accept: 'application/json',
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(vaga)
-    })
+  let codigoVaga;
+  axios.post('http://localhost:8081/vagas', {
+      descricao: vaga.descricao,
+      qtdVagas: vaga.qtdVagas,
+      requisitos: vaga.requisitos,
+      senioridade: vaga.senioridade,
+      codigoStatus: vaga.codigoStatus,
+      tempoExperienciaVaga: vaga.tempoExperienciaVaga,
+      tituloVaga: vaga.tituloVaga,
+      localModalidade: vaga.localModalidade
+    }).then(response => {
+      codigoVaga = response.data;
+      console.table(response);
+      if (response.status === 201 && !!validarSeVagaPossuiTeste()) {
+        alert('Vaga cadastrada com sucesso')
+        window.location.href = `/src/frontend/views/cadastrarTesteVaga.html?codigoVaga=${codigoVaga}`
+      } 
+      else if(response.status === 201 && validarSeVagaPossuiTeste() == false ) { 
+        alert('Vaga cadastrada com sucesso')
+        window.location.href = '/src/frontend/views/listaDeVagasRH.html'      
+      }
+  }).catch(erro => {
+      return alert(erro);
+  });
 
-    if (res.status === 201 && !!validarSeVagaPossuiTeste()) {
-      const codigoDaVaga = getCodigoVaga();
-      console.log(codigoDaVaga);
-      alert('Vaga cadastrada com sucesso')
-      window.location.href = `/cadastro-teste`
-    } 
-    else if(res.status === 201 && validarSeVagaPossuiTeste() == false ) { 
-      alert('Vaga cadastrada com sucesso')
-      window.location.href = '/lista-vagas-empresa'      
-    }
-  } catch (e) {
-    console.error(e);
-  }
+
 }
