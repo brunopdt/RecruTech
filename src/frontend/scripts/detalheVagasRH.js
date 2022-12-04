@@ -1,26 +1,25 @@
 const urlParams = new URLSearchParams(window.location.search);
 const idDaVaga = urlParams.get("id");
 
-
-axios
-  .get(`http://localhost:8081/detalheVagas?codVaga=${idDaVaga}`)
-  .then((response) => {
+axios.get(`http://localhost:8081/detalheVagas?codVaga=${idDaVaga}`)
+  .then(response => {
     if (response.status === 200) {
-      console.log(response.data(0));
-      const divVaga = document.getElementById("container_vagas");
+      console.log(response.data[0]);
+      const divVaga = document.getElementById("detalhesVaga");
       divVaga.innerHTML = construirCorpoModal(response.data[0]);
     }
   })
-  .catch((erro) => {
+  .catch(erro => {
     alert("Erro ao obter detalhes vaga");
   });
+
 
 const construirCorpoModal = (data) => {
   let tituloVaga = data.tituloVaga;
   let descricao = data.descricao;
   let localModalidade = data.localModalidade;
 
-  textoHTML += `
+  textoHTML = `
   <div class="header-content">
   <div class="title" id="nome-vaga">${tituloVaga} - ${localModalidade}</div>
 
