@@ -28,7 +28,6 @@ const uploadTesteModel = async (codVaga, url) => {
   return testeCriado;
 };
 
-
 /*Funçao de uma vaga específica*/
 const vagaEspecificaModel = async (idVaga) => {
   const especificacaoVaga = await connection.execute(`SELECT * FROM vaga WHERE codigoVaga = ${idVaga}`);

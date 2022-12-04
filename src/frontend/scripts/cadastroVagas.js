@@ -66,7 +66,7 @@ async function enviarDadosVagaParaApi(vaga) {
       } 
       else if(response.status === 201 && validarSeVagaPossuiTeste() == false ) { 
         alert('Vaga cadastrada com sucesso')
-        window.location.href = '/src/frontend/views/listaDeVagasRH.html'      
+        window.location.href = '/lista-vagas-empresa'      
       }
   }).catch(erro => {
       return alert(erro);
