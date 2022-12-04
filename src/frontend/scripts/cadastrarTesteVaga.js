@@ -1,45 +1,46 @@
 const btn = document.querySelector('#btn-enviar');
 
 btn.addEventListener('click', () => {
-  const vaga = getDadosVagaForm();
-  enviarDadosVagaParaApi(vaga)
+  const dadosTeste = getTesteForm();
+  enviarDadosTesteParaApi(dadosTeste);
 })
 
+function getTesteForm() {
+  const inputTesteVaga = document.querySelector('#input_file');
+  const urlParams = new URLSearchParams(window.location.search);
+  const codigoVaga = urlParams.get("codigoVaga");
 
-function getTesteForm(){
-  const inputTesteVaga = document.querySelector('#teste');
-
-  if(inputTesteVaga === null){
-    console.log("Erro, todos os campos devem estar preenchidos");
+  if (inputTesteVaga === null) {
+    alert("Erro, todos os campos devem estar preenchidos")
     return;
   }
 
   const teste = {
-    arquivo: inputTesteVaga.value
+    arquivo: inputTesteVaga.files[0],
+    codigoVaga: +codigoVaga
   }
 
   return teste;
 }
 
 
-async function enviarDadosTesteParaApi (teste, codigoVaga) {
-  try{
-    const res = await fetch('http://localhost:8081/vagas-teste', {
-      method: 'POST',
-      headers: {
-        Accept: 'application/json',
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(vaga)
-    })
-    if(res.status === 201){
-      //mostra uma popup falando vaga cadastrada com sucesso
-      //redireciona pra página de vagas
-      window.location.href = '../views/listaDeVagasRH.html'
-    }else{
-      console.log('Erro ao adicionar vaga');
+async function enviarDadosTesteParaApi(teste) {
+  axios.post('http://localhost:8081/vagas-teste', {
+    file: teste.arquivo,
+    codigoVaga: teste.codigoVaga
+  }, {
+    headers: {
+      "Content-Type": "multipart/form-data"
     }
-  }catch(e){
-    console.error(e);
-  }
+  }).then(response => {
+    if (response.status === 201) {
+      alert('Vaga cadastrada com sucesso');
+      window.location.href = `/lista-vagas-empresa`;
+    } 
+    else { 
+      alert('Ocorreu um erro ao cadastrar o teste');  
+    }
+  }).catch(erro => {
+    return alert(response.data.erro);
+  });
 }

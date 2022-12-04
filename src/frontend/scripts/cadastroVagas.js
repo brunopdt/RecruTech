@@ -49,7 +49,6 @@ function getDadosVagaForm() {
 }
 
 async function enviarDadosVagaParaApi(vaga) {
-  let codigoVaga;
   axios.post('http://localhost:8081/vagas', {
       descricao: vaga.descricao,
       qtdVagas: vaga.qtdVagas,
@@ -60,11 +59,11 @@ async function enviarDadosVagaParaApi(vaga) {
       tituloVaga: vaga.tituloVaga,
       localModalidade: vaga.localModalidade
     }).then(response => {
-      codigoVaga = response.data;
+      let codigoVaga = response.data;
       console.table(response);
       if (response.status === 201 && !!validarSeVagaPossuiTeste()) {
         alert('Vaga cadastrada com sucesso')
-        window.location.href = `/src/frontend/views/cadastrarTesteVaga.html?codigoVaga=${codigoVaga}`
+        window.location.href = `/cadastro-teste?codigoVaga=${codigoVaga}`
       } 
       else if(response.status === 201 && validarSeVagaPossuiTeste() == false ) { 
         alert('Vaga cadastrada com sucesso')

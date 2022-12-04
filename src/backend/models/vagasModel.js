@@ -12,23 +12,18 @@ const listarVagasModel = async () => {
 const criarVagaModel = async (vaga) => {
   const { descricao, qtdVagas, requisitos, senioridade, codigoStatus, tempoExperienciaVaga, tituloVaga, localModalidade } = vaga;
 
-  const date = new Date(Date.now()).toLocaleDateString();
-
-  const query = 'INSERT INTO vaga(descricao, qtdVagas, requisitos, senioridade, codigoStatus, tempoExperienciaVaga, tituloVaga, localModalidade, dataCriacaoVaga) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)';
-  const [vagaCriada] = await connection.execute(query, [descricao, qtdVagas, requisitos, senioridade, codigoStatus, tempoExperienciaVaga, tituloVaga, localModalidade, date]);
+  const query = 'INSERT INTO vaga(descricao, qtdVagas, requisitos, senioridade, codigoStatus, tempoExperienciaVaga, tituloVaga, localModalidade) VALUES (?, ?, ?, ?, ?, ?, ?, ?)';
+  const [vagaCriada] = await connection.execute(query, [descricao, qtdVagas, requisitos, senioridade, codigoStatus, tempoExperienciaVaga, tituloVaga, localModalidade]);
 
   return vagaCriada;
 };
 
 const uploadTesteModel = async (codVaga, url) => {
+  const codigoVaga = codVaga.codigoVaga;
+  const urlTeste = url.location;
 
-  const { codigoVaga } = codVaga;
-  const { location: urlTeste = "" } = url;
-
-  const date = new Date(Date.now()).toLocaleDateString();
-
-  const query = 'INSERT INTO teste_vaga(codigoVaga, urlTeste, dataCriacaoTeste) VALUES (?, ?, ?)';
-  const [testeCriado] = await connection.execute(query, [codigoVaga, urlTeste, date]);
+  const query = 'INSERT INTO teste_vaga(codigoVaga, urlTeste) VALUES (?, ?)';
+  const [testeCriado] = await connection.execute(query, [codigoVaga, urlTeste]);
 
   return testeCriado;
 };

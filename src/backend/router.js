@@ -45,8 +45,11 @@ router.get('/detalheVagas', vagasController.detalheVagaEspecificaController); /*
 router.get('/usuarios', usuariosController.listarLoginController);
 router.post('/usuarios', usuariosMiddleware.validateUser, usuariosController.cadastrarUsuarioController);
 
+/* Configuração das rotas do servidor */
+
 router.get('/', (req, res) => res.sendFile(__dirname.replace('backend', 'frontend/views/login.html')))
 router.get('/cadastro-vagas', usuariosMiddleware.usuarioLogado, (req, res) => res.sendFile("cadastroVagas.html", { root: 'frontend/views/' }))
+router.get('/cadastro-teste', usuariosMiddleware.usuarioLogado, (req, res) => res.sendFile("cadastrarTesteVaga.html", { root: 'frontend/views/' }))
 
 router.get('/cadastro-teste', usuariosMiddleware.usuarioLogado, (req, res) => res.sendFile("cadastrarTesteVaga.html", { root: 'frontend/views/' }));
 router.get('/lista-vagas-empresa', usuariosMiddleware.usuarioLogado, (req, res) => res.sendFile("listaDeVagasRH.html", { root: 'frontend/views/' }));
