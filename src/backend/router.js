@@ -3,6 +3,8 @@ const express = require('express');
 const multer = require('multer');
 const multerConfig = require('./config/multer');
 
+const emailController = require('./controllers/emailController');
+
 const usuariosController = require('./controllers/usuariosController');
 const usuariosMiddleware = require('./middlewares/usuariosMiddleware');
 
@@ -60,6 +62,7 @@ router.get('/detalhe-da-vaga', usuariosMiddleware.usuarioLogado, (req, res) => r
 
 router.get('/remove-vaga/(:id)', usuariosMiddleware.usuarioLogado, vagasController.deletarVagaController,);
 
+router.get('/enviar-email', usuariosMiddleware.usuarioLogado, emailController.enviarEmailController);
 
 router.post('/usuarios-logar', usuariosController.logarController);
 router.get('/usuarios-deslogar', usuariosController.deslogarController);
