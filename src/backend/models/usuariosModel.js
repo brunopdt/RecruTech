@@ -6,15 +6,13 @@ const { encriptador } = require('./cripto');
 
 const cadastrarUsuario = async (usuario) => {
 
-  const { nome, senha, email, tipoCadastro } = usuario;
-
-  const date = new Date(Date.now()).toLocaleDateString();
+  const { nome, email, senha, tipoCadastro } = usuario;
 
   const senhaEncriptada = encriptador(senha).dadoEncriptado;
 
-  const query = "INSERT INTO usuario(nome, email, senha, tipoCadastro, dataCriacaoUsuario) VALUES (?, ?, ?, ?, ?)";
+  const query = "INSERT INTO usuario(nome, email, senha, tipoCadastro) VALUES (?, ?, ?, ?)";
 
-  const [usuarios] = await connection.execute(query, [nome, email, senhaEncriptada, tipoCadastro, date]);
+  const [usuarios] = await connection.execute(query, [nome, email, senhaEncriptada, tipoCadastro]);
 
   return usuarios;
 };
@@ -25,7 +23,10 @@ const listarLogin = async () => {
 };
 
 const logarModel = async (email, senha) => {
-  const usuario = await connection.execute(`SELECT * FROM usuario WHERE email = "${email}" and senha = "${senha}"`);
+  const senhaEncriptada = encriptador(senha).dadoEncriptado;
+
+  const usuario = await connection.execute(`SELECT * FROM usuario WHERE email = "${email}" and senha = "${senhaEncriptada}"`);
+
   return usuario;
 };
 

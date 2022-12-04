@@ -18,23 +18,21 @@
   <nav class="sidebar">
     <img id="logo_sidebar" src="../imgs/logo_escrita_icon.png" alt="logo_icon" />
     <br />
-    <p class="title" id=welcome>
-      <u> Acesse sua <br /> conta agora <br /></u>
-    </p>
+      <a href="/" class="title" id="cadastro">Acesse sua <br /> conta agora</a>
   </nav>
 
   <div class="main">
     <div class="header">
       <p id="CriarConta" class="titleA alternative_title">Crie sua conta</p>
       <p id="PreencheDados" class="titleB alternative_title">
-        Preencha seus dados abaixo <br />
+        Preencha os dados abaixo <br />
       </p>
     </div>
 
     <div class="input_area">
 
       <div class="retangulo">
-        <input type="text" id="nome" placeholder="Nome" />
+        <input type="text" id="nome" placeholder="Nome Usuário/Nome Empresa" />
         <i class="fa-regular fa-user fa-2xl icon"></i>
       </div>
 
@@ -60,11 +58,12 @@
 
 
     <div class="button_container">
-      <button type="submit" class="button">CADASTRAR</button> <br />
+      <button type="button" id="botao-cadastrar" class="button">CADASTRAR</button> <br />
     </div>
 
   </div>
   <script src="../scripts/cadastroUser.js"></script>
+  <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 

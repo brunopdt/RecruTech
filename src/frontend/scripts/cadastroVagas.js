@@ -60,7 +60,6 @@ async function enviarDadosVagaParaApi(vaga) {
       localModalidade: vaga.localModalidade
     }).then(response => {
       let codigoVaga = response.data;
-      console.table(response);
       if (response.status === 201 && !!validarSeVagaPossuiTeste()) {
         alert('Vaga cadastrada com sucesso')
         window.location.href = `/cadastro-teste?codigoVaga=${codigoVaga}`
@@ -72,6 +71,4 @@ async function enviarDadosVagaParaApi(vaga) {
   }).catch(erro => {
       return alert(erro);
   });
-
-
 }

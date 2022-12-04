@@ -1,39 +1,47 @@
-const togglePassword = document.querySelector('#togglePassword')
-const password = document.querySelector('#password')
-const button = document.querySelector('#actionButton');
+const btn = document.querySelector('#botao-cadastrar');
 
-togglePassword.addEventListener('click', function (e) {
-  // toggle the type attribute
-  const type =
-    password.getAttribute('type') === 'password' ? 'text' : 'password'
+btn.addEventListener('click', () => {
+  const dadosUsuario = getDadosUsuarioForm();
+  if (dadosUsuario == null || dadosUsuario == undefined)
+    alert("Erro ao cadastrar o usuário! Todos os campos devem estar preenchidos.");
+  else
+    enviarDadosUsuarioParaApi(dadosUsuario)
+})
 
-  if (type == 'password') {
-    togglePassword.className = 'fa-solid fa-eye fa-2xl icon'
-  } else {
-    togglePassword.className = 'fa-solid fa-eye-slash fa-2xl icon'
+function getDadosUsuarioForm() {
+  const inputNome = document.querySelector('#nome');
+  const inputSenha = document.querySelector('#password');
+  const inputEmail = document.querySelector('#email');
+  const inputTipoCadastro = document.querySelector("input[name='tipoUser']:checked");
+
+  if (inputNome.value === "" || inputSenha.value === "" || inputEmail.value === "" ||
+    inputTipoCadastro === null) {
+    console.log("Erro, todos os campos devem estar preenchidos");
+    return;
   }
 
-  password.setAttribute('type', type)
-})
+  const usuario = {
+    nome: inputNome.value,
+    email: inputEmail.value,
+    senha: inputSenha.value,
+    tipoCadastro: inputTipoCadastro.value
+  }
 
-button.addEventListener('click', function (e) {
-  const pass = document.getElementById('password').value;
-  const login = document.getElementById('login').value;
-  console.log(`Login: ${login} \nPassword: ${pass} `);
-  swal.fire({
-    "title": "Bem-vindo",
-    "text":"logado com sucesso",
-    "icon": "success",
-    "timer": 3000,
-    "showConfirmButton":false,
-    "toast": true,
-   // "position":"top-right",
-   // "progressBar"
-  })
-  const actbutton = document.getElementById('actionButton');
+  return usuario;
+}
 
-  actbutton.disabled = true;
-
-  
-
-})
+async function enviarDadosUsuarioParaApi(usuario) {
+  axios.post('http://localhost:8081/usuarios', {
+    nome: usuario.nome,
+    email: usuario.email,
+    senha: usuario.senha,
+    tipoCadastro: usuario.tipoCadastro
+  }).then(response => {
+    if (response.status === 201) {
+      alert('Usuário cadastrado com sucesso')
+      window.location.href = '/'
+    }
+  }).catch(erro => {
+    return alert(erro);
+  });
+}
