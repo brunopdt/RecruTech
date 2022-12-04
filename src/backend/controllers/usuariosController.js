@@ -27,7 +27,9 @@ const logarController = async (req, res) => {
     const token = jsonwebtoken.sign({
         id: res.id,
         nome: usuario.nome,
-        email: usuario.email
+        email: usuario.email,
+        tipo: usuario.tipoCadastro,
+        codigoUsuario: usuario.codigoUsuario
     }, 'SenhaMuitoForteProtegendoToken');
 
     res.cookie('Token', token);

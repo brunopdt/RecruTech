@@ -1,6 +1,7 @@
 //contém todas as funções que vão interagir diretamente com o banco de dados
 const { query } = require('./connection');
 const connection = require('./connection');
+const jsonwebtoken = require('jsonwebtoken');
 
 /*Funçao que lista todas as vagas*/
 const listarVagasModel = async () => {
@@ -10,7 +11,9 @@ const listarVagasModel = async () => {
 
 /*Funçao que cria uma vaga */
 const criarVagaModel = async (vaga) => {
-  const { descricao, qtdVagas, requisitos, senioridade, codigoStatus, tempoExperienciaVaga, tituloVaga, localModalidade } = vaga;
+  const { descricao, qtdVagas, requisitos, senioridade, codigoStatus, tempoExperienciaVaga, tituloVaga, localModalidade } = vaga.body;
+
+  console.log((vaga.cookies.Token.js).jsonwebtoken.decode('SenhaMuitoForteProtegendoToken'))
 
   const query = 'INSERT INTO vaga(descricao, qtdVagas, requisitos, senioridade, codigoStatus, tempoExperienciaVaga, tituloVaga, localModalidade) VALUES (?, ?, ?, ?, ?, ?, ?, ?)';
   const [vagaCriada] = await connection.execute(query, [descricao, qtdVagas, requisitos, senioridade, codigoStatus, tempoExperienciaVaga, tituloVaga, localModalidade]);
