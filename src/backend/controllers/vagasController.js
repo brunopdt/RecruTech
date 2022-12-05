@@ -17,6 +17,13 @@ const detalheVagaEspecificaController = async (req, res) => {
     return res.status(200).json(especificacaoVaga);
 };
 
+const detalheVagaEspecificaUserController = async (req, res) => {
+    const codVaga= req.query.codVaga;
+    console.log(codVaga);
+    const [especificacaoVaga] = await vagasModel.vagaEspecificaUserModel(codVaga); 
+    return res.status(200).json(especificacaoVaga);
+};
+
 const deletarVagaController = async (req, res) => {
     const codVaga= req.params.id;
     console.log(codVaga);
@@ -46,5 +53,6 @@ module.exports = {
     uploadTesteController,
     obterCodigoVagaController,
     detalheVagaEspecificaController,
+    detalheVagaEspecificaUserController,
     deletarVagaController
 };

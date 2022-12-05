@@ -28,8 +28,14 @@ const uploadTesteModel = async (codVaga, url) => {
   return testeCriado;
 };
 
-/*Funçao de uma vaga específica*/
+/*Funçao de uma vaga específica RH*/
 const vagaEspecificaModel = async (idVaga) => {
+  const especificacaoVaga = await connection.execute(`SELECT * FROM vaga WHERE codigoVaga = ${idVaga}`);
+  return especificacaoVaga;
+}
+
+/*Funçao de uma vaga específica User*/
+const vagaEspecificaUserModel = async (idVaga) => {
   const especificacaoVaga = await connection.execute(`SELECT * FROM vaga WHERE codigoVaga = ${idVaga}`);
   return especificacaoVaga;
 }
@@ -50,5 +56,6 @@ module.exports = {
   uploadTesteModel,
   obterCodigoVagaModel,
   vagaEspecificaModel,
+  vagaEspecificaUserModel,
   deletarVagaModel
 };
