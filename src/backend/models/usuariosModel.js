@@ -8,7 +8,7 @@ const cadastrarUsuario = async (usuario) => {
 
   const { nome, email, senha, tipoCadastro } = usuario;
 
-  const senhaEncriptada = encriptador(senha).dadoEncriptado;
+  const senhaEncriptada = encriptador(senha);
 
   const query = "INSERT INTO usuario(nome, email, senha, tipoCadastro) VALUES (?, ?, ?, ?)";
 
@@ -23,7 +23,7 @@ const listarLogin = async () => {
 };
 
 const logarModel = async (email, senha) => {
-  const senhaEncriptada = encriptador(senha).dadoEncriptado;
+  const senhaEncriptada = encriptador(senha);
 
   const usuario = await connection.execute(`SELECT * FROM usuario WHERE email = "${email}" and senha = "${senhaEncriptada}"`);
 

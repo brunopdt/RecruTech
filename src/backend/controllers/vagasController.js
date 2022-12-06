@@ -12,14 +12,12 @@ const criarVagaController = async (req, res) => {
 
 const detalheVagaEspecificaController = async (req, res) => {
     const codVaga= req.query.codVaga;
-    console.log(codVaga);
     const [especificacaoVaga] = await vagasModel.vagaEspecificaModel(codVaga); //recebe o retorno da funcao vagaEspecifica
     return res.status(200).json(especificacaoVaga);
 };
 
 const deletarVagaController = async (req, res) => {
     const codVaga= req.params.id;
-    console.log(codVaga);
     const especificacaoVaga = await vagasModel.deletarVagaModel(codVaga);
     return res.status(200).json(especificacaoVaga);
 };
