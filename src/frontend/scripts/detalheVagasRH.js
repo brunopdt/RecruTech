@@ -4,7 +4,6 @@ const idDaVaga = urlParams.get("id");
 axios.get(`http://localhost:8081/detalheVagas?codVaga=${idDaVaga}`)
   .then(response => {
     if (response.status === 200) {
-      console.log(response.data[0]);
       const divVaga = document.getElementById("detalhesVaga");
       divVaga.innerHTML = construirCorpoModal(response.data[0]);
     }
