@@ -22,17 +22,6 @@ const deletarVagaController = async (req, res) => {
     return res.status(200).json(especificacaoVaga);
 };
 
-const obterCodigoVagaController = async (req, res) => {
-    const nomeVaga = req.query.nomeVaga;
-    const qtdVagas = req.query.qtdVagas;
-    const [codigoVaga] = await vagasModel.obterCodigoVagaModel(nomeVaga, qtdVagas);
-    
-    if(codigoVaga != 0 && codigoVaga != undefined)
-        return res.status(200).json(codigoVaga);
-    else
-        return res.status(404).json("Erro ao encontrar a vaga");
-}
-
 const uploadTesteController = async (req, res) => {
     const uploadTeste = await vagasModel.uploadTesteModel(req.body, req.file);
     return res.status(201).json(req.body);
@@ -42,7 +31,6 @@ module.exports = {
     listarVagasController,
     criarVagaController,
     uploadTesteController,
-    obterCodigoVagaController,
     detalheVagaEspecificaController,
     deletarVagaController
 };

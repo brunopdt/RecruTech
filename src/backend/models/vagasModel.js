@@ -37,11 +37,6 @@ const vagaEspecificaModel = async (idVaga) => {
   return especificacaoVaga;
 }
 
-const obterCodigoVagaModel = async(nomeVaga, qtdVagas) => {
-  const codigoVaga = await connection.execute(`SELECT codigoVaga FROM vaga WHERE tituloVaga = "${nomeVaga}" and qtdVagas = ${qtdVagas}`);
-  return codigoVaga;
-}
-
 const deletarVagaModel = async (codVaga) => {
   const vagaModificada = await connection.execute(`UPDATE vaga SET codigoStatus = 3 WHERE codigoVaga = ${codVaga}`);
   return vagaModificada;
@@ -51,7 +46,6 @@ module.exports = {
   listarVagasModel,
   criarVagaModel,
   uploadTesteModel,
-  obterCodigoVagaModel,
   vagaEspecificaModel,
   deletarVagaModel
 };

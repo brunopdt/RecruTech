@@ -1,19 +1,29 @@
 const connection = require('./connection');
 
-const uploadCurriculoModel = async (codVaga, codCandidato, url, tempExp) => {
+const inscreverVagaModel = async (dadosInscricao) => {
+  const codigoCandidato = dadosInscricao.codCandidato;
+  const codigoVaga = dadosInscricao.codVaga;
+  const tempoExperiencia = dadosInscricao.tempExp;
 
-  const { codigoVaga } = codVaga;
-  const { codigoCandidato } = codCandidato;
-  const { location: curriculo = "" } = url;
-  const { tempoExperiencia } = tempExp;
+  const query = 'INSERT INTO candidato_vaga(codigoCandidato, codigoVaga, tempoExperiencia) VALUES (?, ?, ?)';
+  const [dadosInscricaoEfetuada] = await connection.execute(query, [codigoCandidato, codigoVaga, tempoExperiencia]);
+  return dadosInscricaoEfetuada;
+}
 
-  const query = 'INSERT INTO candidato_vaga(codigoCandidato, codigoVaga, tempoExperiencia, curriculo) VALUES (?, ?, ?)';
-  const [testeCriado] = await connection.execute(query, [codigoCandidato, codigoVaga, tempoExperiencia, curriculo]);
+const uploadCurriculoModel = async (body, url) => {
+
+  const codigoVaga = body.codVaga;
+  const codigoCandidato = body.codCandidato;
+  const urlCurriculo = url.location;
+
+  const query = `UPDATE candidato_vaga set curriculo = '${urlCurriculo}' WHERE codigoCandidato = ${codigoCandidato} and codigoVaga = ${codigoVaga}`;
+  const [testeCriado] = await connection.execute(query);
 
   return testeCriado;
 };
 
 
 module.exports = {
-  uploadCurriculoModel
+  uploadCurriculoModel,
+  inscreverVagaModel
 };

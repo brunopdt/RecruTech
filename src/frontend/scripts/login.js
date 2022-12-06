@@ -1,8 +1,9 @@
+//limpa os cookies toda vez que recarregar a página
+document.cookie.split(";").forEach(function(c) { document.cookie = c.replace(/^ +/, "").replace(/=.*/, "=;expires=" + new Date().toUTCString() + ";path=/"); });
+
 const togglePassword = document.querySelector('#togglePassword')
 const password = document.querySelector('#password')
 let btn = document.querySelector('#actionButton');
-
-//document.cookie.split(";").forEach(function(c) { document.cookie = c.replace(/^ +/, "").replace(/=.*/, "=;expires=" + new Date().toUTCString() + ";path=/"); });
 
 btn.addEventListener('click', () => {
     logar();
