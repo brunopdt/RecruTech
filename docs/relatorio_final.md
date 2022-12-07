@@ -148,7 +148,7 @@ O sistema Recrutech terá o banco de dados com os currículos pré-selecionados 
 De acordo com o resultado de cada fase o sistema envia uma mensagem de retorno notificando o usuário sobre o status do seu processo seletivo (se ele foi aprovado para a próxima etapa ou reprovado). Caso ele tenha sido reprovado em alguma fase o candidato automaticamente é desclassificado para a vaga proposta. E caso tenha sido aprovado em todas as etapas, o candidato é encaminhado para o processo de contratação.
 
 
-![Processo 4](imagens/modproc4.svg "Seleção de cadidatos candidatos para a vaga")
+![Processo 4](imagens/modproc4.jpg "Seleção de cadidatos candidatos para a vaga")
 
 ### 3.3.5 Processo 5 – Contratação
 
@@ -156,7 +156,7 @@ De acordo com o resultado de cada fase o sistema envia uma mensagem de retorno n
 
 Processo de contratação, em que o inicio se dá pela comunicação ao candidato quanto ao feedback de seu processo seletivo. Logo em seguida, o sistema da RecruTech abre para o recebimento da devida documentação necessária para a redação do contrato por parte do setor do RH. Este, deve conferir a integridade dos documentos, assim como se estão completos, para que o processo seja levado adiante e o contratado possa revisar e assinar o contrato. Caso haja alguma inconstância nos dados contratuais, o mesmo é levado para a reelaboração. Caso esteja tudo nos conformes, o setor de recursos humanos das empresas recebe novamente o contrato final e solicita a carteira de trabalho ao contratado. Após isso, o processo tem fim com sua carteira de trabalho registrada pela administração do RH. Vale ressaltar que a empresa pode determinar um prazo para o envio das documentações e assinatura do contrato, em que caso o indivíduo não faça os passos necessários para a continuidade do processo ele é desclassificado e o processo termina.
 
-![Processo 5](imagens/processo5.png)
+![Processo 5](imagens/processo5.jpg)
 
 ### 3.3.6 Processo 6 – Cancelamento da Vaga pela empresa
 
