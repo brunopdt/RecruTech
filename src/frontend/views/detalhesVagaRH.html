@@ -1,56 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <script
-      src="https://kit.fontawesome.com/2c9e6838ea.js"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="stylesheet" href="../styles/detalhesVaga.css" />
 
-    <title>Detalhes da vaga RH</title>
-  </head>
-  <body>
-    <nav class="sidebar">
-      <img id="logo_sidebar" src="../imgs/logo_icon.jpg" alt="logo_icon" />
-      <a href="#"><i class="fa-solid fa-user fa-xl"></i></a> <br />
-      <a href="#"><i class="fa-solid fa-square-plus fa-xl"></i></a> <br />
-      <a href="#"><i class="fa-solid fa-list fa-xl"></i></a> <br />
-      <a href="#"><i class="fa-solid fa-right-from-bracket fa-xl"></i></a>
-      <br />
-    </nav>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700;800&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/2c9e6838ea.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../styles/detalhesVaga.css" />
 
-    <div class="main">
-      <div class="title underline">Detalhes da vaga</div>
+  <title>Detalhes da vaga RH</title>
+</head>
 
-      <div class="content">
-        <div id="close"><i class="fa-solid fa-circle-xmark fa-2xl"></i></div>
+<body>
+  <nav class="sidebar">
+    <img id="logo_sidebar" src="../imgs/logo_icon.jpg" alt="logo_icon" />
+    <a href="#"><i class="fa-solid fa-user fa-xl"></i></a> <br />
+    <a href="/cadastro-vagas"><i class="fa-solid fa-square-plus fa-xl"></i></a> <br />
+    <a href="/lista-vagas-empresa"><i class="fa-solid fa-list fa-xl"></i></a> <br />
+    <a href="#"><i class="fa-solid fa-right-from-bracket fa-xl"></i></a>
+    <br />
+  </nav>
 
-        <div id="detalhesVaga"></div>
+  <div class="main">
+    <div class="title underline">Detalhes da vaga</div>
 
-        <div class="footer-content">
-          <span id="num_candidatos">47</span>
-          <i class="fa-regular fa-user icon"></i>
+    <div class="content">
+      <div id="close"><i class="fa-solid fa-circle-xmark fa-2xl"></i></div>
 
-          <a href="./ListaCurriculosVagas.html">
-            <div class="button_container">
-              <button class="button">ACOMPANHAR VAGA</button>
-            </div>
-          </a>
+      <div id="detalhesVaga"></div>
+
+      <div class="footer-content">
+        <span id="num_candidatos">47</span>
+        <i class="fa-regular fa-user icon"></i>
+
+        <div class="button_container">
+          <button id="botao-acompanhar" type="button" class="button">ACOMPANHAR VAGA</button>
         </div>
       </div>
     </div>
+  </div>
 
-    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
-    <!-- faz requisicao do front pro back-->
-    <script src="../scripts/detalheVagasRH.js"></script>
-  </body>
+  <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+  <!-- faz requisicao do front pro back-->
+  <script src="../scripts/detalheVagasRH.js"></script>
+</body>
+
 </html>
