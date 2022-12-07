@@ -42,8 +42,7 @@ router.post('/vagas-teste', multer(multerConfig).single("file"), vagasController
 router.get('/detalheVagas', vagasController.detalheVagaEspecificaController); /*Rota pra linkar os detalhes */
 router.get('/remove-vaga/(:id)', usuariosMiddleware.usuarioLogado, vagasController.deletarVagaController);
 
-router.post('/inscrever-vaga', candVagaController.inscreverVagaController);
-router.put('/curriculo', multer(multerConfig).single("file"), candVagaController.uploadCurriculoController);
+router.post('/inscrever-vaga', multer(multerConfig).single("file"), candVagaController.inscreverVagaController);
 
 router.get('/usuarios', usuariosController.listarLoginController);
 router.post('/usuarios', usuariosMiddleware.validateUser, usuariosController.cadastrarUsuarioController);
@@ -64,5 +63,9 @@ router.get('/lista-vagas-empresa', usuariosMiddleware.usuarioLogado, (req, res) 
 router.get('/lista-vagas', usuariosMiddleware.usuarioLogado, (req, res) => res.sendFile("listaDeVagasUsuario.html", { root: 'frontend/views/' }));
 
 router.get('/detalhe-da-vaga', usuariosMiddleware.usuarioLogado, (req, res) => res.sendFile("detalhesVagaRH.html", { root: 'frontend/views/' }));
+router.get('/detalhe-da-vaga-usuario', usuariosMiddleware.usuarioLogado, (req, res) => res.sendFile("detalhesVagaUsuario.html", { root: 'frontend/views/' }));
 
+router.get('/upload-curriculo', usuariosMiddleware.usuarioLogado, (req, res) => res.sendFile("uploadCurriculo.html", { root: 'frontend/views/' }));
+
+router.get('/vagas-inscritas', usuariosMiddleware.usuarioLogado, (req, res) => res.sendFile("vagasInscritasUser.html", { root: 'frontend/views/' }));
 module.exports = router;

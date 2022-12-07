@@ -116,3 +116,23 @@ p {
   text-align: end;
   cursor: pointer;
 }
+.button_container {
+  text-align: center;
+}
+
+.button {
+  background-color: #f8b500;
+  font-size: 1.5rem;
+  font-weight: 700;
+  width: 23rem;
+  height: 3rem;
+  border-radius: 15px;
+  outline: none;
+  border: none;
+  transition-duration: 0.4s;
+}
+
+.button:hover {
+  cursor: pointer;
+  background-color: #ffde82;
+}
