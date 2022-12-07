@@ -35,21 +35,26 @@ router.all("*", function (req, res, next) {
   next();
 });
 
+
 router.get('/vagas', vagasController.listarVagasController);
 router.post('/vagas', vagasMiddleware.validateBody, vagasController.criarVagaController);
-router.get('/vagas-codigo', vagasController.obterCodigoVagaController);
 router.post('/vagas-teste', multer(multerConfig).single("file"), vagasController.uploadTesteController);
-
-router.post('/curriculo', multer(multerConfig).single("file"), candVagaController.uploadCurriculoController);
-
 router.get('/detalheVagas', vagasController.detalheVagaEspecificaController); /*Rota pra linkar os detalhes RH*/
 router.get('/detalheVagasUser', vagasController.detalheVagaEspecificaUserController); /*Rota pra linkar os detalhes User*/
+router.get('/remove-vaga/(:id)', usuariosMiddleware.usuarioLogado, vagasController.deletarVagaController);
+
+router.post('/inscrever-vaga', candVagaController.inscreverVagaController);
+router.put('/curriculo', multer(multerConfig).single("file"), candVagaController.uploadCurriculoController);
 
 router.get('/usuarios', usuariosController.listarLoginController);
 router.post('/usuarios', usuariosMiddleware.validateUser, usuariosController.cadastrarUsuarioController);
+router.post('/usuarios-logar', usuariosController.logarController);
+router.get('/usuarios-deslogar', usuariosController.deslogarController);
+
+router.get('/enviar-email', usuariosMiddleware.usuarioLogado, emailController.enviarEmailController);
+
 
 /* Configuração das rotas do servidor */
-
 router.get('/', (req, res) => res.sendFile(__dirname.replace('backend', 'frontend/views/login.html')));
 router.get('/cadastro-usuario', (req, res) => res.sendFile("cadastroUser.html", { root: 'frontend/views/' }));
 
@@ -61,12 +66,5 @@ router.get('/lista-vagas', usuariosMiddleware.usuarioLogado, (req, res) => res.s
 
 router.get('/detalhe-da-vaga', usuariosMiddleware.usuarioLogado, (req, res) => res.sendFile("detalhesVagaRH.html", { root: 'frontend/views/' }));
 router.get('/detalhe-da-vaga-user', usuariosMiddleware.usuarioLogado, (req, res) => res.sendFile("detalheDaVagaUsuario.html", { root: 'frontend/views/' }));
-
-router.get('/remove-vaga/(:id)', usuariosMiddleware.usuarioLogado, vagasController.deletarVagaController,);
-
-router.get('/enviar-email', usuariosMiddleware.usuarioLogado, emailController.enviarEmailController);
-
-router.post('/usuarios-logar', usuariosController.logarController);
-router.get('/usuarios-deslogar', usuariosController.deslogarController);
 
 module.exports = router;

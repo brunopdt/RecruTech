@@ -14,23 +14,27 @@ const listarLoginController = async (req, res) => {
 const logarController = async (req, res) => {
     const email = req.body.email;
     const senha = req.body.senha;
-    
-    if(!email || !senha)
-        return {erro: 'Dados insuficientes'};
+
+    if (!email || !senha)
+        return { erro: 'Dados insuficientes' };
 
     const [usuario] = await usuariosModel.logarModel(email, senha);
 
-    if(usuario == '' || usuario == undefined || usuario == null){ //essa parte não tá funcionando, req roda infinito
-        return{ erro: 'E-mail ou senha incorretos.'}
+    if (usuario == '' || usuario == undefined || usuario == null) { //essa parte não tá funcionando, req roda infinito
+        return res.status(400).json(usuario)
     }
 
     const token = jsonwebtoken.sign({
         id: res.id,
-        nome: usuario.nome,
-        email: usuario.email
+        nome: usuario[0].nome,
+        email: usuario[0].email,
+        tipo: usuario[0].tipoCadastro,
+        codigoUsuario: usuario[0].codigoUsuario
     }, 'SenhaMuitoForteProtegendoToken');
 
     res.cookie('Token', token);
+    res.cookie('CodigoUsuarioLogado', usuario[0].codigoUsuario);
+    res.cookie('TipoCadastroUsuarioLogado', usuario[0].tipoCadastro);
 
     return res.status(200).json(usuario)
 };

@@ -15,12 +15,16 @@ const redirecionar = async (codigo) => {
 
     if (res.status === 200) {
       alert('Vaga fechada com sucesso')
-    } 
+    }
 
   } catch (e) {
     console.error(e);
   }
-    
+
+}
+
+const abrirDetalhes = async (codigo) => {
+  window.location.href = `/detalhe-da-vaga?id=${codigo}`;
 }
 
 async function getItems() {
@@ -35,20 +39,12 @@ async function getItems() {
 
   console.log(data);
 
-
-
-const construirCorpoModal = (data) => {
-    let codigoStatus = data.codigoStatus;
+  const construirCorpoModal = (data) => {
     let dscStatus = data.dscStatus;
     let codigoVaga = data.codigoVaga;
-    let descricao = data.descricao;
-    let qtdVagas = data.qtdVagas;
-    let requisitos = data.requisitos;
-    let senioridade = data.senioridade;
-    let tempoExperienciaVaga = data.tempoExperienciaVaga;
     let tituloVaga = data.tituloVaga;
     let localModalidade = data.localModalidade;
-    
+
 
     textoHTML += `
       <div class="new-vaga">
@@ -66,7 +62,9 @@ const construirCorpoModal = (data) => {
               </div>
 
               <div class="button_container">
-                <button class="button" id="button-detalhe" value='${codigoVaga}'><i class="fa-solid fa-plus"></i></button>
+                <button class="button" id="button-detalhe" onClick="abrirDetalhes(${codigoVaga})"'>
+                  <i class="fa-solid fa-plus"></i>
+                </button>
               </div>
             </div>
           </div>
@@ -82,15 +80,5 @@ const construirCorpoModal = (data) => {
     const divVaga = document.getElementById("container_vagas");
     divVaga.innerHTML = construirCorpoModal(vaga);
   })
-
-  let button = document.querySelector('#button-detalhe');
-  
-  button.addEventListener('click', () => {
-    alert('ooi');
-    const idVaga = button.value;
-    window.location.href= `/detalhe-da-vaga?id=${idVaga}`;    
-  });
-
-
 }
 
