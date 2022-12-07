@@ -1,5 +1,6 @@
 const urlParams = new URLSearchParams(window.location.search);
 const idDaVaga = urlParams.get("id");
+let btn = document.querySelector('#botao-acompanhar');
 
 axios.get(`http://localhost:8081/detalheVagas?codVaga=${idDaVaga}`)
   .then(response => {
@@ -42,3 +43,7 @@ const construirCorpoModal = (data) => {
 
   return textoHTML;
 };
+
+btn.addEventListener('click', () => {
+  window.location.href = '/acompanhar-vaga-empresa'
+})

@@ -137,26 +137,21 @@ Processo responsável pela filtragem automática de currículos por meio do temp
 
 ![Processo 3](imagens/bpmn_curriculo.png "Filtragem e Validação de Currículos")
 
-### 3.3.4 Processo 4 – Seleção do Candidato
+### 3.3.4 Processo 4 – Seleção do Candidato (Teste)
 
 **Descrição geral do processo:**
 
-O processo de seleção é o processo responsável pela apuração e triagem dos candidatos. Ele irá filtrar os candidatos de acordo com os currículos selecionados e as fases que terão no sistema como o teste online (caso a empresa exija) e a entrevista com o RH. 
+O processo de seleção é o processo responsável pelo envio e correção do teste online. Inicia-se com a tela contendo a lista de vagas inscritas disponibilizada para o candidato. Logo em seguida ele seleciona uma vaga para acompanhar, se a vaga possuir teste o candidato faz o download do teste, realiza o teste e envia para o RH da empresa. A partir daí o RH da empresa corrige o teste manualmente e envia o resultado para o sistema Recrutech. Se o candidato foi aprovado é enviado um email notificando-o da aprovação, caso contrário a candidatura é encerrada no sistema e o candidato é notificado que infelizmente foi reprovado no processo seletivo. 	
 
-O sistema Recrutech terá o banco de dados com os currículos pré-selecionados para as vagas e irá verificar se a vaga possui ou não um teste online. Caso não possua, o processo seguirá para a reunião entre o candidato e os Recursos Humanos. Caso possua, o sistema irá disponibilizar um teste online para os candidatos e prosseguir com a candidatura. 
+![Processo 4](imagens/modproc4.jpg "Seleção de cadidatos candidatos para a vaga")
 
-De acordo com o resultado de cada fase o sistema envia uma mensagem de retorno notificando o usuário sobre o status do seu processo seletivo (se ele foi aprovado para a próxima etapa ou reprovado). Caso ele tenha sido reprovado em alguma fase o candidato automaticamente é desclassificado para a vaga proposta. E caso tenha sido aprovado em todas as etapas, o candidato é encaminhado para o processo de contratação.
-
-
-![Processo 4](imagens/modproc4.svg "Seleção de cadidatos candidatos para a vaga")
-
-### 3.3.5 Processo 5 – Contratação
+### 3.3.5 Processo 5 – Seleção do Candidato (Entrevista)
 
 **Descrição geral do processo:**
 
-Processo de contratação, em que o inicio se dá pela comunicação ao candidato quanto ao feedback de seu processo seletivo. Logo em seguida, o sistema da RecruTech abre para o recebimento da devida documentação necessária para a redação do contrato por parte do setor do RH. Este, deve conferir a integridade dos documentos, assim como se estão completos, para que o processo seja levado adiante e o contratado possa revisar e assinar o contrato. Caso haja alguma inconstância nos dados contratuais, o mesmo é levado para a reelaboração. Caso esteja tudo nos conformes, o setor de recursos humanos das empresas recebe novamente o contrato final e solicita a carteira de trabalho ao contratado. Após isso, o processo tem fim com sua carteira de trabalho registrada pela administração do RH. Vale ressaltar que a empresa pode determinar um prazo para o envio das documentações e assinatura do contrato, em que caso o indivíduo não faça os passos necessários para a continuidade do processo ele é desclassificado e o processo termina.
+O processo 5 é a continuação da seleção do candidato que inicia-se com o RH da empresa notificando os candidatos aprovados com informações e o link da entrevista. Em seguida após aguardar a conclusão da entrevista, o RH da empresa informa ao sistema o resultado, e se o canditato for aprovado é enviado um email notificando os próximos passos com informações de contratação. Com isso, o sistema atualiza o status da vaga para "fechada". Caso o candidato não foi aprovado na entrevista ele é notificado com o feedback da mesma, contendo a informação que infelizmente ele foi reprovado no processo seletivo.
 
-![Processo 5](imagens/processo5.png)
+![Processo 5](imagens/processo5.jpg)
 
 ### 3.3.6 Processo 6 – Cancelamento da Vaga pela empresa
 

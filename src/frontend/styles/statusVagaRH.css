@@ -1,0 +1,153 @@
+body {
+  background: #f7f7f7;
+  font-family: 'Inter', sans-serif;
+  color: #393e46;
+}
+
+/* codigo sidebar padrão para todas as páginas */
+.sidebar {
+  height: 100%;
+  width: 140px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #f8b500;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sidebar a {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1.5rem;
+  text-decoration: none;
+  font-size: 25px;
+  color: #393e46;
+  transition-duration: 0.3s;
+  display: block;
+  text-align: center;
+}
+
+#nome-section {
+  display: flex;
+  justify-content: space-between;
+  width: 85%;
+}
+
+#logo_sidebar {
+  width: 8rem;
+  height: 8rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -1rem;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+/* fim do codigo navbar padrao */
+
+.main {
+  margin-top: 70px;
+  margin-left: 140px;
+  padding: 0px 10px;
+}
+
+.title {
+  font-weight: 800;
+  font-size: 3rem;
+  margin-top: 50px;
+  margin-left: 3rem;
+}
+
+#main_title {
+  text-decoration: underline;
+  margin-bottom: 4rem;
+}
+
+.button_container {
+  width: 85%;
+  text-align: right;
+  margin-top: 1em;
+}
+
+.button {
+  font-size: 1.5rem;
+  font-weight: 700;
+  width: 13rem;
+  height: 3rem;
+  border-radius: 15px;
+  outline: none;
+  border: none;
+  transition-duration: 0.4s;
+  background-color: #f8b500;
+}
+
+#visualizar:hover {
+  cursor: pointer;
+  background-color: rgb(255, 225, 143);
+}
+
+.section-info {
+  margin-left: 3em;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.fa-circle {
+  color: #f8b500;
+}
+
+#line {
+  border-top: 1px solid #393e46;
+  margin-left: 6rem;
+  margin-top: 2rem;
+}
+
+.section {
+  margin-top: 1em;
+  margin-bottom: 7rem;
+  font-weight: 600;
+  font-size: 2em;
+}
+
+/* iPads (landscape) ----------- */
+@media only screen and (max-width: 1224px) {
+}
+
+/* iPads (portrait) ----------- */
+@media only screen and (max-width: 1024px) {
+  .sidebar {
+    height: 80px;
+    width: 100%;
+  }
+
+  .button {
+    width: 10rem;
+  }
+
+  .main {
+    margin-top: 150px;
+    margin-left: 0px;
+  }
+
+  .section {
+    font-size: 1.7em;
+  }
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen and (max-width: 768px) {
+}
+/* Big smartphones (portrait) (ie: Galaxy 3 has 360) */
+@media only screen and (max-width: 640px) {
+}
+/* Smartphones (portrait) (ie: Galaxy 1) */
+@media only screen and (max-width: 321px) {
+}

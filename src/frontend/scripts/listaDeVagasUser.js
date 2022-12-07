@@ -2,10 +2,9 @@ const uri = "http://localhost:8081/vagas"
 let textoHTML = '';
 let btn = document.querySelector('#detalhe');
 
-btn.addEventListener('click', () => {
-  alert("testee");
-  window.location.href = '/src/frontend/views/DetalhesVag.html'
-})
+const abrirDetalhes = async (codigo) => {
+  window.location.href = `/detalhe-da-vaga-usuario?id=${codigo}`;
+}
 
 async function getItems() {
   const headers = new Headers();
@@ -20,14 +19,8 @@ async function getItems() {
   console.log(data);
 
   function construirCorpoModal(data) {
-    let codigoStatus = data.codigoStatus;
     let dscStatus = data.dscStatus;
     let codigoVaga = data.codigoVaga;
-    let descricao = data.descricao;
-    let qtdVagas = data.qtdVagas;
-    let requisitos = data.requisitos;
-    let senioridade = data.senioridade;
-    let tempoExperienciaVaga = data.tempoExperienciaVaga;
     let tituloVaga = data.tituloVaga;
     let localModalidade = data.localModalidade;
 
@@ -42,7 +35,9 @@ async function getItems() {
             <div id="botoes">
 
               <div class="button_container">
-                <button class="button"><i class="fa-solid fa-plus"></i> VER DETALHES</button>
+                <button class="button" id="button-detalhes" onClick="abrirDetalhes(${codigoVaga})">
+                  <i class="fa-solid fa-plus"></i> VER DETALHES
+                </button>
               </div>
             </div>
           </div>
