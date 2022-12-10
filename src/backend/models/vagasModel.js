@@ -13,8 +13,6 @@ const listarVagasModel = async () => {
 const criarVagaModel = async (vaga) => {
   const { descricao, qtdVagas, requisitos, senioridade, codigoStatus, tempoExperienciaVaga, tituloVaga, localModalidade } = vaga.body;
 
-  console.log((vaga.cookies.Token.js).jsonwebtoken.decode('SenhaMuitoForteProtegendoToken'))
-
   const query = 'INSERT INTO vaga(descricao, qtdVagas, requisitos, senioridade, codigoStatus, tempoExperienciaVaga, tituloVaga, localModalidade) VALUES (?, ?, ?, ?, ?, ?, ?, ?)';
   const [vagaCriada] = await connection.execute(query, [descricao, qtdVagas, requisitos, senioridade, codigoStatus, tempoExperienciaVaga, tituloVaga, localModalidade]);
 
@@ -42,12 +40,6 @@ const vagaEspecificaUserModel = async (idVaga) => {
   const especificacaoVaga = await connection.execute(`SELECT * FROM vaga WHERE codigoVaga = ${idVaga}`);
   return especificacaoVaga;
 }
-
-const obterCodigoVagaModel = async(nomeVaga, qtdVagas) => {
-  const codigoVaga = await connection.execute(`SELECT codigoVaga FROM vaga WHERE tituloVaga = "${nomeVaga}" and qtdVagas = ${qtdVagas}`);
-  return codigoVaga;
-}
-
 const deletarVagaModel = async (codVaga) => {
   const vagaModificada = await connection.execute(`UPDATE vaga SET codigoStatus = 3 WHERE codigoVaga = ${codVaga}`);
   return vagaModificada;
