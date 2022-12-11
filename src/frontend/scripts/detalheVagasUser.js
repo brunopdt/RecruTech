@@ -45,5 +45,5 @@ const construirCorpoModal = (data) => {
 };
 
 btn.addEventListener('click', () => {
-  window.location.href = '/inscricao-user-vaga'
+  window.location.href = `/inscricao-user-vaga?id=${idDaVaga}`
 })
