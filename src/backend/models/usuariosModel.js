@@ -30,8 +30,15 @@ const logarModel = async (email, senha) => {
   return usuario;
 };
 
+const pegarUsuarioModel = async (codigoUsuario) => {
+
+  const usuario = await connection.execute(`SELECT * FROM usuario WHERE codigoUsuario = "${codigoUsuario}"`);
+
+  return usuario;
+};
 module.exports = {
   cadastrarUsuario,
   listarLogin,
-  logarModel
+  logarModel,
+  pegarUsuarioModel
 };
