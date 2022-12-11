@@ -1,70 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/2c9e6838ea.js"
+      crossorigin="anonymous"
+    ></script>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700;800&display=swap" rel="stylesheet" />
-  <script src="https://kit.fontawesome.com/2c9e6838ea.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="../styles/cadastroUser.css" />
+    <link rel="stylesheet" href="../styles/cadastroUser.css" />
 
-  <title>Cadastro</title>
-</head>
+    <title>Cadastro</title>
+  </head>
 
-<body>
-  <nav class="sidebar">
-    <img id="logo_sidebar" src="../imgs/logo_escrita_icon.png" alt="logo_icon" />
-    <br />
-      <a href="/" class="title" id="cadastro">Acesse sua <br /> conta agora</a>
-  </nav>
+  <body>
+    <nav class="sidebar">
+      <img
+        id="logo_sidebar"
+        src="../imgs/logo_escrita_icon.png"
+        alt="logo_icon"
+      />
+      <br />
+      <a href="/" class="title" id="cadastro"
+        >Acesse sua <br />
+        conta agora</a
+      >
+    </nav>
 
-  <div class="main">
-    <div class="header">
-      <p id="CriarConta" class="titleA alternative_title">Crie sua conta</p>
-      <p id="PreencheDados" class="titleB alternative_title">
-        Preencha os dados abaixo <br />
-      </p>
-    </div>
-
-    <div class="input_area">
-
-      <div class="retangulo">
-        <input type="text" id="nome" placeholder="Nome Usuário/Nome Empresa" />
-        <i class="fa-regular fa-user fa-2xl icon"></i>
+    <div class="main">
+      <div class="header">
+        <p id="CriarConta" class="titleA alternative_title">Crie sua conta</p>
+        <p id="PreencheDados" class="titleB alternative_title">
+          Preencha os dados abaixo <br />
+        </p>
       </div>
 
-      <div class="retangulo">
-        <input type="password" id="password" placeholder="Senha" />
-        <a href="#"><i class="fa-solid fa-eye fa-2xl icon" id="togglePassword"></i></a>
+      <div class="input_area">
+        <div class="retangulo">
+          <input
+            type="text"
+            id="nome"
+            placeholder="Nome Usuário/Nome Empresa"
+          />
+          <i class="fa-regular fa-user fa-2xl icon"></i>
+        </div>
+
+        <div class="retangulo">
+          <input type="password" id="password" placeholder="Senha" />
+          <a href="#"
+            ><i class="fa-solid fa-eye fa-2xl icon" id="togglePassword"></i
+          ></a>
+          <br />
+        </div>
+
+        <div class="retangulo">
+          <input type="text" id="email" placeholder="Email" />
+          <i class="fa-regular fa-envelope fa-2xl icon"></i>
+          <br />
+        </div>
+      </div>
+
+      <div class="user">
+        <div class="item_radio">
+          <input type="radio" name="tipoUser" value="candidato" /> Candidato
+        </div>
+        <div class="item_radio">
+          <input type="radio" name="tipoUser" value="rh" /> Empresa
+        </div>
+      </div>
+
+      <div class="button_container">
+        <button type="button" id="botao-cadastrar" class="button">
+          CADASTRAR
+        </button>
         <br />
       </div>
-
-      <div class="retangulo">
-        <input type="text" id="email" placeholder="Email" />
-        <i class="fa-regular fa-envelope  fa-2xl icon"></i>
-        <br />
-
-      </div>
-
     </div>
-
-    <div class="user">
-      <div class="item_radio"> <input type="radio" name="tipoUser" value="candidato"> Candidato </div>
-      <div class="item_radio"> <input type="radio" name="tipoUser" value="rh"> Empresa </div>
-    </div>
-
-
-    <div class="button_container">
-      <button type="button" id="botao-cadastrar" class="button">CADASTRAR</button> <br />
-    </div>
-
-  </div>
-  <script src="../scripts/cadastroUser.js"></script>
-  <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-</body>
-
+    <script src="../scripts/cadastroUser.js"></script>
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </body>
 </html>

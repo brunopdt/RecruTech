@@ -9,7 +9,7 @@ body {
   font-size: 2.5rem;
   margin-right: auto;
   text-align: center;
-  color: #f1f1f1; 
+  color: #f1f1f1;
 }
 
 .titleA {
@@ -26,7 +26,6 @@ body {
   margin-right: auto;
   margin-top: 5rem;
 }
-
 
 a {
   color: inherit;
@@ -95,7 +94,6 @@ a {
   border-radius: 16px;
   background-color: #ced4df;
   margin-top: 3.5rem;
-  
 }
 
 #nome,
@@ -104,11 +102,11 @@ a {
   width: 80%;
   height: 40px;
   margin-left: 2rem;
-  margin-bottom: 2.0rem;
+  margin-bottom: 2rem;
   margin-top: 0.7rem;
   background-color: transparent;
   color: #000000;
- /*color: #f1f1f1; */
+  /*color: #f1f1f1; */
   outline: none;
   outline-style: none;
   border-top: none;
@@ -142,7 +140,7 @@ a {
 }
 
 .button {
-  margin-top: 4rem; 
+  margin-top: 4rem;
   background-color: #f8b500;
   font-size: 1.5rem;
   font-weight: 700;
@@ -160,15 +158,15 @@ a {
 
 .item_radio {
   margin-left: 18rem;
-  margin-right: 10rem; 
+  margin-right: 10rem;
   font-size: 1.5em;
   display: inline-block;
 }
 
-.user{
+.user {
   margin-top: 2rem;
 }
 
-input[type=radio]:checked{
+input[type='radio']:checked {
   accent-color: #bd8a00;
 }

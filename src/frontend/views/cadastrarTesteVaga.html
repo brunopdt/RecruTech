@@ -1,54 +1,52 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700;800&display=swap" rel="stylesheet" />
-    <script src="https://kit.fontawesome.com/2c9e6838ea.js" crossorigin="anonymous"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/2c9e6838ea.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" href="../styles/sidebar.css" />
     <link rel="stylesheet" href="../styles/cadastrarTesteVaga.css" />
 
     <title>Cadastro do Teste</title>
-</head>
+  </head>
 
-<body>
-    <nav class="sidebar">
-        <img id="logo_sidebar" src="../imgs/logo_icon.jpg" alt="logo_icon" />
-
-        <a href="#"><i class="nav-item fa-solid fa-user fa-xl"></i></a> <br />
-        <a href="#"><i class="nav-item fa-solid fa-square-plus fa-xl"></i></a>
-        <br />
-        <a href="#"><i class="nav-item fa-solid fa-list fa-xl"></i></a> <br />
-
-        <a href="#"><i class="nav-item fa-solid fa-right-from-bracket fa-xl"></i></a>
-    </nav>
+  <body>
+    <nav class="sidebar"></nav>
 
     <div class="main">
-        <div class="title" id="main_title">Envio do teste</div>
+      <div class="title" id="main_title">Envio do teste</div>
 
-        <div class="content">
-            <div class="content-info">
-                <div>Teste (PDF)*</div>
-                <div class="file_container">
-                    <div class="retangulo">
-                        <input type="file" id="input_file" />
-                    </div>
-                    <i class="fa-solid fa-file" id="icon_file"></i>
-                </div>
+      <div class="content">
+        <div class="content-info">
+          <div>Teste (PDF)*</div>
+          <div class="file_container">
+            <div class="retangulo">
+              <input type="file" id="input_file" />
             </div>
+            <i class="fa-solid fa-file" id="icon_file"></i>
+          </div>
         </div>
+      </div>
 
-        <div id="line"></div>
-        <div class="bottom_page">
-            <button class="button" id="btn-enviar">ENVIAR</button>
-        </div>
+      <div id="line"></div>
+      <div class="bottom_page">
+        <button class="button" id="btn-enviar">ENVIAR</button>
+      </div>
     </div>
 
+    <script src="../scripts/sidebar.js"></script>
     <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
     <script src="../scripts/cadastrarTesteVaga.js"></script>
-</body>
-
+  </body>
 </html>

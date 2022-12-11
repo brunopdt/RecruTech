@@ -1,48 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/2c9e6838ea.js"
+      crossorigin="anonymous"
+    ></script>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700;800&display=swap" rel="stylesheet" />
-  <script src="https://kit.fontawesome.com/2c9e6838ea.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="../styles/listaDeVagasRH.css" />
+    <link rel="stylesheet" href="../styles/sidebar.css" />
+    <link rel="stylesheet" href="../styles/listaDeVagasRH.css" />
 
-  <title>Lista de vagas RH</title>
-</head>
+    <title>Lista de vagas RH</title>
+  </head>
 
-<body>
-  <nav class="sidebar">
-    <img id="logo_sidebar" src="../imgs/logo_icon.jpg" alt="logo_icon" />
+  <body>
+    <nav class="sidebar"></nav>
 
-    <a href="#"><i class="nav-item fa-solid fa-user fa-xl"></i></a> <br />
-    <a href="/cadastro-vagas"><i class="nav-item fa-solid fa-square-plus fa-xl"></i></a>
-    <br />
-    <a href="#"><i class="nav-item fa-solid fa-list fa-xl"></i></a> <br />
+    <div class="main">
+      <div class="title" id="main_title">Lista de vagas</div>
 
-    <a href="#"><i class="nav-item fa-solid fa-right-from-bracket fa-xl"></i></a>
-  </nav>
+      <div class="titulos-coluna">
+        <div class="coluna">Vaga</div>
+        <div class="coluna">Modalidade/Local</div>
+        <div class="coluna">Status</div>
+      </div>
 
-  <div class="main">
-    <div class="title" id="main_title">Lista de vagas</div>
-
-    <div class="titulos-coluna">
-      <div class="coluna">Vaga</div>
-      <div class="coluna">Modalidade/Local</div>
-      <div class="coluna">Status</div>
+      <div id="container_vagas"></div>
     </div>
 
-    <div id="container_vagas"></div>
-
-  </div>
-
-  <script src="../scripts/listaDeVagasRH.js"></script>
-  <script type="text/javascript">
-    getItems();
-  </script>
-</body>
-
+    <script src="../scripts/sidebar.js"></script>
+    <script src="../scripts/listaDeVagasRH.js"></script>
+    <script type="text/javascript">
+      getItems()
+    </script>
+  </body>
 </html>

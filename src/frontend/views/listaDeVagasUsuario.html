@@ -9,20 +9,15 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700;800&display=swap" rel="stylesheet" />
   <script src="https://kit.fontawesome.com/2c9e6838ea.js" crossorigin="anonymous"></script>
+ 
+  <link rel="stylesheet" href="../styles/sidebar.css" />
   <link rel="stylesheet" href="../styles/ListaDeVagasUsuario.css" />
 
   <title>Lista de vagas User</title>
 </head>
 
 <body>
-  <nav class="sidebar">
-    <img id="logo_sidebar" src="../imgs/logo_icon.jpg" alt="logo_icon" />
-
-    <a href="/vagas-inscritas"><i class="nav-item fa-solid fa-user fa-xl"></i></a> <br />
-    <a href="#"><i class="nav-item fa-solid fa-list fa-xl"></i></a> <br />
-
-    <a href="#"><i class="nav-item fa-solid fa-right-from-bracket fa-xl"></i></a>
-  </nav>
+  <nav class="sidebar"></nav>
 
   <div class="main">
     <div class="title" id="main_title">Lista de vagas</div>
@@ -35,6 +30,7 @@
     </div>
     <div id="container_vagas"></div>
 
+    <script src="../scripts/sidebar.js"></script>
     <script src="../scripts/listaDeVagasUser.js"></script>
     <script type="text/javascript">
       getItems();
