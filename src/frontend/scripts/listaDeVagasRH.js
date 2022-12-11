@@ -45,7 +45,6 @@ async function getItems() {
     let tituloVaga = data.tituloVaga;
     let localModalidade = data.localModalidade;
 
-
     textoHTML += `
       <div class="new-vaga">
         <div class="vaga">

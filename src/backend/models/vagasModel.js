@@ -40,6 +40,7 @@ const vagaEspecificaUserModel = async (idVaga) => {
   const especificacaoVaga = await connection.execute(`SELECT * FROM vaga WHERE codigoVaga = ${idVaga}`);
   return especificacaoVaga;
 }
+
 const deletarVagaModel = async (codVaga) => {
   const vagaModificada = await connection.execute(`UPDATE vaga SET codigoStatus = 3 WHERE codigoVaga = ${codVaga}`);
   return vagaModificada;

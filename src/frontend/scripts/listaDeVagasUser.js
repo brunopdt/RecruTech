@@ -1,20 +1,22 @@
-const uri = "http://localhost:8081/vagas"
-let textoHTML = '';
-let btn = document.querySelector('#detalhe');
+const uri = "http://localhost:8081/vagas";
+let textoHTML = "";
+let btn = document.querySelector("#detalhe");
 
 const abrirDetalhes = async (codigo) => {
   window.location.href = `/detalhe-da-vaga-usuario?id=${codigo}`;
-}
+};
 
 async function getItems() {
   const headers = new Headers();
-  headers.append('Content-Type', 'application/json');
-  headers.append('Accept', 'application/json');
+  headers.append("Content-Type", "application/json");
+  headers.append("Accept", "application/json");
 
   const data = await fetch(uri, {
     method: "GET",
     headers: headers,
-  }).then((response) => { return response.json() });
+  }).then((response) => {
+    return response.json();
+  });
 
   console.log(data);
 
@@ -32,6 +34,8 @@ async function getItems() {
             <div id="local-vaga">${localModalidade}</div>
             <div id="status-vaga">${dscStatus}</div>
 
+            <div class="coluna" id="botoes" style="visibility: hidden">  </div>
+
             <div id="botoes">
 
               <div class="button_container">
@@ -39,23 +43,22 @@ async function getItems() {
                   <i class="fa-solid fa-plus"></i> VER DETALHES
                 </button>
               </div>
+              
             </div>
+
           </div>
-        </div>
         <div id="line">
       </div>`
       ;
 
-    return textoHTML
+    return textoHTML;
   }
 
   data.forEach((vaga) => {
-    if(vaga.codigoStatus == 3){
-      
+    if (vaga.codigoStatus == 3) {
     } else {
       const divVaga = document.getElementById("container_vagas");
       divVaga.innerHTML = construirCorpoModal(vaga);
     }
-    
-  })
+  });
 }
