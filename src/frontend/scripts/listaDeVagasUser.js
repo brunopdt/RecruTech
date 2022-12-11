@@ -33,8 +33,8 @@ async function getItems() {
             <div id="nome-vaga">${tituloVaga}</div>
             <div id="local-vaga">${localModalidade}</div>
             <div id="status-vaga">${dscStatus}</div>
-
-            <div class="coluna" id="botoes" style="visibility: hidden">  </div>
+            
+            <div class="coluna" id="botoes" style="visibility: hidden"> </div>
 
             <div id="botoes">
 
@@ -45,7 +45,7 @@ async function getItems() {
               </div>
               
             </div>
-
+            </div>
           </div>
         <div id="line">
       </div>`
