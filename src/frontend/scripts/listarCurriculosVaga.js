@@ -42,9 +42,40 @@ axios.get(`http://localhost:8081/listar-curriculos?codVaga=${idDaVaga}`)
     alert("Erro ao obter lista de currículos vaga");
   });
 
+  const enviarEmailPositivo = (codUsuario) => {
+    
+    axios.get(`http://localhost:8081/enviar-email?codUser=${codUsuario}`)
+    .then(response => {
+      if (response.status === 200) {
+        console.log(response.data);
+      }
+    })
+    .catch(erro => {
+      alert("Erro ao obter lista de currículos vaga");
+    });
+  }
+  
+  const enviarEmailNegativo = (codUsuario) => {
+    axios.get(`http://localhost:8081/enviar-email-negativo?codUser=${codUsuario}`)
+    .then(response => {
+      if (response.status === 200) {
+        console.log(response.data);
+      }
+    })
+    .catch(erro => {
+      alert("Erro ao obter lista de currículos vaga");
+    });
+  }
+  
+  
+
 const preencherCurriculosVaga = (dadosCurriculo) => {
   let nomeCandidato = dadosCurriculo.nome;
   let urlCurriculo = dadosCurriculo.curriculo;
+  let codigoUsuario = dadosCurriculo.codigoCandidato;
+
+  
+  console.log(codigoUsuario)
 
   textoHTML += `
   <div class="new-candidato">
@@ -59,10 +90,10 @@ const preencherCurriculosVaga = (dadosCurriculo) => {
             
             <div id="botoes">
               <div class="button_container">
-                <button class="button" id="check">
+                <button class="button" id="check" onClick="enviarEmailPositivo(${codigoUsuario})">
                   <span id="button_text"><i class="fa-solid fa-check"></i></span>
                 </button>
-                <button class="button" id="xmark">
+                <button class="button" id="xmark" onClick="enviarEmailNegativo(${codigoUsuario})">
                   <i class="fa-solid fa-xmark"></i>
                 </button>
               </div>
