@@ -55,6 +55,7 @@ router.get('/usuarios-deslogar', usuariosController.deslogarController);
 router.get('/enviar-email', usuariosMiddleware.usuarioLogado, emailController.enviarEmailController);
 
 router.get('/listar-curriculos', processoSeletivoController.listarCurriculosController);
+router.get('/listar-curriculos-filtrados', processoSeletivoController.listarCurriculosFiltradosController);
 
 
 /* Configuração das rotas do servidor */

@@ -5,6 +5,14 @@ const listarCurriculosController = async (req, res) => {
   const listaCurriculos = await processoSeletivoModel.listarCurriculosModel(codigoVaga);
   return res.status(200).json(listaCurriculos);;  
 }
+
+const listarCurriculosFiltradosController = async (req, res) => {
+  const codigoVaga = req.query.codVaga;
+  const listaCurriculos = await processoSeletivoModel.listarCurriculosFiltradosModel(codigoVaga);
+  return res.status(200).json(listaCurriculos);;  
+}
+
 module.exports = {
-    listarCurriculosController
+    listarCurriculosController,
+    listarCurriculosFiltradosController
 };

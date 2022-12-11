@@ -1,6 +1,35 @@
 const urlParams = new URLSearchParams(window.location.search);
 const idDaVaga = urlParams.get("id");
 let textoHTML = '';
+let checkboxFiltrar = document.getElementById('filtrar-curriculos');
+
+checkboxFiltrar.addEventListener('click', () => {
+  if (checkboxFiltrar.checked) {
+    axios.get(`http://localhost:8081/listar-curriculos-filtrados?codVaga=${idDaVaga}`)
+      .then(response => {
+        if (response.status === 200) {
+          preencherDivCurriculos(response.data)
+          console.log(response.data);
+        }
+      })
+      .catch(erro => {
+        alert("Erro ao obter lista de currículos vaga");
+      });
+  }
+  else{
+    axios.get(`http://localhost:8081/listar-curriculos?codVaga=${idDaVaga}`)
+    .then(response => {
+      if (response.status === 200) {
+        preencherDivCurriculos(response.data)
+        console.log(response.data);
+      }
+    })
+    .catch(erro => {
+      alert("Erro ao obter lista de currículos vaga");
+    });    
+  }
+});
+
 
 axios.get(`http://localhost:8081/listar-curriculos?codVaga=${idDaVaga}`)
   .then(response => {
@@ -73,6 +102,7 @@ const preencherDivTituloVaga = () => {
 
 const preencherDivCurriculos = (dados) => {
   const divVaga = document.getElementById("containerDados");
+  textoHTML = ''
   preencherDivTituloVaga();
   if (dados.length !== 0) {
     dados.forEach((dadosCurriculo) => {
