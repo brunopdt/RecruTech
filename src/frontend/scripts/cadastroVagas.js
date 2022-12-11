@@ -8,7 +8,6 @@ btn.addEventListener('click', () => {
     enviarDadosVagaParaApi(vaga)
 })
 
-
 function validarSeVagaPossuiTeste() {
   const vagaPossuiTeste = document.querySelector("input[name='possuiTeste']:checked");
 

@@ -108,6 +108,12 @@ body {
   font-size: 2em;
 }
 
+.div-sem-candidatos {
+  margin-left: 2.5em;
+  margin-top: 1.5em;
+  font-size: 30px;
+}
+
 #nome-candidato,
 #candidato,
 #curriculo,
