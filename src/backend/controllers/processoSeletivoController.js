@@ -12,7 +12,14 @@ const listarCurriculosFiltradosController = async (req, res) => {
   return res.status(200).json(listaCurriculos);;  
 }
 
+const listarVagasInscritasController = async (req, res) => {
+  const codigoUsuario = req.query.codUser;
+  const listaCurriculos = await processoSeletivoModel.listarVagasInscritasModel(codigoUsuario);
+  return res.status(200).json(listaCurriculos);;  
+}
+
 module.exports = {
     listarCurriculosController,
-    listarCurriculosFiltradosController
+    listarCurriculosFiltradosController,
+    listarVagasInscritasController
 };

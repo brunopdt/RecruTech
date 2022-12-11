@@ -24,7 +24,20 @@ const listarCurriculosFiltradosModel = async (codigoVaga) => {
     return curriculos;
 };
 
+const listarVagasInscritasModel = async (codigoUsuario) => {
+    const [vagas] = await connection.execute(`
+        SELECT v.tituloVaga, v.localModalidade, v.codigoVaga FROM usuario u
+	        JOIN candidato_vaga cv
+		        ON u.codigoUsuario = cv.codigoCandidato
+	        JOIN vaga v
+		        ON cv.codigoVaga = v.codigoVaga
+	        WHERE u.codigoUsuario = ${codigoUsuario};
+        `);
+    return vagas;
+};
+
 module.exports = {
     listarCurriculosModel,
-    listarCurriculosFiltradosModel
+    listarCurriculosFiltradosModel,
+    listarVagasInscritasModel
   };

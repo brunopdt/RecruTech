@@ -1,15 +1,5 @@
 let btn = document.querySelector('#botao-cadastrar');
 
-function validarTipoCadastroEhRh() {
-  if (document.cookie.split(';')[2].split('=')[1] == 'rh') {
-      return true;
-  }
-  return false;
-}
-
-console.log(validarTipoCadastroEhRh());
-
-
 btn.addEventListener('click', () => {
   const vaga = getDadosVagaForm();
   if (vaga == null || vaga == undefined)
