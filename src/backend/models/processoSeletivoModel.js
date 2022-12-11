@@ -36,8 +36,17 @@ const listarVagasInscritasModel = async (codigoUsuario) => {
     return vagas;
 };
 
+const obterTesteVagaModel = async (codigoVaga) => {
+    const [testeVaga] = await connection.execute(`
+        SELECT * FROM teste_vaga WHERE codigoVaga = ${codigoVaga};
+    `);
+
+    return testeVaga;    
+}
+
 module.exports = {
     listarCurriculosModel,
     listarCurriculosFiltradosModel,
-    listarVagasInscritasModel
+    listarVagasInscritasModel,
+    obterTesteVagaModel
   };

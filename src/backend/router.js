@@ -59,6 +59,7 @@ router.get('/listar-curriculos', processoSeletivoController.listarCurriculosCont
 router.get('/listar-curriculos-filtrados', processoSeletivoController.listarCurriculosFiltradosController);
 
 router.get('/listar-vagas-inscritas', processoSeletivoController.listarVagasInscritasController);
+router.get('/obter-teste', processoSeletivoController.obterTesteVagaController);
 
 /* Configuração das rotas do servidor */
 router.get('/', (req, res) => res.sendFile(__dirname.replace('backend', 'frontend/views/login.html')));
@@ -76,7 +77,7 @@ router.get('/detalhe-da-vaga-usuario', usuariosMiddleware.usuarioLogado, (req, r
 router.get('/vagas-inscritas', usuariosMiddleware.usuarioLogado, (req, res) => res.sendFile("vagasInscritasUser.html", { root: 'frontend/views/' }));
 
 router.get('/acompanhar-vaga-empresa', usuariosMiddleware.usuarioLogado, (req, res) => res.sendFile("acompanharVagaRH.html", { root: 'frontend/views/' }));
-router.get('/acompanhar-vaga', usuariosMiddleware.usuarioLogado, (req, res) => res.sendFile("statusVagaUsuario.html", { root: 'frontend/views/' })); 
+router.get('/acompanhar-vaga', usuariosMiddleware.usuarioLogado, (req, res) => res.sendFile("acompanharVagaUsuario.html", { root: 'frontend/views/' })); 
 
 router.get('/lista-curriculos', usuariosMiddleware.usuarioLogado, (req, res) => res.sendFile("listaCurriculosVaga.html", { root: 'frontend/views/' }));
 router.get('/lista-testes', usuariosMiddleware.usuarioLogado, (req, res) => res.sendFile("ListaTestesRH.html", { root: 'frontend/views/' }));
