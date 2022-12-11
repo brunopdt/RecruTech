@@ -53,6 +53,7 @@ router.post('/usuarios-logar', usuariosController.logarController);
 router.get('/usuarios-deslogar', usuariosController.deslogarController);
 
 router.get('/enviar-email', usuariosMiddleware.usuarioLogado, emailController.enviarEmailController);
+router.get('/enviar-email-negativo', usuariosMiddleware.usuarioLogado, emailController.enviarEmailNegativoController);
 
 router.get('/listar-curriculos', processoSeletivoController.listarCurriculosController);
 router.get('/listar-curriculos-filtrados', processoSeletivoController.listarCurriculosFiltradosController);
