@@ -75,7 +75,7 @@ router.get('/detalhe-da-vaga-usuario', usuariosMiddleware.usuarioLogado, (req, r
 
 router.get('/vagas-inscritas', usuariosMiddleware.usuarioLogado, (req, res) => res.sendFile("vagasInscritasUser.html", { root: 'frontend/views/' }));
 
-router.get('/acompanhar-vaga-empresa', usuariosMiddleware.usuarioLogado, (req, res) => res.sendFile("statusVagaRH.html", { root: 'frontend/views/' }));
+router.get('/acompanhar-vaga-empresa', usuariosMiddleware.usuarioLogado, (req, res) => res.sendFile("acompanharVagaRH.html", { root: 'frontend/views/' }));
 router.get('/acompanhar-vaga', usuariosMiddleware.usuarioLogado, (req, res) => res.sendFile("statusVagaUsuario.html", { root: 'frontend/views/' })); 
 
 router.get('/lista-curriculos', usuariosMiddleware.usuarioLogado, (req, res) => res.sendFile("listaCurriculosVaga.html", { root: 'frontend/views/' }));
