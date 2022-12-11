@@ -2,10 +2,10 @@ const urlParams = new URLSearchParams(window.location.search);
 const idDaVaga = urlParams.get("id");
 let btn = document.querySelector('#botao-inscricao');
 
-axios.get(`http://localhost:8081/detalheVagas?codVaga=${idDaVaga}`)
+axios.get(`http://localhost:8081/detalheVagasUser?codVaga=${idDaVaga}`)
   .then(response => {
     if (response.status === 200) {
-      const divVaga = document.getElementById("detalhesVaga");
+      const divVaga = document.getElementById("detalhesVagaUser");
       divVaga.innerHTML = construirCorpoModal(response.data[0]);
     }
   })
