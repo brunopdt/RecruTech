@@ -75,9 +75,8 @@ body {
 }
 
 .button {
-  font-size: 1.5rem;
   font-weight: 700;
-  width: 13rem;
+  width: 6rem;
   height: 3rem;
   border-radius: 15px;
   outline: none;
@@ -86,7 +85,7 @@ body {
   background-color: #f8b500;
 }
 
-#visualizar:hover {
+.button:hover {
   cursor: pointer;
   background-color: rgb(255, 225, 143);
 }
@@ -115,6 +114,12 @@ a {
   margin-bottom: 7rem;
   font-weight: 600;
   font-size: 2em;
+}
+
+#lista-curriculos {
+  font-size: 2rem;
+  color: #393e46;
+  cursor: pointer;
 }
 
 /* iPads (landscape) ----------- */
