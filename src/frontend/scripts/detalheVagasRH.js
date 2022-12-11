@@ -45,5 +45,5 @@ const construirCorpoModal = (data) => {
 };
 
 btn.addEventListener('click', () => {
-  window.location.href = '/acompanhar-vaga-empresa'
+  window.location.href = `/acompanhar-vaga-empresa?id=${idDaVaga}`
 })

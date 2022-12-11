@@ -1,7 +1,5 @@
 //contém todas as funções que vão interagir diretamente com o banco de dados
-const { query } = require('./connection');
 const connection = require('./connection');
-const jsonwebtoken = require('jsonwebtoken');
 
 /*Funçao que lista todas as vagas*/
 const listarVagasModel = async () => {

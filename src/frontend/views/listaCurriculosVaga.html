@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700;800&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/2c9e6838ea.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../styles/listaCurriculosVaga.css" />
+
+  <title>Lista de vagas</title>
+</head>
+
+<body>
+  <nav class="sidebar">
+    <img id="logo_sidebar" src="../imgs/logo_icon.jpg" alt="logo_icon" />
+
+    <a href="#"><i class="nav-item fa-solid fa-user fa-xl"></i></a> <br />
+    <a href="/cadastro-vagas"><i class="nav-item fa-solid fa-square-plus fa-xl"></i></a>
+    <br />
+    <a href="/lista-vagas-empresa"><i class="nav-item fa-solid fa-list fa-xl"></i></a> <br />
+    <a href="#"><i class="nav-item fa-solid fa-right-from-bracket fa-xl"></i></a>
+  </nav>
+
+  <div class="main">
+    <div class="title" id="main_title"></div>
+
+    <div class="titulos-coluna">
+      <div class="coluna">Candidato</div>
+      <div class="coluna">Currículo</div>
+    </div>
+
+    <div id="containerDados">
+
+    </div>
+
+  </div>
+
+  <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+  <script src="../scripts/listarCurriculosVaga.js"></script>
+</body>
+
+</html>
