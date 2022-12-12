@@ -32,8 +32,8 @@ const logarModel = async (email, senha) => {
 
 const pegarUsuarioModel = async (codigoUsuario) => {
 
-  const usuario = await connection.execute(`SELECT * FROM usuario WHERE codigoUsuario = "${codigoUsuario}"`);
-
+  const [usuario] = await connection.execute(`SELECT * FROM usuario WHERE codigoUsuario = "${codigoUsuario}"`);
+  
   return usuario;
 };
 module.exports = {
