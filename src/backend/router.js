@@ -91,3 +91,5 @@ module.exports = router;
 
 router.get('/inscricao-user-vaga', usuariosMiddleware.usuarioLogado, (req, res) => res.sendFile("uploadCurriculo.html", { root: 'frontend/views/' }));
 
+//criando essa
+router.get('/lista-vagas-criadas', usuariosMiddleware.usuarioLogado, (req, res) => res.sendFile("listaDeVagasRH.html", { root: 'frontend/views/' }));

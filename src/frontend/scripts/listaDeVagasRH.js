@@ -3,7 +3,6 @@ let textoHTML = '';
 
 
 const redirecionar = async (codigo) => {
-
   try {
     const res = await fetch(`http://localhost:8081/remove-vaga/${codigo}`, {
       method: 'GET',
@@ -20,7 +19,6 @@ const redirecionar = async (codigo) => {
   } catch (e) {
     console.error(e);
   }
-
 }
 
 const abrirDetalhes = async (codigo) => {
