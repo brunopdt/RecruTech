@@ -11,7 +11,7 @@ const enviarEmailController = async (req, res) => {
 const enviarEmailNegativoController = async (req, res) => {
   const codigoUsuario = req.query.codUser;
   const usuario = await usuariosModel.pegarUsuarioModel(codigoUsuario);
-  console.log(usuario)
+  console.log(usuario);
   const sendEmail = await emailModel.runNegativo(usuario);
   return res.status(200).json(sendEmail);
 }; 
