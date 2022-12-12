@@ -48,7 +48,8 @@ function getDadosVagaForm() {
 }
 
 async function enviarDadosVagaParaApi(vaga) {
-  axios.post('http://localhost:8081/vagas', {
+  const codigoUsuario = document.cookie.split(';')[1].split('=')[1];
+  axios.post(`http://localhost:8081/vagas?codUsuario=${codigoUsuario}`, {
       descricao: vaga.descricao,
       qtdVagas: vaga.qtdVagas,
       requisitos: vaga.requisitos,
