@@ -44,11 +44,20 @@ const deletarVagaModel = async (codVaga) => {
   return vagaModificada;
 }
 
+
+/*Funçao que lista todas as vagas criadas de acordo com o usuario do rh*/
+const listarVagasCriadas = async (codigoUsuario) => {
+  const vagas = await connection.execute(`SELECT *  FROM vaga WHERE codigoUsuario = ${codigoUsuario}`);
+  return vagas;
+};
+
+
 module.exports = {
   listarVagasModel,
   criarVagaModel,
   uploadTesteModel,
   vagaEspecificaModel,
   vagaEspecificaUserModel,
-  deletarVagaModel
+  deletarVagaModel,
+  listarVagasCriadas
 };

@@ -35,11 +35,17 @@ const uploadTesteController = async (req, res) => {
     return res.status(201).json(req.body);
 }
 
+const vagasCriadasRH = async (req, res) => {
+    const vagaCriada = await vagasModel.listarVagasCriadas(req.params.codigoUsuario);
+    return res.status(201).json(vagaCriada[0]);
+}
+
 module.exports = {
     listarVagasController,
     criarVagaController,
     uploadTesteController,
     detalheVagaEspecificaController,
     detalheVagaEspecificaUserController,
-    deletarVagaController
+    deletarVagaController,
+    vagasCriadasRH
 };
