@@ -86,3 +86,38 @@ a {
 .button:hover {
   background-color: #ffc938;
 }
+
+@media only screen and (max-width: 1024px) {
+  .main {
+    margin-top: 170px;
+    margin-left: 0px;
+    padding: 0px 0px;
+  }
+
+  .input_area {
+    margin-left: 0;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .main {
+    margin-top: 140px;
+  }
+
+  #welcome {
+    margin-top: 0;
+  }
+
+  .title {
+    margin-left: 1rem;
+    font-size: 1.6rem;
+  }
+
+  #login,
+  #password {
+    width: 70%;
+    height: 30px;
+    margin-left: 1rem;
+    font-size: 1.4rem;
+  }
+}

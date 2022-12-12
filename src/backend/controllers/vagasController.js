@@ -6,7 +6,8 @@ const listarVagasController = async (req, res) => {
 };
 
 const criarVagaController = async (req, res) => {
-    const vagaCriada = await vagasModel.criarVagaModel(req);
+    let codUsuario = req.query.codUsuario;
+    const vagaCriada = await vagasModel.criarVagaModel(req, codUsuario);
     return res.status(201).json(vagaCriada.insertId);
 };
 
