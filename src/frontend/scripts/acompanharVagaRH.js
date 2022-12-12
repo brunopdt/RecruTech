@@ -1,7 +1,9 @@
 const urlParams = new URLSearchParams(window.location.search);
 const idDaVaga = urlParams.get("id");
 
-let btn = document.querySelector('#lista-curriculos');
+let btnCurriculos = document.querySelector('#lista-curriculos');
+let btnTestes = document.querySelector('#lista-testes');
+let btnEntrevistas = document.querySelector('#lista-entrevistas');
 
 axios.get(`http://localhost:8081/detalheVagas?codVaga=${idDaVaga}`)
     .then(response => {
@@ -14,6 +16,15 @@ axios.get(`http://localhost:8081/detalheVagas?codVaga=${idDaVaga}`)
         alert("Erro ao obter título da vaga");
     });
 
-btn.addEventListener('click', () => {
+btnCurriculos.addEventListener('click', () => {
     window.location.href = `/lista-curriculos?id=${idDaVaga}`
 })
+
+btnTestes.addEventListener('click', () => {
+    window.location.href = `/lista-testes?id=${idDaVaga}`
+})
+
+btnEntrevistas.addEventListener('click', () => {
+    window.location.href = `/lista-entrevistas?id=${idDaVaga}`
+})
+

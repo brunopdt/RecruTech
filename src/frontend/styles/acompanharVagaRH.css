@@ -70,15 +70,16 @@ a {
   font-size: 2em;
 }
 
-#lista-curriculos {
+#lista-curriculos,
+#lista-testes,
+#lista-entrevistas {
   font-size: 2rem;
   color: #393e46;
   cursor: pointer;
 }
 
 /* iPads (landscape) ----------- */
-@media only screen and (max-width: 1224px) {
-}
+@media only screen and (max-width: 1224px) {}
 
 /* iPads (portrait) ----------- */
 @media only screen and (max-width: 1024px) {
@@ -102,11 +103,10 @@ a {
 }
 
 /* Smartphones (landscape) ----------- */
-@media only screen and (max-width: 768px) {
-}
+@media only screen and (max-width: 768px) {}
+
 /* Big smartphones (portrait) (ie: Galaxy 3 has 360) */
-@media only screen and (max-width: 640px) {
-}
+@media only screen and (max-width: 640px) {}
+
 /* Smartphones (portrait) (ie: Galaxy 1) */
-@media only screen and (max-width: 321px) {
-}
+@media only screen and (max-width: 321px) {}
