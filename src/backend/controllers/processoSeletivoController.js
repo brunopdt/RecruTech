@@ -24,9 +24,32 @@ const obterTesteVagaController = async (req, res) => {
   return res.status(200).json(teste);  
 }
 
+const enviarTesteVagaController = async (req, res) => {
+  const uploadTeste = await processoSeletivoModel.uploadTesteModel(req.body, req.file);
+  return res.status(201).json(req.body);
+}
+
+const obterStatusVagaController = async (req, res) => {
+  const codigoCandidato = req.query.codCandidato;
+  const codigoVaga = req.query.codVaga;
+  const uploadTeste = await processoSeletivoModel.obterStatusVagaModel(codigoCandidato, codigoVaga);
+  return res.status(200).json(uploadTeste);
+}
+
+const atualizarStatusVagaController = async (req, res) => {
+  const codigoCandidato = req.query.codCandidato;
+  const codigoVaga = req.query.codVaga;
+  const status = req.query.status;
+  const uploadTeste = await processoSeletivoModel.atualizarStatusVagaModel(codigoCandidato, codigoVaga, status);
+  return res.status(200).json(uploadTeste);
+}
+
 module.exports = {
     listarCurriculosController,
     listarCurriculosFiltradosController,
     listarVagasInscritasController,
-    obterTesteVagaController
+    obterTesteVagaController,
+    enviarTesteVagaController,
+    obterStatusVagaController,
+    atualizarStatusVagaController
 };

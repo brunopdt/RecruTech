@@ -51,7 +51,7 @@ axios.get(`http://localhost:8081/listar-curriculos?codVaga=${idDaVaga}`)
       }
     })
     .catch(erro => {
-      alert("Erro ao obter lista de currículos vaga");
+      alert("Erro ao tentar enviar o email");
     });
   }
   
@@ -63,7 +63,7 @@ axios.get(`http://localhost:8081/listar-curriculos?codVaga=${idDaVaga}`)
       }
     })
     .catch(erro => {
-      alert("Erro ao obter lista de currículos vaga");
+      alert("Erro ao tentar enviar o email");
     });
   }
   

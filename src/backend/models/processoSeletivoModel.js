@@ -41,12 +41,42 @@ const obterTesteVagaModel = async (codigoVaga) => {
         SELECT * FROM teste_vaga WHERE codigoVaga = ${codigoVaga};
     `);
 
-    return testeVaga;    
+    return testeVaga;
+}
+
+const uploadTesteModel = async (dadosEnvioTeste, url) => {
+    const codigoVaga = dadosEnvioTeste.codVaga;
+    const codigoCandidato = dadosEnvioTeste.codUsuario;
+    const urlTeste = url.location;
+
+    const query = 'INSERT INTO teste_candidato(codigoCandidato, codigoVaga, urlTeste) VALUES (?, ?, ?)';
+    const [testeCriado] = await connection.execute(query, [codigoCandidato, codigoVaga, urlTeste]);
+
+    return testeCriado;
+};
+
+const obterStatusVagaModel = async (codigoCandidato, codigoVaga) => {
+    const [statusVaga] = await connection.execute(`
+        SELECT * FROM candidato_vaga WHERE codigoCandidato = ${codigoCandidato} AND codigoVaga = ${codigoVaga};
+    `);
+
+    return statusVaga;
+}
+
+const atualizarStatusVagaModel = async (codigoCandidato, codigoVaga, status) => {
+    const [statusVaga] = await connection.execute(`
+        UPDATE candidato_vaga SET statusInscricao = ${status} WHERE codigoCandidato = ${codigoCandidato} AND codigoVaga = ${codigoVaga};
+    `);
+
+    return statusVaga;
 }
 
 module.exports = {
     listarCurriculosModel,
     listarCurriculosFiltradosModel,
     listarVagasInscritasModel,
-    obterTesteVagaModel
-  };
+    obterTesteVagaModel,
+    uploadTesteModel,
+    obterStatusVagaModel,
+    atualizarStatusVagaModel
+};

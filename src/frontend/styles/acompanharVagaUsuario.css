@@ -77,6 +77,15 @@ body {
   justify-content: space-between;
 }
 
+#visualizar-curriculo {
+  margin-bottom: 0.2rem;
+  margin-top: 1.5rem;
+  margin-left: 1.9rem;
+  display: flex;
+  justify-content: space-between;
+  width: 85%;
+}
+
 .fa-circle {
   color: #f8b500;
 }

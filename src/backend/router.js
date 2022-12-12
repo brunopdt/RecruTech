@@ -59,7 +59,10 @@ router.get('/listar-curriculos', processoSeletivoController.listarCurriculosCont
 router.get('/listar-curriculos-filtrados', processoSeletivoController.listarCurriculosFiltradosController);
 
 router.get('/listar-vagas-inscritas', processoSeletivoController.listarVagasInscritasController);
+router.get('/acompanhar-status-vaga', processoSeletivoController.obterStatusVagaController);
+router.put('/atualizar-status-vaga', processoSeletivoController.atualizarStatusVagaController);
 router.get('/obter-teste', processoSeletivoController.obterTesteVagaController);
+router.post('/enviar-teste', multer(multerConfig).single("file"), processoSeletivoController.enviarTesteVagaController);
 
 /* Configuração das rotas do servidor */
 router.get('/', (req, res) => res.sendFile(__dirname.replace('backend', 'frontend/views/login.html')));
