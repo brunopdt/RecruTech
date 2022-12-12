@@ -16,17 +16,17 @@ checkboxFiltrar.addEventListener('click', () => {
         alert("Erro ao obter lista de currículos vaga");
       });
   }
-  else{
+  else {
     axios.get(`http://localhost:8081/listar-curriculos?codVaga=${idDaVaga}`)
-    .then(response => {
-      if (response.status === 200) {
-        preencherDivCurriculos(response.data)
-        console.log(response.data);
-      }
-    })
-    .catch(erro => {
-      alert("Erro ao obter lista de currículos vaga");
-    });    
+      .then(response => {
+        if (response.status === 200) {
+          preencherDivCurriculos(response.data)
+          console.log(response.data);
+        }
+      })
+      .catch(erro => {
+        alert("Erro ao obter lista de currículos vaga");
+      });
   }
 });
 
@@ -42,9 +42,22 @@ axios.get(`http://localhost:8081/listar-curriculos?codVaga=${idDaVaga}`)
     alert("Erro ao obter lista de currículos vaga");
   });
 
-  const enviarEmailPositivo = (codUsuario) => {
-    
-    axios.get(`http://localhost:8081/enviar-email?codUser=${codUsuario}`)
+const candidatoAprovado = (codUsuario) => {
+  enviarEmailPositivo(codUsuario);
+  atualizarStatusVaga(codUsuario, 2);
+  atualizarIndiceAprovacao(codUsuario, 1);
+  window.location.reload(false);
+}
+
+const candidatoReprovado = (codUsuario) => {
+  enviarEmailNegativo(codUsuario);
+  atualizarStatusVaga(codUsuario, 2);
+  atualizarIndiceAprovacao(codUsuario, 0);
+  window.location.reload(false);
+}
+
+const enviarEmailPositivo = (codUsuario) => {
+  axios.get(`http://localhost:8081/enviar-email?codUser=${codUsuario}`)
     .then(response => {
       if (response.status === 200) {
         console.log(response.data);
@@ -53,10 +66,34 @@ axios.get(`http://localhost:8081/listar-curriculos?codVaga=${idDaVaga}`)
     .catch(erro => {
       alert("Erro ao tentar enviar o email");
     });
-  }
-  
-  const enviarEmailNegativo = (codUsuario) => {
-    axios.get(`http://localhost:8081/enviar-email-negativo?codUser=${codUsuario}`)
+};
+
+const atualizarStatusVaga = (codUsuario, status) => {
+  axios.put(`http://localhost:8081/atualizar-status-vaga?codCandidato=${codUsuario}&codVaga=${idDaVaga}&status=${status}`)
+    .then(response => {
+      if (response.status === 200) {
+        console.log(response.data);
+      }
+    })
+    .catch(erro => {
+      alert("Erro ao atualizar status da vaga");
+    });
+}
+
+const atualizarIndiceAprovacao = (codUsuario, indAprovado) => {
+  axios.put(`http://localhost:8081/atualizar-indice-aprovacao?codCandidato=${codUsuario}&codVaga=${idDaVaga}&indAprovado=${indAprovado}`)
+    .then(response => {
+      if (response.status === 200) {
+        console.log(response.data);
+      }
+    })
+    .catch(erro => {
+      alert("Erro ao atualizar status da vaga");
+    });
+}
+
+const enviarEmailNegativo = (codUsuario) => {
+  axios.get(`http://localhost:8081/enviar-email-negativo?codUser=${codUsuario}`)
     .then(response => {
       if (response.status === 200) {
         console.log(response.data);
@@ -65,17 +102,22 @@ axios.get(`http://localhost:8081/listar-curriculos?codVaga=${idDaVaga}`)
     .catch(erro => {
       alert("Erro ao tentar enviar o email");
     });
-  }
-  
-  
+};
 
 const preencherCurriculosVaga = (dadosCurriculo) => {
   let nomeCandidato = dadosCurriculo.nome;
   let urlCurriculo = dadosCurriculo.curriculo;
   let codigoUsuario = dadosCurriculo.codigoCandidato;
+  let codigoAprovacao = dadosCurriculo.indCurriculoAprovado;
+  let statusCurriculo;
 
-  
-  console.log(codigoUsuario)
+  if (codigoAprovacao === 1)
+    statusCurriculo = "Aprovado";
+  else if (codigoAprovacao === 0)
+    statusCurriculo = "Reprovado";
+  else {
+    statusCurriculo = "A validar";
+  }
 
   textoHTML += `
   <div class="new-candidato">
@@ -85,15 +127,16 @@ const preencherCurriculosVaga = (dadosCurriculo) => {
             <div id="curriculo">
             <a href = ${urlCurriculo}>
               <i class="fa-solid fa-arrow-up-right-from-square"></i>
-            </a>            
+            </a>  
             </div>
+            <div id="statusDoCandidato">${statusCurriculo}</div>
             
             <div id="botoes">
               <div class="button_container">
-                <button class="button" id="check" onClick="enviarEmailPositivo(${codigoUsuario})">
+                <button class="button" id="check" onClick="candidatoAprovado(${codigoUsuario})">
                   <span id="button_text"><i class="fa-solid fa-check"></i></span>
                 </button>
-                <button class="button" id="xmark" onClick="enviarEmailNegativo(${codigoUsuario})">
+                <button class="button" id="xmark" onClick="candidatoReprovado(${codigoUsuario})">
                   <i class="fa-solid fa-xmark"></i>
                 </button>
               </div>

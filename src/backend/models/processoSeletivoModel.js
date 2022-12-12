@@ -2,7 +2,7 @@ const connection = require('./connection');
 
 const listarCurriculosModel = async (codigoVaga) => {
     const [curriculos] = await connection.execute(`
-        SELECT u.nome, cv.codigoCandidato, cv.curriculo, v.tituloVaga FROM usuario u
+        SELECT u.nome, cv.codigoCandidato, cv.curriculo, v.tituloVaga, v.codigoVaga, cv.indCurriculoAprovado FROM usuario u
             JOIN candidato_vaga cv
                 ON u.codigoUsuario = cv.codigoCandidato
             JOIN vaga v
@@ -71,6 +71,14 @@ const atualizarStatusVagaModel = async (codigoCandidato, codigoVaga, status) => 
     return statusVaga;
 }
 
+const atualizarIndiceAprovacaoModel = async (codigoCandidato, codigoVaga, indAprovacao) => {
+    const [vagaAtualizada] = await connection.execute(`
+        UPDATE candidato_vaga SET indCurriculoAprovado = ${indAprovacao} WHERE codigoCandidato = ${codigoCandidato} AND codigoVaga = ${codigoVaga};
+    `);
+
+    return vagaAtualizada;
+}
+
 module.exports = {
     listarCurriculosModel,
     listarCurriculosFiltradosModel,
@@ -78,5 +86,6 @@ module.exports = {
     obterTesteVagaModel,
     uploadTesteModel,
     obterStatusVagaModel,
-    atualizarStatusVagaModel
+    atualizarStatusVagaModel,
+    atualizarIndiceAprovacaoModel
 };

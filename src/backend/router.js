@@ -61,6 +61,7 @@ router.get('/listar-curriculos-filtrados', processoSeletivoController.listarCurr
 router.get('/listar-vagas-inscritas', processoSeletivoController.listarVagasInscritasController);
 router.get('/acompanhar-status-vaga', processoSeletivoController.obterStatusVagaController);
 router.put('/atualizar-status-vaga', processoSeletivoController.atualizarStatusVagaController);
+router.put('/atualizar-indice-aprovacao', processoSeletivoController.atualizarIndiceAprovacaoController);
 router.get('/obter-teste', processoSeletivoController.obterTesteVagaController);
 router.post('/enviar-teste', multer(multerConfig).single("file"), processoSeletivoController.enviarTesteVagaController);
 
