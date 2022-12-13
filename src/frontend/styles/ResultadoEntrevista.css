@@ -93,28 +93,15 @@ body {
   background-color: rgb(255, 45, 45);
 }
 
-/* iPads (landscape) ----------- */
-@media only screen and (max-width: 1224px) {
-}
-
 /* iPads (portrait) ----------- */
 @media only screen and (max-width: 1024px) {
-  .sidebar {
-    height: 80px;
-    width: 100%;
-  }
-
-  #button_text {
-    display: none;
-  }
-
-  .button {
-    width: 10rem;
+  #check {
+    margin-bottom: 0.5rem;
   }
 
   .main {
-    margin-top: 150px;
-    margin-left: 0px;
+    margin-top: 170px;
+    margin-left: 0;
   }
 
   .candidato {
@@ -130,20 +117,41 @@ body {
 
   #nome-candidato,
   #candidato,
+  #curriculo,
   #botoes {
     width: 180px;
-    overflow-wrap: break-word;
-    word-wrap: break-word;
-    word-break: break-word;
   }
 }
 
-/* Smartphones (landscape) ----------- */
-@media only screen and (max-width: 768px) {
-}
 /* Big smartphones (portrait) (ie: Galaxy 3 has 360) */
 @media only screen and (max-width: 640px) {
-}
-/* Smartphones (portrait) (ie: Galaxy 1) */
-@media only screen and (max-width: 321px) {
+  .button {
+    width: 50%;
+  }
+
+  .candidato {
+    font-size: 1.5em;
+  }
+
+  #main_title {
+    font-size: 2rem;
+  }
+
+  .titulos-coluna {
+    font-size: 0.57rem;
+    margin-bottom: -5em;
+  }
+
+  .main {
+    margin-top: 130px;
+    margin-left: 0;
+  }
+
+  .coluna1 {
+    min-width: 123px;
+  }
+
+  div.main {
+    padding-right: 0;
+  }
 }
