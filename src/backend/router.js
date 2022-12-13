@@ -37,7 +37,6 @@ router.all("*", function (req, res, next) {
   next();
 });
 
-
 router.get('/vagas', vagasController.listarVagasController);
 router.post('/vagas', vagasMiddleware.validateBody, vagasController.criarVagaController);
 router.post('/vagas-teste', multer(multerConfig).single("file"), vagasController.uploadTesteController);
@@ -57,6 +56,8 @@ router.get('/enviar-email-negativo', usuariosMiddleware.usuarioLogado, emailCont
 
 router.get('/listar-curriculos', processoSeletivoController.listarCurriculosController);
 router.get('/listar-curriculos-filtrados', processoSeletivoController.listarCurriculosFiltradosController);
+router.get('/listar-testes-vagas', processoSeletivoController.listarTestesVagaController);
+
 
 router.get('/listar-vagas-inscritas', processoSeletivoController.listarVagasInscritasController);
 router.get('/acompanhar-status-vaga', processoSeletivoController.obterStatusVagaController);

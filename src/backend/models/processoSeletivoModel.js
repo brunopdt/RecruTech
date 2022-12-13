@@ -79,6 +79,15 @@ const atualizarIndiceAprovacaoModel = async (codigoCandidato, codigoVaga, indApr
     return vagaAtualizada;
 }
 
+const listarTestesVagaModel = async (codVaga) => {
+    const [listaTestes] = await connection.execute(`
+        SELECT * FROM teste_candidato
+	        WHERE codigoVaga = ${codVaga};
+    `);
+
+    return listaTestes;
+}
+
 module.exports = {
     listarCurriculosModel,
     listarCurriculosFiltradosModel,
@@ -87,5 +96,6 @@ module.exports = {
     uploadTesteModel,
     obterStatusVagaModel,
     atualizarStatusVagaModel,
-    atualizarIndiceAprovacaoModel
+    atualizarIndiceAprovacaoModel,
+    listarTestesVagaModel
 };
