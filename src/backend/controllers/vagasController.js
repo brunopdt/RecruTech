@@ -1,5 +1,11 @@
 const vagasModel = require('../models/vagasModel');
 
+const indicador = async(req, res) => {
+    const dados = await vagasModel.indicadorTaxaVagasCriadas();
+    console.log(JSON.parse(dados))
+    return res.json(dados);
+}
+
 const listarVagasController = async (req, res) => {
     const listaVagas = await vagasModel.listarVagasModel();
     return res.status(200).json(listaVagas);
@@ -40,5 +46,6 @@ module.exports = {
     uploadTesteController,
     detalheVagaEspecificaController,
     detalheVagaEspecificaUserController,
-    deletarVagaController
+    deletarVagaController,
+    indicador
 };
