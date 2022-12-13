@@ -1,4 +1,5 @@
 const uri = "http://localhost:8081/vagas"
+const codigoUsuario = document.cookie.split(';')[1].split('=')[1];
 let textoHTML = '';
 
 
@@ -25,18 +26,26 @@ const abrirDetalhes = async (codigo) => {
   window.location.href = `/detalhe-da-vaga?id=${codigo}`;
 }
 
+
+const res =  fetch(`http://localhost:8081/lista-vagas-criadas/${codigoUsuario}`, {
+  method: 'GET',
+  headers: {
+   Accept: 'application/json',
+  'Content-Type': 'application/json'
+  },
+}).then(resp=>resp.json()).then((data)=>{console.log(data)})
+
+
 async function getItems() {
   const headers = new Headers();
   headers.append('Content-Type', 'application/json');
   headers.append('Accept', 'application/json');
 
-  const data = await fetch(uri, {
+  const data = await fetch(`http://localhost:8081/lista-vagas-criadas/${codigoUsuario}`, {
     method: "GET",
     headers: headers,
   }).then((response) => { return response.json() });
-
-  console.log(data);
-
+ 
   const construirCorpoModal = (data) => {
     let dscStatus = data.dscStatus;
     let codigoVaga = data.codigoVaga;

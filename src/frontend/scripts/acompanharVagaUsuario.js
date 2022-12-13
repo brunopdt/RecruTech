@@ -49,11 +49,18 @@ const preencherDivTeste = (urlTeste) => {
   `;
 }
 
+const preencherDivSemTeste = () => {
+  document.getElementById("sectionTeste").style.display = 'none';
+}
+
 const obterUrlTeste = async () => {
   await axios.get(`http://localhost:8081/obter-teste?codVaga=${idDaVaga}`)
     .then(response => {
       if (response.status === 200) {
-        preencherDivTeste(response.data[0].urlTeste);
+        if(response.data.length !== 0)
+          preencherDivTeste(response.data[0].urlTeste);
+        else
+          preencherDivSemTeste();
       }
     })
     .catch(erro => {
@@ -119,19 +126,35 @@ const indicarStatusProcesso = async () => {
     document.getElementById("download-teste").style.display = 'none';
   }
   else if(codigoStatus === 2){
+    document.getElementById('topico-curriculo').style.color = 'green';
     document.getElementById('divCurriculo').style.color = 'green';
     document.getElementById("enviar-teste").disabled = false;
     document.getElementById("input_file").disabled = false;
     document.getElementById("download-teste").style.display = 'block';
   }
   else if(codigoStatus === 3){
+    document.getElementById('topico-curriculo').style.color = 'green';
+    document.getElementById('divCurriculo').style.color = 'green';
+    document.getElementById('topico-teste').style.color = 'green';
     document.getElementById('divTeste').style.color = 'green';
+    document.getElementById("enviar-teste").disabled = true;
+    document.getElementById("input_file").disabled = true;
   }
   else if(codigoStatus === 4){
     document.getElementById('divEntrevista').style.color = 'green';    
   }
   else if(codigoStatus === 5){
     document.getElementById('divFinal').style.color = 'green';       
+  }
+  else if(codigoStatus === 6){
+    document.getElementById("enviar-teste").disabled = true;
+    document.getElementById("input_file").disabled = true;
+    const divReprovado = document.getElementById("candidato-reprovado");
+    divReprovado.innerHTML = `
+      <p>
+        Infelizmente você não foi selecionado para essa vaga! :(
+      </p>
+    `;
   }
 }
 

@@ -20,6 +20,12 @@ body {
   margin-left: 3rem;
 }
 
+.div-sem-testes {
+  margin-left: 2.5em;
+  margin-top: 0.5em;
+  font-size: 30px;
+}
+
 .button_container {
   text-align: center;
 }

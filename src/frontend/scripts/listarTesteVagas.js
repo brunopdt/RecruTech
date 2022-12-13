@@ -1,40 +1,11 @@
 const urlParams = new URLSearchParams(window.location.search);
 const idDaVaga = urlParams.get("id");
 let textoHTML = '';
-let checkboxFiltrar = document.getElementById('filtrar-curriculos');
 
-checkboxFiltrar.addEventListener('click', () => {
-  if (checkboxFiltrar.checked) {
-    axios.get(`http://localhost:8081/listar-curriculos-filtrados?codVaga=${idDaVaga}`)
-      .then(response => {
-        if (response.status === 200) {
-          preencherDivCurriculos(response.data)
-          console.log(response.data);
-        }
-      })
-      .catch(erro => {
-        alert("Erro ao obter lista de currículos vaga");
-      });
-  }
-  else {
-    axios.get(`http://localhost:8081/listar-curriculos?codVaga=${idDaVaga}`)
-      .then(response => {
-        if (response.status === 200) {
-          preencherDivCurriculos(response.data)
-          console.log(response.data);
-        }
-      })
-      .catch(erro => {
-        alert("Erro ao obter lista de currículos vaga");
-      });
-  }
-});
-
-
-axios.get(`http://localhost:8081/listar-curriculos?codVaga=${idDaVaga}`)
+axios.get(`http://localhost:8081/listar-testes-vagas?codVaga=${idDaVaga}`)
   .then(response => {
     if (response.status === 200) {
-      preencherDivCurriculos(response.data)
+      preencherDivTestes(response.data)
       console.log(response.data);
     }
   })
@@ -44,7 +15,7 @@ axios.get(`http://localhost:8081/listar-curriculos?codVaga=${idDaVaga}`)
 
 const candidatoAprovado = (codUsuario) => {
   enviarEmailPositivo(codUsuario);
-  atualizarStatusVaga(codUsuario, 2);
+  atualizarStatusVaga(codUsuario, 3);
   atualizarIndiceAprovacao(codUsuario, 1);
   atualizarIndiceContratacaoVaga(codUsuario, null);
   window.location.reload(false);
@@ -82,18 +53,6 @@ const atualizarStatusVaga = (codUsuario, status) => {
     });
 }
 
-const atualizarIndiceAprovacao = (codUsuario, indAprovado) => {
-  axios.put(`http://localhost:8081/atualizar-indice-aprovacao?codCandidato=${codUsuario}&codVaga=${idDaVaga}&indAprovado=${indAprovado}`)
-    .then(response => {
-      if (response.status === 200) {
-        console.log(response.data);
-      }
-    })
-    .catch(erro => {
-      alert("Erro ao atualizar indice aprovação da vaga");
-    });
-}
-
 const atualizarIndiceContratacaoVaga = (codUsuario, indAprovado) => {
   axios.put(`http://localhost:8081/atualizar-candidato-aprovado-vaga?codCandidato=${codUsuario}&codVaga=${idDaVaga}&indAprovado=${indAprovado}`)
     .then(response => {
@@ -103,6 +62,18 @@ const atualizarIndiceContratacaoVaga = (codUsuario, indAprovado) => {
     })
     .catch(erro => {
       alert("Erro ao atualizar indice contratação da vaga");
+    });
+}
+
+const atualizarIndiceAprovacao = (codUsuario, indAprovado) => {
+  axios.put(`http://localhost:8081/atualizar-indice-aprovacao-teste?codCandidato=${codUsuario}&codVaga=${idDaVaga}&indAprovado=${indAprovado}`)
+    .then(response => {
+      if (response.status === 200) {
+        console.log(response.data);
+      }
+    })
+    .catch(erro => {
+      alert("Erro ao atualizar status da vaga");
     });
 }
 
@@ -118,32 +89,32 @@ const enviarEmailNegativo = (codUsuario) => {
     });
 };
 
-const preencherCurriculosVaga = (dadosCurriculo) => {
-  let nomeCandidato = dadosCurriculo.nome;
-  let urlCurriculo = dadosCurriculo.curriculo;
-  let codigoUsuario = dadosCurriculo.codigoCandidato;
-  let codigoAprovacao = dadosCurriculo.indCurriculoAprovado;
-  let statusCurriculo;
+const preencherTestesVaga = (dadosTeste) => {
+  let nomeCandidato = dadosTeste.nome;
+  let urlTeste = dadosTeste.urlTeste;
+  let codigoUsuario = dadosTeste.codigoCandidato;
+  let codigoAprovacao = dadosTeste.indTesteAprovado;
+  let statusTeste;
 
   if (codigoAprovacao === 1)
-    statusCurriculo = "Aprovado";
+    statusTeste = "Aprovado";
   else if (codigoAprovacao === 0)
-    statusCurriculo = "Reprovado";
+    statusTeste = "Reprovado";
   else {
-    statusCurriculo = "A validar";
+    statusTeste = "A validar";
   }
-
+  
   textoHTML += `
   <div class="new-candidato">
         <div class="candidato">
           <div class="candidato-info">
             <div id="nome-candidato">${nomeCandidato}</div>
-            <div id="curriculo">
-            <a href = ${urlCurriculo}>
+            <div id="teste">
+            <a href = ${urlTeste}>
               <i class="fa-solid fa-arrow-up-right-from-square"></i>
             </a>  
             </div>
-            <div id="statusDoCandidato">${statusCurriculo}</div>
+            <div id="statusDoCandidato">${statusTeste}</div>
             
             <div id="botoes">
               <div class="button_container">
@@ -164,11 +135,11 @@ const preencherCurriculosVaga = (dadosCurriculo) => {
   return textoHTML;
 };
 
-const preencherDivSemCurriculos = () => {
+const preencherDivSemTeste = () => {
   textoHTML += `
-    <div class="div-sem-candidatos">
+    <div class="div-sem-testes">
       <p>
-        Essa vaga ainda não possui candidatos inscritos!
+        Ainda não foi submetido nenhum teste para essa vaga!
       </p>
     </div>`
     ;
@@ -188,15 +159,15 @@ const preencherDivTituloVaga = () => {
     });
 }
 
-const preencherDivCurriculos = (dados) => {
-  const divVaga = document.getElementById("containerDados");
+const preencherDivTestes = (dados) => {
+  const divTeste = document.getElementById("container-dados");
   textoHTML = ''
   preencherDivTituloVaga();
   if (dados.length !== 0) {
-    dados.forEach((dadosCurriculo) => {
-      divVaga.innerHTML = preencherCurriculosVaga(dadosCurriculo);
+    dados.forEach((dadosTeste) => {
+      divTeste.innerHTML = preencherTestesVaga(dadosTeste);
     });
   } else {
-    divVaga.innerHTML = preencherDivSemCurriculos();
+    divTeste.innerHTML = preencherDivSemTeste();
   }
 };

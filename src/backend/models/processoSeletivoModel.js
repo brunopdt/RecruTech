@@ -26,7 +26,7 @@ const listarCurriculosFiltradosModel = async (codigoVaga) => {
 
 const listarVagasInscritasModel = async (codigoUsuario) => {
     const [vagas] = await connection.execute(`
-        SELECT v.tituloVaga, v.localModalidade, v.codigoVaga FROM usuario u
+        SELECT v.tituloVaga, v.localModalidade, v.codigoVaga, cv.indCandidatoContratado FROM usuario u
 	        JOIN candidato_vaga cv
 		        ON u.codigoUsuario = cv.codigoCandidato
 	        JOIN vaga v
@@ -79,6 +79,33 @@ const atualizarIndiceAprovacaoModel = async (codigoCandidato, codigoVaga, indApr
     return vagaAtualizada;
 }
 
+const atualizarCandidatoAprovadoModel = async (codigoCandidato, codigoVaga, indAprovacao) => {
+    const [vagaAtualizada] = await connection.execute(`
+        UPDATE candidato_vaga SET indCandidatoContratado = ${indAprovacao} WHERE codigoCandidato = ${codigoCandidato} AND codigoVaga = ${codigoVaga};
+    `);
+
+    return vagaAtualizada;
+}
+
+const atualizarIndiceAprovacaoTesteModel = async (codigoCandidato, codigoVaga, indAprovacao) => {
+    const [testeAtualizado] = await connection.execute(`
+        UPDATE teste_candidato SET indTesteAprovado = ${indAprovacao} WHERE codigoCandidato = ${codigoCandidato} AND codigoVaga = ${codigoVaga};
+    `);
+
+    return testeAtualizado;
+}
+
+const listarTestesVagaModel = async (codVaga) => {
+    const [listaTestes] = await connection.execute(`
+        SELECT * FROM usuario u
+	    JOIN teste_candidato tc
+	    	ON u.codigoUsuario = tc.codigoCandidato
+	    WHERE tc.codigoVaga = ${codVaga};
+    `);
+
+    return listaTestes;
+}
+
 module.exports = {
     listarCurriculosModel,
     listarCurriculosFiltradosModel,
@@ -87,5 +114,8 @@ module.exports = {
     uploadTesteModel,
     obterStatusVagaModel,
     atualizarStatusVagaModel,
-    atualizarIndiceAprovacaoModel
+    atualizarIndiceAprovacaoModel,
+    atualizarCandidatoAprovadoModel,
+    atualizarIndiceAprovacaoTesteModel,
+    listarTestesVagaModel
 };

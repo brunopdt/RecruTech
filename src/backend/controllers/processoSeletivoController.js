@@ -32,8 +32,8 @@ const enviarTesteVagaController = async (req, res) => {
 const obterStatusVagaController = async (req, res) => {
   const codigoCandidato = req.query.codCandidato;
   const codigoVaga = req.query.codVaga;
-  const uploadTeste = await processoSeletivoModel.obterStatusVagaModel(codigoCandidato, codigoVaga);
-  return res.status(200).json(uploadTeste);
+  const statusVaga = await processoSeletivoModel.obterStatusVagaModel(codigoCandidato, codigoVaga);
+  return res.status(200).json(statusVaga);
 }
 
 const atualizarStatusVagaController = async (req, res) => {
@@ -52,6 +52,28 @@ const atualizarIndiceAprovacaoController = async (req, res) => {
   return res.status(200).json(indicadorAtualizado);
 }
 
+const atualizarCandidatoAprovadoController = async (req, res) => {
+  const codigoCandidato = req.query.codCandidato;
+  const codigoVaga = req.query.codVaga;
+  const indAprovado = req.query.indAprovado;
+  const indicadorAtualizado = await processoSeletivoModel.atualizarCandidatoAprovadoModel(codigoCandidato, codigoVaga, indAprovado);
+  return res.status(200).json(indicadorAtualizado);
+}
+
+const atualizarIndiceAprovacaoTesteController = async (req, res) => {
+  const codigoCandidato = req.query.codCandidato;
+  const codigoVaga = req.query.codVaga;
+  const indAprovado = req.query.indAprovado;
+  const indicadorAtualizado = await processoSeletivoModel.atualizarIndiceAprovacaoTesteModel(codigoCandidato, codigoVaga, indAprovado);
+  return res.status(200).json(indicadorAtualizado);
+}
+
+const listarTestesVagaController = async (req, res) => {
+  const codigoVaga = req.query.codVaga;
+  const listaTestes = await processoSeletivoModel.listarTestesVagaModel(codigoVaga);
+  return res.status(200).json(listaTestes);
+}
+
 module.exports = {
     listarCurriculosController,
     listarCurriculosFiltradosController,
@@ -60,5 +82,8 @@ module.exports = {
     enviarTesteVagaController,
     obterStatusVagaController,
     atualizarStatusVagaController,
-    atualizarIndiceAprovacaoController
+    atualizarIndiceAprovacaoController,
+    atualizarCandidatoAprovadoController,
+    atualizarIndiceAprovacaoTesteController,
+    listarTestesVagaController
 };
