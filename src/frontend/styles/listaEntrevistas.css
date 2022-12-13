@@ -22,6 +22,10 @@ body {
 
 .button_container {
   text-align: center;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
 }
 
 .button {
@@ -50,7 +54,6 @@ body {
 .candidato-info {
   margin-left: 3em;
   display: flex;
-  justify-content: space-between;
 }
 
 #line {
@@ -70,7 +73,6 @@ body {
 }
 
 #nome-candidato,
-#candidato,
 #botoes {
   width: 100%;
   overflow-wrap: break-word;
@@ -94,10 +96,39 @@ body {
   background-color: rgb(255, 45, 45);
 }
 
+#link-entrevista {
+  width: 100%;
+}
+
+#link-entrevista > input,
+.date-time > input {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  border-bottom: 1px solid;
+}
+
+.date-time {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 0.3rem;
+}
+
+#enviar-teste {
+  width: 50%;
+}
+
+.button_container2 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
 /* iPads (portrait) ----------- */
 @media only screen and (max-width: 1024px) {
-  #check {
-    margin-bottom: 0.5rem;
+  .date-time {
+    justify-content: space-between;
   }
 
   .main {
@@ -116,18 +147,64 @@ body {
     margin-left: 0.5rem;
   }
 
+  .titulos-coluna {
+    margin-bottom: -1rem;
+  }
+
+  .candidato-info {
+    justify-content: space-between;
+  }
+
+  #link-entrevista,
+  .date-time {
+    width: 90%;
+  }
+
   #nome-candidato,
-  #candidato,
-  #curriculo,
   #botoes {
+    max-width: 180px;
+  }
+
+  .button_container {
+    display: block;
+  }
+
+  .coluna {
     width: 180px;
+    font-size: 1.5rem;
+  }
+
+  #check {
+    margin-bottom: 1rem;
   }
 }
 
 /* Big smartphones (portrait) (ie: Galaxy 3 has 360) */
 @media only screen and (max-width: 640px) {
   .button {
-    width: 50%;
+    width: 45%;
+  }
+
+  #link-entrevista,
+  .date-time {
+    width: 270px;
+  }
+
+  #link-entrevista > input,
+  .date-time > input {
+    font-size: 1.25rem;
+  }
+
+  #nome-candidato {
+    max-width: 120px;
+  }
+
+  #botoes {
+    max-width: 100%;
+  }
+
+  #enviar-teste {
+    font-size: 1rem;
   }
 
   .candidato {
@@ -139,20 +216,37 @@ body {
   }
 
   .titulos-coluna {
+    margin-bottom: 0;
     font-size: 0.57rem;
-    margin-bottom: -5em;
   }
 
   .main {
     margin-top: 130px;
     margin-left: 0;
+    padding: 0;
   }
 
-  .coluna1 {
-    min-width: 123px;
+  .candidato-info {
+    flex-wrap: wrap;
   }
 
-  div.main {
-    padding-right: 0;
+  .break {
+    flex-basis: 100%;
+    height: 0;
+  }
+
+  .button_container {
+    margin-top: 1.5rem;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  .coluna {
+    width: 120px;
+  }
+
+  .colunabotoes {
+    display: none;
   }
 }
