@@ -37,7 +37,6 @@ router.all("*", function (req, res, next) {
   next();
 });
 
-
 router.get('/vagas', vagasController.listarVagasController);
 router.post('/vagas', vagasMiddleware.validateBody, vagasController.criarVagaController);
 router.post('/vagas-teste', multer(multerConfig).single("file"), vagasController.uploadTesteController);
@@ -57,9 +56,16 @@ router.get('/enviar-email-negativo', usuariosMiddleware.usuarioLogado, emailCont
 
 router.get('/listar-curriculos', processoSeletivoController.listarCurriculosController);
 router.get('/listar-curriculos-filtrados', processoSeletivoController.listarCurriculosFiltradosController);
+router.get('/listar-testes-vagas', processoSeletivoController.listarTestesVagaController);
 
 router.get('/listar-vagas-inscritas', processoSeletivoController.listarVagasInscritasController);
+router.get('/acompanhar-status-vaga', processoSeletivoController.obterStatusVagaController);
+router.put('/atualizar-status-vaga', processoSeletivoController.atualizarStatusVagaController);
+router.put('/atualizar-indice-aprovacao', processoSeletivoController.atualizarIndiceAprovacaoController);
+router.put('/atualizar-candidato-aprovado-vaga', processoSeletivoController.atualizarCandidatoAprovadoController);
+router.put('/atualizar-indice-aprovacao-teste', processoSeletivoController.atualizarIndiceAprovacaoTesteController);
 router.get('/obter-teste', processoSeletivoController.obterTesteVagaController);
+router.post('/enviar-teste', multer(multerConfig).single("file"), processoSeletivoController.enviarTesteVagaController);
 
 /* Configuração das rotas do servidor */
 router.get('/', (req, res) => res.sendFile(__dirname.replace('backend', 'frontend/views/login.html')));
@@ -87,3 +93,5 @@ module.exports = router;
 
 router.get('/inscricao-user-vaga', usuariosMiddleware.usuarioLogado, (req, res) => res.sendFile("uploadCurriculo.html", { root: 'frontend/views/' }));
 
+//criando essa
+router.get('/lista-vagas-criadas/:codigoUsuario', usuariosMiddleware.usuarioLogado,  vagasController.vagasCriadasRH );

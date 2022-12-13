@@ -20,12 +20,6 @@ body {
   margin-left: 3rem;
 }
 
-.div-sem-testes {
-  margin-left: 2.5em;
-  margin-top: 0.5em;
-  font-size: 30px;
-}
-
 .button_container {
   text-align: center;
 }
@@ -39,6 +33,7 @@ body {
   outline: none;
   border: none;
   transition-duration: 0.4s;
+  background-color: #f8b500;
 }
 
 #check:hover {
@@ -76,7 +71,6 @@ body {
 
 #nome-candidato,
 #candidato,
-#teste,
 #botoes {
   width: 100%;
   overflow-wrap: break-word;
@@ -98,10 +92,6 @@ body {
 
 #xmark {
   background-color: rgb(255, 45, 45);
-}
-
-#teste {
-  cursor: pointer;
 }
 
 /* iPads (landscape) ----------- */
@@ -141,7 +131,6 @@ body {
 
   #nome-candidato,
   #candidato,
-  #teste,
   #botoes {
     width: 180px;
     overflow-wrap: break-word;

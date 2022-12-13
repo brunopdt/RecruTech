@@ -8,11 +8,11 @@ const listarVagasModel = async () => {
 };
 
 /*Funçao que cria uma vaga */
-const criarVagaModel = async (vaga) => {
+const criarVagaModel = async (vaga, codigoUsuario) => {
   const { descricao, qtdVagas, requisitos, senioridade, codigoStatus, tempoExperienciaVaga, tituloVaga, localModalidade } = vaga.body;
 
-  const query = 'INSERT INTO vaga(descricao, qtdVagas, requisitos, senioridade, codigoStatus, tempoExperienciaVaga, tituloVaga, localModalidade) VALUES (?, ?, ?, ?, ?, ?, ?, ?)';
-  const [vagaCriada] = await connection.execute(query, [descricao, qtdVagas, requisitos, senioridade, codigoStatus, tempoExperienciaVaga, tituloVaga, localModalidade]);
+  const query = 'INSERT INTO vaga(descricao, qtdVagas, requisitos, senioridade, codigoStatus, tempoExperienciaVaga, tituloVaga, localModalidade, codigoUsuario) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)';
+  const [vagaCriada] = await connection.execute(query, [descricao, qtdVagas, requisitos, senioridade, codigoStatus, tempoExperienciaVaga, tituloVaga, localModalidade, codigoUsuario]);
 
   return vagaCriada;
 };
@@ -52,6 +52,14 @@ const indicadorTaxaVagasCriadas = async () => {
   return dados;
 };
 
+
+/*Funçao que lista todas as vagas criadas de acordo com o usuario do rh*/
+const listarVagasCriadas = async (codigoUsuario) => {
+  const vagas = await connection.execute(`SELECT * FROM vaga v join status_vaga sv on v.codigoStatus = sv.codigoStatus WHERE v.codigoUsuario = ${codigoUsuario}`);
+  return vagas;
+};
+
+
 module.exports = {
   listarVagasModel,
   criarVagaModel,
@@ -59,5 +67,6 @@ module.exports = {
   vagaEspecificaModel,
   vagaEspecificaUserModel,
   deletarVagaModel,
-  indicadorTaxaVagasCriadas
+  indicadorTaxaVagasCriadas,
+  listarVagasCriadas
 };

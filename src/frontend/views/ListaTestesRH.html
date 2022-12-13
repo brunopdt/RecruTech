@@ -1,134 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <script
-      src="https://kit.fontawesome.com/2c9e6838ea.js"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="stylesheet" href="../styles/ListaTestesRH.css" />
 
-    <title>Lista de testes</title>
-  </head>
-  <body>
-    <nav class="sidebar">
-      <img id="logo_sidebar" src="../imgs/logo_icon.jpg" alt="logo_icon" />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700;800&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/2c9e6838ea.js" crossorigin="anonymous"></script>
 
-      <a href="#"><i class="nav-item fa-solid fa-user fa-xl"></i></a> <br />
-      <a href="#cadastro-vagas"><i class="nav-item fa-solid fa-square-plus fa-xl"></i></a>
-      <br />
-      <a href="#lista-vagas-empresa"><i class="nav-item fa-solid fa-list fa-xl"></i></a> <br />
+  <link rel="stylesheet" href="../styles/sidebar.css" />
+  <link rel="stylesheet" href="../styles/ListaTestesRH.css" />
 
-      <a href="#"
-        ><i class="nav-item fa-solid fa-right-from-bracket fa-xl"></i
-      ></a>
-    </nav>
+  <title>Lista de testes</title>
+</head>
 
-    <div class="main">
-      <div class="title" id="main_title">Nome da vaga</div>
+<body>
+  <nav class="sidebar"></nav>
 
-      <div class="titulos-coluna">
-        <div class="coluna">Candidato</div>
-        <div class="coluna">Teste Candidato</div>
-        <div class="coluna" id="botoes" style="visibility: hidden">
-          <div id="botoes">
-            <div class="button_container">
-              <button class="button">
-                <span id="button_text"><i class="fa-solid fa-check"></i></span>
-              </button>
-              <button class="button">
-                <i class="fa-solid fa-xmark"></i>
-              </button>
-            </div>
+  <div class="main">
+    <div class="title" id="main_title"></div>
+
+    <div class="titulos-coluna">
+      <div class="coluna">Candidato</div>
+      <div class="coluna">Teste Candidato</div>
+      <div class="coluna">Status</div>
+      <div class="coluna" id="botoes" style="visibility: hidden">
+        <div id="botoes">
+          <div class="button_container">
+            <button class="button">
+              <span id="button_text"><i class="fa-solid fa-check"></i></span>
+            </button>
+            <button class="button">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
           </div>
         </div>
-      </div>
-
-      <div class="new-candidato">
-        <div class="candidato">
-          <div class="candidato-info">
-            <div id="nome-candidato">Bárbara Mattioly</div>
-
-            <div id="teste">
-              <i class="fa-solid fa-arrow-up-right-from-square"></i>
-            </div>
-
-            <div id="botoes">
-              <div class="button_container">
-                <button class="button" id="check">
-                  <span id="button_text"
-                    ><i class="fa-solid fa-check"></i
-                  ></span>
-                </button>
-                <button class="button" id="xmark">
-                  <i class="fa-solid fa-xmark"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div id="line"></div>
-      </div>
-
-      <div class="new-candidato">
-        <div class="candidato">
-          <div class="candidato-info">
-            <div id="nome-candidato">Bruno Duarte</div>
-
-            <div id="teste">
-              <i class="fa-solid fa-arrow-up-right-from-square"></i>
-            </div>
-
-            <div id="botoes">
-              <div class="button_container">
-                <button class="button" id="check">
-                  <span id="button_text"
-                    ><i class="fa-solid fa-check"></i
-                  ></span>
-                </button>
-                <button class="button" id="xmark">
-                  <i class="fa-solid fa-xmark"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div id="line"></div>
-      </div>
-
-      <div class="new-candidato">
-        <div class="candidato">
-          <div class="candidato-info">
-            <div id="nome-candidato">Bruna Bernardes</div>
-
-            <div id="teste">
-              <i class="fa-solid fa-arrow-up-right-from-square"></i>
-            </div>
-
-            <div id="botoes">
-              <div class="button_container">
-                <button class="button" id="check">
-                  <span id="button_text"
-                    ><i class="fa-solid fa-check"></i
-                  ></span>
-                </button>
-                <button class="button" id="xmark">
-                  <i class="fa-solid fa-xmark"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div id="line"></div>
       </div>
     </div>
-  </body>
+
+    <div id="container-dados"></div>
+
+  </div>
+  <script src="../scripts/sidebar.js"></script>
+  <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+  <script src="../scripts/listarTesteVagas.js"></script>
+</body>
+
 </html>

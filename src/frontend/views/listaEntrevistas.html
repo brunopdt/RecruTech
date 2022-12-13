@@ -14,29 +14,21 @@
       src="https://kit.fontawesome.com/2c9e6838ea.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="../styles/ResultadoEntrevista.css" />
+
+    <link rel="stylesheet" href="../styles/sidebar.css" />
+    <link rel="stylesheet" href="../styles/listaEntrevistas.css" />
 
     <title>Resultado da Entrevista</title>
   </head>
   <body>
-    <nav class="sidebar">
-      <img id="logo_sidebar" src="../imgs/logo_icon.jpg" alt="logo_icon" />
-
-      <a href="#"><i class="nav-item fa-solid fa-user fa-xl"></i></a> <br />
-      <a href="#"><i class="nav-item fa-solid fa-square-plus fa-xl"></i></a>
-      <br />
-      <a href="#"><i class="nav-item fa-solid fa-list fa-xl"></i></a> <br />
-
-      <a href="#"
-        ><i class="nav-item fa-solid fa-right-from-bracket fa-xl"></i
-      ></a>
-    </nav>
+    <nav class="sidebar"></nav>
 
     <div class="main">
       <div class="title" id="main_title">Nome da vaga</div>
-      
+
       <div class="titulos-coluna">
         <div class="coluna">Candidato</div>
+        <div class="coluna">Dados Entrevista</div>
         <div class="coluna" id="botoes" style="visibility: hidden">
           <div id="botoes">
             <div class="button_container">
@@ -55,6 +47,14 @@
         <div class="candidato">
           <div class="candidato-info">
             <div id="nome-candidato">Bárbara Mattioly</div>
+            <div id="link-entrevista">
+              <input type="text" id="link-entrevista" name="name" placeholder="Link da Entrevista" required>
+              <input type="time" id="appt" name="appt" min="09:00" max="18:00" required>
+              <input type="date" id="start" name="trip-start" value="2022-12-13">
+              <div class="button_container">
+                <button class="button" id="enviar-teste" type="button">ENVIAR</button>
+              </div>
+            </div>
 
             <div id="botoes">
               <div class="button_container">
@@ -117,5 +117,6 @@
         <div id="line"></div>
       </div>
     </div>
+    <script src="../scripts/sidebar.js"></script>
   </body>
 </html>

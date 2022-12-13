@@ -1,0 +1,104 @@
+body {
+  background: #f7f7f7;
+  font-family: 'Inter', sans-serif;
+  color: #393e46;
+}
+
+.main {
+  margin-top: 70px;
+  margin-left: 140px;
+  padding: 0px 10px;
+}
+
+#main_title {
+  text-decoration: underline;
+}
+
+.title {
+  font-weight: 800;
+  font-size: 3rem;
+  margin-left: 3rem;
+}
+
+.titulos-coluna {
+  margin-left: 3em;
+  display: flex;
+  justify-content: space-between;
+}
+
+#line {
+  border-top: 1px solid #393e46;
+  margin-left: 3rem;
+}
+
+.indicador-num {
+  color: #616161;
+  margin-right: 1rem;
+}
+
+.candidato {
+  margin-left: 1.5em;
+  font-weight: 600;
+  font-size: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#nome-candidato,
+#candidato,
+#botoes {
+  width: 100%;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+}
+
+.coluna {
+  font-size: 2em;
+  color: gray;
+  font-weight: 400;
+  margin-top: 1em;
+  width: 100%;
+}
+
+/* iPads (portrait) ----------- */
+@media only screen and (max-width: 1024px) {
+  .main {
+    margin-top: 150px;
+    margin-left: 0px;
+  }
+
+  .candidato {
+    font-size: 1.7em;
+    margin-left: 0.5rem;
+  }
+
+  #line,
+  .titulos-coluna {
+    margin-left: 0.5rem;
+  }
+}
+
+/* Big smartphones (portrait) (ie: Galaxy 3 has 360) */
+@media only screen and (max-width: 640px) {
+  #nome-candidato {
+    width: 70%;
+    font-size: 1.5rem;
+  }
+  .titulos-coluna {
+    font-size: 0.8rem;
+  }
+
+  #main_title {
+    margin-left: 0.5rem;
+  }
+
+  #line {
+    margin-left: 0;
+  }
+
+  .candidato {
+    margin: 1rem 0 1rem 0;
+  }
+}

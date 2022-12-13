@@ -1,0 +1,97 @@
+.sidebar {
+  height: 100%;
+  width: 140px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #f8b500;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.fa-right-from-bracket {
+  margin-bottom: 4rem;
+}
+
+#sidebar-separate {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+}
+
+.sidebar a {
+  margin-left: auto;
+  margin-right: auto;
+  text-decoration: none;
+  font-size: 25px;
+  color: #393e46;
+  transition-duration: 0.3s;
+}
+
+#logo_sidebar {
+  width: 8rem;
+  height: 8rem;
+  margin-top: -1rem;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+@media only screen and (max-width: 1024px) {
+  .sidebar {
+    height: 128px;
+    width: 100%;
+    padding-top: 0;
+  }
+
+  .fa-right-from-bracket {
+    margin-bottom: 0rem;
+  }
+
+  #logo_sidebar {
+    width: 8rem;
+    height: 8rem;
+    margin-top: 0;
+  }
+
+  nav {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .fa-right-from-bracket {
+    margin-left: 0;
+  }
+
+  .sidebar {
+    height: 100px;
+  }
+
+  .candidato {
+    font-size: 1.5em;
+  }
+
+  #main_title {
+    font-size: 2rem;
+  }
+
+  #logo_sidebar {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  .nav-item {
+    font-size: 1.7rem;
+  }
+}

@@ -12,7 +12,8 @@ const listarVagasController = async (req, res) => {
 };
 
 const criarVagaController = async (req, res) => {
-    const vagaCriada = await vagasModel.criarVagaModel(req);
+    let codUsuario = req.query.codUsuario;
+    const vagaCriada = await vagasModel.criarVagaModel(req, codUsuario);
     return res.status(201).json(vagaCriada.insertId);
 };
 
@@ -40,6 +41,11 @@ const uploadTesteController = async (req, res) => {
     return res.status(201).json(req.body);
 }
 
+const vagasCriadasRH = async (req, res) => {
+    const vagaCriada = await vagasModel.listarVagasCriadas(req.params.codigoUsuario);
+    return res.status(201).json(vagaCriada[0]);
+}
+
 module.exports = {
     listarVagasController,
     criarVagaController,
@@ -47,5 +53,6 @@ module.exports = {
     detalheVagaEspecificaController,
     detalheVagaEspecificaUserController,
     deletarVagaController,
-    indicador
+    indicador,
+    vagasCriadasRH
 };

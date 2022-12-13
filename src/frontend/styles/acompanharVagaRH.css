@@ -4,52 +4,6 @@ body {
   color: #393e46;
 }
 
-/* codigo sidebar padrão para todas as páginas */
-.sidebar {
-  height: 100%;
-  width: 140px;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #f8b500;
-  overflow-x: hidden;
-  padding-top: 20px;
-}
-
-.sidebar a {
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 1.5rem;
-  text-decoration: none;
-  font-size: 25px;
-  color: #393e46;
-  transition-duration: 0.3s;
-  display: block;
-  text-align: center;
-}
-
-#nome-section {
-  display: flex;
-  justify-content: space-between;
-  width: 85%;
-}
-
-#logo_sidebar {
-  width: 8rem;
-  height: 8rem;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: -1rem;
-}
-
-.sidebar a:hover {
-  color: #f1f1f1;
-}
-
-/* fim do codigo navbar padrao */
-
 .main {
   margin-top: 70px;
   margin-left: 140px;
@@ -116,15 +70,16 @@ a {
   font-size: 2em;
 }
 
-#lista-curriculos {
+#lista-curriculos,
+#lista-testes,
+#lista-entrevistas {
   font-size: 2rem;
   color: #393e46;
   cursor: pointer;
 }
 
 /* iPads (landscape) ----------- */
-@media only screen and (max-width: 1224px) {
-}
+@media only screen and (max-width: 1224px) {}
 
 /* iPads (portrait) ----------- */
 @media only screen and (max-width: 1024px) {
@@ -148,11 +103,10 @@ a {
 }
 
 /* Smartphones (landscape) ----------- */
-@media only screen and (max-width: 768px) {
-}
+@media only screen and (max-width: 768px) {}
+
 /* Big smartphones (portrait) (ie: Galaxy 3 has 360) */
-@media only screen and (max-width: 640px) {
-}
+@media only screen and (max-width: 640px) {}
+
 /* Smartphones (portrait) (ie: Galaxy 1) */
-@media only screen and (max-width: 321px) {
-}
+@media only screen and (max-width: 321px) {}

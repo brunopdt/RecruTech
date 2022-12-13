@@ -14,45 +14,6 @@ a {
   color: inherit;
 }
 
-/* codigo sidebar padrão para todas as páginas */
-.sidebar {
-  height: 100%;
-  width: 140px;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #f8b500;
-  overflow-x: hidden;
-  padding-top: 20px;
-}
-
-.sidebar a {
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 1.5rem;
-  text-decoration: none;
-  font-size: 25px;
-  color: #393e46;
-  transition-duration: 0.3s;
-  display: block;
-  text-align: center;
-}
-
-#logo_sidebar {
-  width: 8rem;
-  height: 8rem;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: -1rem;
-}
-
-.sidebar a:hover {
-  color: #f1f1f1;
-}
-/* fim do codigo navbar padrao */
-
 .main {
   margin-top: 30px;
   margin-left: 140px;
@@ -124,4 +85,39 @@ a {
 
 .button:hover {
   background-color: #ffc938;
+}
+
+@media only screen and (max-width: 1024px) {
+  .main {
+    margin-top: 170px;
+    margin-left: 0px;
+    padding: 0px 0px;
+  }
+
+  .input_area {
+    margin-left: 0;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .main {
+    margin-top: 140px;
+  }
+
+  #welcome {
+    margin-top: 0;
+  }
+
+  .title {
+    margin-left: 1rem;
+    font-size: 1.6rem;
+  }
+
+  #login,
+  #password {
+    width: 70%;
+    height: 30px;
+    margin-left: 1rem;
+    font-size: 1.4rem;
+  }
 }

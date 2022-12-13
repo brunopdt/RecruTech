@@ -14,46 +14,40 @@
       src="https://kit.fontawesome.com/2c9e6838ea.js"
       crossorigin="anonymous"
     ></script>
+
+    <link rel="stylesheet" href="../styles/sidebar.css" />
     <link rel="stylesheet" href="../styles/acompanharVagaUsuario.css" />
 
     <title>Inscricoes User</title>
   </head>
 
   <body>
-    <nav class="sidebar">
-      <img id="logo_sidebar" src="../imgs/logo_icon.jpg" alt="logo_icon" />
-
-      <a href="#"><i class="nav-item fa-solid fa-user fa-xl"></i></a> <br />
-      <a href="#"><i class="nav-item fa-solid fa-square-plus fa-xl"></i></a>
-      <br />
-      <a href="#"><i class="nav-item fa-solid fa-list fa-xl"></i></a> <br />
-
-      <a href="#"
-        ><i class="nav-item fa-solid fa-right-from-bracket fa-xl"></i
-      ></a>
-    </nav>
+    <nav class="sidebar"></nav>
 
     <div class="main">
       <div class="title" id="main_title"></div>
 
+      <div class="section" id="candidato-reprovado">
+      </div>
       <div class="section">
-        <div class="section-info">
+        <div class="section-info" id="divCurriculo">
           <div id="nome-section">
-            <i class="fa-solid fa-circle"></i>&nbsp; Envio do currículo
+            <i id="topico-curriculo" class="fa-solid fa-circle"></i>&nbsp; Envio do currículo
+          </div>
+          <div id="visualizar-curriculo">
+
           </div>
         </div>
         <div id="line"></div>
       </div>
 
-      <div class="section">
-        <div class="section-info">
+      <div class="section" id="sectionTeste">
+        <div class="section-info" id="divTeste">
           <div id="nome-section">
-            <i class="fa-solid fa-circle"></i>&nbsp; Teste
+            <i id="topico-teste" class="fa-solid fa-circle"></i>&nbsp; Teste
           </div>
           <ul id="lista">
-              <li id = "download-teste">
-
-              </li>
+            <li id="download-teste"></li>
 
             <li>
               Envio do teste resolvido:
@@ -65,7 +59,7 @@
             </li>
 
             <div class="button_container">
-              <button class="button">ENVIAR</button>
+              <button class="button" id="enviar-teste" type="button">ENVIAR</button>
             </div>
           </ul>
         </div>
@@ -73,7 +67,7 @@
       </div>
 
       <div class="section">
-        <div class="section-info">
+        <div class="section-info" id="divEntrevista">
           <div id="nome-section">
             <i class="fa-solid fa-circle"></i>&nbsp; Entrevista
           </div>
@@ -82,7 +76,7 @@
       </div>
 
       <div class="section">
-        <div class="section-info">
+        <div class="section-info" id="divFinal">
           <div id="nome-section">
             <i class="fa-solid fa-circle"></i>&nbsp; Final
           </div>
@@ -90,8 +84,8 @@
         <div id="line"></div>
       </div>
     </div>
+    <script src="../scripts/sidebar.js"></script>
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+    <script src="../scripts/acompanharVagaUsuario.js"></script>
   </body>
-
-  <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
-  <script src="../scripts/acompanharVagaUsuario.js"></script>
 </html>

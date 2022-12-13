@@ -23,7 +23,7 @@ const run = async (usuario) => {
     text: 'Trouxemos uma grande novidade: você foi uma das pessoas selecionadas para a nossa proxima etapa, abra o site para mais informações!!',
     subject: 'Vaga',
     from: 'Recrutech <recrutech@hotmail.com>',
-    to: [`${usuario.email}`]
+    to: [`${usuario[0].email}`]
   }).then(()=> console.log('Sucesso'))
     .catch((err) => console.log(err))
 }
@@ -33,7 +33,7 @@ const runNegativo = async (usuario) => {
     text: 'Infelizmente você não foi selecionado para nossa proxima etapa!',
     subject: 'Vaga',
     from: 'Recrutech <recrutech@hotmail.com>',
-    to: [`${usuario.email}`]
+    to: [`${usuario[0].email}`]
   }).then(()=> console.log('Sucesso'))
     .catch((err) => console.log(err))
 }
