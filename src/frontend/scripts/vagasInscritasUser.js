@@ -16,6 +16,17 @@ const preencherVagasInscritas = (dadosCurriculo) => {
     let nomeVaga = dadosCurriculo.tituloVaga;
     let modalidadeTrabalho = dadosCurriculo.localModalidade;
     let codigoVaga = dadosCurriculo.codigoVaga;
+    let codigoStatus = dadosCurriculo.indCandidatoContratado;
+    let statusInscricao;
+
+    if (codigoStatus === 1)
+        statusInscricao = "Aprovado";
+    else if (codigoStatus === 0)
+        statusInscricao = "Reprovado";
+    else {
+        statusInscricao = "Em Andamento";
+    }
+
 
     textoHTML += `
     <div class="new-vaga">
@@ -23,6 +34,7 @@ const preencherVagasInscritas = (dadosCurriculo) => {
       <div class="vaga-info">
         <div id="nome-vaga">${nomeVaga}</div>
         <div id="modalidade">${modalidadeTrabalho}</div>
+        <div id="status">${statusInscricao}</div>
             <div class="button_container">
                 <button class="button" id="visualizar" onClick="abrirAcompanhamentoVaga(${codigoVaga})">VISUALIZAR</button>
             </div>

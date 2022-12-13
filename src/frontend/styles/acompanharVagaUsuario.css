@@ -86,6 +86,11 @@ body {
   width: 85%;
 }
 
+#candidato-reprovado{
+  margin-left: 5rem;
+  color: #ff0808;
+}
+
 .fa-circle {
   color: #ff0808;
 }

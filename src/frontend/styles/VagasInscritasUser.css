@@ -71,7 +71,8 @@ body {
 
 #nome-vaga,
 #vaga,
-#modalidade {
+#modalidade,
+#status {
   width: 100%;
   overflow-wrap: break-word;
   word-wrap: break-word;
@@ -89,7 +90,8 @@ body {
   background-color: #f8b500;
 }
 
-#modalidade {
+#modalidade,
+#status {
   cursor: pointer;
 }
 
