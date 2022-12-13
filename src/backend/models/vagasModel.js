@@ -47,7 +47,7 @@ const deletarVagaModel = async (codVaga) => {
 
 /*Funçao que lista todas as vagas criadas de acordo com o usuario do rh*/
 const listarVagasCriadas = async (codigoUsuario) => {
-  const vagas = await connection.execute(`SELECT *  FROM vaga WHERE codigoUsuario = ${codigoUsuario}`);
+  const vagas = await connection.execute(`SELECT * FROM vaga v join status_vaga sv on v.codigoStatus = sv.codigoStatus WHERE v.codigoUsuario = ${codigoUsuario}`);
   return vagas;
 };
 

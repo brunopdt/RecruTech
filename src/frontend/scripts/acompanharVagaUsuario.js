@@ -49,11 +49,18 @@ const preencherDivTeste = (urlTeste) => {
   `;
 }
 
+const preencherDivSemTeste = () => {
+  document.getElementById("sectionTeste").style.display = 'none';
+}
+
 const obterUrlTeste = async () => {
   await axios.get(`http://localhost:8081/obter-teste?codVaga=${idDaVaga}`)
     .then(response => {
       if (response.status === 200) {
-        preencherDivTeste(response.data[0].urlTeste);
+        if(response.data.length !== 0)
+          preencherDivTeste(response.data[0].urlTeste);
+        else
+          preencherDivSemTeste();
       }
     })
     .catch(erro => {
@@ -119,6 +126,7 @@ const indicarStatusProcesso = async () => {
     document.getElementById("download-teste").style.display = 'none';
   }
   else if(codigoStatus === 2){
+    document.getElementById('topico-teste').style.color = 'green';
     document.getElementById('divCurriculo').style.color = 'green';
     document.getElementById("enviar-teste").disabled = false;
     document.getElementById("input_file").disabled = false;
