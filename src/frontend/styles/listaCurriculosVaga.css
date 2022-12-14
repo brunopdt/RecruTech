@@ -75,7 +75,6 @@ body {
 }
 
 #nome-candidato,
-#candidato,
 #curriculo,
 #statusDoCandidato,
 #botoes {
@@ -83,6 +82,18 @@ body {
   overflow-wrap: break-word;
   word-wrap: break-word;
   word-break: break-word;
+}
+
+.filtrar-curriculo {
+  margin-left: 3rem;
+  margin-top: 2rem;
+  font-size: 2rem;
+}
+
+.filtrar-curriculo > input {
+  width: 1.3rem;
+  height: 1.3rem;
+  accent-color: #f8b500;
 }
 
 .coluna {
@@ -105,43 +116,26 @@ body {
   cursor: pointer;
 }
 
-/* iPads (landscape) ----------- */
-@media only screen and (max-width: 1224px) {
-}
-
 /* iPads (portrait) ----------- */
 @media only screen and (max-width: 1024px) {
-  .sidebar {
-    height: 80px;
-    width: 100%;
-  }
-
-  #button_text {
-    display: none;
-  }
-
-  .button {
-    width: 10rem;
-  }
-
   .main {
     margin-top: 150px;
-    margin-left: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    padding: 0;
   }
 
-  .candidato {
-    font-size: 1.7em;
+  .candidato,
+  .coluna {
+    font-size: 1.7rem;
   }
 
-  .candidato-info,
-  #line,
-  .titulos-coluna,
-  #main_title {
-    margin-left: 0.5rem;
+  #check {
+    margin-bottom: 0.5rem;
   }
 
   #nome-candidato,
-  #candidato,
   #curriculo,
   #statusDoCandidato,
   #botoes {
@@ -150,14 +144,52 @@ body {
     word-wrap: break-word;
     word-break: break-word;
   }
+
+  .filtrar-curriculo,
+  #main_title,
+  #line,
+  .titulos-coluna,
+  .candidato-info {
+    margin-left: 0;
+  }
 }
 
-/* Smartphones (landscape) ----------- */
-@media only screen and (max-width: 768px) {
-}
-/* Big smartphones (portrait) (ie: Galaxy 3 has 360) */
 @media only screen and (max-width: 640px) {
-}
-/* Smartphones (portrait) (ie: Galaxy 1) */
-@media only screen and (max-width: 321px) {
+  .main {
+    margin-top: 130px;
+  }
+
+  .candidato-info {
+    flex-wrap: wrap;
+  }
+
+  #nome-candidato,
+  #curriculo,
+  #statusDoCandidato {
+    width: 33%;
+    font-size: 1.4rem;
+  }
+
+  #botoes {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 1.5rem;
+  }
+
+  .coluna,
+  .filtrar-curriculo {
+    font-size: 1.4rem;
+  }
+
+  #botoes.btn-coluna {
+    display: none;
+  }
+
+  .break {
+    flex-basis: 100%;
+    height: 0;
+  }
 }
