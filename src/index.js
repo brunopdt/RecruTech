@@ -1,4 +1,4 @@
-const app = require('./app');
+const app = require('./backend/app');
 const port = 8081;
 
 app.listen(port, function () {
