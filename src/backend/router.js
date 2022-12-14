@@ -83,7 +83,7 @@ router.get('/indicador-contratados', indicadoresController.indicadorContratacaoC
 router.get('/indicador-testes-aprovados', indicadoresController.indicadorCandidatoAprovadoController)
 /* Configuração das rotas do servidor */
 //router.get('/', (req, res) =>  res.sendFile('index.html', { root: '../frontend  ' }))
-router.get('/aaaaaaaaaa', (req, res) =>  res.status(200).json(__dirname))
+router.get('/', (req, res) => res.sendFile('index.html', { root: './frontend' }))
 router.get('/cadastro-usuario', (req, res) => res.sendFile('cadastroUser.html', { root: 'frontend/views/' }))
 
 router.get('/indicador-taxa-usuarios', indicadoresController.indicadorTaxaUsuariosController)
@@ -101,7 +101,6 @@ router.get('/vagas-inscritas', usuariosMiddleware.usuarioLogado, (req, res) => r
 
 router.get('/acompanhar-vaga-empresa', usuariosMiddleware.usuarioLogado, (req, res) => res.sendFile('acompanharVagaRH.html', { root: 'frontend/views/' }))
 router.get('/acompanhar-vaga', usuariosMiddleware.usuarioLogado, (req, res) => res.sendFile('acompanharVagaUsuario.html', { root: 'frontend/views/' }))
-
 
 router.get('/lista-curriculos', usuariosMiddleware.usuarioLogado, (req, res) => res.sendFile('listaCurriculosVaga.html', { root: 'frontend/views/' }))
 router.get('/lista-testes', usuariosMiddleware.usuarioLogado, (req, res) => res.sendFile('ListaTestesRH.html', { root: 'frontend/views/' }))
