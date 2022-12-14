@@ -1,6 +1,5 @@
 # RecruTech
 
-
 **Barbara Mattioly Andrade, 1403413@sga.pucminas.br**
 
 **Bruna Barbosa Portilho Bernardes, bbernardes@sga.pucminas.br**
@@ -11,15 +10,15 @@
 
 **Laura Enísia Rodrigues Melo, laura.enisia@sga.pucminas.br**
 
-**Samuel Marques Sousa Leal, 1401791@sga.pucminas.br** 
+**Samuel Marques Sousa Leal, 1401791@sga.pucminas.br**
 
 ---
 
 Professores:
 
-**Prof Cristiano Neves Rodrigues** 
-**Prof. Felipe Augusto Lima Reis** 
-**Prof. Hugo Bastos de Paula** 
+**Prof Cristiano Neves Rodrigues**
+**Prof. Felipe Augusto Lima Reis**
+**Prof. Hugo Bastos de Paula**
 
 ---
 
@@ -29,11 +28,10 @@ _Instituto de Informática e Ciências Exatas – Pontifícia Universidade de Mi
 
 ---
 
-**Resumo** 
+**Resumo**
 No contexto de processos realizados no setor de Recursos Humanos de empresas, com foco maior nas etapas de seleção de funcionários na rede corporativa é notório que a maioria das empresas possuem processos extremamente burocráticos e tradicionais: envio e cadastro de documentos manualmente, dificuldade no controle e administração de dados e documentos e a demora de feedbacks das etapas do processo seletivo. Desse modo, o objetivo do trabalho consiste em desenvolver um sistema afim de solucionar esses problemas agilizando o processo de seleção e de contratação. Essa plataforma contará com feedbacks para os candidatos e gerência de informações, além de conter indicadores que evidenciam a taxa de usuários, taxa de vagas criadas, indíce de contratação e outros quantitativos. Com a criação de uma plataforma intuitiva de recrutamento e seleção, o projeto irá fornecer um ambiente centralizado, padronizado e organizado no setor de recursos humanos. Dessa forma, otimizará o tempo de execução de tarefas, facilitando o meio de trabalho dos funcionários.
 
 ---
-
 
 ## 1. Introdução
 
@@ -43,47 +41,47 @@ Primordialmente, o trabalho é inserido no contexto dos processos realizados no 
 Transitando o foco para a a contratação em si, as diversas etapas que compõem tal processo podem ser divididas em cinco majoritárias: divulgação da vaga, processo seletivo, contato final aos candidatos, a efetivação documentada e a integração com a equipe e o ambiente de trabalho. Por ser uma atividade regida pela CLT (Consolidação das Leis do Trabalho), os direitos e deveres de cada parte devem ser respeitados a todo momento, garantindo assim a segurança tanto do contratado quanto do contratante.<br><br>
 Por fim, é fato que a recente pandemia trouxe a digitalização acelerada dos meios, tendo em vista a necessidade urgente da atualização de tecnologias; além disso, vagas de emprego na modalidade _home office_ tendem somente a crescer, especialmente nas áreas de Tecnologia da informação. Como consequência, torna-se imprescindível ter um setor de RH confiável e atualizado, trazendo segurança no quesito dos colabores à empresa em questão.
 
-
     1.2 Problema
 
-Apesar de ser um setor tão importante na administração de uma organização, a execução de seus serviços não é feita da maneira mais eficiente possível. As questões mais trazidas à tona são o excesso de burocracia enfrentado pelas partes da gerência da empresa e do funcionário (o que é potencializado no período de contratação, onde deve haver a inserção e o armazenamento de diversos tipos de documentos diferentes) e justamente o controle de dados relevantes. Ainda nesse contexto, vale citar a dificuldade de manter a organização e eficiência armazenamento de documentação, tendo em vista o enorme volume de informações gerenciada pelo setor. Esse problema, quando somado à obsolescência de sistemas usados, ou pior ainda, o mantimento de processos manuais - quando poderiam ser feitos por meio de uma ferramenta específica -  pode causar um caos no setor, enfrentando a má comunicação e possíveis problemas jurídicos. Usualmente, isso acontece pela falta de investimento no setor tecnológico, visando o controle de gastos.<br><br>
+Apesar de ser um setor tão importante na administração de uma organização, a execução de seus serviços não é feita da maneira mais eficiente possível. As questões mais trazidas à tona são o excesso de burocracia enfrentado pelas partes da gerência da empresa e do funcionário (o que é potencializado no período de contratação, onde deve haver a inserção e o armazenamento de diversos tipos de documentos diferentes) e justamente o controle de dados relevantes. Ainda nesse contexto, vale citar a dificuldade de manter a organização e eficiência armazenamento de documentação, tendo em vista o enorme volume de informações gerenciada pelo setor. Esse problema, quando somado à obsolescência de sistemas usados, ou pior ainda, o mantimento de processos manuais - quando poderiam ser feitos por meio de uma ferramenta específica - pode causar um caos no setor, enfrentando a má comunicação e possíveis problemas jurídicos. Usualmente, isso acontece pela falta de investimento no setor tecnológico, visando o controle de gastos.<br><br>
 Entretanto, somente o maior investimento no âmbito não é o suficiente para combater um problema tão profundo, é necessário também o treinamento para o uso dos recursos de maneira eficiente, e especialmente a padronização das tarefas feitas, para que haja coesão e entendimento conjunto entre os materiais de trabalho do departamento do RH [1.2].
 
     1.3 Objetivo geral
 
    <p>      Elaborar um sistema que faça para a empresa o processo seletivo de uma vaga de emprego ou estagio, envolvendo a criação da vaga, divulgação, inscrição, seleção, com todo o processo seletivo (fazer a entrevista, a atividade individual e a atividade em grupo) e por fim realizar a contratação ou não do candidato.</p>
  
-        1.3.1 Objetivos específicos 
+        1.3.1 Objetivos específicos
 
-   - Criar uma plataforma intuitiva que facilite a empresa interessada a contratar novos funcionarios. 
-   - Criar a área do candidato, na qual o mesmo pode demonstrar interesse em participar do processo seletivo. 
-   - Armazenar essas informações em um banco de dados. 
+- Criar uma plataforma intuitiva que facilite a empresa interessada a contratar novos funcionarios.
+- Criar a área do candidato, na qual o mesmo pode demonstrar interesse em participar do processo seletivo.
+- Armazenar essas informações em um banco de dados.
 
-    1.4 Justificativas
+  1.4 Justificativas
 
-Com a criação de uma plataforma intuitiva de recrutamento e seleção, o projeto tem a finalidade de automatizar os processos burocráticos no âmbito da contratação de funcionários em empresas, realizando a gerência de documentos. 
+Com a criação de uma plataforma intuitiva de recrutamento e seleção, o projeto tem a finalidade de automatizar os processos burocráticos no âmbito da contratação de funcionários em empresas, realizando a gerência de documentos.
 Irá fornecer um ambiente centralizado, padronizado e organizado no setor de recursos humanos.
 Dessa forma, otimizará o tempo de execução de tarefas, facilitando o meio de trabalho dos funcionários.
 
 ## 2. Participantes do processo
+
 Os Stakeholders do projeto são:
+
 - Profissionais de RH (psicólogos, administradores, assistentes sociais e recrutadores)
 - Empresas parceiras
 - Diretor e supervisor da empresa
-- Candidatos 
+- Candidatos
 
 Os profissionais do RH, juntamente com os recrutadores, serão os indivíduos que participarão ativamente no Recrutech e em todas as etapas do processo seletivo. (Pessoas de 20-60 anos)
- 
-Os candidatos são as pessoas interessadas nas vagas estabelecidas no sistema, sendo de estágio, CLT, ou PJ. 
+
+Os candidatos são as pessoas interessadas nas vagas estabelecidas no sistema, sendo de estágio, CLT, ou PJ.
 (Pessoas de 16-70 anos)
 
 O diretor e supervisor da empresa são as pessoas que participarão de algumas etapas do processo seletivo (entrevistas) para analisarem os candidatos durante as etapas.
 (Pessoas de 25-70 anos)
 
-![Persona 1](imagens/Persona1.png "persona1")
-![Persona 2](imagens/Persona2.png "persona2")
-![Mapa de Stakeholders](imagens/Mapa_Stakeholders.jpg "mapa")
-
+![Persona 1](imagens/Persona1.png 'persona1')
+![Persona 2](imagens/Persona2.png 'persona2')
+![Mapa de Stakeholders](imagens/Mapa_Stakeholders.jpg 'mapa')
 
 ## 3. Modelagem do processo de negócio
 
@@ -92,7 +90,7 @@ O diretor e supervisor da empresa são as pessoas que participarão de algumas e
 Os atuais processos do setor de recursos humanos (RH) contam com alguns pontos principais como controle de ponto, folhas de pagamento, armazenamento de dados, contratação e demissão.
 Analisando o cenário atual, é nítido como esse setor apresenta desafios na execução desses processos, como a gestão de documentações, excesso de burocracias e informações, utilização de sistemas legados e entre outras dificuldades. Em muitas empresas, grande parte desses processos que poderiam ser automatizados são feitos de forma manual, aumentando a sobrecarga e dificultando a gerência do trabalho.
 
-Como forma de entender melhor as dificuldades enfrentadas, realizamos pesquisas e conversamos com pessoas que trabalham nessa área, e algo que foi colocado em pauta é a dificuldade na gerência das documentações  por apresentar muitos funcionários, o trabalho para armazenar todos os documentos em uma pasta e fazer buscas nesses documentos é muito grande. A automatização desse processo facilitaria o acesso a informações mais antigas e que dificilmente seriam encontradas nos arquivos físicos da empresa. Oferecendo assim maior facilidade e rapidez nas buscas, além de segurança no arquivamento de dados importantes.
+Como forma de entender melhor as dificuldades enfrentadas, realizamos pesquisas e conversamos com pessoas que trabalham nessa área, e algo que foi colocado em pauta é a dificuldade na gerência das documentações por apresentar muitos funcionários, o trabalho para armazenar todos os documentos em uma pasta e fazer buscas nesses documentos é muito grande. A automatização desse processo facilitaria o acesso a informações mais antigas e que dificilmente seriam encontradas nos arquivos físicos da empresa. Oferecendo assim maior facilidade e rapidez nas buscas, além de segurança no arquivamento de dados importantes.
 
 Hoje, o fechamento da folha de pagamento e o controle de ponto também são feitos em sua maioria de forma manual. As regras das folhas de pagamento, taxas e impostos que devem ser calculados abrem possibilidades para erros manuais, mas a automação e os softwares de gestão contribuem com os cálculos e adequam todos os pontos conforme a legislação trabalhista. Já o controle de ponto passa pela importância de saber da possibilidade de automação de processos de RH, uma vez que ao automatizar esse processo o cálculo de horas trabalhadas se torna mais preciso.
 
@@ -102,8 +100,8 @@ Dessa maneira, o recruTech busca trazer uma solução para tornar mais eficiente
 
 ## 3.2. Descrição Geral da proposta
 
-O processo em que a plataforma atua se inicia com a criação e divulgação da vaga com os requisitos desejados pela empresa. Após isso, os indivíduos interessados podem se candidatar à vaga de emprego, preenchendo formulários com informações pessoais e pertinentes à oferta, além do envio do currículo pessoal. Em seguida, o sistema filtra os candidatos com base nos requisitos especificados pelo setor de Recursos Humanos, disponibilizando ao departamento uma lista de possíveis convocados. Após o contato com aqueles candidatos dejesados, deve haver uma confirmação de interesse em continuar o processo seletivo. Caso contrário, ocorre a escolha de outro currículo.   
-   
+O processo em que a plataforma atua se inicia com a criação e divulgação da vaga com os requisitos desejados pela empresa. Após isso, os indivíduos interessados podem se candidatar à vaga de emprego, preenchendo formulários com informações pessoais e pertinentes à oferta, além do envio do currículo pessoal. Em seguida, o sistema filtra os candidatos com base nos requisitos especificados pelo setor de Recursos Humanos, disponibilizando ao departamento uma lista de possíveis convocados. Após o contato com aqueles candidatos dejesados, deve haver uma confirmação de interesse em continuar o processo seletivo. Caso contrário, ocorre a escolha de outro currículo.
+
 Dessa maneira, a seleção segue de acordo com as políticas da empresa em questão - entrevistas, provas ou contatos pessoais ocorrem nesse momento. Assim, a empresa contata cada candidato por meio do sistema, enviando e-mails quanto ao feedback do processo seletivo. Na etapa seguinte, ocorre o envio da documentação necessária por parte do candidato selecionado para a contratação ser efetivada, assim como a marcação do exame médico admissional e o respectivo contato com finalidade informativa ao novo prestador de serviços.
 
 Por último, o setor do RH redige o contrato e o envia para a revisão de dados por parte do candidato, que após análise cuidadosa deve confirmá-lo ou mandá-lo de volta para a correção. Caso todo o processo seja bem-sucedido, o candidato é efetivamente contratado e catalogado no sistema corporativo.
@@ -112,22 +110,19 @@ Nesse viés, vale ressaltar que a atuação da plataforma RecruTech se dá pela 
 
 Por fim, é importante manter as limitações do sistema em mente. Ainda nesse contexto, processos manuais como as entrevistas, aplicações de provas ou a assinatura do contrato por ambas as partes não poderão ser automatizados, tendo em vista a complexidade e necessidade da intervenção humana contínua nas etapas citadas.
 
-
 ## 3.3. Modelagem dos Processos
 
 ### 3.3.1 Processo 1 – Criação e divulgação das vagas
 
 O primeiro processo se trata da criação e divulgação das vagas, o processo inicia-se com o setor do recursos humanos da empresa cadastrando as vagas com os requisitos desejados no sistema Recrutech, elas ficam armazenadas no banco de dados do sistema. Logo em seguida o sistema atualiza o status da vaga para vaga aberta. E é decidido pelo recursos humanos se haverá teste avaliativo online, se sim, é redirecionado para o cadastro do teste online no sistema do Recrutech, e da mesma forma ele é armazenado no banco de dados do sistema. Em seguida a vaga é divulgada no sistema, e caso não tenha teste avaliativo online finaliza-se com a vaga sem teste sendo divulgada no sistema.
 
-![Processo 1](imagens/diagrama_processo1.png "Modelo BPMN do Processo 1.")
-
+![Processo 1](imagens/diagrama_processo1.png 'Modelo BPMN do Processo 1.')
 
 ### 3.3.2 Processo 2 – Inscrição do candidato na vaga
 
 O segundo processo, é o processo de inscrição do candidato na vaga, o processo inicia-se com o candidato visualizando as vagas disponíveis no sistema que estão armazenadas no banco de dados. A partir daí ele escolhe uma vaga que lhe agrada, abre a tela de detalhes que consta os critérios da vaga escolhida. Dessa forma ele aplica-se na vaga e finaliza fazendo o upload de seu currículo.
 
-
-![Processo 2](imagens/diagrama-processo2.png "Modelo BPMN do Processo 2.")
+![Processo 2](imagens/diagrama-processo2.png 'Modelo BPMN do Processo 2.')
 
 ### 3.3.3 Processo 3 – Filtragem e Validação de Currículos
 
@@ -135,15 +130,15 @@ O segundo processo, é o processo de inscrição do candidato na vaga, o process
 
 Processo responsável pela filtragem automática de currículos por meio do tempo de experiência requisitado pela vaga e o informado pelo candidato, e pela validação manual dos currículos filtrados pelo profissional de recursos humanos.
 
-![Processo 3](imagens/bpmn_curriculo.png "Filtragem e Validação de Currículos")
+![Processo 3](imagens/bpmn_curriculo.png 'Filtragem e Validação de Currículos')
 
 ### 3.3.4 Processo 4 – Seleção do Candidato (Teste)
 
 **Descrição geral do processo:**
 
-O processo de seleção é o processo responsável pelo envio e correção do teste online. Inicia-se com a tela contendo a lista de vagas inscritas disponibilizada para o candidato. Logo em seguida ele seleciona uma vaga para acompanhar, se a vaga possuir teste o candidato faz o download do teste, realiza o teste e envia para o RH da empresa. A partir daí o RH da empresa corrige o teste manualmente e envia o resultado para o sistema Recrutech. Se o candidato foi aprovado é enviado um email notificando-o da aprovação, caso contrário a candidatura é encerrada no sistema e o candidato é notificado que infelizmente foi reprovado no processo seletivo. 	
+O processo de seleção é o processo responsável pelo envio e correção do teste online. Inicia-se com a tela contendo a lista de vagas inscritas disponibilizada para o candidato. Logo em seguida ele seleciona uma vaga para acompanhar, se a vaga possuir teste o candidato faz o download do teste, realiza o teste e envia para o RH da empresa. A partir daí o RH da empresa corrige o teste manualmente e envia o resultado para o sistema Recrutech. Se o candidato foi aprovado é enviado um email notificando-o da aprovação, caso contrário a candidatura é encerrada no sistema e o candidato é notificado que infelizmente foi reprovado no processo seletivo.
 
-![Processo 4](imagens/modproc4.jpg "Seleção de cadidatos candidatos para a vaga")
+![Processo 4](imagens/modproc4.jpg 'Seleção de cadidatos candidatos para a vaga')
 
 ### 3.3.5 Processo 5 – Seleção do Candidato (Entrevista)
 
@@ -161,7 +156,6 @@ O processo de cancelamento de vagas por parte da empresa é responsável por rec
 
 ![Processo 6](imagens/diag_Process6.jpeg)
 
-
 ## 4. Projeto da Solução
 
 ### 4.1. Detalhamento das atividades
@@ -170,65 +164,65 @@ O processo de cancelamento de vagas por parte da empresa é responsável por rec
 
 **Cadastro das vagas**
 
-| **Campo** | **Tipo** | **Restrições** | **Valor default** |
-| --- | --- | --- | --- |
-| Título da vaga | Caixa de texto | Máximo 50 caracteres |  |
-| Descrição da vaga | Área de texto |  | Sem descrição da vaga |
-| Local/Modalidade | Caixa de texto |  |  |
-| Requisitos da vaga | Área de texto |  |  |
-| Quantidade das vagas | Número | Valor maior que zero |  |
-| Experiência mínima desejada | Número |  | Zero |
-| Senioridade desejada | Radio |  |  |
-| Possui teste | Radio |  | Null |
+| **Campo**                   | **Tipo**       | **Restrições**       | **Valor default**     |
+| --------------------------- | -------------- | -------------------- | --------------------- |
+| Título da vaga              | Caixa de texto | Máximo 50 caracteres |                       |
+| Descrição da vaga           | Área de texto  |                      | Sem descrição da vaga |
+| Local/Modalidade            | Caixa de texto |                      |                       |
+| Requisitos da vaga          | Área de texto  |                      |                       |
+| Quantidade das vagas        | Número         | Valor maior que zero |                       |
+| Experiência mínima desejada | Número         |                      | Zero                  |
+| Senioridade desejada        | Radio          |                      |                       |
+| Possui teste                | Radio          |                      | Null                  |
 
 **Cadastro de teste online**
 
-| **Campo** | **Tipo** | **Restrições** | **Valor default** |
-| --- | --- | --- | --- |
-| Envio do teste online | Arquivo | Formato PDF |  |
+| **Campo**             | **Tipo** | **Restrições** | **Valor default** |
+| --------------------- | -------- | -------------- | ----------------- |
+| Envio do teste online | Arquivo  | Formato PDF    |                   |
 
 **Status da vaga**
 | **Etapa** | **Cor representada** | **Texto** |
 | --- | --- | --- |
-| 1° | Vermelho | Vaga fechada | 
-| 2° |  Verde | Vaga aberta |  
+| 1° | Vermelho | Vaga fechada |
+| 2° | Verde | Vaga aberta |
 
 #### Processo 2 – INSCRIÇÃO DO CANDIDATO NA VAGA
 
 **Lista Vagas**
 
-| **Vaga** | **Local** | **Status** | **Detalhamento**
-| --- | --- | --- | --- |
+| **Vaga**     | **Local**        | **Status**     | **Detalhamento**                                    |
+| ------------ | ---------------- | -------------- | --------------------------------------------------- |
 | Nome da vaga | Local/Modalidade | Aberta/Fechada | Botão para redirecionamento para a tela de detalhes |
 
 **Detalhes**
 
-| **Título** | **Subtítulo** | **Descrição** | **Inscrição** |
-| --- | --- | --- | --- |
-| Título da vaga e local | Empresa e presença de teste na vaga | Descrição da vaga|  Botão de inscrição (redirecionamento para o envio de currículo) |
+| **Título**             | **Subtítulo**                       | **Descrição**     | **Inscrição**                                                   |
+| ---------------------- | ----------------------------------- | ----------------- | --------------------------------------------------------------- |
+| Título da vaga e local | Empresa e presença de teste na vaga | Descrição da vaga | Botão de inscrição (redirecionamento para o envio de currículo) |
 
 **Envio de curriculo**
 
 | **Campo** | **Tipo** | **Restrições** | **Valor default** |
-| --- | --- | --- | --- |
-| Curriculo | Arquivo | Formato PDF |  |
+| --------- | -------- | -------------- | ----------------- |
+| Curriculo | Arquivo  | Formato PDF    |                   |
 
 #### Processo 3 – INDICAÇÃO DE CANDIDATOS PARA UMA VAGA
 
 **Preenchimento do formulário de inscrição**
 
-| **Campo** | **Tipo** | **Restrições** | **Valor default** |
-| --- | --- | --- | --- |
-| Nome Funcionário | Caixa de Texto | Mínimo de 3 e máximo de 100 caracteres | - |
-| Nome do indicado | Caixa de Texto | Mínimo de 3 e máximo de máximo 100 caracteres | - |
-| Telefone do indicado | Caixa de Texto | Mínimo de 7 e máximo de 10 caracteres | - |
-| E-mail do indicado | Caixa de Texto | Mínimo de 3 e máximo 100 caracteres | - |
-| LinkedIn do indicado | Caixa de Texto | Máximo 100 caracteres | Nulo |
-| Portfólio do indicado | Caixa de Texto | Máximo 100 caracteres | Nulo |
-| Nível de senioridade | Radio | Não nulo | - |
-| Tempo que conhece o indicado | Número | Maior que 1 ano | - |
-| Competências do indicado | Lista | - | - |
-| Currículo do indicado | Arquivo | Formato PDF | Não nulo |
+| **Campo**                    | **Tipo**       | **Restrições**                                | **Valor default** |
+| ---------------------------- | -------------- | --------------------------------------------- | ----------------- |
+| Nome Funcionário             | Caixa de Texto | Mínimo de 3 e máximo de 100 caracteres        | -                 |
+| Nome do indicado             | Caixa de Texto | Mínimo de 3 e máximo de máximo 100 caracteres | -                 |
+| Telefone do indicado         | Caixa de Texto | Mínimo de 7 e máximo de 10 caracteres         | -                 |
+| E-mail do indicado           | Caixa de Texto | Mínimo de 3 e máximo 100 caracteres           | -                 |
+| LinkedIn do indicado         | Caixa de Texto | Máximo 100 caracteres                         | Nulo              |
+| Portfólio do indicado        | Caixa de Texto | Máximo 100 caracteres                         | Nulo              |
+| Nível de senioridade         | Radio          | Não nulo                                      | -                 |
+| Tempo que conhece o indicado | Número         | Maior que 1 ano                               | -                 |
+| Competências do indicado     | Lista          | -                                             | -                 |
+| Currículo do indicado        | Arquivo        | Formato PDF                                   | Não nulo          |
 
 **Status Indicação**
 | **Campo** | **Tipo** | **Restrições** | **Valor default** |
@@ -240,119 +234,105 @@ O processo de cancelamento de vagas por parte da empresa é responsável por rec
 Status da indicação
 | **cod_status_indicacao** | **dsc_status_indicacao** |
 | --- | --- |
-| 1 | Em validação | 
-| 2 | Validada | 
+| 1 | Em validação |
+| 2 | Validada |
 | 3 | Candidato Convocado para Seleção |
-| 4 | Inserida no Banco de Indicações | 
-| 5 | Indeferida | 
-| 6 | Concluída | 
+| 4 | Inserida no Banco de Indicações |
+| 5 | Indeferida |
+| 6 | Concluída |
 
 **Validação inscrição**
 
-| **Campo** | **Tipo** | **Restrições** | **Valor default** |
-| --- | --- | --- | --- |
-| indicadorInscricaoVálida | Boolean | - | - |
-
+| **Campo**                | **Tipo** | **Restrições** | **Valor default** |
+| ------------------------ | -------- | -------------- | ----------------- |
+| indicadorInscricaoVálida | Boolean  | -              | -                 |
 
 #### Processo 4 – SELEÇÃO DO CANDIDATO
 
 **Currículo**
 
-| **Título** | **Subtitulo** | **Restrição** | **Restrição**|
-| --- | --- | --- | --- |
-| Nome da vaga | Nome da empresa | Tempo da vaga disponibilizada | PDF |
-
+| **Título**   | **Subtitulo**   | **Restrição**                 | **Restrição** |
+| ------------ | --------------- | ----------------------------- | ------------- |
+| Nome da vaga | Nome da empresa | Tempo da vaga disponibilizada | PDF           |
 
 **Vaga**
 
-| **Título** | **Subtitulo** | **Descrição** | **Contém teste** | **Etapa reunião** |
-| --- | --- | --- | --- | --- |
-| Nome da vaga| Nome da empresa| Detalhes da vaga | Boolean | Boolean |
-
+| **Título**   | **Subtitulo**   | **Descrição**    | **Contém teste** | **Etapa reunião** |
+| ------------ | --------------- | ---------------- | ---------------- | ----------------- |
+| Nome da vaga | Nome da empresa | Detalhes da vaga | Boolean          | Boolean           |
 
 **Teste**
 
-| **Campo** | **Tipo** | **Restrições** | **Inicio**| **Fim** |
-| --- | --- | --- | --- | --- |
-| Teste online | Arquivo | PDF | Timer | Timer | 
-
+| **Campo**    | **Tipo** | **Restrições** | **Inicio** | **Fim** |
+| ------------ | -------- | -------------- | ---------- | ------- |
+| Teste online | Arquivo  | PDF            | Timer      | Timer   |
 
 **Avaliação do teste**
 
-| **Título** | **Subtitulo** | **Teste recebido** | **Avaliação**| **Fim** |
-| --- | --- | --- | --- | --- |
-| Nome da vaga | Nome da empresa | Respostas do teste | Boa, neutra, ruim | Boolean | 
+| **Título**   | **Subtitulo**   | **Teste recebido** | **Avaliação**     | **Fim** |
+| ------------ | --------------- | ------------------ | ----------------- | ------- |
+| Nome da vaga | Nome da empresa | Respostas do teste | Boa, neutra, ruim | Boolean |
 
+**Resultado do teste**
 
-**Resultado do teste** 
-
-| **Campo** | **Tipo** | **Restrições** | **Valor default** |
-| --- | --- | --- | --- |
-| Teste online | Arquivo | PDF | - |
-| Resultado do teste | float | Máximo 5 caracteres | - |
-
+| **Campo**          | **Tipo** | **Restrições**      | **Valor default** |
+| ------------------ | -------- | ------------------- | ----------------- |
+| Teste online       | Arquivo  | PDF                 | -                 |
+| Resultado do teste | float    | Máximo 5 caracteres | -                 |
 
 **Status da seleção**
 
-| **Título** | **Etapa** | 
-| --- | --- |
-| Nome da vaga Etapas bloqueadas e liberadas|
-
+| **Título**                                 | **Etapa** |
+| ------------------------------------------ | --------- |
+| Nome da vaga Etapas bloqueadas e liberadas |
 
 #### Processo 5 – CONTRATAÇÃO
 
 **Envio da documentação pessoal para a redação do contrato**
 
-| **Campo** | **Tipo** | **Restrições** | **Valor default** | **Obrigatório** | 
-| --- | --- | --- | --- | --- |
-| RG | Arquivo | Formato PDF | | Sim |
-| Carteira de Trabalho | Arquivo | Formato PDF | | Sim |
-| Certidão de Nascimento | Arquivo | Formato PDF | | Sim |
-| Foto 3x4 | Arquivo | Formato PDF, JPG ou PNG | | Sim |
-| Comprovante de Endereço | Arquivo | Formato PDF | | Sim |
-| Cartão de Vacina | Arquivo | Formato PDF | | Não |
-| Título de Eleitor| Arquivo | Formato PDF | | Sim |
-| CNH | Arquivo | Formato PDF | | Não |
-| Certidão de Casamento | Arquivo | Formato PDF | | Não |
-
-
+| **Campo**               | **Tipo** | **Restrições**          | **Valor default** | **Obrigatório** |
+| ----------------------- | -------- | ----------------------- | ----------------- | --------------- |
+| RG                      | Arquivo  | Formato PDF             |                   | Sim             |
+| Carteira de Trabalho    | Arquivo  | Formato PDF             |                   | Sim             |
+| Certidão de Nascimento  | Arquivo  | Formato PDF             |                   | Sim             |
+| Foto 3x4                | Arquivo  | Formato PDF, JPG ou PNG |                   | Sim             |
+| Comprovante de Endereço | Arquivo  | Formato PDF             |                   | Sim             |
+| Cartão de Vacina        | Arquivo  | Formato PDF             |                   | Não             |
+| Título de Eleitor       | Arquivo  | Formato PDF             |                   | Sim             |
+| CNH                     | Arquivo  | Formato PDF             |                   | Não             |
+| Certidão de Casamento   | Arquivo  | Formato PDF             |                   | Não             |
 
 **Envio do contrato para assinatura**
 
 | **Campo** | **Tipo** | **Restrições** | **Valor default** |
-| --- | --- | --- | --- |
-| Contrato | Arquivo | Formato PDF |  |
-
-
+| --------- | -------- | -------------- | ----------------- |
+| Contrato  | Arquivo  | Formato PDF    |                   |
 
 **Envio do contrato assinado**
 
-| **Campo** | **Tipo** | **Restrições** | **Valor default** |
-| --- | --- | --- | --- |
-| Contrato Assinado | Arquivo | Formato PDF |  |
+| **Campo**         | **Tipo** | **Restrições** | **Valor default** |
+| ----------------- | -------- | -------------- | ----------------- |
+| Contrato Assinado | Arquivo  | Formato PDF    |                   |
 
 #### Processo 6 – CANCELAMENTO DA VAGA PELA EMPRESA
 
 **Vaga Cancelada**
 
-| **Campo** | **Tipo** | **Restrições** | **Valor default** |
-| --- | --- | --- | --- |
-| Vaga cancelada | Booleano | - | False |
-
-
+| **Campo**      | **Tipo** | **Restrições** | **Valor default** |
+| -------------- | -------- | -------------- | ----------------- |
+| Vaga cancelada | Booleano | -              | False             |
 
 ### 4.2. Tecnologias
 
 As tecnologias utilizadas são, Node.js para o BackEnd, HTML/CSS/JavaScript no FrontEnd, MySQL para o SGBD, Visual Studio Code, Github e Figma.
 
-
 ## 5. Modelo de dados
+
 **[MODELO ENTIDADE RELACIONAMENTO]**
-![Modelo Entidade Relacionamento](imagens/Modelo_ER.png "Modelo Relacional.")
+![Modelo Entidade Relacionamento](imagens/Modelo_ER.png 'Modelo Relacional.')
 
 **[MODELO FÍSICO]**
-![Modelo Relacional](imagens/modeloFisico.jpg "Modelo Relacional.")
-
+![Modelo Relacional](imagens/modeloFisico.jpg 'Modelo Relacional.')
 
 ## 6. Indicadores de desempenho
 
@@ -360,19 +340,20 @@ Apresente aqui os principais indicadores de desempenho e algumas metas para o pr
 
 Usar o seguinte modelo:
 
-| **Indicador** | **Objetivos** | **Descrição** | **Cálculo** | **Fonte dados** | **Perspectiva** |
-| --- | --- | --- | --- | --- | --- |
-| Taxa de usuários (mensais) | Avaliar quantitativamente a taxa de novos usuários cadastrados na plataforma por mês | Taxa de usuários cadastrados por mês |  (Somatório de usuários cadastrados no mês / Somatório total de usuários) | Tabela usuários | Análise do Crescimento da plataforma |
-| Taxa de vagas criadas (mensais) | Avaliar quantitativamente a taxa de vagas cadastradas na plataforma pela empresa mensalmente| Quantitativo de vagas cadastradas por mês |  (Somatório de vagas cadastrados no mês / Somatório total de vagas) | Tabela vagas | Análise do Crescimento da plataforma |
-| Taxa de vagas canceladas (mensais) | Avaliar quantitativamente a taxa de vagas canceladas na plataforma pela empresa mensalmente | Quantitativo de vagas canceladas por mês |  (Somatório de vagas canceladas no mês / Somatório total de vagas)*100 | Tabela vagas | Análise do Crescimento da plataforma |
-| Índice de Contratação | Avaliar quantitativamente a taxa de usuários contratados na plataforma em relação a taxa de usuários inscritos na vaga | Taxa de usuários contratados por mês | (Somatório de pessoas inscritas na vaga / somatório de pessoas contratadas)*100 | Tabela vagas | Análise do Crescimento da plataforma |
-| Quantidade de usuários ativos | Avaliar quantitativamente a quantidade de usuários que fazem uso da plataforma | Número de usuários cadastrados no sistema | (somatório de usuários logados) | Log da tabela de usuários | Análise da quantidade de usuários mensais do Recrutech |
-
+| **Indicador**                      | **Objetivos**                                                                                                          | **Descrição**                             | **Cálculo**                                                                      | **Fonte dados**           | **Perspectiva**                                        |
+| ---------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ----------------------------------------- | -------------------------------------------------------------------------------- | ------------------------- | ------------------------------------------------------ |
+| Taxa de usuários (mensais)         | Avaliar quantitativamente a taxa de novos usuários cadastrados na plataforma por mês                                   | Taxa de usuários cadastrados por mês      | (Somatório de usuários cadastrados no mês / Somatório total de usuários)         | Tabela usuários           | Análise do Crescimento da plataforma                   |
+| Taxa de vagas criadas (mensais)    | Avaliar quantitativamente a taxa de vagas cadastradas na plataforma pela empresa mensalmente                           | Quantitativo de vagas cadastradas por mês | (Somatório de vagas cadastrados no mês / Somatório total de vagas)               | Tabela vagas              | Análise do Crescimento da plataforma                   |
+| Taxa de vagas canceladas (mensais) | Avaliar quantitativamente a taxa de vagas canceladas na plataforma pela empresa mensalmente                            | Quantitativo de vagas canceladas por mês  | (Somatório de vagas canceladas no mês / Somatório total de vagas)\*100           | Tabela vagas              | Análise do Crescimento da plataforma                   |
+| Índice de Contratação              | Avaliar quantitativamente a taxa de usuários contratados na plataforma em relação a taxa de usuários inscritos na vaga | Taxa de usuários contratados por mês      | (Somatório de pessoas inscritas na vaga / somatório de pessoas contratadas)\*100 | Tabela vagas              | Análise do Crescimento da plataforma                   |
+| Quantidade de usuários ativos      | Avaliar quantitativamente a quantidade de usuários que fazem uso da plataforma                                         | Número de usuários cadastrados no sistema | (somatório de usuários logados)                                                  | Log da tabela de usuários | Análise da quantidade de usuários mensais do Recrutech |
 
 ## 7.Sistema desenvolvido
+
 O software consiste em um site de recrutamento em que possui a opção de cadastro caso seja um recrutador (profissional de RH) ou um candidato. O sistema visa automatizar e agilizar o processo seletivo e de contratação de uma empresa. Além disso, possui indicadores que evidenciam taxas e índices sobre os processos a fim de mostrar um feedback do processo como um todo para as empresas e os candidatos.
 
-Caso seja um recrutador, o usuário possui as seguintes funcionalidades: 
+Caso seja um recrutador, o usuário possui as seguintes funcionalidades:
+
 - Cadastrar uma vaga
 - Visualizar suas vagas criadas
 - Ver detalhes de determinada vaga (visualizar sua descrição, requisitos e se possui teste)
@@ -383,79 +364,80 @@ Caso seja um recrutador, o usuário possui as seguintes funcionalidades:
 - Encerrar/excluir uma vaga
 - Visualizar indicadores de acordo com suas vagas criadas: taxa de usuários, taxa de crescimento de vagas criadas, taxa de vagas canceladas, índice de contratação e taxa de aprovados nos testes
 
-Caso seja um candidato, o usuário possui as seguintes funcionalidades: 
+Caso seja um candidato, o usuário possui as seguintes funcionalidades:
+
 - Visualizar todas as vagas criadas por recrutadores de empresas na plataforma
 - Visualizar detalhes de determinada vaga (visualizar sua descrição, requisitos e se possui teste)
 - Se inscrever na vaga enviando seu currículo
 - Visualizar todas suas vagas inscritas
-- Visualizar situação da vaga inscrita (envio de curriculo, dowload do teste, envio de teste, entrevista, final). Todas essas etapas são indicadas se o usuário passou para a próxima fase ou não 
+- Visualizar situação da vaga inscrita (envio de curriculo, dowload do teste, envio de teste, entrevista, final). Todas essas etapas são indicadas se o usuário passou para a próxima fase ou não
 
 ### 7.1. Telas
+
 **[Tela de Login]**
-![Tela de Login](imagens/1Login.png "Tela de Login")
-O usuário deve inserir seu email e senha. Em seguida entrar. 
+![Tela de Login](imagens/1Login.png 'Tela de Login')
+O usuário deve inserir seu email e senha. Em seguida entrar.
 
 **[Tela de Cadastro]**
-![Tela de Cadastro](imagens/2Cadastro.png "Tela de Cadastro")
+![Tela de Cadastro](imagens/2Cadastro.png 'Tela de Cadastro')
 O usuário deve realizar um cadastro inserindo nome, senha e email. Em seguida ele deve selecionar se é um usuário do tipo candidato ou empresa e cadastrar sua conta.
 
 **[Tela de Cadastrar Vaga]**
-![Tela de Cadastro Vaga](imagens/3CadastrarVaga.png "Tela de Cadastrar uma vaga")
+![Tela de Cadastro Vaga](imagens/3CadastrarVaga.png 'Tela de Cadastrar uma vaga')
 Tela para cadastrar uma vaga no sistema. O usuário de RH deve inserir os requisitos e as restrições da vaga.
 
 **[Tela Lista de Vagas RH]**
-![Tela Lista de Vagas RH](imagens/4ListagemVagas.png "Tela listagem das vagas criadas")
+![Tela Lista de Vagas RH](imagens/4ListagemVagas.png 'Tela listagem das vagas criadas')
 Tela que lista todas as vagas criadas pelo RH. É possível o usuário fechar/excluir a vaga e visualizar seus detalhes.
 
 **[Tela detalhes da VagasRH]**
-![Tela detalhes da Vagas RH](imagens/5DetalheVagaRh.png "Tela detalhe de uma vaga específica")
+![Tela detalhes da Vagas RH](imagens/5DetalheVagaRh.png 'Tela detalhe de uma vaga específica')
 Tela que abre detalhes de uma vaga escpecífica com seus requisitos. É possível o usuário clicar para acompanhar a situação e status da vaga.
 
 **[Tela acompanhamento Vaga RH]**
-![Tela acompanhamento Vagas RH](imagens/6AcompanharVagaRh.png "Tela acompanha situacao de uma vaga específica")
+![Tela acompanhamento Vagas RH](imagens/6AcompanharVagaRh.png 'Tela acompanha situacao de uma vaga específica')
 Tela que abre o acompanhamento de uma vaga específica de acordo com a lista de currículos(com seus candidatos inscritos), lista de testes e aprovação na entrevista. Se o candidato é aprovado em todas as etapas o processo é finalizado e encerra-se a vaga.
 
 **[Tela avaliação currículo RH]**
-![Tela avalia curriculo RH](imagens/7AvaliarCurriculo.png "Tela avalia curriculo")
+![Tela avalia curriculo RH](imagens/7AvaliarCurriculo.png 'Tela avalia curriculo')
 Tela que o Rh avalia todos os currículos recebidos, aprovando ou reprovando o candidato. É possível que o usuário filtre os currículos aprovados.
 
 **[Tela avaliação teste RH]**
-![Tela avalia curriculo RH](imagens/8AvaliarTeste.png "Tela avalia teste")
+![Tela avalia curriculo RH](imagens/8AvaliarTeste.png 'Tela avalia teste')
 Tela que o Rh avalia todos os testes recebidos, aprovando ou reprovando o candidato.
 
 **[Tela agendamento e avaliação da entrevista RH]**
-![Tela avalia entrevista RH](imagens/9AgendarEntrevista.png "Tela agenda entrevista e avalia entrevista")
+![Tela avalia entrevista RH](imagens/9AgendarEntrevista.png 'Tela agenda entrevista e avalia entrevista')
 Tela que o Rh agenda a entrevista especificando a data, horário e o link para a reunião. O usuário avalia a entrevista, aprovando ou reprovando o candidato.
 
 **[Tela Indicadores]**
-![Tela Indicadores](imagens/10Indicadores.png "Tela Indicadores")
+![Tela Indicadores](imagens/10Indicadores.png 'Tela Indicadores')
 Tela com os indicadores especificando os percentuais de cada taxa ou indíce do sistema.
 
 **[Tela lista de Vagas Candidato]**
-![Tela lista de Vagas](imagens/11VagasDisponiveis.png "Tela vagas disponiveis")
+![Tela lista de Vagas](imagens/11VagasDisponiveis.png 'Tela vagas disponiveis')
 Tela com a listagem de todas as vagas disponíveis no sistema. É possível o candidato escolher uma vaga e clicar para analisar seus detalhes.
 
 **[Tela detalhe da Vaga Candidato]**
-![Tela detalhe vaga candidato](imagens/12DetalheVagaUser.png "Tela detalhe vaga")
+![Tela detalhe vaga candidato](imagens/12DetalheVagaUser.png 'Tela detalhe vaga')
 Tela que abre detalhes de uma vaga escpecífica com seus requisitos e restrições. O candidato é capaz de analisar os requisitos e clicar para se inscrever.
 
 **[Tela inscrição vaga Candidato]**
-![Tela lista de Vagas](imagens/13InscricaoVagaCurriculo.png "Tela inscrição vaga")
+![Tela lista de Vagas](imagens/13InscricaoVagaCurriculo.png 'Tela inscrição vaga')
 Tela que o candidato se inscreve na vaga upando e enviando seu currículo.
 
 **[Tela vagas inscritas Candidato]**
-![Tela vagas inscritas](imagens/14VagasInscritasUser.png "Tela vagas inscritas")
+![Tela vagas inscritas](imagens/14VagasInscritasUser.png 'Tela vagas inscritas')
 Tela que o usuário visualiza todas as suas vagas inscritas no sistema. É possível ele clicar para acompanhar uma vaga específica e analisar seus resultados em cada etapa do processo seletivo.
 
 **[Tela de acompanhamento da vaga Candidato]**
-![Tela vagas inscritas](imagens/15AcompanhamentoVagaUser.png "Tela acompanhaemnto candidato")
+![Tela vagas inscritas](imagens/15AcompanhamentoVagaUser.png 'Tela acompanhaemnto candidato')
 Tela de acompanhamento da vaga pelo candidato. É possível o candidato visualizar seu currículo enviado e se foi aprovado ou não na seleção do currículo. Além disso, ele verifica se a vaga possui teste e em caso positivo, é possível o candidato realizar o download do teste e upar a sua resposta. Em seguida, ele consegue visualizar se foi aprovado na etapa do teste e prosseguir para a etapa de entrevista. Caso ele tenha sido aprovado em todas as etapas ele é direcionado para a etapa final de contratação.
-
 
 ## 8. Conclusão
 
-Os resultados obtidos do sistema foram satisfatórios. Apresenta um software fundamentado de acordo com os requisitos proposto no início do projeto. Ele conta com indicadores que são artefatos imprescindíveis para a empresa obter resultados sobre seus processos seletivos. Isso permite comparações de índices e taxas entre os meses, para que a empresa fique ciente dos seus resultados alcançados. 
-Para implementações futuras, o sistema contará com processos de envio de documentos para a contratação de modo automatizado. Ele salvará os dados e documentos dos usuários diretamente na nuvem. Além disso, o sistema também enviará e-mails instâneos para o candidato sobre o resultado de cada etapa do processo seletivo e de contratação. 
+Os resultados obtidos do sistema foram satisfatórios. Apresenta um software fundamentado de acordo com os requisitos proposto no início do projeto. Ele conta com indicadores que são artefatos imprescindíveis para a empresa obter resultados sobre seus processos seletivos. Isso permite comparações de índices e taxas entre os meses, para que a empresa fique ciente dos seus resultados alcançados.
+Para implementações futuras, o sistema contará com processos de envio de documentos para a contratação de modo automatizado. Ele salvará os dados e documentos dos usuários diretamente na nuvem. Além disso, o sistema também enviará e-mails instâneos para o candidato sobre o resultado de cada etapa do processo seletivo e de contratação.
 
 # REFERÊNCIAS
 
@@ -464,7 +446,6 @@ Para implementações futuras, o sistema contará com processos de envio de docu
 Verifique no link abaixo como devem ser as referências no padrão ABNT:
 
 http://www.pucminas.br/imagedb/documento/DOC\_DSC\_NOME\_ARQUI20160217102425.pdf -->
-
 
 **[1.1]** - [GUIA] Processo de admissão: Etapas, prazos e passo a passo, PontoTel, 2021. Disponível em https://www.pontotel.com.br/processo-de-admissao/. Acesso em 21/08/2022
 
@@ -476,8 +457,6 @@ http://www.pucminas.br/imagedb/documento/DOC\_DSC\_NOME\_ARQUI20160217102425.pdf
 
 **[1.5]** - _RUSSELL, Stuart J.; NORVIG, Peter. **Inteligência artificial**. Rio de Janeiro: Elsevier, c2013. xxi, 988 p. ISBN 9788535237016._-->
 
-
-
 # APÊNDICES
 
 **Colocar link:**
@@ -488,8 +467,4 @@ http://www.pucminas.br/imagedb/documento/DOC\_DSC\_NOME\_ARQUI20160217102425.pdf
 
 - Apresentação final: https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2022-2-ti2-0924100-recrutech/blob/master/divulgacao/Apresentacao/Apresentacao_final_RecruTech.pdf
 
-- Vídeo de apresentação (armazenado no repositório):
-
-
-
-
+- Vídeo de apresentação (armazenado no repositório): https://drive.google.com/file/d/1cmzgtFIlBHEEMFouL-uANx0N6w2O6pRX/view?usp=sharing
