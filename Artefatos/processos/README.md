@@ -1,16 +1,8 @@
 # Lista dos processos de negócio do sistema
 
-* login.bpmn - Processo de Criação e divulgação das vagas.
-* agendar.bpmn - Inscrição do candidato na vaga.
-* entregar.bpmn - Filtragem e Validação de Currículos.
-* entregar.bpmn - Seleção do Candidato (Teste).
-* entregar.bpmn - Seleção do Candidato (Entrevista)
-* entregar.bpmn - Cancelamento da Vaga pela empresa
-
-
- Processo 1 – Criação e divulgação das vagas
-Processo 2 – Inscrição do candidato na vaga
-Processo 3 – Filtragem e Validação de Currículos
-Processo 4 – Seleção do Candidato (Teste)
-Processo 5 – Seleção do Candidato (Entrevista)
-Processo 6 – Cancelamento da Vaga pela empresa
+* diagrama_processo1.png - Processo de Criação e divulgação das vagas.
+* diagrama_processo2.png  - Inscrição do candidato na vaga.
+* diagrama_processo3.png  - Filtragem e Validação de Currículos.
+* diagrama_processo4.png  - Seleção do Candidato (Teste).
+* diagrama_processo5.png  - Seleção do Candidato (Entrevista)
+* diagrama_processo6.png  - Cancelamento da Vaga pela empresa
