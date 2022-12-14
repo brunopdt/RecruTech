@@ -44,6 +44,22 @@ const obterTesteVagaModel = async (codigoVaga) => {
     return testeVaga;
 }
 
+const obterDadosEntrevistaModel = async (codigoVaga, codigoCandidato) => {
+    const [dadosEntrevista] = await connection.execute(`
+        SELECT cv.linkEntrevista, cv.dataEntrevista, cv.horaEntrevista FROM candidato_vaga cv WHERE cv.codigoVaga = ${codigoVaga} AND cv.codigoCandidato = ${codigoCandidato};
+    `);
+
+    return dadosEntrevista;
+}
+
+const obterQuantidadesVagasModel = async (codigoVaga) => {
+    const [qtdVagas] = await connection.execute(`
+        SELECT v.qtdVagas, v.qtdUsuariosContratados, v.codigoStatus FROM vaga v WHERE v.codigoVaga = ${codigoVaga};
+    `);
+
+    return qtdVagas;
+}
+
 const uploadTesteModel = async (dadosEnvioTeste, url) => {
     const codigoVaga = dadosEnvioTeste.codVaga;
     const codigoCandidato = dadosEnvioTeste.codUsuario;
@@ -112,6 +128,22 @@ const atualizarDadosEntrevistaModel = async (codigoCandidato, codigoVaga, body) 
     return entrevistaAtualizada;
 }
 
+const atualizarUsuariosContratadosModel = async (codigoVaga) => {
+    const [usuariosContratados] = await connection.execute(`
+        UPDATE vaga SET qtdUsuariosContratados = (qtdUsuariosContratados + 1) where codigoVaga = ${codigoVaga};
+    `);
+
+    return usuariosContratados;
+}
+
+const fecharVagaModel = async (codigoVaga) => {
+    const [vagaFechada] = await connection.execute(`
+        UPDATE vaga SET codigoStatus = 2 where codigoVaga = ${codigoVaga};
+    `);
+
+    return vagaFechada;
+}
+
 const listarTestesVagaModel = async (codVaga) => {
     const [listaTestes] = await connection.execute(`
         SELECT * FROM usuario u
@@ -143,12 +175,16 @@ module.exports = {
     obterTesteVagaModel,
     uploadTesteModel,
     obterStatusVagaModel,
+    fecharVagaModel,
+    obterDadosEntrevistaModel,
     atualizarStatusVagaModel,
     atualizarIndiceAprovacaoModel,
+    obterQuantidadesVagasModel,
     atualizarCandidatoAprovadoModel,
     atualizarIndiceAprovacaoTesteModel,
     atualizarIndiceAprovacaoEntrevistaModel,
     atualizarDadosEntrevistaModel,
+    atualizarUsuariosContratadosModel,
     listarTestesVagaModel,
     listarCandidatosEntrevistaModel
 };

@@ -18,6 +18,7 @@ const candidatoAprovado = (codUsuario) => {
   atualizarStatusVaga(codUsuario, 4);
   atualizarIndiceAprovacao(codUsuario, 1);
   atualizarIndiceContratacaoVaga(codUsuario, 1);
+  incrementarQuantidadeUsuariosContratados();
   window.location.reload(false);
 }
 
@@ -27,6 +28,18 @@ const candidatoReprovado = (codUsuario) => {
   atualizarIndiceAprovacao(codUsuario, 0);
   atualizarIndiceContratacaoVaga(codUsuario, 0);
   window.location.reload(false);
+}
+
+const incrementarQuantidadeUsuariosContratados = () => {
+  axios.put(`http://localhost:8081/atualizar-quantidade-usuContratados?codVaga=${idDaVaga}`)
+    .then(response => {
+      if (response.status === 200) {
+        console.log(response.data);
+      }
+    })
+    .catch(erro => {
+      alert("Erro ao atualizar quantidade de usuários contratados");
+    });
 }
 
 const enviarEmailPositivo = (codUsuario) => {

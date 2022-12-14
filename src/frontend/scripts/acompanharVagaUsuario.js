@@ -141,10 +141,16 @@ const indicarStatusProcesso = async () => {
     document.getElementById("input_file").disabled = true;
   }
   else if(codigoStatus === 4){
-    document.getElementById('divEntrevista').style.color = 'green';    
-  }
-  else if(codigoStatus === 5){
-    document.getElementById('divFinal').style.color = 'green';       
+    document.getElementById('topico-curriculo').style.color = 'green';
+    document.getElementById('divCurriculo').style.color = 'green';
+    document.getElementById('topico-teste').style.color = 'green';
+    document.getElementById('divTeste').style.color = 'green';
+    document.getElementById('divEntrevista').style.color = 'green';
+    document.getElementById('divFinal').style.color = 'green';
+    document.getElementById('topico-final').style.color = 'green';
+    document.getElementById('topico-entrevista').style.color = 'green';
+    document.getElementById("enviar-teste").disabled = true;
+    document.getElementById("input_file").disabled = true;
   }
   else if(codigoStatus === 6){
     document.getElementById("enviar-teste").disabled = true;

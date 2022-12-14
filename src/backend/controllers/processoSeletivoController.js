@@ -24,6 +24,19 @@ const obterTesteVagaController = async (req, res) => {
   return res.status(200).json(teste);  
 }
 
+const obterDadosEntrevistaController = async (req, res) => {
+  const codigoVaga = req.query.codVaga;
+  const codigoCandidato = req.query.codCandidato;
+  const dadosEntrevista = await processoSeletivoModel.obterDadosEntrevistaModel(codigoVaga, codigoCandidato);
+  return res.status(200).json(dadosEntrevista);  
+}
+
+const obterQuantidadeVagasController = async (req, res) => {
+  const codigoVaga = req.query.codVaga;
+  const qtdVagas = await processoSeletivoModel.obterQuantidadesVagasModel(codigoVaga);
+  return res.status(200).json(qtdVagas);  
+}
+
 const enviarTesteVagaController = async (req, res) => {
   const uploadTeste = await processoSeletivoModel.uploadTesteModel(req.body, req.file);
   return res.status(201).json(req.body);
@@ -83,6 +96,18 @@ const atualizarDadosEntrevistaController = async (req, res) => {
   return res.status(200).json(dadosEntrevista);
 }
 
+const atualizarUsuariosContratadosController = async (req, res) => {
+  const codigoVaga = req.query.codVaga;
+  const qtdUsuarios = await processoSeletivoModel.atualizarUsuariosContratadosModel(codigoVaga);
+  return res.status(200).json(qtdUsuarios);
+}
+
+const fecharVagaController = async (req, res) => {
+  const codigoVaga = req.query.codVaga;
+  const vagaFechada = await processoSeletivoModel.fecharVagaModel(codigoVaga);
+  return res.status(200).json(vagaFechada);
+}
+
 const listarTestesVagaController = async (req, res) => {
   const codigoVaga = req.query.codVaga;
   const listaTestes = await processoSeletivoModel.listarTestesVagaModel(codigoVaga);
@@ -102,8 +127,12 @@ module.exports = {
     obterTesteVagaController,
     enviarTesteVagaController,
     obterStatusVagaController,
+    obterDadosEntrevistaController,
+    fecharVagaController,
     atualizarStatusVagaController,
     atualizarIndiceAprovacaoController,
+    obterQuantidadeVagasController,
+    atualizarUsuariosContratadosController,
     atualizarCandidatoAprovadoController,
     atualizarIndiceAprovacaoTesteController,
     atualizarDadosEntrevistaController,

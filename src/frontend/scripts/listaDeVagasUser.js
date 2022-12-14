@@ -33,7 +33,6 @@ async function getItems() {
             <div id="nome-vaga">${tituloVaga}</div>
             <div id="local-vaga">${localModalidade}</div>
             
-
             <div id="botoes">
 
               <div class="button_container">

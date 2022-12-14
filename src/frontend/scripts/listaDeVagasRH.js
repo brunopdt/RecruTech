@@ -1,8 +1,9 @@
-const uri = 'http://localhost:8081/vagas'
-const codigoUsuario = document.cookie.split(';')[1].split('=')[1]
-let textoHTML = ''
+const uri = "http://localhost:8081/vagas"
+const codigoUsuario = document.cookie.split(';')[1].split('=')[1];
+let textoHTML = '';
 
-const redirecionar = async codigo => {
+
+const redirecionar = async (codigo) => {
   try {
     const res = await fetch(`http://localhost:8081/remove-vaga/${codigo}`, {
       method: 'GET',
@@ -13,11 +14,36 @@ const redirecionar = async codigo => {
     })
 
     if (res.status === 200) {
+      window.location.reload(false);
       alert('Vaga fechada com sucesso')
     }
   } catch (e) {
     console.error(e)
   }
+}
+
+const fecharVaga = async(codVaga) => {
+  axios.get(`http://localhost:8081/obter-qtd-vagas?codVaga=${codVaga}`)
+  .then(response => {
+    if (response.status === 200) {
+      if(response.data[0].codigoStatus === 1 && response.data[0].qtdVagas === response.data[0].qtdUsuariosContratados){
+        fecharVagaPut(codVaga);
+      }
+    }
+  })
+  .catch(erro => {
+    alert("Erro ao tentar fechar vaga");
+  });
+}
+
+const fecharVagaPut = async (codVaga) => {
+  axios.put(`http://localhost:8081/fechar-vaga?codVaga=${codVaga}`)
+  .then(response => {
+    console.log("Vaga fechada" + codVaga);
+  })
+  .catch(erro => {
+    alert("Erro ao tentar fechar vaga");
+  });
 }
 
 const abrirDetalhes = async codigo => {
@@ -44,21 +70,16 @@ async function getItems() {
   headers.append('Content-Type', 'application/json')
   headers.append('Accept', 'application/json')
 
-  const data = await fetch(
-    `http://localhost:8081/lista-vagas-criadas/${codigoUsuario}`,
-    {
-      method: 'GET',
-      headers: headers
-    }
-  ).then(response => {
-    return response.json()
-  })
+  const data = await fetch(`http://localhost:8081/lista-vagas-criadas/${codigoUsuario}`, {
+    method: "GET",
+    headers: headers,
+  }).then((response) => { return response.json() });
 
-  const construirCorpoModal = data => {
-    let dscStatus = data.dscStatus
-    let codigoVaga = data.codigoVaga
-    let tituloVaga = data.tituloVaga
-    let localModalidade = data.localModalidade
+  const construirCorpoModal = (data) => {
+    let dscStatus = data.dscStatus;
+    let codigoVaga = data.codigoVaga;
+    let tituloVaga = data.tituloVaga;
+    let localModalidade = data.localModalidade;
 
     textoHTML += `
       <div class="new-vaga">
@@ -90,8 +111,9 @@ async function getItems() {
     return textoHTML
   }
 
-  data.forEach(vaga => {
-    const divVaga = document.getElementById('container_vagas')
-    divVaga.innerHTML = construirCorpoModal(vaga)
+  data.forEach((vaga) => {
+    const divVaga = document.getElementById("container_vagas");
+    fecharVaga(vaga.codigoVaga)
+    divVaga.innerHTML = construirCorpoModal(vaga);
   })
 }

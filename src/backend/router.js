@@ -63,7 +63,8 @@ router.get('/listar-candidatos-entrevista', processoSeletivoController.listarCan
 router.get('/listar-vagas-inscritas', processoSeletivoController.listarVagasInscritasController);
 router.get('/acompanhar-status-vaga', processoSeletivoController.obterStatusVagaController);
 router.get('/obter-teste', processoSeletivoController.obterTesteVagaController);
-
+router.get('/obter-dados-entrevista', processoSeletivoController.obterDadosEntrevistaController);
+router.get('/obter-qtd-vagas', processoSeletivoController.obterQuantidadeVagasController)
 
 router.put('/atualizar-status-vaga', processoSeletivoController.atualizarStatusVagaController);
 router.put('/atualizar-indice-aprovacao', processoSeletivoController.atualizarIndiceAprovacaoController);
@@ -71,6 +72,8 @@ router.put('/atualizar-candidato-aprovado-vaga', processoSeletivoController.atua
 router.put('/atualizar-indice-aprovacao-teste', processoSeletivoController.atualizarIndiceAprovacaoTesteController);
 router.put('/atualizar-indice-aprovacao-entrevista', processoSeletivoController.atualizarIndiceAprovacaoEntrevistaController);
 router.put('/atualizar-dados-entrevista', processoSeletivoController.atualizarDadosEntrevistaController);
+router.put('/atualizar-quantidade-usuContratados', processoSeletivoController.atualizarUsuariosContratadosController);
+router.put('/fechar-vaga', processoSeletivoController.fecharVagaController);
 
 router.post('/enviar-teste', multer(multerConfig).single('file'), processoSeletivoController.enviarTesteVagaController)
 router.get('/lista-vagas-criadas/:codigoUsuario', vagasController.vagasCriadasRH)
