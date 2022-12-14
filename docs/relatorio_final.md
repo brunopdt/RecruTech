@@ -392,10 +392,9 @@ Caso seja um candidato, o usuário possui as seguintes funcionalidades:
 - Visualizar todas suas vagas inscritas
 - Visualizar situação da vaga inscrita (envio de curriculo, dowload do teste, envio de teste, entrevista, final). Todas essas etapas são indicadas se o usuário passou para a próxima fase ou não 
 
-
-
-
-(Fotos)
+### 7.1. Telas
+![Tela de Login](imagens/1Login.pngg "Tela de Login")
+O usuário deve cadastrar seu email e senha e logar. 
 
 ## 8. Conclusão
 
