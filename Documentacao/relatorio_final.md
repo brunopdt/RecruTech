@@ -80,9 +80,9 @@ Os candidatos são as pessoas interessadas nas vagas estabelecidas no sistema, s
 O diretor e supervisor da empresa são as pessoas que participarão de algumas etapas do processo seletivo (entrevistas) para analisarem os candidatos durante as etapas.
 (Pessoas de 25-70 anos)
 
-![Persona 1](imagens/Persona1.png)
-![Persona 2](imagens/Persona2.png)
-![Mapa de Stakeholders](imagens/Mapa_Stakeholders.jpg)
+![Persona 1](imagens/Persona1.png "persona1")
+![Persona 2](imagens/Persona2.png "persona2")
+![Mapa de Stakeholders](imagens/Mapa_Stakeholders.jpg "mapa")
 
 
 ## 3. Modelagem do processo de negócio
