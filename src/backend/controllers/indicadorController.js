@@ -32,9 +32,18 @@ const indicadorContratacaoController = async(req, res) => {
     return res.status(200).send(taxaContratadosMensais);
 }
 
+const indicadorCandidatoAprovadoController = async(req, res) => {
+    const dados = await indicadorModel.indicadorTaxaAprovadosTesteModel();
+    let qtdAprovadosMes = dados[0].qtdAprovadosMes;
+    let qtdUsuariosTotaisMes = dados[0].qtdUsuariosTotaisMes;
+    let taxaAprovadosTestes = parseFloat((qtdAprovadosMes/qtdUsuariosTotaisMes)*100).toFixed(2);
+    return res.status(200).send(taxaAprovadosTestes);
+}
+
 module.exports = {
     indicadorTaxaVagasController,
     indicadorTaxaVagasCanceladasController,
     indicadorTaxaUsuariosController,
-    indicadorContratacaoController
+    indicadorContratacaoController,
+    indicadorCandidatoAprovadoController
 }

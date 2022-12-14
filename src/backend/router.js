@@ -77,7 +77,7 @@ router.get('/lista-vagas-criadas/:codigoUsuario', vagasController.vagasCriadasRH
 router.get('/indicador-taxa-vagas', indicadoresController.indicadorTaxaVagasController)
 router.get('/indicador-taxa-vagas-canceladas', indicadoresController.indicadorTaxaVagasCanceladasController)
 router.get('/indicador-contratados', indicadoresController.indicadorContratacaoController)
-
+router.get('/indicador-testes-aprovados', indicadoresController.indicadorCandidatoAprovadoController)
 /* Configuração das rotas do servidor */
 router.get('/', (req, res) => res.sendFile(__dirname.replace('backend', 'frontend/views/login.html')))
 router.get('/cadastro-usuario', (req, res) => res.sendFile('cadastroUser.html', { root: 'frontend/views/' }))

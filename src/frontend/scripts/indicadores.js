@@ -3,6 +3,7 @@ const taxaMesUri = "/indicador-taxa-vagas"
 const taxaUsuariosUri = "/indicador-taxa-usuarios"
 const taxaCanceladosUri = "/indicador-taxa-vagas-canceladas"
 const taxaContratacaoUri = "/indicador-contratados"
+const taxaAprovadosTesteUri = "/indicador-testes-aprovados"
 
 const abrirIndicador = async (codigo) => {
   window.location.href = `/indicadores`;
@@ -92,7 +93,29 @@ const getContratacao = async () => {
 
 };
 
+const taxaAprovadosTeste = (data) => {
+  const pTaxa = document.getElementById("aprovadosTeste");
+  pTaxa.innerHTML = data+"%";
+};
+
+const getAprovadosTeste = async () => {
+const headers = new Headers()
+headers.append('Content-Type', 'application/json')
+headers.append('Accept', 'application/json')
+
+const data = await fetch(taxaAprovadosTesteUri, {
+method: 'GET',
+headers: headers
+}).then(response => {
+return response.json()
+})
+
+taxaAprovadosTeste(data);
+
+};
+
 getUsuarios();
 getVagas();
 getVagasCanceladas();
 getContratacao();
+getAprovadosTeste();
