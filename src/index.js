@@ -1,4 +1,4 @@
-const app = require('./api/app');
+const app = require('./backend/app');
 const port = 8081;
 console.log("Entrou aqui")
 app.listen(port, function () {

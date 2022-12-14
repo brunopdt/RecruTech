@@ -12,7 +12,7 @@ else {
 
 const efetuarLogout = () => {
   axios
-    .get(`https://plf-es-2022-2-ti2-0924100-recrutech-t-git-26faaa-recrutech-tis2.vercel.app/usuarios-deslogar`)
+    .get(`http://localhost:8081/usuarios-deslogar`)
     .then(response => {
       if (response.status === 200) {
         window.location.href = '/'
