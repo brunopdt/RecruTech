@@ -19,7 +19,10 @@ O RecruTech é um produto que visa facilitar o trabalho de profissionais de recu
 
 ## Instruções de utilização
 
-Assim que a primeira versão do sistema estiver disponível, deverá complementar com as instruções de utilização. Descreva como instalar eventuais dependências e como executar a aplicação.
+Instruções de Utilização:
+- A solução pode ser acessada via internet no link: https://funciona-recrutech.000webhostapp.com/
+- Para rodar localmente pela primeira vez será necessário, em primeiro lugar instalar as dependências do projeto com o comando (npm install) dentro da pasta src do projeto
+- Para iniciar a aplicação local basta rodar o comando npm run dev dentro da pasta src. Sera iniciado a aplicação através do localhost por onde poderá ser realizadas requisições de acordo com as rotas especificadas no router.js encontrado na pasta backend
 
 ## Histórico de versões
 
