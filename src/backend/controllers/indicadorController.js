@@ -25,7 +25,6 @@ const indicadorTaxaUsuariosController = async(req, res) => {
     return res.status(200).send(taxaUsuariosMensais);
 }
 
-
 const indicadorContratacaoController = async(req, res) => {
     const dados = await indicadorModel.indicadorContratacaoModel();
     let qtdTotalContratados = dados[0].qtdTotalContratados;
