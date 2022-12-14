@@ -10,6 +10,19 @@ else {
   rotaIcone3 = "/indicadores";
 }
 
+const efetuarLogout = () => {
+  axios
+    .get(`http://localhost:8081/usuarios-deslogar`)
+    .then(response => {
+      if (response.status === 200) {
+        window.location.href = '/'
+      }
+    })
+    .catch(erro => {
+      alert('Erro ao efetuar logout')
+    })
+}
+
 function myFunction(x) {
 
   if (x.matches) {
@@ -18,7 +31,7 @@ function myFunction(x) {
     <a href=${rotaIcone1}><i class="fa-solid fa-user-plus fa-xl"></i></a>
     <a href=${rotaIcone2}><i class="nav-item fa-solid fa-list fa-xl"></i></a>
     <a href=${rotaIcone3}><i class="fa-solid fa-chart-simple fa-xl"></i></a>
-    <a href="#"
+    <a onClick = "efetuarLogout()"
       ><i class="nav-item fa-solid fa-right-from-bracket fa-xl"></i
     ></a> 
   `
@@ -30,7 +43,7 @@ function myFunction(x) {
     <a href=${rotaIcone3}><i class="fa-solid fa-chart-simple fa-xl"></i></a>
   </div>
 
-  <a href="#"
+  <a onClick = "efetuarLogout()"
     ><i class="nav-item fa-solid fa-right-from-bracket fa-xl"></i
   ></a>`
   }
