@@ -104,7 +104,7 @@ body {
 }
 
 #link-entrevista {
-  width: 100%;
+  width: 90%;
 }
 
 #link-entrevista > input,
@@ -115,10 +115,15 @@ body {
   border-bottom: 1px solid;
 }
 
+#link-da-entrevista {
+  width: 90%;
+}
+
 .date-time {
   display: flex;
   justify-content: space-around;
   margin-top: 0.3rem;
+  width: 90%;
 }
 
 #enviar-teste {
@@ -155,7 +160,8 @@ body {
   }
 
   .titulos-coluna {
-    margin-bottom: -1rem;
+    justify-content: space-between;
+    width: 85%;
   }
 
   .candidato-info {
@@ -171,6 +177,11 @@ body {
   #botoes,
   #status-vaga {
     max-width: 180px;
+    font-size: 1.3rem;
+  }
+
+  #link-entrevista {
+    font-size: 1rem;
   }
 
   .button_container {
@@ -184,6 +195,14 @@ body {
 
   #check {
     margin-bottom: 1rem;
+  }
+
+  .button {
+    width: 7rem;
+  }
+
+  .colunabotoes {
+    display: none;
   }
 }
 
@@ -255,7 +274,14 @@ body {
     width: 120px;
   }
 
-  .colunabotoes {
+  .colunabotoes,
+  .coluna3,
+  #status-vaga {
     display: none;
+  }
+
+  .button_container2 {
+    justify-content: flex-end;
+    width: 95%;
   }
 }
