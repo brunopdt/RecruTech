@@ -32,7 +32,7 @@ async function getItems() {
           <div class="vaga-info">
             <div id="nome-vaga">${tituloVaga}</div>
             <div id="local-vaga">${localModalidade}</div>
-            <div id="status-vaga">${dscStatus}</div>
+            
 
             <div id="botoes">
 

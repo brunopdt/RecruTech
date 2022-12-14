@@ -148,3 +148,43 @@ input[type='radio']:checked,
 input[type='checkbox']:checked {
   accent-color: #bd8a00;
 }
+
+@media only screen and (max-width: 1024px) {
+  .main {
+    margin-top: 170px;
+    margin-left: 0;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .main {
+    margin-top: 130px;
+    padding: 0;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .item_radio,
+  .subtitle,
+  .input,
+  .textarea,
+  .typing,
+  .title {
+    margin-left: 0rem;
+  }
+
+  .title,
+  .subtitle {
+    font-size: 1.5rem;
+  }
+
+  div.item_radio {
+    font-size: 1.2rem;
+  }
+
+  .typing,
+  .textarea {
+    width: 90%;
+  }
+}

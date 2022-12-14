@@ -59,6 +59,5 @@ module.exports = {
   vagaEspecificaModel,
   vagaEspecificaUserModel,
   deletarVagaModel,
-  indicadorTaxaVagasCriadas,
   listarVagasCriadas
 };
