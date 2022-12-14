@@ -95,6 +95,14 @@ const atualizarIndiceAprovacaoTesteModel = async (codigoCandidato, codigoVaga, i
     return testeAtualizado;
 }
 
+const atualizarIndiceAprovacaoEntrevistaModel = async (codigoCandidato, codigoVaga, indAprovacao) => {
+    const [testeAtualizado] = await connection.execute(`
+        UPDATE candidato_vaga SET indEntrevistaAprovada = ${indAprovacao} WHERE codigoCandidato = ${codigoCandidato} AND codigoVaga = ${codigoVaga};
+    `);
+
+    return testeAtualizado;
+}
+
 const listarTestesVagaModel = async (codVaga) => {
     const [listaTestes] = await connection.execute(`
         SELECT * FROM usuario u
@@ -130,6 +138,7 @@ module.exports = {
     atualizarIndiceAprovacaoModel,
     atualizarCandidatoAprovadoModel,
     atualizarIndiceAprovacaoTesteModel,
+    atualizarIndiceAprovacaoEntrevistaModel,
     listarTestesVagaModel,
     listarCandidatosEntrevistaModel
 };

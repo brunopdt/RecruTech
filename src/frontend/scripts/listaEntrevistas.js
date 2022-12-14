@@ -66,7 +66,7 @@ const atualizarIndiceContratacaoVaga = (codUsuario, indAprovado) => {
 }
 
 const atualizarIndiceAprovacao = (codUsuario, indAprovado) => {
-  axios.put(`http://localhost:8081/atualizar-indice-aprovacao-teste?codCandidato=${codUsuario}&codVaga=${idDaVaga}&indAprovado=${indAprovado}`)
+  axios.put(`http://localhost:8081/atualizar-indice-aprovacao-entrevista?codCandidato=${codUsuario}&codVaga=${idDaVaga}&indAprovado=${indAprovado}`)
     .then(response => {
       if (response.status === 200) {
         console.log(response.data);
