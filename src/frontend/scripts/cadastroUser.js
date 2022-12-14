@@ -7,7 +7,7 @@ btn.addEventListener('click', () => {
       'Erro ao cadastrar o usuário! Todos os campos devem estar preenchidos.'
     )
   else enviarDadosUsuarioParaApi(dadosUsuario)
-})
+}) 
 
 function getDadosUsuarioForm() {
   const inputNome = document.querySelector('#nome')
