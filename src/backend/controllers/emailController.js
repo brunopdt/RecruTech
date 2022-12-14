@@ -8,6 +8,13 @@ const enviarEmailController = async (req, res) => {
   return res.status(200).json(sendEmail);
 };
 
+const enviarEmailFinalController = async (req, res) => {
+  const codigoUsuario = req.query.codUser;
+  const usuario = await usuariosModel.pegarUsuarioModel(codigoUsuario);
+  const sendEmail = await emailModel.runFinal(usuario);
+  return res.status(200).json(sendEmail);
+};
+
 const enviarEmailNegativoController = async (req, res) => {
   const codigoUsuario = req.query.codUser;
   const usuario = await usuariosModel.pegarUsuarioModel(codigoUsuario);
@@ -18,5 +25,6 @@ const enviarEmailNegativoController = async (req, res) => {
 
 module.exports = {
   enviarEmailController,
+  enviarEmailFinalController,
   enviarEmailNegativoController
 }

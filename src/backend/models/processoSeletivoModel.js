@@ -95,6 +95,14 @@ const atualizarIndiceAprovacaoTesteModel = async (codigoCandidato, codigoVaga, i
     return testeAtualizado;
 }
 
+const atualizarIndiceAprovacaoEntrevistaModel = async (codigoCandidato, codigoVaga, indAprovacao) => {
+    const [testeAtualizado] = await connection.execute(`
+        UPDATE candidato_vaga SET indEntrevistaAprovada = ${indAprovacao} WHERE codigoCandidato = ${codigoCandidato} AND codigoVaga = ${codigoVaga};
+    `);
+
+    return testeAtualizado;
+}
+
 const listarTestesVagaModel = async (codVaga) => {
     const [listaTestes] = await connection.execute(`
         SELECT * FROM usuario u
@@ -104,6 +112,19 @@ const listarTestesVagaModel = async (codVaga) => {
     `);
 
     return listaTestes;
+}
+
+const listarCandidatosEntrevistaModel = async (codVaga) => {
+    const [listaCandidatos] = await connection.execute(`
+        SELECT u.nome, u.email, u.codigoUsuario, tc.indTesteAprovado, cv.indEntrevistaAprovada FROM usuario u
+        JOIN teste_candidato tc
+            ON u.codigoUsuario = tc.codigoCandidato
+        JOIN candidato_vaga cv
+            ON u.codigoUsuario = cv.codigoCandidato
+        WHERE cv.codigoVaga = ${codVaga} AND tc.indTesteAprovado = 1;
+    `);
+
+    return listaCandidatos;
 }
 
 module.exports = {
@@ -117,5 +138,7 @@ module.exports = {
     atualizarIndiceAprovacaoModel,
     atualizarCandidatoAprovadoModel,
     atualizarIndiceAprovacaoTesteModel,
-    listarTestesVagaModel
+    atualizarIndiceAprovacaoEntrevistaModel,
+    listarTestesVagaModel,
+    listarCandidatosEntrevistaModel
 };

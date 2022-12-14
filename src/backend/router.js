@@ -52,12 +52,27 @@ router.post('/usuarios', usuariosMiddleware.validateUser, usuariosController.cad
 router.post('/usuarios-logar', usuariosController.logarController)
 router.get('/usuarios-deslogar', usuariosController.deslogarController)
 
-router.get('/enviar-email', usuariosMiddleware.usuarioLogado, emailController.enviarEmailController)
-router.get('/enviar-email-negativo', usuariosMiddleware.usuarioLogado, emailController.enviarEmailNegativoController)
+router.get('/enviar-email', usuariosMiddleware.usuarioLogado, emailController.enviarEmailController);
+router.get('/enviar-email-final', usuariosMiddleware.usuarioLogado, emailController.enviarEmailFinalController);
+router.get('/enviar-email-negativo', usuariosMiddleware.usuarioLogado, emailController.enviarEmailNegativoController);
 
-router.get('/listar-curriculos', processoSeletivoController.listarCurriculosController)
-router.get('/listar-curriculos-filtrados', processoSeletivoController.listarCurriculosFiltradosController)
-router.get('/listar-testes-vagas', processoSeletivoController.listarTestesVagaController)
+router.get('/listar-curriculos', processoSeletivoController.listarCurriculosController);
+router.get('/listar-curriculos-filtrados', processoSeletivoController.listarCurriculosFiltradosController);
+router.get('/listar-testes-vagas', processoSeletivoController.listarTestesVagaController);
+router.get('/listar-candidatos-entrevista', processoSeletivoController.listarCandidatosEntrevistaController);
+router.get('/listar-vagas-inscritas', processoSeletivoController.listarVagasInscritasController);
+router.get('/acompanhar-status-vaga', processoSeletivoController.obterStatusVagaController);
+router.get('/obter-teste', processoSeletivoController.obterTesteVagaController);
+router.get('/enviar-email', usuariosMiddleware.usuarioLogado, emailController.enviarEmailController);
+router.get('/enviar-email-final', usuariosMiddleware.usuarioLogado, emailController.enviarEmailFinalController);
+router.get('/enviar-email-negativo', usuariosMiddleware.usuarioLogado, emailController.enviarEmailNegativoController);
+
+router.put('/atualizar-status-vaga', processoSeletivoController.atualizarStatusVagaController);
+router.put('/atualizar-indice-aprovacao', processoSeletivoController.atualizarIndiceAprovacaoController);
+router.put('/atualizar-candidato-aprovado-vaga', processoSeletivoController.atualizarCandidatoAprovadoController);
+router.put('/atualizar-indice-aprovacao-teste', processoSeletivoController.atualizarIndiceAprovacaoTesteController);
+router.put('/atualizar-indice-aprovacao-entrevista', processoSeletivoController.atualizarIndiceAprovacaoEntrevistaController);
+//router.put('/atualizar-dados-entrevista', processoSeletivoController.atualizarDadosEntrevistaController);
 
 router.get('/listar-vagas-inscritas', processoSeletivoController.listarVagasInscritasController)
 router.get('/acompanhar-status-vaga', processoSeletivoController.obterStatusVagaController)
@@ -71,10 +86,13 @@ router.get('/lista-vagas-criadas/:codigoUsuario', vagasController.vagasCriadasRH
 router.get('/indicador-taxa-vagas', indicadoresController.indicadorTaxaVagasController)
 router.get('/indicador-taxa-vagas-canceladas', indicadoresController.indicadorTaxaVagasCanceladasController
 )
+router.get('/indicador-contratados', indicadoresController.indicadorContratacaoController)
 
 /* Configuração das rotas do servidor */
 router.get('/', (req, res) => res.sendFile(__dirname.replace('backend', 'frontend/views/login.html')))
 router.get('/cadastro-usuario', (req, res) => res.sendFile('cadastroUser.html', { root: 'frontend/views/' }))
+
+router.get('/indicador-taxa-usuarios', indicadoresController.indicadorTaxaUsuariosController)
 
 router.get('/cadastro-vagas', usuariosMiddleware.usuarioLogado, (req, res) => res.sendFile('cadastroVagas.html', { root: 'frontend/views/' }))
 router.get('/cadastro-teste', usuariosMiddleware.usuarioLogado, (req, res) => res.sendFile('cadastrarTesteVaga.html', { root: 'frontend/views/' }))
@@ -92,8 +110,26 @@ router.get('/acompanhar-vaga', usuariosMiddleware.usuarioLogado, (req, res) => r
 
 router.get('/lista-curriculos', usuariosMiddleware.usuarioLogado, (req, res) => res.sendFile('listaCurriculosVaga.html', { root: 'frontend/views/' }))
 router.get('/lista-testes', usuariosMiddleware.usuarioLogado, (req, res) => res.sendFile('ListaTestesRH.html', { root: 'frontend/views/' }))
-router.get('/lista-entrevistas', usuariosMiddleware.usuarioLogado, (req, res) => res.sendFile('ResultadoEntrevista.html', { root: 'frontend/views/' }))
-router.get('/indicador-taxa-vagas-criadas', usuariosMiddleware.usuarioLogado, (req, res) => res.sendFile('indicadores.html', { root: 'frontend/views/' }))
+router.get('/lista-entrevistas', usuariosMiddleware.usuarioLogado, (req, res) => res.sendFile('listaEntrevistas.html', { root: 'frontend/views/' }))
 router.get('/inscricao-user-vaga', usuariosMiddleware.usuarioLogado, (req, res) => res.sendFile('uploadCurriculo.html', { root: 'frontend/views/' }))
 
 module.exports = router
+
+router.get(
+  '/inscricao-user-vaga',
+  usuariosMiddleware.usuarioLogado,
+  (req, res) =>
+    res.sendFile('uploadCurriculo.html', { root: 'frontend/views/' })
+)
+
+//criando essa
+router.get(
+  '/lista-vagas-criadas/:codigoUsuario',
+  usuariosMiddleware.usuarioLogado,
+  vagasController.vagasCriadasRH
+)
+
+router.get('/indicadores', usuariosMiddleware.usuarioLogado, (req, res) =>
+  res.sendFile('indicadores.html', { root: 'frontend/views/' })
+)
+

@@ -1,5 +1,14 @@
 const uri = "http://localhost:8081/indicadores"
-const taxaMesUri = "/indicador-taxa-vagas-criadas"
+const taxaMesUri = "/indicador-taxa-vagas"
+
+const abrirIndicador = async (codigo) => {
+  window.location.href = `/indicadores`;
+}
+
+const taxaCrescimentoVaga = (data) => {
+        const pTaxa = document.getElementById("vagasMensais");
+        pTaxa.innerHTML = data;
+    };
 
 async function getVagas() {
     const headers = new Headers()
@@ -15,8 +24,8 @@ async function getVagas() {
 
     taxaCrescimentoVaga(data);
 
-    const taxaCrescimentoVaga = (data) => {
-        const pTaxa = document.getElementById("vagasMensais");
-        pTaxa.innerHTML = data;
-    };
 };
+
+btn.addEventListener('click', () => {
+  window.location.href = `/idicadores `
+})
