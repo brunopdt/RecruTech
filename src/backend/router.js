@@ -83,7 +83,7 @@ router.get('/indicador-contratados', indicadoresController.indicadorContratacaoC
 router.get('/indicador-testes-aprovados', indicadoresController.indicadorCandidatoAprovadoController)
 /* Configuração das rotas do servidor */
 //router.get('/', (req, res) =>  res.sendFile('index.html', { root: '../frontend  ' }))
-router.get('/', (req, res) =>  res.status(200).json(__dirname))
+router.get('/aaaaaaaaaa', (req, res) =>  res.status(200).json(__dirname))
 router.get('/cadastro-usuario', (req, res) => res.sendFile('cadastroUser.html', { root: 'frontend/views/' }))
 
 router.get('/indicador-taxa-usuarios', indicadoresController.indicadorTaxaUsuariosController)
