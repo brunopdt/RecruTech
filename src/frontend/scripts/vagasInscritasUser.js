@@ -2,7 +2,7 @@ const codigoUsuario = document.cookie.split(';')[1].split('=')[1]
 let textoHTML = ''
 
 axios
-  .get(`http://localhost:8081/listar-vagas-inscritas?codUser=${codigoUsuario}`)
+  .get(`https://plf-es-2022-2-ti2-0924100-recrutech-t-git-26faaa-recrutech-tis2.vercel.app/listar-vagas-inscritas?codUser=${codigoUsuario}`)
   .then(response => {
     if (response.status === 200) {
       preencherDivVagas(response.data)

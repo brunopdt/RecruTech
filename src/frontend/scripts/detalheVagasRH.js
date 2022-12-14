@@ -2,7 +2,7 @@ const urlParams = new URLSearchParams(window.location.search);
 const idDaVaga = urlParams.get("id");
 let btn = document.querySelector('#botao-acompanhar');
 
-axios.get(`http://localhost:8081/detalheVagas?codVaga=${idDaVaga}`)
+axios.get(`https://plf-es-2022-2-ti2-0924100-recrutech-t-git-26faaa-recrutech-tis2.vercel.app/detalheVagas?codVaga=${idDaVaga}`)
   .then(response => {
     if (response.status === 200) {
       const divVaga = document.getElementById("detalhesVaga");

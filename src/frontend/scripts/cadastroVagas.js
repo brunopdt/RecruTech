@@ -49,7 +49,7 @@ function getDadosVagaForm() {
 
 async function enviarDadosVagaParaApi(vaga) {
   const codigoUsuario = document.cookie.split(';')[1].split('=')[1];
-  axios.post(`http://localhost:8081/vagas?codUsuario=${codigoUsuario}`, {
+  axios.post(`https://plf-es-2022-2-ti2-0924100-recrutech-t-git-26faaa-recrutech-tis2.vercel.app/vagas?codUsuario=${codigoUsuario}`, {
       descricao: vaga.descricao,
       qtdVagas: vaga.qtdVagas,
       requisitos: vaga.requisitos,
