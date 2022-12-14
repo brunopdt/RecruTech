@@ -350,6 +350,11 @@ As tecnologias utilizadas são, Node.js para o BackEnd, HTML/CSS/JavaScript no F
 ![Modelo Relacional](imagens/Modelo_RelacionalRecrutech.png "Modelo Relacional.")
 
 
+<<<<<<< HEAD
+![Diagrama de Entidade Relacionamento de Exemplo](imagens/er_diagram.png "Diagrama de Entidade Relacionamento de Exemplo")
+![Legenda imagem](imagens/call-process.png)
+=======
+>>>>>>> afaf57934b85c95fb248dd8b29d953e1ac0f6796
 ## 6. Indicadores de desempenho
 
 Apresente aqui os principais indicadores de desempenho e algumas metas para o processo. Atenção: as informações necessárias para gerar os indicadores devem estar contempladas no diagrama de classe. Colocar no mínimo 5 indicadores.
