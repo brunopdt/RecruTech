@@ -1,6 +1,8 @@
 const uri = "http://localhost:8081/indicadores"
 const taxaMesUri = "/indicador-taxa-vagas"
 const taxaUsuariosUri = "/indicador-taxa-usuarios"
+const taxaCanceladosUri = "/indicador-taxa-vagas-canceladas"
+const taxaContratacaoUri = "/indicador-contratados"
 
 const abrirIndicador = async (codigo) => {
   window.location.href = `/indicadores`;
@@ -8,7 +10,7 @@ const abrirIndicador = async (codigo) => {
 
 const taxaCrescimentoVaga = (data) => {
         const pTaxa = document.getElementById("vagasMensais");
-        pTaxa.innerHTML = data;
+        pTaxa.innerHTML = data+"%";
     };
 
 async function getVagas() {
@@ -26,10 +28,10 @@ async function getVagas() {
     taxaCrescimentoVaga(data);
 
 };
+
 const taxaCrescimentoUsuario = (data) => {
-  console.log(data)
   const pTaxa = document.getElementById("novosUsuarios");
-  pTaxa.innerHTML = data;
+  pTaxa.innerHTML = data+"%";
 };
 
 const getUsuarios = async () => {
@@ -48,4 +50,49 @@ const getUsuarios = async () => {
 
 };
 
+const taxaVagasCanceladas = (data) => {
+  const pTaxa = document.getElementById("vagasCanceladas");
+  pTaxa.innerHTML = data+"%";
+};
+
+const getVagasCanceladas = async () => {
+  const headers = new Headers()
+  headers.append('Content-Type', 'application/json')
+  headers.append('Accept', 'application/json')
+
+  const data = await fetch(taxaCanceladosUri, {
+    method: 'GET',
+    headers: headers
+  }).then(response => {
+    return response.json()
+  })
+
+  taxaVagasCanceladas(data);
+
+};
+
+const taxaContratacao = (data) => {
+  const pTaxa = document.getElementById("contratacao");
+  pTaxa.innerHTML = data+"%";
+};
+
+const getContratacao = async () => {
+  const headers = new Headers()
+  headers.append('Content-Type', 'application/json')
+  headers.append('Accept', 'application/json')
+
+  const data = await fetch(taxaContratacaoUri, {
+    method: 'GET',
+    headers: headers
+  }).then(response => {
+    return response.json()
+  })
+
+  taxaContratacao(data);
+
+};
+
 getUsuarios();
+getVagas();
+getVagasCanceladas();
+getContratacao();
