@@ -4,6 +4,7 @@ const taxaUsuariosUri = "/indicador-taxa-usuarios"
 const taxaCanceladosUri = "/indicador-taxa-vagas-canceladas"
 const taxaContratacaoUri = "/indicador-contratados"
 const taxaAprovadosTesteUri = "/indicador-testes-aprovados"
+let data;
 
 const abrirIndicador = async (codigo) => {
   window.location.href = `/indicadores`;
@@ -18,13 +19,16 @@ async function getVagas() {
     const headers = new Headers()
     headers.append('Content-Type', 'application/json')
     headers.append('Accept', 'application/json')
-  
-    const data = await fetch(taxaMesUri, {
-      method: 'GET',
-      headers: headers
-    }).then(response => {
-      return response.json()
-    })
+
+    try{
+       data = await fetch(taxaMesUri, {
+        method: 'GET',
+        headers: headers
+      })
+    }
+    catch(e){
+      console.log("Erro ao obter indicador taxa crescimento")
+    }
 
     taxaCrescimentoVaga(data);
 
