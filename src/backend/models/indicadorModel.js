@@ -1,11 +1,15 @@
-//contém todas as funções que vão interagir diretamente com o banco de dados
 const connection = require('./connection');
 
-
-const indicadorTaxaVagasCriadas = async () => {
-    const dados = await connection.execute(`
-    SELECT MONTH (dataCriacaoVaga) AS mes, YEAR(dataCriacaoVaga) AS ano, COUNT(codigoVaga) AS totalVagas,
-    (COUNT(codigoVaga)/(SELECT COUNT(codigoVaga) FROM vaga WHERE month(dataCriacaoVaga)<mes))*100 AS indicador
-    FROM vaga GROUP BY month (dataCriacaoVaga) ORDER BY mes;`);
+const indicadorTaxaVagasCriadasModel = async () => {
+    const [dados] = await connection.execute(`
+      SELECT COUNT(*) as qtdTotaisVagas, (SELECT COUNT(*) as qtdVagas FROM vaga v
+			                                      WHERE MONTH(v.dataCriacaoVaga) = MONTH(current_timestamp())
+									                          AND YEAR(v.dataCriacaoVaga) = YEAR(current_timestamp())) as qtdVagasMes
+	    FROM vaga v;
+      `);
     return dados;
   };
+
+module.exports = {
+  indicadorTaxaVagasCriadasModel
+}

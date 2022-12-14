@@ -15,6 +15,7 @@ const candVagaController = require('./controllers/candidatoVagaController');
 
 const processoSeletivoController = require('./controllers/processoSeletivoController');
 
+const indicadoresController = require('./controllers/indicadoresController');
 const router = express.Router();
 
 router.all("*", function (req, res, next) {
@@ -70,7 +71,7 @@ router.post('/enviar-teste', multer(multerConfig).single("file"), processoSeleti
 /* Configuração das rotas do servidor */
 router.get('/', (req, res) => res.sendFile(__dirname.replace('backend', 'frontend/views/login.html')));
 router.get('/cadastro-usuario', (req, res) => res.sendFile("cadastroUser.html", { root: 'frontend/views/' }));
-
+router.get('/indicador-taxa-vagas', indicadoresController.indicadorTaxaVagasController);
 router.get('/cadastro-vagas', usuariosMiddleware.usuarioLogado, (req, res) => res.sendFile("cadastroVagas.html", { root: 'frontend/views/' }))
 router.get('/cadastro-teste', usuariosMiddleware.usuarioLogado, (req, res) => res.sendFile("cadastrarTesteVaga.html", { root: 'frontend/views/' }))
 
