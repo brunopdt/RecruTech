@@ -100,3 +100,22 @@ router.get('/indicador-taxa-vagas-criadas', usuariosMiddleware.usuarioLogado, (r
 router.get('/inscricao-user-vaga', usuariosMiddleware.usuarioLogado, (req, res) => res.sendFile('uploadCurriculo.html', { root: 'frontend/views/' }))
 
 module.exports = router
+
+router.get(
+  '/inscricao-user-vaga',
+  usuariosMiddleware.usuarioLogado,
+  (req, res) =>
+    res.sendFile('uploadCurriculo.html', { root: 'frontend/views/' })
+)
+
+//criando essa
+router.get(
+  '/lista-vagas-criadas/:codigoUsuario',
+  usuariosMiddleware.usuarioLogado,
+  vagasController.vagasCriadasRH
+)
+
+router.get('/indicadores', usuariosMiddleware.usuarioLogado, (req, res) =>
+  res.sendFile('indicadores.html', { root: 'frontend/views/' })
+)
+
