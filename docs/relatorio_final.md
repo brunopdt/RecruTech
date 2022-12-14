@@ -350,8 +350,7 @@ As tecnologias utilizadas são, Node.js para o BackEnd, HTML/CSS/JavaScript no F
 ![Modelo Relacional](imagens/Modelo_RelacionalRecrutech.png "Modelo Relacional.")
 
 
-![Diagrama de Entidade Relacionamento de Exemplo](imagens/er_diagram.png "Diagrama de Entidade Relacionamento de Exemplo")
-![Legenda imagem](imagens/call-process.png)
+por aq o entidade relaicoanmentoooo!!!!
 =======
 >>>>>>> afaf57934b85c95fb248dd8b29d953e1ac0f6796
 ## 6. Indicadores de desempenho
@@ -403,13 +402,13 @@ http://www.pucminas.br/imagedb/documento/DOC\_DSC\_NOME\_ARQUI20160217102425.pdf
 
 **Colocar link:**
 
-Do código (armazenado no repositório);
+- Código: (armazenado no repositório):
 
-Dos artefatos (armazenado do repositório);
+- Artefatos: https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2022-2-ti2-0924100-recrutech/tree/master/Artefatos
 
-Da apresentação final (armazenado no repositório);
+- Apresentação final: https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2022-2-ti2-0924100-recrutech/blob/master/divulgacao/Apresentacao/Apresentacao_final_RecruTech.pdf
 
-Do vídeo de apresentação (armazenado no repositório).
+- Vídeo de apresentação (armazenado no repositório):
 
 
 
