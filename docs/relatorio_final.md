@@ -369,9 +369,6 @@ Usar o seguinte modelo:
 
 
 ## 7.Sistema desenvolvido
-
-Faça aqui uma breve descrição do software e coloque as principais telas com uma explicação de como usar cada uma.
-
 O software consiste em um site de recrutamento em que possui a opção de cadastro caso seja um recrutador (profissional de RH) ou um candidato. O sistema visa automatizar e agilizar o processo seletivo e de contratação de uma empresa. Além disso, possui indicadores que evidenciam taxas e índices sobre os processos a fim de mostrar um feedback do processo como um todo para as empresas e os candidatos.
 
 Caso seja um recrutador, o usuário possui as seguintes funcionalidades: 
