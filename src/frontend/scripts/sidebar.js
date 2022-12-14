@@ -2,12 +2,12 @@ let rotaIcone1, rotaIcone2, rotaIcone3;
 if(document.cookie.split(';')[2].split('=')[1] == 'rh'){
   rotaIcone1 = "/cadastro-vagas";
   rotaIcone2 = "/lista-vagas-empresa";
-  rotaIcone3 = "#";
+  rotaIcone3 = "indicadores";
 }
 else {
   rotaIcone1 = "/vagas-inscritas";
   rotaIcone2 = "/lista-vagas";
-  rotaIcone3 = "#"
+  rotaIcone3 = "/indicadores";
 }
 
 function myFunction(x) {

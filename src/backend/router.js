@@ -214,3 +214,8 @@ router.get(
   usuariosMiddleware.usuarioLogado,
   vagasController.vagasCriadasRH
 )
+
+router.get('/indicadores', usuariosMiddleware.usuarioLogado, (req, res) =>
+  res.sendFile('indicadores.html', { root: 'frontend/views/' })
+)
+
