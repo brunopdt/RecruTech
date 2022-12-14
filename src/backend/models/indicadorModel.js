@@ -33,9 +33,8 @@ const indicadorTaxaVagasCriadasModel = async () => {
 
   const indicadorContratacaoModel = async () => {
     const [dados] = await connection.execute(`
-    SELECT COUNT(*) as qtdTotalContratados, (SELECT COUNT(*) as qtdUsuarios FROM candidato_vaga u
-    WHERE MONTH(u.dataContratacao) = MONTH(current_timestamp())
-    AND YEAR(u.dataContratacao) = YEAR(current_timestamp()) AND (indCandidatoContratado = 1)) as qtdContratadosMes
+    SELECT COUNT(*) as qtdTotalContratados, 
+    (SELECT COUNT(*) as qtdUsuarios FROM candidato_vaga u) as qtdContratadosMes
     FROM candidato_vaga WHERE (indCandidatoContratado = 1);
       `);
     return dados;
