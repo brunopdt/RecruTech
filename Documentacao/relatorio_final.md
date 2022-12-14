@@ -467,4 +467,4 @@ http://www.pucminas.br/imagedb/documento/DOC\_DSC\_NOME\_ARQUI20160217102425.pdf
 
 - Apresentação final: https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2022-2-ti2-0924100-recrutech/blob/master/divulgacao/Apresentacao/Apresentacao_final_RecruTech.pdf
 
-- Vídeo de apresentação (armazenado no repositório): https://drive.google.com/file/d/1cmzgtFIlBHEEMFouL-uANx0N6w2O6pRX/view?usp=sharing
+- Vídeo de apresentação: https://drive.google.com/file/d/1cmzgtFIlBHEEMFouL-uANx0N6w2O6pRX/view?usp=sharing
