@@ -27,11 +27,12 @@ async function getVagas() {
 
 };
 const taxaCrescimentoUsuario = (data) => {
+  console.log(data)
   const pTaxa = document.getElementById("novosUsuarios");
   pTaxa.innerHTML = data;
 };
 
-async function getUsuarios() {
+const getUsuarios = async () => {
   const headers = new Headers()
   headers.append('Content-Type', 'application/json')
   headers.append('Accept', 'application/json')
@@ -43,10 +44,8 @@ async function getUsuarios() {
     return response.json()
   })
 
-  taxaCrescimentoVaga(data);
+  taxaCrescimentoUsuario(data);
 
 };
 
-btn.addEventListener('click', () => {
-  window.location.href = `/idicadores `
-})
+getUsuarios();
