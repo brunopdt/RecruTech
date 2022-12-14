@@ -5,10 +5,11 @@ Este diretório mantém os artefatos relatório à modelagem de dados do projeto
 Os principais documentos a serem produzidos são:
 
 
-* `script_de_banco.sql`
+* `scriptCriacao.sql`
 	* Script de criação do banco de dados.
 
 * `diagrama entidade relacionamento`
-	* Apresentar o DER em imagem vetorial para eviar perda de qualidade com renderização em resolução específica.
+	* Apresentar o DER do banco de dados.
 
-Demais artefatos que julgar pertinentes.
+* `modeloFisico.jpg`
+	* Apresenta o modelo físico do banco de dados.
