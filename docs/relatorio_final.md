@@ -393,8 +393,66 @@ Caso seja um candidato, o usuário possui as seguintes funcionalidades:
 - Visualizar situação da vaga inscrita (envio de curriculo, dowload do teste, envio de teste, entrevista, final). Todas essas etapas são indicadas se o usuário passou para a próxima fase ou não 
 
 ### 7.1. Telas
-![Tela de Login](imagens/1Login.pngg "Tela de Login")
-O usuário deve cadastrar seu email e senha e logar. 
+**[Tela de Login]**
+![Tela de Login](imagens/1Login.png "Tela de Login")
+O usuário deve inserir seu email e senha. Em seguida entrar. 
+
+**[Tela de Cadastro]**
+![Tela de Cadastro](imagens/2Cadastro.png "Tela de Cadastro")
+O usuário deve realizar um cadastro inserindo nome, senha e email. Em seguida ele deve selecionar se é um usuário do tipo candidato ou empresa e cadastrar sua conta.
+
+**[Tela de Cadastrar Vaga]**
+![Tela de Cadastro Vaga](imagens/3CadastrarVaga.png "Tela de Cadastrar uma vaga")
+Tela que o RH Cadastra uma vaga no sistema. Deve inserir os requisitos e restrições da vaga.
+
+**[Tela Lista de Vagas RH]**
+![Tela Lista de Vagas RH](imagens/4ListagemVagas.png "Tela listagem das vagas criadas")
+Tela que lista todas as vagas criadas pelo RH. É possível o usuário fechar/excluir a vaga e visualizar os detalhes da vaga
+
+**[Tela detalhes da VagasRH]**
+![Tela detalhes da Vagas RH](imagens/5DetalheVagaRh.png "Tela detalhe de uma vaga específica")
+Tela que abre detalhes de uma vaga escpecífica com seus requisitos. É possível o usuário acompanhar o status da vaga.
+
+**[Tela acompanhamento Vaga RH]**
+![Tela acompanhamento Vagas RH](imagens/6AcompanharVagaRh.png "Tela acompanha situacao de uma vaga específica")
+Tela que abre acompanhamento de uma vaga específica de acordo com a lista de currículos, lista de testes, aprovação na entrevista. Se o candidato é aprovado em todas as etapas o processo é finalizado contrando.
+
+**[Tela avalia curriculo RH]**
+![Tela avalia curriculo RH](imagens/7AvaliarCurriculo.png "Tela avalia curriculo")
+Tela que o Rh avalia todos os curriculos recebidos, aprovando ou reprovando o candidato. è possível filtrar os currículos
+
+**[Tela avalia teste RH]**
+![Tela avalia curriculo RH](imagens/8AvaliarTeste.png "Tela avalia teste")
+Tela que o Rh avalia todos os testes recebidos, aprovando ou reprovando o candidato.
+
+**[Tela agenda e avalia entrevista RH]**
+![Tela avalia entrevista RH](imagens/9AgendarEntrevista.png "Tela agenda entrevista e avalia entrevista")
+Tela que o Rh agenda a entrevista com data, horário e link para a reunião e avalia a entrevista, aprovando ou reprovando o candidato.
+
+**[Tela Indicadores]**
+![Tela Indicadores](imagens/10Indicadores.png "Tela Indicadores")
+Tela com os indicadores indicando os percentuais de cada indíce, de modo mensal.
+
+**[Tela lista de Vagas Candidato]**
+![Tela lista de Vagas](imagens/11VagasDisponiveis.png "Tela vagas disponiveis")
+Tela com todas as vagas disponíveis no sistema para o candidato escolher e se inscrever.
+
+**[Tela detalhe da Vaga Candidato]**
+![Tela detalhe vaga candidato](imagens/12DetalheVagaUser.png "Tela detalhe vaga")
+Tela que abre detalhes de uma vaga escpecífica com seus requisitos e restrições. O usuário é capaz de analisar os requisitos e clicar para se inscrever.
+
+**[Tela inscrição vaga Candidato]**
+![Tela lista de Vagas](imagens/13InscricaoVagaCurriculo.png "Tela inscrição vaga")
+Tela que o usuário se inscreve na vaga upando e enviando seu currículo.
+
+**[Tela vagas inscritas Candidato]**
+![Tela vagas inscritas](imagens/14VagasInscritasUser.png "Tela vagas inscritas")
+Tela que o usuário visualiza todas as vagas inscritas no sistema. É possível ele clicar para acompanhar uma vaga específica e seus resultados em cada etapa do processo.
+
+**[Tela de acompanhamento da vaga Candidato]**
+![Tela vagas inscritas](imagens/15AcompanhamentoVagaUser.png "Tela acompanhaemnto candidato")
+Tela de acompanhamento da vaga pelo candidato. É possível o usuário visualizar seu currículo enviado e se foi aprovaod ou não na seleção do currículo. Além disso, ele verifica se a vaga possui teste e em caso positivo, é possível o candidato realizar o download do teste e upar a sua resposta. Em seguida, ele consegue visualizar se foi aprovado na etapa do teste e seguir para a etapa de entrevista. Caso ele tenha sido aprovado em todas as etapas ele é direcionado para a etapa final de contratação.
+
 
 ## 8. Conclusão
 
