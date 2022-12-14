@@ -39,7 +39,7 @@ function getDadosUsuarioForm() {
 
 async function enviarDadosUsuarioParaApi(usuario) {
   axios
-    .post('http://localhost:8081/usuarios', {
+    .post('https://plf-es-2022-2-ti2-0924100-recrutech-tis2.vercel.app/usuarios', {
       nome: usuario.nome,
       email: usuario.email,
       senha: usuario.senha,

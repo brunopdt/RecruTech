@@ -2,7 +2,7 @@ const urlParams = new URLSearchParams(window.location.search);
 const idDaVaga = urlParams.get("id");
 let textoHTML = '';
 
-axios.get(`http://localhost:8081/listar-candidatos-entrevista?codVaga=${idDaVaga}`)
+axios.get(`https://plf-es-2022-2-ti2-0924100-recrutech-tis2.vercel.app/listar-candidatos-entrevista?codVaga=${idDaVaga}`)
   .then(response => {
     if (response.status === 200) {
       preencherDivCandidatosEntrevista(response.data)
@@ -31,7 +31,7 @@ const candidatoReprovado = (codUsuario) => {
 }
 
 const incrementarQuantidadeUsuariosContratados = () => {
-  axios.put(`http://localhost:8081/atualizar-quantidade-usuContratados?codVaga=${idDaVaga}`)
+  axios.put(`https://plf-es-2022-2-ti2-0924100-recrutech-tis2.vercel.app/atualizar-quantidade-usuContratados?codVaga=${idDaVaga}`)
     .then(response => {
       if (response.status === 200) {
         console.log(response.data);
@@ -43,7 +43,7 @@ const incrementarQuantidadeUsuariosContratados = () => {
 }
 
 const enviarEmailPositivo = (codUsuario) => {
-  axios.get(`http://localhost:8081/enviar-email-final?codUser=${codUsuario}`)
+  axios.get(`https://plf-es-2022-2-ti2-0924100-recrutech-tis2.vercel.app/enviar-email-final?codUser=${codUsuario}`)
     .then(response => {
       if (response.status === 200) {
         console.log(response.data);
@@ -55,7 +55,7 @@ const enviarEmailPositivo = (codUsuario) => {
 };
 
 const atualizarStatusVaga = (codUsuario, status) => {
-  axios.put(`http://localhost:8081/atualizar-status-vaga?codCandidato=${codUsuario}&codVaga=${idDaVaga}&status=${status}`)
+  axios.put(`https://plf-es-2022-2-ti2-0924100-recrutech-tis2.vercel.app/atualizar-status-vaga?codCandidato=${codUsuario}&codVaga=${idDaVaga}&status=${status}`)
     .then(response => {
       if (response.status === 200) {
         console.log(response.data);
@@ -67,7 +67,7 @@ const atualizarStatusVaga = (codUsuario, status) => {
 }
 
 const atualizarIndiceContratacaoVaga = (codUsuario, indAprovado) => {
-  axios.put(`http://localhost:8081/atualizar-candidato-aprovado-vaga?codCandidato=${codUsuario}&codVaga=${idDaVaga}&indAprovado=${indAprovado}`)
+  axios.put(`https://plf-es-2022-2-ti2-0924100-recrutech-tis2.vercel.app/atualizar-candidato-aprovado-vaga?codCandidato=${codUsuario}&codVaga=${idDaVaga}&indAprovado=${indAprovado}`)
     .then(response => {
       if (response.status === 200) {
         console.log(response.data);
@@ -79,7 +79,7 @@ const atualizarIndiceContratacaoVaga = (codUsuario, indAprovado) => {
 }
 
 const atualizarIndiceAprovacao = (codUsuario, indAprovado) => {
-  axios.put(`http://localhost:8081/atualizar-indice-aprovacao-entrevista?codCandidato=${codUsuario}&codVaga=${idDaVaga}&indAprovado=${indAprovado}`)
+  axios.put(`https://plf-es-2022-2-ti2-0924100-recrutech-tis2.vercel.app/atualizar-indice-aprovacao-entrevista?codCandidato=${codUsuario}&codVaga=${idDaVaga}&indAprovado=${indAprovado}`)
     .then(response => {
       if (response.status === 200) {
         console.log(response.data);
@@ -91,7 +91,7 @@ const atualizarIndiceAprovacao = (codUsuario, indAprovado) => {
 }
 
 const enviarEmailNegativo = (codUsuario) => {
-  axios.get(`http://localhost:8081/enviar-email-negativo?codUser=${codUsuario}`)
+  axios.get(`https://plf-es-2022-2-ti2-0924100-recrutech-tis2.vercel.app/enviar-email-negativo?codUser=${codUsuario}`)
     .then(response => {
       if (response.status === 200) {
         console.log(response.data);
@@ -111,7 +111,7 @@ const enviarDadosEntrevista = (codigoUsuario) => {
     console.log("Erro, todos os campos devem estar preenchidos");
     return;
   }
-  axios.put(`http://localhost:8081/atualizar-dados-entrevista?codUsuario=${codigoUsuario}&codVaga=${idDaVaga}`, {
+  axios.put(`https://plf-es-2022-2-ti2-0924100-recrutech-tis2.vercel.app/atualizar-dados-entrevista?codUsuario=${codigoUsuario}&codVaga=${idDaVaga}`, {
     linkEntrevista: linkEntrevista.value,
     horaEntrevista: horaEntrevista.value,
     dataEntrevista: dataEntrevista.value
@@ -209,7 +209,7 @@ const preencherDivSemTeste = () => {
 };
 
 const preencherDivTituloVaga = () => {
-  axios.get(`http://localhost:8081/detalheVagas?codVaga=${idDaVaga}`)
+  axios.get(`https://plf-es-2022-2-ti2-0924100-recrutech-tis2.vercel.app/detalheVagas?codVaga=${idDaVaga}`)
     .then(response => {
       if (response.status === 200) {
         const divTitulo = document.getElementById("main_title");

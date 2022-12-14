@@ -1,4 +1,4 @@
-const uri = "http://localhost:8081/indicadores"
+const uri = "https://plf-es-2022-2-ti2-0924100-recrutech-tis2.vercel.app/indicadores"
 const taxaMesUri = "/indicador-taxa-vagas"
 const taxaUsuariosUri = "/indicador-taxa-usuarios"
 const taxaCanceladosUri = "/indicador-taxa-vagas-canceladas"

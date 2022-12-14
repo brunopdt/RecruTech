@@ -7,7 +7,7 @@ checkboxFiltrar.addEventListener('click', () => {
   if (checkboxFiltrar.checked) {
     axios
       .get(
-        `http://localhost:8081/listar-curriculos-filtrados?codVaga=${idDaVaga}`
+        `https://plf-es-2022-2-ti2-0924100-recrutech-tis2.vercel.app/listar-curriculos-filtrados?codVaga=${idDaVaga}`
       )
       .then(response => {
         if (response.status === 200) {
@@ -20,7 +20,7 @@ checkboxFiltrar.addEventListener('click', () => {
       })
   } else {
     axios
-      .get(`http://localhost:8081/listar-curriculos?codVaga=${idDaVaga}`)
+      .get(`https://plf-es-2022-2-ti2-0924100-recrutech-tis2.vercel.app/listar-curriculos?codVaga=${idDaVaga}`)
       .then(response => {
         if (response.status === 200) {
           preencherDivCurriculos(response.data)
@@ -34,7 +34,7 @@ checkboxFiltrar.addEventListener('click', () => {
 })
 
 axios
-  .get(`http://localhost:8081/listar-curriculos?codVaga=${idDaVaga}`)
+  .get(`https://plf-es-2022-2-ti2-0924100-recrutech-tis2.vercel.app/listar-curriculos?codVaga=${idDaVaga}`)
   .then(response => {
     if (response.status === 200) {
       preencherDivCurriculos(response.data)
@@ -63,7 +63,7 @@ const candidatoReprovado = codUsuario => {
 
 const enviarEmailPositivo = codUsuario => {
   axios
-    .get(`http://localhost:8081/enviar-email?codUser=${codUsuario}`)
+    .get(`https://plf-es-2022-2-ti2-0924100-recrutech-tis2.vercel.app/enviar-email?codUser=${codUsuario}`)
     .then(response => {
       if (response.status === 200) {
         console.log(response.data)
@@ -77,7 +77,7 @@ const enviarEmailPositivo = codUsuario => {
 const atualizarStatusVaga = (codUsuario, status) => {
   axios
     .put(
-      `http://localhost:8081/atualizar-status-vaga?codCandidato=${codUsuario}&codVaga=${idDaVaga}&status=${status}`
+      `https://plf-es-2022-2-ti2-0924100-recrutech-tis2.vercel.app/atualizar-status-vaga?codCandidato=${codUsuario}&codVaga=${idDaVaga}&status=${status}`
     )
     .then(response => {
       if (response.status === 200) {
@@ -92,7 +92,7 @@ const atualizarStatusVaga = (codUsuario, status) => {
 const atualizarIndiceAprovacao = (codUsuario, indAprovado) => {
   axios
     .put(
-      `http://localhost:8081/atualizar-indice-aprovacao?codCandidato=${codUsuario}&codVaga=${idDaVaga}&indAprovado=${indAprovado}`
+      `https://plf-es-2022-2-ti2-0924100-recrutech-tis2.vercel.app/atualizar-indice-aprovacao?codCandidato=${codUsuario}&codVaga=${idDaVaga}&indAprovado=${indAprovado}`
     )
     .then(response => {
       if (response.status === 200) {
@@ -107,7 +107,7 @@ const atualizarIndiceAprovacao = (codUsuario, indAprovado) => {
 const atualizarIndiceContratacaoVaga = (codUsuario, indAprovado) => {
   axios
     .put(
-      `http://localhost:8081/atualizar-candidato-aprovado-vaga?codCandidato=${codUsuario}&codVaga=${idDaVaga}&indAprovado=${indAprovado}`
+      `https://plf-es-2022-2-ti2-0924100-recrutech-tis2.vercel.app/atualizar-candidato-aprovado-vaga?codCandidato=${codUsuario}&codVaga=${idDaVaga}&indAprovado=${indAprovado}`
     )
     .then(response => {
       if (response.status === 200) {
@@ -121,7 +121,7 @@ const atualizarIndiceContratacaoVaga = (codUsuario, indAprovado) => {
 
 const enviarEmailNegativo = codUsuario => {
   axios
-    .get(`http://localhost:8081/enviar-email-negativo?codUser=${codUsuario}`)
+    .get(`https://plf-es-2022-2-ti2-0924100-recrutech-tis2.vercel.app/enviar-email-negativo?codUser=${codUsuario}`)
     .then(response => {
       if (response.status === 200) {
         console.log(response.data)
@@ -189,7 +189,7 @@ const preencherDivSemCurriculos = () => {
 
 const preencherDivTituloVaga = () => {
   axios
-    .get(`http://localhost:8081/detalheVagas?codVaga=${idDaVaga}`)
+    .get(`https://plf-es-2022-2-ti2-0924100-recrutech-tis2.vercel.app/detalheVagas?codVaga=${idDaVaga}`)
     .then(response => {
       if (response.status === 200) {
         const divTitulo = document.getElementById('main_title')

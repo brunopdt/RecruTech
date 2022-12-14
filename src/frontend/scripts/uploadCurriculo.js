@@ -29,7 +29,7 @@ function getDadosIncricao() {
 }
 
 async function enviarDadosInscricaoParaApi(dadosInscricao) {
-    axios.post('http://localhost:8081/inscrever-vaga', {
+    axios.post('https://plf-es-2022-2-ti2-0924100-recrutech-tis2.vercel.app/inscrever-vaga', {
         file: dadosInscricao.arquivo,
         codUsuario: dadosInscricao.codUsuario,
         codVaga: dadosInscricao.codVaga,
