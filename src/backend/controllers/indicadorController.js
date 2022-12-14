@@ -27,7 +27,7 @@ const indicadorTaxaUsuariosController = async(req, res) => {
 
 
 const indicadorContratacaoController = async(req, res) => {
-    const dados = await indicadorModel.indicadorContratacaoModel;
+    const dados = await indicadorModel.indicadorContratacaoModel();
     let qtdTotalContratados = dados[0].qtdTotalContratados;
     let qtdContratadosMes = dados[0].qtdContratadosMes;
     let taxaContratadosMensais = parseFloat((qtdContratadosMes/qtdTotalContratados)*100).toFixed(2);
