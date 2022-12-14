@@ -39,22 +39,22 @@ router.all('*', function (req, res, next) {
 })
 
 router.get('/vagas', vagasController.listarVagasController)
-router.post('/vagas', vagasMiddleware.validateBody, vagasController.criarVagaController)
+router.post('/vagas', vagasController.criarVagaController)
 router.post('/vagas-teste', multer(multerConfig).single('file'), vagasController.uploadTesteController)
 router.get('/detalheVagas', vagasController.detalheVagaEspecificaController)
 router.get('/detalheVagasUser', vagasController.detalheVagaEspecificaUserController)
-router.get('/remove-vaga/(:id)', usuariosMiddleware.usuarioLogado, vagasController.deletarVagaController)
+router.get('/remove-vaga/(:id)', vagasController.deletarVagaController)
 
 router.post('/inscrever-vaga', multer(multerConfig).single('file'), candVagaController.inscreverVagaController)
 
 router.get('/usuarios', usuariosController.listarLoginController)
-router.post('/usuarios', usuariosMiddleware.validateUser, usuariosController.cadastrarUsuarioController)
+router.post('/usuarios', usuariosController.cadastrarUsuarioController)
 router.post('/usuarios-logar', usuariosController.logarController)
 router.get('/usuarios-deslogar', usuariosController.deslogarController)
 
-router.get('/enviar-email', usuariosMiddleware.usuarioLogado, emailController.enviarEmailController);
-router.get('/enviar-email-final', usuariosMiddleware.usuarioLogado, emailController.enviarEmailFinalController);
-router.get('/enviar-email-negativo', usuariosMiddleware.usuarioLogado, emailController.enviarEmailNegativoController);
+router.get('/enviar-email', emailController.enviarEmailController);
+router.get('/enviar-email-final', emailController.enviarEmailFinalController);
+router.get('/enviar-email-negativo', emailController.enviarEmailNegativoController);
 
 router.get('/listar-curriculos', processoSeletivoController.listarCurriculosController);
 router.get('/listar-curriculos-filtrados', processoSeletivoController.listarCurriculosFiltradosController);
@@ -82,7 +82,7 @@ router.get('/indicador-taxa-vagas-canceladas', indicadoresController.indicadorTa
 router.get('/indicador-contratados', indicadoresController.indicadorContratacaoController)
 router.get('/indicador-testes-aprovados', indicadoresController.indicadorCandidatoAprovadoController)
 /* Configuração das rotas do servidor */
-//router.get('/', (req, res) =>  res.sendFile('index.html', { root: '../frontend  ' }))
+
 router.get('/', (req, res) => res.sendFile('index.html', { root: './frontend' }))
 router.get('/cadastro-usuario', (req, res) => res.sendFile('cadastroUser.html', { root: 'frontend/views/' }))
 
@@ -119,7 +119,6 @@ router.get(
 //criando essa
 router.get(
   '/lista-vagas-criadas/:codigoUsuario',
-  usuariosMiddleware.usuarioLogado,
   vagasController.vagasCriadasRH
 )
 
