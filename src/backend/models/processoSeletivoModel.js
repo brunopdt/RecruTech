@@ -157,7 +157,7 @@ const listarTestesVagaModel = async (codVaga) => {
 
 const listarCandidatosEntrevistaModel = async (codVaga) => {
     const [listaCandidatos] = await connection.execute(`
-        SELECT u.nome, u.email, u.codigoUsuario, tc.indTesteAprovado, cv.indEntrevistaAprovada, cv.statusInscricao FROM usuario u
+        SELECT DISTINCT u.nome, u.email, u.codigoUsuario, tc.indTesteAprovado, cv.indEntrevistaAprovada, cv.statusInscricao FROM usuario u
         JOIN teste_candidato tc
             ON u.codigoUsuario = tc.codigoCandidato
         JOIN candidato_vaga cv

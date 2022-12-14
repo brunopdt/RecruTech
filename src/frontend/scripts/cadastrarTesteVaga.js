@@ -34,7 +34,7 @@ async function enviarDadosTesteParaApi(teste) {
     }
   }).then(response => {
     if (response.status === 201) {
-      alert('Vaga cadastrada com sucesso');
+      alert('Teste cadastrado com sucesso');
       window.location.href = `/lista-vagas-empresa`;
     } 
     else { 
