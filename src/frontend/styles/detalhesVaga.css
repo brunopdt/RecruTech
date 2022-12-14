@@ -97,3 +97,51 @@ p {
   cursor: pointer;
   background-color: #ffde82;
 }
+
+@media only screen and (max-width: 1024px) {
+  .main {
+    margin-top: 170px;
+    margin-left: 0;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .main {
+    margin-top: 130px;
+    margin-left: 0;
+    padding: 0;
+  }
+
+  .title {
+    margin-left: 0rem;
+  }
+
+  .underline {
+    margin-left: 0.5rem;
+    font-size: 5rem;
+  }
+
+  .title,
+  .subtitle,
+  #descricao {
+    font-size: 1.8rem;
+  }
+
+  .content {
+    width: 100%;
+    padding: 2em;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .button_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #descricao > p {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}

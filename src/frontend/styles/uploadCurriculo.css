@@ -110,3 +110,53 @@ body {
   margin-left: 82%;
   padding-top: 3vh;
 }
+
+@media only screen and (max-width: 1024px) {
+  .main {
+    margin-top: 170px;
+    margin-left: 0;
+  }
+
+  .content-exp,
+  .content-info,
+  #main_title {
+    margin: 0;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .main {
+    width: 90%;
+    margin-top: 130px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+  }
+
+  .content-exp,
+  .content-info,
+  #input_file {
+    font-size: 1rem;
+  }
+
+  #icon_file {
+    display: none;
+  }
+
+  .content-info {
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+  }
+
+  .break {
+    flex-basis: 100%;
+    height: 0;
+  }
+
+  .bottom_page {
+    margin-left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
