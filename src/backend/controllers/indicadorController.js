@@ -19,7 +19,7 @@ const indicadorTaxaVagasCanceladasController = async(req, res) => {
 
 const indicadorTaxaUsuariosController = async(req, res) => {
     const dados = await indicadorModel.indicadorTaxaUsuariosCriadosModel();
-    let qtdTotalUsuarios = dados[0].qtdTotaisUsuarios;
+    let qtdTotalUsuarios = dados[0].qtdTotaisUsuario;
     let qtdUsuariosMes = dados[0].qtdUsuariosMes;
     let taxaUsuariosMensais = parseFloat((qtdUsuariosMes/qtdTotalUsuarios)*100).toFixed(2);
     return res.status(200).send(taxaUsuariosMensais);
