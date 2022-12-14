@@ -83,6 +83,9 @@ body {
 #status-vaga,
 #botoes {
   width: 100%;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
 }
 
 .coluna {
@@ -91,4 +94,82 @@ body {
   font-weight: 400;
   margin-top: 1em;
   width: 100%;
+}
+
+@media only screen and (max-width: 1024px) {
+  .main {
+    margin-top: 170px;
+    margin-left: 0;
+    padding: 0;
+  }
+
+  #nome-vaga,
+  #local-vaga,
+  #status-vaga,
+  #botoes {
+    width: 90%;
+  }
+
+  .coluna {
+    max-width: 180px;
+  }
+
+  .titulos-coluna {
+    justify-content: flex-start;
+  }
+
+  #nome-vaga,
+  #local-vaga {
+    max-width: 180px;
+    font-size: 1.5rem;
+  }
+
+  .titulos-coluna {
+    font-size: 0.8rem;
+  }
+
+  .title,
+  .titulos-coluna,
+  .vaga-info,
+  #line {
+    margin-left: 0;
+    width: 92%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .main {
+    margin-top: 130px;
+    margin-left: 0;
+    padding: 0;
+  }
+
+  #btn-text {
+    display: none;
+  }
+
+  .button {
+    width: fit-content;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  #nome-vaga,
+  #local-vaga {
+    font-size: 1.3rem;
+  }
+
+  #local-vaga {
+    margin-left: 0.3rem;
+  }
+
+  .titulos-coluna {
+    font-size: 0.7rem;
+  }
+
+  .coluna {
+    max-width: 122px;
+  }
 }

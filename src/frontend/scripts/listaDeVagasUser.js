@@ -38,7 +38,7 @@ async function getItems() {
 
               <div class="button_container">
                 <button class="button" id="button-detalhes" onClick="abrirDetalhes(${codigoVaga})">
-                  <i class="fa-solid fa-plus"></i> VER DETALHES
+                  <i class="fa-solid fa-plus"></i> <span id="btn-text"> VER DETALHES </span>
                 </button>
               </div>
               
