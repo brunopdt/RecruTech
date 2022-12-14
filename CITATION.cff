@@ -16,12 +16,14 @@ authors:
     given-names: Samuel
   - name-suffix: Professor
     affiliation: PUC Minas
-  - name-suffix: Professor
-    affiliation: PUC Minas
     family-names: Neves Rodrigues
     given-names: Cristiano 
+  - name-suffix: Professor
+    affiliation: PUC Minas
     family-names: Lima Reis
     given-names: Felipe Augusto
+  - name-suffix: Professor
+    affiliation: PUC Minas
     family-names: Bastos de Paula
     given-names: Hugo
 
