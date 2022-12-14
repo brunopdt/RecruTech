@@ -9,7 +9,7 @@ Os principais documentos a serem produzidos são:
 	* Script de criação do banco de dados.
 
 * `modelo_ER`
-	* Apresentar o diagrama entidade relacionamento do banco de dados.
+	* Apresenta o diagrama entidade relacionamento do banco de dados.
 
 * `modeloFisico.jpg`
 	* Apresenta o modelo físico do banco de dados.
