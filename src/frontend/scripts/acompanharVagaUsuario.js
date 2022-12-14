@@ -109,6 +109,35 @@ const uploadTeste = (dadosInscricao) => {
   });
 }
 
+const preencherDivEntrevista = (dadosEntrevista) => {
+  const divEntrevista = document.getElementById("div-entrevista");
+  divEntrevista.innerHTML = `
+    <div class="info-entrevista" id="infoEntrevista">
+      <span id="pai-link-entrevista">
+        Link da entrevista:
+      <span id="link-entrevista">${dadosEntrevista.linkEntrevista}</span></span
+     >
+      <div id="entrevista-detalhe">
+        <span id="hora-entrevista">${dadosEntrevista.horaEntrevista}</span>
+        <span id="data-entrevista">${dadosEntrevista.dataEntrevista}</span>
+      </div>
+    </div>
+  `;
+}
+
+const preencherDadosEntrevista = async () => {
+  await axios.get(`http://localhost:8081/obter-dados-entrevista?codVaga=${idDaVaga}&codCandidato=${codigoUsuario}`)
+    .then(response => {
+      if (response.status === 200) {
+        if(response.data[0].linkEntrevista !== null)
+          preencherDivEntrevista(response.data[0]);
+      }
+    })
+    .catch(erro => {
+      alert("Erro ao obter dados entrevista");
+    });
+}
+
 const indicarStatusProcesso = async () => {
   await axios.get(`http://localhost:8081/acompanhar-status-vaga?codCandidato=${codigoUsuario}&codVaga=${idDaVaga}`)
     .then(response => {
@@ -124,6 +153,7 @@ const indicarStatusProcesso = async () => {
     document.getElementById("enviar-teste").disabled = true;
     document.getElementById("input_file").disabled = true;
     document.getElementById("download-teste").style.display = 'none';
+
   }
   else if(codigoStatus === 2){
     document.getElementById('topico-curriculo').style.color = 'green';
@@ -168,3 +198,4 @@ preencherDivTituloVaga();
 obterUrlCurriculo();
 indicarStatusProcesso();
 obterUrlTeste();
+preencherDadosEntrevista();

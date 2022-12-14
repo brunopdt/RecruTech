@@ -64,7 +64,7 @@ router.get('/listar-vagas-inscritas', processoSeletivoController.listarVagasInsc
 router.get('/acompanhar-status-vaga', processoSeletivoController.obterStatusVagaController);
 router.get('/obter-teste', processoSeletivoController.obterTesteVagaController);
 router.get('/obter-dados-entrevista', processoSeletivoController.obterDadosEntrevistaController);
-router.get('/obter-qtd-vagas', processoSeletivoController.obterQuantidadeVagasController)
+router.get('/obter-qtd-vagas', processoSeletivoController.obterQuantidadeVagasController);
 
 router.put('/atualizar-status-vaga', processoSeletivoController.atualizarStatusVagaController);
 router.put('/atualizar-indice-aprovacao', processoSeletivoController.atualizarIndiceAprovacaoController);
