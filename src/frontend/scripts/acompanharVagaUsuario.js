@@ -5,7 +5,7 @@ const codigoUsuario = document.cookie.split(';')[1].split('=')[1];
 let codigoStatus = "";
 
 const preencherDivTituloVaga = () => {
-  axios.get(`https://plf-es-2022-2-ti2-0924100-recrutech-tis2.vercel.app/detalheVagas?codVaga=${idDaVaga}`)
+  axios.get(`http://localhost:8081/detalheVagas?codVaga=${idDaVaga}`)
     .then(response => {
       if (response.status === 200) {
         const divTitulo = document.getElementById("main_title");
@@ -28,7 +28,7 @@ const preencherDivCurriculo = (urlCurriculo) => {
 }
 
 const obterUrlCurriculo = () => {
-  axios.get(`https://plf-es-2022-2-ti2-0924100-recrutech-tis2.vercel.app/listar-curriculos?codVaga=${idDaVaga}`)
+  axios.get(`http://localhost:8081/listar-curriculos?codVaga=${idDaVaga}`)
     .then(response => {
       if (response.status === 200) {
         preencherDivCurriculo(response.data[0].curriculo);
@@ -54,7 +54,7 @@ const preencherDivSemTeste = () => {
 }
 
 const obterUrlTeste = async () => {
-  await axios.get(`https://plf-es-2022-2-ti2-0924100-recrutech-tis2.vercel.app/obter-teste?codVaga=${idDaVaga}`)
+  await axios.get(`http://localhost:8081/obter-teste?codVaga=${idDaVaga}`)
     .then(response => {
       if (response.status === 200) {
         if(response.data.length !== 0)
@@ -89,7 +89,7 @@ btn.addEventListener('click', () => {
 })
 
 const uploadTeste = (dadosInscricao) => {
-  axios.post('https://plf-es-2022-2-ti2-0924100-recrutech-tis2.vercel.app/enviar-teste', {
+  axios.post('http://localhost:8081/enviar-teste', {
     file: dadosInscricao.arquivo,
     codUsuario: dadosInscricao.codigoUsuario,
     codVaga: dadosInscricao.codigoVaga
@@ -126,7 +126,7 @@ const preencherDivEntrevista = (dadosEntrevista) => {
 }
 
 const preencherDadosEntrevista = async () => {
-  await axios.get(`https://plf-es-2022-2-ti2-0924100-recrutech-tis2.vercel.app/obter-dados-entrevista?codVaga=${idDaVaga}&codCandidato=${codigoUsuario}`)
+  await axios.get(`http://localhost:8081/obter-dados-entrevista?codVaga=${idDaVaga}&codCandidato=${codigoUsuario}`)
     .then(response => {
       if (response.status === 200) {
         if(response.data[0].linkEntrevista !== null)
@@ -139,7 +139,7 @@ const preencherDadosEntrevista = async () => {
 }
 
 const indicarStatusProcesso = async () => {
-  await axios.get(`https://plf-es-2022-2-ti2-0924100-recrutech-tis2.vercel.app/acompanhar-status-vaga?codCandidato=${codigoUsuario}&codVaga=${idDaVaga}`)
+  await axios.get(`http://localhost:8081/acompanhar-status-vaga?codCandidato=${codigoUsuario}&codVaga=${idDaVaga}`)
     .then(response => {
       if (response.status === 200) {
         codigoStatus = response.data[0].statusInscricao

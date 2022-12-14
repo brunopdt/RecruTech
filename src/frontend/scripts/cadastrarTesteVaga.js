@@ -25,7 +25,7 @@ function getTesteForm() {
 
 
 async function enviarDadosTesteParaApi(teste) {
-  axios.post('https://plf-es-2022-2-ti2-0924100-recrutech-tis2.vercel.app/vagas-teste', {
+  axios.post('http://localhost:8081/vagas-teste', {
     file: teste.arquivo,
     codigoVaga: teste.codigoVaga
   }, {

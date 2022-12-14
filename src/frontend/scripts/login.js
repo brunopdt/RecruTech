@@ -17,7 +17,7 @@ function logar() {
         return alert('Preencha todos os campos!');
     }
 
-    axios.post('https://plf-es-2022-2-ti2-0924100-recrutech-tis2.vercel.app/usuarios-logar', {
+    axios.post('http://localhost:8081/usuarios-logar', {
         email: inputEmail, 
         senha: inputSenha
     }).then(response => {

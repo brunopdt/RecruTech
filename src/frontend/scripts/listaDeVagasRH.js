@@ -1,11 +1,11 @@
-const uri = "https://plf-es-2022-2-ti2-0924100-recrutech-tis2.vercel.app/vagas"
+const uri = "http://localhost:8081/vagas"
 const codigoUsuario = document.cookie.split(';')[1].split('=')[1];
 let textoHTML = '';
 
 
 const redirecionar = async (codigo) => {
   try {
-    const res = await fetch(`https://plf-es-2022-2-ti2-0924100-recrutech-tis2.vercel.app/remove-vaga/${codigo}`, {
+    const res = await fetch(`http://localhost:8081/remove-vaga/${codigo}`, {
       method: 'GET',
       headers: {
         Accept: 'application/json',
@@ -23,7 +23,7 @@ const redirecionar = async (codigo) => {
 }
 
 const fecharVaga = async(codVaga) => {
-  axios.get(`https://plf-es-2022-2-ti2-0924100-recrutech-tis2.vercel.app/obter-qtd-vagas?codVaga=${codVaga}`)
+  axios.get(`http://localhost:8081/obter-qtd-vagas?codVaga=${codVaga}`)
   .then(response => {
     if (response.status === 200) {
       if(response.data[0].codigoStatus === 1 && response.data[0].qtdVagas === response.data[0].qtdUsuariosContratados){
@@ -37,7 +37,7 @@ const fecharVaga = async(codVaga) => {
 }
 
 const fecharVagaPut = async (codVaga) => {
-  axios.put(`https://plf-es-2022-2-ti2-0924100-recrutech-tis2.vercel.app/fechar-vaga?codVaga=${codVaga}`)
+  axios.put(`http://localhost:8081/fechar-vaga?codVaga=${codVaga}`)
   .then(response => {
     console.log("Vaga fechada" + codVaga);
   })
@@ -51,7 +51,7 @@ const abrirDetalhes = async codigo => {
 }
 
 const res = fetch(
-  `https://plf-es-2022-2-ti2-0924100-recrutech-tis2.vercel.app/lista-vagas-criadas/${codigoUsuario}`,
+  `http://localhost:8081/lista-vagas-criadas/${codigoUsuario}`,
   {
     method: 'GET',
     headers: {
@@ -70,7 +70,7 @@ async function getItems() {
   headers.append('Content-Type', 'application/json')
   headers.append('Accept', 'application/json')
 
-  const data = await fetch(`https://plf-es-2022-2-ti2-0924100-recrutech-tis2.vercel.app/lista-vagas-criadas/${codigoUsuario}`, {
+  const data = await fetch(`http://localhost:8081/lista-vagas-criadas/${codigoUsuario}`, {
     method: "GET",
     headers: headers,
   }).then((response) => { return response.json() });

@@ -5,7 +5,7 @@ let btnCurriculos = document.querySelector('#lista-curriculos');
 let btnTestes = document.querySelector('#lista-testes');
 let btnEntrevistas = document.querySelector('#lista-entrevistas');
 
-axios.get(`https://plf-es-2022-2-ti2-0924100-recrutech-tis2.vercel.app/detalheVagas?codVaga=${idDaVaga}`)
+axios.get(`http://localhost:8081/detalheVagas?codVaga=${idDaVaga}`)
     .then(response => {
         if (response.status === 200) {
             const divTitulo = document.getElementById("main_title");

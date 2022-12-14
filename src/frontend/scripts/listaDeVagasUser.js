@@ -1,4 +1,4 @@
-const uri = 'https://plf-es-2022-2-ti2-0924100-recrutech-tis2.vercel.app/vagas'
+const uri = 'http://localhost:8081/vagas'
 let textoHTML = ''
 let btn = document.querySelector('#detalhe')
 
