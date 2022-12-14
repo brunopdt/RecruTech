@@ -13,7 +13,7 @@ O RecruTech é um produto que visa facilitar o trabalho de profissionais de recu
 
 ## Professor
 
-* Cristiano Geraldo Teixeira Silva
+* Cristiano Neves Rodrigues
 * Felipe Augusto Lima Reis
 * Hugo Bastos de Paula
 
