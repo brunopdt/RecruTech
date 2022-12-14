@@ -347,7 +347,7 @@ As tecnologias utilizadas são, Node.js para o BackEnd, HTML/CSS/JavaScript no F
 
 
 ## 5. Modelo de dados
-![Modelo Relacional](imagens/Modelo_RelacionalRecrutech.png "Modelo Relacional.")
+![Modelo Relacional](imagens/modeloFisico.jpg "Modelo Relacional.")
 
 
 por aq o entidade relaicoanmentoooo!!!!
