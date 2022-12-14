@@ -376,7 +376,8 @@ Faça aqui uma breve descrição do software e coloque as principais telas com u
 
 ## 8. Conclusão
 
-Apresente aqui a conclusão do seu trabalho. Discussão dos resultados obtidos no trabalho, onde se verifica as observações pessoais de cada aluno. Poderá também apresentar sugestões de novas linhas de estudo.
+Os resultados obtidos do sistema foram satisfatórios. Apresenta um software fundamentado de acordo com os requisitos proposto no início do projeto. Ele conta com indicadores que são artefatos imprescindíveis para a empresa obter resultados sobre seus processos seletivos. Isso permite comparações de índices e taxas entre os meses, para que a empresa fique ciente dos seus resultados alcançados. 
+Para implementações futuras, o sistema contará com processos de envio de documentos para a contratação de modo automatizado. Ele salvará os dados e documentos dos usuários diretamente na nuvem. Além disso, o sistema também enviará e-mails instâneos para o candidato sobre o resultado de cada etapa do processo seletivo e de contratação. 
 
 # REFERÊNCIAS
 
