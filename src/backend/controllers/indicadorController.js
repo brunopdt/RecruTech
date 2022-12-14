@@ -16,7 +16,6 @@ const indicadorTaxaVagasCanceladasController = async(req, res) => {
     return res.status(200).send(taxaVagasMensais);
 }
 
-
 const indicadorTaxaUsuariosController = async(req, res) => {
     const dados = await indicadorModel.indicadorTaxaUsuariosCriadosModel();
     let qtdTotalUsuarios = dados[0].qtdTotaisUsuario;

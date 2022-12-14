@@ -76,6 +76,13 @@ const atualizarIndiceAprovacaoEntrevistaController = async (req, res) => {
   return res.status(200).json(indicadorAtualizado);
 }
 
+const atualizarDadosEntrevistaController = async (req, res) => {
+  const codigoCandidato = req.query.codUsuario;
+  const codigoVaga = req.query.codVaga;
+  const dadosEntrevista = await processoSeletivoModel.atualizarDadosEntrevistaModel(codigoCandidato, codigoVaga, req.body);
+  return res.status(200).json(dadosEntrevista);
+}
+
 const listarTestesVagaController = async (req, res) => {
   const codigoVaga = req.query.codVaga;
   const listaTestes = await processoSeletivoModel.listarTestesVagaModel(codigoVaga);
@@ -99,6 +106,7 @@ module.exports = {
     atualizarIndiceAprovacaoController,
     atualizarCandidatoAprovadoController,
     atualizarIndiceAprovacaoTesteController,
+    atualizarDadosEntrevistaController,
     atualizarIndiceAprovacaoEntrevistaController,
     listarTestesVagaController,
     listarCandidatosEntrevistaController

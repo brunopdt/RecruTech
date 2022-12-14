@@ -63,29 +63,19 @@ router.get('/listar-candidatos-entrevista', processoSeletivoController.listarCan
 router.get('/listar-vagas-inscritas', processoSeletivoController.listarVagasInscritasController);
 router.get('/acompanhar-status-vaga', processoSeletivoController.obterStatusVagaController);
 router.get('/obter-teste', processoSeletivoController.obterTesteVagaController);
-router.get('/enviar-email', usuariosMiddleware.usuarioLogado, emailController.enviarEmailController);
-router.get('/enviar-email-final', usuariosMiddleware.usuarioLogado, emailController.enviarEmailFinalController);
-router.get('/enviar-email-negativo', usuariosMiddleware.usuarioLogado, emailController.enviarEmailNegativoController);
+
 
 router.put('/atualizar-status-vaga', processoSeletivoController.atualizarStatusVagaController);
 router.put('/atualizar-indice-aprovacao', processoSeletivoController.atualizarIndiceAprovacaoController);
 router.put('/atualizar-candidato-aprovado-vaga', processoSeletivoController.atualizarCandidatoAprovadoController);
 router.put('/atualizar-indice-aprovacao-teste', processoSeletivoController.atualizarIndiceAprovacaoTesteController);
 router.put('/atualizar-indice-aprovacao-entrevista', processoSeletivoController.atualizarIndiceAprovacaoEntrevistaController);
-//router.put('/atualizar-dados-entrevista', processoSeletivoController.atualizarDadosEntrevistaController);
+router.put('/atualizar-dados-entrevista', processoSeletivoController.atualizarDadosEntrevistaController);
 
-router.get('/listar-vagas-inscritas', processoSeletivoController.listarVagasInscritasController)
-router.get('/acompanhar-status-vaga', processoSeletivoController.obterStatusVagaController)
-router.put('/atualizar-status-vaga', processoSeletivoController.atualizarStatusVagaController)
-router.put('/atualizar-indice-aprovacao',processoSeletivoController.atualizarIndiceAprovacaoController)
-router.put('/atualizar-candidato-aprovado-vaga', processoSeletivoController.atualizarCandidatoAprovadoController)
-router.put('/atualizar-indice-aprovacao-teste', processoSeletivoController.atualizarIndiceAprovacaoTesteController)
-router.get('/obter-teste', processoSeletivoController.obterTesteVagaController)
 router.post('/enviar-teste', multer(multerConfig).single('file'), processoSeletivoController.enviarTesteVagaController)
 router.get('/lista-vagas-criadas/:codigoUsuario', vagasController.vagasCriadasRH)
 router.get('/indicador-taxa-vagas', indicadoresController.indicadorTaxaVagasController)
-router.get('/indicador-taxa-vagas-canceladas', indicadoresController.indicadorTaxaVagasCanceladasController
-)
+router.get('/indicador-taxa-vagas-canceladas', indicadoresController.indicadorTaxaVagasCanceladasController)
 router.get('/indicador-contratados', indicadoresController.indicadorContratacaoController)
 
 /* Configuração das rotas do servidor */

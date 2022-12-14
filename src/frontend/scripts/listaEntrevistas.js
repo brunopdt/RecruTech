@@ -89,6 +89,29 @@ const enviarEmailNegativo = (codUsuario) => {
     });
 };
 
+const enviarDadosEntrevista = (codigoUsuario) => {
+  let linkEntrevista = document.getElementById("link-da-entrevista");
+  let horaEntrevista = document.getElementById("hora-entrevista");
+  let dataEntrevista = document.getElementById("data-entrevista");
+
+  if (linkEntrevista.value === "" || horaEntrevista.value === "" || dataEntrevista.value === "") {
+    console.log("Erro, todos os campos devem estar preenchidos");
+    return;
+  }
+  axios.put(`http://localhost:8081/atualizar-dados-entrevista?codUsuario=${codigoUsuario}&codVaga=${idDaVaga}`, {
+    linkEntrevista: linkEntrevista.value,
+    horaEntrevista: horaEntrevista.value,
+    dataEntrevista: dataEntrevista.value
+  }).then(response => {
+    if (response.status === 200) {
+      alert('Dados da entrevista enviados com sucesso!')
+      console.log(response.data)
+    }
+  }).catch(erro => {
+    return alert(erro);
+  });
+}
+
 const preencherCandidatosEntrevista = (dadosCandidato) => {
   let nomeCandidato = dadosCandidato.nome;
   let codigoUsuario = dadosCandidato.codigoUsuario;
@@ -102,7 +125,7 @@ const preencherCandidatosEntrevista = (dadosCandidato) => {
   else {
     statusEntrevista = "Pendente";
   }
-  
+
   textoHTML += `
       <div class="new-candidato">
       <div class="candidato">
@@ -111,7 +134,7 @@ const preencherCandidatosEntrevista = (dadosCandidato) => {
           <div id="link-entrevista">
             <input
               type="text"
-              id="link-entrevista"
+              id="link-da-entrevista"
               name="name"
               placeholder="Link da Entrevista"
               required
@@ -119,7 +142,7 @@ const preencherCandidatosEntrevista = (dadosCandidato) => {
             <div class="date-time">
               <input
                 type="time"
-                id="appt"
+                id="hora-entrevista"
                 name="appt"
                 min="09:00"
                 max="18:00"
@@ -127,13 +150,13 @@ const preencherCandidatosEntrevista = (dadosCandidato) => {
               />
               <input
                 type="date"
-                id="start"
+                id="data-entrevista"
                 name="trip-start"
                 value="2022-12-13"
               />
             </div>
             <div class="button_container2">
-              <button class="button" id="enviar-teste" type="button">
+              <button class="button" type="button" id="enviar-teste" type="button" onClick="enviarDadosEntrevista(${codigoUsuario})">
                 ENVIAR
               </button>
             </div>
@@ -191,7 +214,13 @@ const preencherDivCandidatosEntrevista = (dados) => {
   preencherDivTituloVaga();
   if (dados.length !== 0) {
     dados.forEach((dadosCandidatos) => {
-        divCandidatosEntrevista.innerHTML = preencherCandidatosEntrevista(dadosCandidatos);
+      divCandidatosEntrevista.innerHTML = preencherCandidatosEntrevista(dadosCandidatos);
+      if(dadosCandidatos.statusInscricao === 6){
+        document.getElementById("link-da-entrevista").disabled = true;
+        document.getElementById("hora-entrevista").disabled = true;
+        document.getElementById("data-entrevista").disabled = true;
+        document.getElementById("enviar-teste").disabled = true;
+      }
     });
   } else {
     divCandidatosEntrevista.innerHTML = preencherDivSemTeste();

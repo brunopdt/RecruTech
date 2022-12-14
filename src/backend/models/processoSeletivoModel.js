@@ -103,6 +103,15 @@ const atualizarIndiceAprovacaoEntrevistaModel = async (codigoCandidato, codigoVa
     return testeAtualizado;
 }
 
+const atualizarDadosEntrevistaModel = async (codigoCandidato, codigoVaga, body) => {
+    const [entrevistaAtualizada] = await connection.execute(`
+        UPDATE candidato_vaga SET linkEntrevista = "${body.linkEntrevista}", dataEntrevista = "${body.dataEntrevista}", horaEntrevista = "${body.horaEntrevista}"
+         WHERE codigoCandidato = ${codigoCandidato} AND codigoVaga = ${codigoVaga};
+    `);
+
+    return entrevistaAtualizada;
+}
+
 const listarTestesVagaModel = async (codVaga) => {
     const [listaTestes] = await connection.execute(`
         SELECT * FROM usuario u
@@ -116,7 +125,7 @@ const listarTestesVagaModel = async (codVaga) => {
 
 const listarCandidatosEntrevistaModel = async (codVaga) => {
     const [listaCandidatos] = await connection.execute(`
-        SELECT u.nome, u.email, u.codigoUsuario, tc.indTesteAprovado, cv.indEntrevistaAprovada FROM usuario u
+        SELECT u.nome, u.email, u.codigoUsuario, tc.indTesteAprovado, cv.indEntrevistaAprovada, cv.statusInscricao FROM usuario u
         JOIN teste_candidato tc
             ON u.codigoUsuario = tc.codigoCandidato
         JOIN candidato_vaga cv
@@ -139,6 +148,7 @@ module.exports = {
     atualizarCandidatoAprovadoModel,
     atualizarIndiceAprovacaoTesteModel,
     atualizarIndiceAprovacaoEntrevistaModel,
+    atualizarDadosEntrevistaModel,
     listarTestesVagaModel,
     listarCandidatosEntrevistaModel
 };
