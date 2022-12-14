@@ -159,7 +159,7 @@ O processo 5 é a continuação da seleção do candidato que inicia-se com o RH
 
 O processo de cancelamento de vagas por parte da empresa é responsável por receber a solicitação de cancelamento de vagas do setor de Recursos Humanos da empresa, é feito uma verificação de candidatos já registrados (contratados) para aquela vaga, casa já tenha sido registrado outra pessoa, o candidato é notificado com o feedback de indisponibilidade da vaga de interesse. O currículo do candidato é salvo no banco de dados da RecruTech e a vaga que antes estava disponível agora é removida do sistema. Caso a vaga não tenha nenhum candidato registrado,a vaga somente é removida a do sistema.
 
-![Processo 6](imagens/diag_Process6.png)
+![Processo 6](imagens/diag_Process6.jpeg)
 
 
 ## 4. Projeto da Solução
