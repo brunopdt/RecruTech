@@ -372,6 +372,31 @@ Usar o seguinte modelo:
 
 Faça aqui uma breve descrição do software e coloque as principais telas com uma explicação de como usar cada uma.
 
+O software consiste em um site de recrutamento em que possui a opção de cadastro caso seja um recrutador (profissional de RH) ou um candidato. O sistema visa automatizar e agilizar o processo seletivo e de contratação de uma empresa. Além disso, possui indicadores que evidenciam taxas e índices sobre os processos a fim de mostrar um feedback do processo como um todo para as empresas e os candidatos.
+
+Caso seja um recrutador, o usuário possui as seguintes funcionalidades: 
+- Cadastrar uma vaga
+- Visualizar suas vagas criadas
+- Ver detalhes de determinada vaga (visualizar sua descrição, requisitos e se possui teste)
+- Realizar o acompanhamento do processo da vaga (listagem de curriculos, testes, aprovação na entrevista e encerramento a vaga)
+- Visualizar currículo do candidato e avaliar (aprovar ou reprovar)
+- Avaliar teste do candidato (aprovar ou reprovar)
+- Marcar entrevista com data, horário e link da entrevisra. Em seguida avaliar candidato (aprovar ou reprovar)
+- Encerrar/excluir uma vaga
+- Visualizar indicadores de acordo com suas vagas criadas: taxa de usuários, taxa de crescimento de vagas criadas, taxa de vagas canceladas, índice de contratação e taxa de aprovados nos testes
+
+Caso seja um candidato, o usuário possui as seguintes funcionalidades: 
+- Visualizar todas as vagas criadas por recrutadores de empresas na plataforma
+- Visualizar detalhes de determinada vaga (visualizar sua descrição, requisitos e se possui teste)
+- Se inscrever na vaga enviando seu currículo
+- Visualizar todas suas vagas inscritas
+- Visualizar situação da vaga inscrita (envio de curriculo, dowload do teste, envio de teste, entrevista, final). Todas essas etapas são indicadas se o usuário passou para a próxima fase ou não 
+
+
+
+
+(Fotos)
+
 ## 8. Conclusão
 
 Os resultados obtidos do sistema foram satisfatórios. Apresenta um software fundamentado de acordo com os requisitos proposto no início do projeto. Ele conta com indicadores que são artefatos imprescindíveis para a empresa obter resultados sobre seus processos seletivos. Isso permite comparações de índices e taxas entre os meses, para que a empresa fique ciente dos seus resultados alcançados. 
