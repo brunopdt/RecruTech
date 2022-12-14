@@ -29,8 +29,8 @@ _Instituto de Informática e Ciências Exatas – Pontifícia Universidade de Mi
 
 ---
 
-_**Resumo**. Escrever aqui o resumo. O resumo deve contextualizar rapidamente o trabalho, descrever seu objetivo e, ao final, 
-mostrar algum resultado relevante do trabalho (até 10 linhas)._
+**Resumo** 
+No contexto de processos realizados no setor de Recursos Humanos de empresas, com foco maior nas etapas de seleção de funcionários na rede corporativa é notório que a maioria das empresas possuem processos extremamente burocráticos e tradicionais: envio e cadastro de documentos manualmente, dificuldade no controle e administração de dados e documentos e a demora de feedbacks das etapas do processo seletivo. Desse modo, o objetivo do trabalho consiste em desenvolver um sistema afim de solucionar esses problemas agilizando o processo de seleção e de contratação. Essa plataforma contará com feedbacks para os candidatos e gerência de informações, além de conter indicadores que evidenciam a taxa de usuários, taxa de vagas criadas, indíce de contratação e outros quantitativos. Com a criação de uma plataforma intuitiva de recrutamento e seleção, o projeto irá fornecer um ambiente centralizado, padronizado e organizado no setor de recursos humanos. Dessa forma, otimizará o tempo de execução de tarefas, facilitando o meio de trabalho dos funcionários.
 
 ---
 
