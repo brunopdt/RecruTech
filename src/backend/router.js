@@ -111,7 +111,6 @@ router.get('/acompanhar-vaga', usuariosMiddleware.usuarioLogado, (req, res) => r
 router.get('/lista-curriculos', usuariosMiddleware.usuarioLogado, (req, res) => res.sendFile('listaCurriculosVaga.html', { root: 'frontend/views/' }))
 router.get('/lista-testes', usuariosMiddleware.usuarioLogado, (req, res) => res.sendFile('ListaTestesRH.html', { root: 'frontend/views/' }))
 router.get('/lista-entrevistas', usuariosMiddleware.usuarioLogado, (req, res) => res.sendFile('listaEntrevistas.html', { root: 'frontend/views/' }))
-router.get('/indicador-taxa-vagas-criadas', usuariosMiddleware.usuarioLogado, (req, res) => res.sendFile('indicadores.html', { root: 'frontend/views/' }))
 router.get('/inscricao-user-vaga', usuariosMiddleware.usuarioLogado, (req, res) => res.sendFile('uploadCurriculo.html', { root: 'frontend/views/' }))
 
 module.exports = router
