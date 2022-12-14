@@ -8,8 +8,8 @@ Os principais documentos a serem produzidos são:
 * `scriptCriacao.sql`
 	* Script de criação do banco de dados.
 
-* `diagrama entidade relacionamento`
-	* Apresentar o DER do banco de dados.
+* `modelo_ER`
+	* Apresentar o diagrama entidade relacionamento do banco de dados.
 
 * `modeloFisico.jpg`
 	* Apresenta o modelo físico do banco de dados.
