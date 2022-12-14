@@ -1,10 +1,10 @@
 const express = require('express');
 const cors = require('cors');
 const cookieParser = require('cookie-parser');
-const router = require('./router');
+const router = require('../backend/router');
 const bodyParser = require('body-parser');
 const path = require('path');
-
+    
 const app = express();
 
 app.use(express.json());
