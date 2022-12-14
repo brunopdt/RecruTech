@@ -14,3 +14,15 @@ Pode-se também criar um diretório "canvas", que seria descrito da seguinte for
 	* **BusinessModelCanvas.pdf**: Canvas do modelo de negócios.
 
 Assim, sucessivamente para outros artefatos como `processos` e `DER`, etc.
+
+
+
+# Artefatos do projeto
+
+Liste os artefatos produzidos, com suas localizaçãoes e descrição do conteúdo.
+
+
+* `/atas` - Pasta de Atas de reunião.
+* `/processos` - Pasta com os modelos de processo de negócio.
+* `/dados ` - Pasta com os modelos de dados.
+
