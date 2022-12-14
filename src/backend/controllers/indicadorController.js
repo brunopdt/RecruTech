@@ -1,3 +1,5 @@
+const indicadorModel = require ('../models/indicadorModel');
+
 const indicadorTaxaVagasController = async(req, res) => {
     const dados = await indicadorModel.indicadorTaxaVagasCriadasModel();
     let qtdTotalVagas = dados[0].qtdTotaisVagas;
@@ -6,6 +8,15 @@ const indicadorTaxaVagasController = async(req, res) => {
     return res.status(200).send(taxaVagasMensais);
 }
 
+const indicadorTaxaUsuariosController = async(req, res) => {
+    const dados = await indicadorModel.indicadorTaxaUsuariosCriadosModel();
+    let qtdTotalUsuarios = dados[0].qtdTotaisUsuarios;
+    let qtdUsuariosMes = dados[0].qtdUsuariosMes;
+    let taxaUsuariosMensais = parseFloat((qtdUsuariosMes/qtdTotalUsuarios)*100).toFixed(2);
+    return res.status(200).send(taxaUsuariosMensais);
+}
+
 module.exports = {
-    indicadorTaxaVagasController
+    indicadorTaxaVagasController,
+    indicadorTaxaUsuariosController
 }

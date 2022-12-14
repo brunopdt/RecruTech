@@ -10,6 +10,18 @@ const indicadorTaxaVagasCriadasModel = async () => {
     return dados;
   };
 
+  const indicadorTaxaUsuariosCriadosModel = async () => {
+    const [dados] = await connection.execute(`
+      SELECT COUNT(*) as qtdTotaisUsuario, (SELECT COUNT(*) as qtdUsuarios FROM usuario u
+        WHERE MONTH(u.dataCriacaoUsuario) = MONTH(current_timestamp())
+        AND YEAR(u.dataCriacaoUsuario) = YEAR(current_timestamp())) as qtdUsuariosMes
+      FROM usuario u;
+      `);
+    return dados;
+  };
+
+
 module.exports = {
-  indicadorTaxaVagasCriadasModel
+  indicadorTaxaVagasCriadasModel,
+  indicadorTaxaUsuariosCriadosModel
 }
