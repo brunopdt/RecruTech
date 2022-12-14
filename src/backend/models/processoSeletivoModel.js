@@ -106,6 +106,19 @@ const listarTestesVagaModel = async (codVaga) => {
     return listaTestes;
 }
 
+const listarCandidatosEntrevistaModel = async (codVaga) => {
+    const [listaCandidatos] = await connection.execute(`
+        SELECT u.nome, u.email, u.codigoUsuario, tc.indTesteAprovado, cv.indEntrevistaAprovada FROM usuario u
+        JOIN teste_candidato tc
+            ON u.codigoUsuario = tc.codigoCandidato
+        JOIN candidato_vaga cv
+            ON u.codigoUsuario = cv.codigoCandidato
+        WHERE cv.codigoVaga = ${codVaga} AND tc.indTesteAprovado = 1;
+    `);
+
+    return listaCandidatos;
+}
+
 module.exports = {
     listarCurriculosModel,
     listarCurriculosFiltradosModel,
@@ -117,5 +130,6 @@ module.exports = {
     atualizarIndiceAprovacaoModel,
     atualizarCandidatoAprovadoModel,
     atualizarIndiceAprovacaoTesteModel,
-    listarTestesVagaModel
+    listarTestesVagaModel,
+    listarCandidatosEntrevistaModel
 };

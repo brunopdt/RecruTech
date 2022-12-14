@@ -28,6 +28,16 @@ const run = async (usuario) => {
     .catch((err) => console.log(err))
 }
 
+const runFinal = async (usuario) => {
+  const mailSent = await transporter.sendMail({
+    text: 'Trouxemos uma grande novidade: você foi contrado para a nossa vaga!! Em breve entraremos em contato com você.',
+    subject: 'Vaga',
+    from: 'Recrutech <recrutech@hotmail.com>',
+    to: [`${usuario[0].email}`]
+  }).then(()=> console.log('Sucesso'))
+    .catch((err) => console.log(err))
+}
+
 const runNegativo = async (usuario) => {
   const mailSent = await transporter.sendMail({
     text: 'Infelizmente você não foi selecionado para nossa proxima etapa!',
@@ -40,5 +50,6 @@ const runNegativo = async (usuario) => {
 
 module.exports = {
   run,
+  runFinal,
   runNegativo
 }

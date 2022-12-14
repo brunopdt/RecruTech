@@ -52,12 +52,23 @@ router.post('/usuarios', usuariosMiddleware.validateUser, usuariosController.cad
 router.post('/usuarios-logar', usuariosController.logarController)
 router.get('/usuarios-deslogar', usuariosController.deslogarController)
 
-router.get('/enviar-email', usuariosMiddleware.usuarioLogado, emailController.enviarEmailController)
-router.get('/enviar-email-negativo', usuariosMiddleware.usuarioLogado, emailController.enviarEmailNegativoController)
+router.get('/enviar-email', usuariosMiddleware.usuarioLogado, emailController.enviarEmailController);
+router.get('/enviar-email-final', usuariosMiddleware.usuarioLogado, emailController.enviarEmailFinalController);
+router.get('/enviar-email-negativo', usuariosMiddleware.usuarioLogado, emailController.enviarEmailNegativoController);
 
-router.get('/listar-curriculos', processoSeletivoController.listarCurriculosController)
-router.get('/listar-curriculos-filtrados', processoSeletivoController.listarCurriculosFiltradosController)
-router.get('/listar-testes-vagas', processoSeletivoController.listarTestesVagaController)
+router.get('/listar-curriculos', processoSeletivoController.listarCurriculosController);
+router.get('/listar-curriculos-filtrados', processoSeletivoController.listarCurriculosFiltradosController);
+router.get('/listar-testes-vagas', processoSeletivoController.listarTestesVagaController);
+router.get('/listar-candidatos-entrevista', processoSeletivoController.listarCandidatosEntrevistaController);
+router.get('/listar-vagas-inscritas', processoSeletivoController.listarVagasInscritasController);
+router.get('/acompanhar-status-vaga', processoSeletivoController.obterStatusVagaController);
+router.get('/obter-teste', processoSeletivoController.obterTesteVagaController);
+
+router.put('/atualizar-status-vaga', processoSeletivoController.atualizarStatusVagaController);
+router.put('/atualizar-indice-aprovacao', processoSeletivoController.atualizarIndiceAprovacaoController);
+router.put('/atualizar-candidato-aprovado-vaga', processoSeletivoController.atualizarCandidatoAprovadoController);
+router.put('/atualizar-indice-aprovacao-teste', processoSeletivoController.atualizarIndiceAprovacaoTesteController);
+//router.put('/atualizar-dados-entrevista', processoSeletivoController.atualizarDadosEntrevistaController);
 
 router.get('/listar-vagas-inscritas', processoSeletivoController.listarVagasInscritasController)
 router.get('/acompanhar-status-vaga', processoSeletivoController.obterStatusVagaController)

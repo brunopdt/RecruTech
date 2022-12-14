@@ -74,6 +74,12 @@ const listarTestesVagaController = async (req, res) => {
   return res.status(200).json(listaTestes);
 }
 
+const listarCandidatosEntrevistaController = async (req, res) => {
+  const codigoVaga = req.query.codVaga;
+  const listaCandidatos = await processoSeletivoModel.listarCandidatosEntrevistaModel(codigoVaga);
+  return res.status(200).json(listaCandidatos);
+}
+
 module.exports = {
     listarCurriculosController,
     listarCurriculosFiltradosController,
@@ -85,5 +91,6 @@ module.exports = {
     atualizarIndiceAprovacaoController,
     atualizarCandidatoAprovadoController,
     atualizarIndiceAprovacaoTesteController,
-    listarTestesVagaController
+    listarTestesVagaController,
+    listarCandidatosEntrevistaController
 };

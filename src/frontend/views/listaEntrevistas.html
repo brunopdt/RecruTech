@@ -24,11 +24,12 @@
     <nav class="sidebar"></nav>
 
     <div class="main">
-      <div class="title" id="main_title">Nome da vaga</div>
+      <div class="title" id="main_title"></div>
 
       <div class="titulos-coluna">
         <div class="coluna">Candidato</div>
         <div class="coluna">Dados da entrevista</div>
+        <div class="coluna">Status</div>
         <div class="coluna colunabotoes" id="botoes" style="visibility: hidden">
           <div id="botoes">
             <div class="button_container">
@@ -43,106 +44,9 @@
         </div>
       </div>
 
-      <div class="new-candidato">
-        <div class="candidato">
-          <div class="candidato-info">
-            <div id="nome-candidato">Bárbara Mattioly</div>
-            <div id="link-entrevista">
-              <input
-                type="text"
-                id="link-entrevista"
-                name="name"
-                placeholder="Link da Entrevista"
-                required
-              />
-              <div class="date-time">
-                <input
-                  type="time"
-                  id="appt"
-                  name="appt"
-                  min="09:00"
-                  max="18:00"
-                  required
-                />
-                <input
-                  type="date"
-                  id="start"
-                  name="trip-start"
-                  value="2022-12-13"
-                />
-              </div>
-              <div class="button_container2">
-                <button class="button" id="enviar-teste" type="button">
-                  ENVIAR
-                </button>
-              </div>
-            </div>
-
-            <div class="break"></div>
-
-            <div id="botoes">
-              <div class="button_container">
-                <button class="button" id="check">
-                  <span id="button_text"
-                    ><i class="fa-solid fa-check"></i
-                  ></span>
-                </button>
-                <button class="button" id="xmark">
-                  <i class="fa-solid fa-xmark"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div id="line"></div>
-      </div>
-
-      <div class="new-candidato">
-        <div class="candidato">
-          <div class="candidato-info">
-            <div id="nome-candidato">Bruno Duarte</div>
-
-            <div class="break"></div>
-            <div id="botoes">
-              <div class="button_container">
-                <button class="button" id="check">
-                  <span id="button_text"
-                    ><i class="fa-solid fa-check"></i
-                  ></span>
-                </button>
-                <button class="button" id="xmark">
-                  <i class="fa-solid fa-xmark"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div id="line"></div>
-      </div>
-
-      <div class="new-candidato">
-        <div class="candidato">
-          <div class="candidato-info">
-            <div id="nome-candidato">Bruna Bernardes</div>
-
-            <div class="break"></div>
-            <div id="botoes">
-              <div class="button_container">
-                <button class="button" id="check">
-                  <span id="button_text"
-                    ><i class="fa-solid fa-check"></i
-                  ></span>
-                </button>
-                <button class="button" id="xmark">
-                  <i class="fa-solid fa-xmark"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div id="line"></div>
-      </div>
-    </div>
+      <div id="container-dados"></div>
     <script src="../scripts/sidebar.js"></script>
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+    <script src="../scripts/listaEntrevistas.js"></script>
   </body>
 </html>
