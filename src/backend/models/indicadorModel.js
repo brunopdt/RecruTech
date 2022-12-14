@@ -10,6 +10,17 @@ const indicadorTaxaVagasCriadasModel = async () => {
     return dados;
   };
 
+  const indicadorTaxaVagasCanceladasModel = async () => {
+    const [dados] = await connection.execute(`
+      SELECT COUNT(*) as qtdTotaisVagas, (SELECT COUNT(*) as qtdVagas FROM vaga v
+			                                      WHERE MONTH(v.dataCriacaoVaga) = MONTH(current_timestamp())
+									                          AND YEAR(v.dataCriacaoVaga) = YEAR(current_timestamp()) AND (codigoStatus = 3)) as qtdVagasMes
+	    FROM vaga v WHERE (codigoStatus = 3);
+      `);
+    return dados;
+  };
+
+
   const indicadorTaxaUsuariosCriadosModel = async () => {
     const [dados] = await connection.execute(`
       SELECT COUNT(*) as qtdTotaisUsuario, (SELECT COUNT(*) as qtdUsuarios FROM usuario u
@@ -23,5 +34,6 @@ const indicadorTaxaVagasCriadasModel = async () => {
 
 module.exports = {
   indicadorTaxaVagasCriadasModel,
+  indicadorTaxaVagasCanceladasModel,
   indicadorTaxaUsuariosCriadosModel
 }

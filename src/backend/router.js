@@ -68,12 +68,15 @@ router.put('/atualizar-indice-aprovacao-teste', processoSeletivoController.atual
 router.get('/obter-teste', processoSeletivoController.obterTesteVagaController)
 router.post('/enviar-teste', multer(multerConfig).single('file'), processoSeletivoController.enviarTesteVagaController)
 router.get('/lista-vagas-criadas/:codigoUsuario', vagasController.vagasCriadasRH)
+router.get('/indicador-taxa-vagas', indicadoresController.indicadorTaxaVagasController)
+router.get('/indicador-taxa-vagas-canceladas', indicadoresController.indicadorTaxaVagasCanceladasController
+)
 
 /* Configuração das rotas do servidor */
 router.get('/', (req, res) => res.sendFile(__dirname.replace('backend', 'frontend/views/login.html')))
 router.get('/cadastro-usuario', (req, res) => res.sendFile('cadastroUser.html', { root: 'frontend/views/' }))
 
-router.get('/indicador-taxa-vagas', indicadoresController.indicadorTaxaVagasController)
+
 router.get('/indicador-taxa-usuarios', indicadoresController.indicadorTaxaUsuariosController)
 
 router.get('/cadastro-vagas', usuariosMiddleware.usuarioLogado, (req, res) => res.sendFile('cadastroVagas.html', { root: 'frontend/views/' }))
