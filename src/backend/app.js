@@ -14,7 +14,6 @@ app.use(cookieParser());
 app.use(router);
 app.use("/views", express.static(__dirname.replace('backend', 'frontend/views')));
 
-app.use(express.static(path.join(__dirname .replace('backend', ''), 'frontend'))); //substitui o back pelo front
-
+app.use(express.static(path.join(__dirname .replace('backend', ''), 'frontend')));
 module.exports = app;
 
